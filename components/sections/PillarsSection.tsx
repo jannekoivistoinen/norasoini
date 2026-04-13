@@ -1,0 +1,53 @@
+"use client";
+
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faComments, faSeedling, faClover } from "@fortawesome/free-solid-svg-icons";
+
+const pillarIcons = [faComments, faClover, faSeedling];
+
+export default function PillarsSection() {
+  const t = useTranslations("page.homepage");
+  const pillars = t.raw("pillars.items") as { icon: string; title: string; description: string }[];
+
+  return (
+    <section className="px-6 py-20">
+      <div className="max-w-[1200px] mx-auto">
+        <h2 className="font-heading italic text-3xl md:text-4xl lg:text-5xl leading-tight mb-4 text-center">
+          {t("pillars.heading")}
+        </h2>
+        <p className="text-black/60 font-body text-sm md:text-base mb-12 text-center max-w-2xl mx-auto">
+          {t("pillars.description")}
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {pillars.map((pillar, i) => (
+            <div
+              key={i}
+              className="relative overflow-hidden rounded-2xl"
+              style={{ aspectRatio: "467/418" }}
+            >
+              <Image
+                src={`/images/pillar-${i + 1}.jpg`}
+                alt={pillar.title}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-[#d8cdbb]/80" />
+              <div className="absolute inset-0 p-8 flex flex-col justify-between">
+                <div>
+                  {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                  <FontAwesomeIcon icon={pillarIcons[i] as any} className="text-brand-primary w-7 h-7" />
+                </div>
+                <div>
+                  <h3 className="font-heading italic text-2xl mb-3">{pillar.title}</h3>
+                  <p className="text-sm font-body text-black/70">{pillar.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

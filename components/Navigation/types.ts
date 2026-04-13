@@ -14,21 +14,20 @@ export type NavigationItem = {
     | {
         link: string;
         icon?: IconKey;
+        fi: LocaleData;
         en: LocaleData;
-        sv: LocaleData;
       }[]
     | undefined;
+  fi: LocaleData;
   en: LocaleData;
-  sv: LocaleData;
   sublinks?: {
     link: string;
     icon?: IconKey;
+    fi: LocaleData;
     en: LocaleData;
-    sv: LocaleData;
   }[];
 };
 
-// Helper function to check if a value is LocaleData
 export function isLocaleData(value: unknown): value is LocaleData {
   return (
     value !== null &&

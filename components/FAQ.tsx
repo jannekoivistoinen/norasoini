@@ -63,7 +63,7 @@ export function FAQ({}: FAQProps) {
     <section id="FAQ">
       <div className="container">
         <Image
-          src={images.peopleImage}
+          src={images.placeholderImage}
           alt="Test Image"
           className="w-full h-full object-cover aspect-[3/2] lg:aspect-[3/1] mb-8 lg:mb-16"
           quality={80}

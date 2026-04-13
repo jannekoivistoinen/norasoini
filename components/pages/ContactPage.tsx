@@ -1,61 +1,48 @@
-"use client";
-
-import { FAQ } from "@/components/FAQ";
-import MarkdownText from "@/components/MarkdownText";
 import { useTranslations } from "next-intl";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import Testimonials from "@/components/Testimonials";
-import ContactForm from "../ContactForm";
+import ContactForm from "@/components/ContactForm";
+import PageHero from "@/components/sections/PageHero";
+import FaqSection from "@/components/sections/FaqSection";
+import { SITE_CONFIG } from "@/lib/constants";
+
 export default function ContactPage() {
   const t = useTranslations("page.contact");
 
   return (
     <>
-      <section className="container">
-        <div className="mx-auto text-center max-w-4xl mb-8 lg:mb-24">
-          <MarkdownText className="mb-3 md:mb-6">
-            {t("hero.title")}
-          </MarkdownText>
-          <MarkdownText className="p-lg content">
-            {t("hero.description")}
-          </MarkdownText>
-          <Button
-            size="lg"
-            className="mx-auto mt-8 !text-white hover:no-underline"
-            asChild
-          >
-            <Link href="#form" className="hover:no-underline" target="_blank">
-              {t("hero.buttonText")}
-            </Link>
-          </Button>
-        </div>
-        <Testimonials />
-      </section>
+      <PageHero heading={t("hero.title")} />
 
-      <section id="contact" className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24">
+      <section className="px-6 py-10 pb-24 max-w-[1200px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
+          {/* Info */}
           <div>
-            <MarkdownText className="mb-3 md:mb-6">
+            <h2 className="font-heading italic text-3xl md:text-4xl leading-tight mb-6">
               {t("contact.title")}
-            </MarkdownText>
-            <MarkdownText className="mb-3 md:mb-6 p-base">
+            </h2>
+            <p className="font-body text-sm md:text-base text-black/70 mb-6 leading-relaxed">
+              {t("hero.description")}
+            </p>
+            <p className="font-body text-sm md:text-base text-black/60 mb-6 leading-relaxed">
               {t("contact.info")}
-            </MarkdownText>
-            <MarkdownText className="mb-3 md:mb-6 p-base">
-              {t("contact.email")}
-            </MarkdownText>
+            </p>
+            <a
+              href={`mailto:${SITE_CONFIG.company.contact.email}`}
+              className="font-body text-sm text-brand-primary hover:opacity-70 transition"
+            >
+              {SITE_CONFIG.company.contact.email}
+            </a>
           </div>
+
+          {/* Form */}
           <div>
-            <MarkdownText className="mb-3 md:mb-6">
+            <h2 className="font-heading italic text-3xl md:text-4xl leading-tight mb-8">
               {t("contact.formTitle")}
-            </MarkdownText>
+            </h2>
             <ContactForm />
           </div>
         </div>
       </section>
 
-      <FAQ />
+      <FaqSection />
     </>
   );
 }

@@ -1,33 +1,21 @@
-import testImage from "./image.png";
-import vinovardagHero from "./vinovardag-hero.jpg";
-import vinovardagCulinaryJourneys from "./vinovardag-culinaryjourneys.jpg";
-import vinovardagOutdoor from "./vinovardag-outdoor.jpg";
-import vinovardagWinetastings from "./vinovardag-winetastings.jpg";
-import hannaKarkea from "./vinovardag-hanna-karkea.jpg";
-import peopleImage from "./vinovardag-people.jpg";
-import terminalImage from "./vinovardag-terminal.jpg";
 import testimonialAvatar from "./testimonialAvatar.jpg";
+import placeholderImage from "./image.png";
 
-// FontAwesome Icons
-import { faArrowRightLong } from "@awesome.me/kit-b2cb81c624/icons/duotone/solid";
-import { faInstagram } from "@awesome.me/kit-b2cb81c624/icons/classic/brands";
+// FontAwesome Free Icons
+import { faComments, faSeedling, faArrowRight, faClover } from "@fortawesome/free-solid-svg-icons";
+import { faPerson } from "@fortawesome/free-solid-svg-icons";
 
 export const images = {
-  // Content Images
-  testImage,
-  vinovardagHero,
-  vinovardagCulinaryJourneys,
-  vinovardagOutdoor,
-  vinovardagWinetastings,
-  hannaKarkea,
-  peopleImage,
-  terminalImage,
   testimonialAvatar,
+  placeholderImage,
 } as const;
 
 export const navigationIcons = {
-  nordicSkiing: faArrowRightLong,
-  instagram: faInstagram,
+  comments: faComments,
+  seedling: faSeedling,
+  flower: faClover,
+  person: faPerson,
+  arrowRight: faArrowRight,
 } as const;
 
 export type ImageKey = keyof typeof images;

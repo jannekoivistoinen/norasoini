@@ -6,148 +6,127 @@ import { usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
 import { AnimatePresence } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { COMPANY_METADATA } from "@/lib/constants";
-import Logo from "@/components/Logo";
-import DesktopNavigation from "./DesktopNavigation";
+import { COMPANY_METADATA, NAVIGATION_LINKS, NAVIGATION_CTA, SITE_CONFIG } from "@/lib/constants";
+import LanguageSwitcher from "./LanguageSwitcher";
 import MobileNavigation from "./MobileNavigation";
-import { SCROLL_THRESHOLD } from "./utils";
+import { getLocaleData, isActive, SCROLL_THRESHOLD } from "./utils";
+import { desktopLinkStyles, linkStylesActive } from "./styles";
+import { NavigationItem } from "./types";
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
-  const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(
-    null
-  );
+  const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null);
   const locale = useLocale();
-  const [openPopover, setOpenPopover] = useState<string | null>(null);
   const router = useRouter();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > SCROLL_THRESHOLD);
-    };
-
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => setIsScrolled(window.scrollY > SCROLL_THRESHOLD);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
     if (mobileMenuOpen) {
-      const scrollbarWidth =
-        window.innerWidth - document.documentElement.clientWidth;
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
       document.documentElement.style.paddingRight = `${scrollbarWidth}px`;
       document.body.style.overflow = "hidden";
     } else {
       document.documentElement.style.paddingRight = "0px";
       document.body.style.overflow = "unset";
     }
-
     return () => {
       document.documentElement.style.paddingRight = "0px";
       document.body.style.overflow = "unset";
     };
   }, [mobileMenuOpen]);
 
-  useEffect(() => {
-    setOpenPopover(null);
-  }, [pathname]);
-
   const toggleMobileSubmenu = (itemName: string) => {
     setOpenMobileSubmenu(openMobileSubmenu === itemName ? null : itemName);
   };
 
   return (
-    <div
-      className={`sticky z-[9999] top-0 w-full duration-300 ${
-        mobileMenuOpen
-          ? "bg-[#f5f5ed] bg-opacity-100"
-          : isScrolled
-          ? "bg-[#f5f5ed] bg-opacity-85 backdrop-blur-xl "
-          : "bg-[#f5f5ed]"
+    <header
+      className={`sticky z-[9999] top-0 w-full transition-all duration-300 bg-brand-bg ${
+        isScrolled ? "border-b border-black/10" : ""
       }`}
     >
       <nav
         aria-label="Global"
-        className={`relative z-[9999] mx-auto flex xl:flex-none xl:grid xl:grid-cols-[200px_1fr_200px] items-center justify-between duration-300 pl-2 ${
-          isScrolled ? "py-3 xl:py-3" : "py-3 xl:py-3"
-        }`}
+        className="mx-auto max-w-[1440px] flex items-center justify-between px-6 md:px-10 py-4"
       >
-        <div className="flex relative z-[10000]">
-          <Link
-            href="/"
-            className={`px-1 xl:px-2 transition hover:opacity-50 ${
-              isScrolled ? "scale-[80%]" : "scale-[80%]"
-            }`}
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            <span className="sr-only">{COMPANY_METADATA.name}</span>
-            <Logo />
-          </Link>
-        </div>
-        <div className="mr-6 flex xl:hidden relative z-[10000]">
-          <Button
-            className="group scale-125"
-            variant="outline"
-            size="icon"
-            onClick={() => setMobileMenuOpen((prev) => !prev)}
-            aria-expanded={mobileMenuOpen}
-            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-          >
-            <svg
-              className="pointer-events-none"
-              width={16}
-              height={16}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M4 12L20 12"
-                className="origin-center -translate-y-[7px] transition-all duration-300 [transition-timing-function:cubic-bezier(.5,.85,.25,1.1)] group-aria-expanded:translate-x-0 group-aria-expanded:translate-y-0 group-aria-expanded:rotate-[315deg]"
-              />
-              <path
-                d="M4 12H20"
-                className="origin-center transition-all duration-300 [transition-timing-function:cubic-bezier(.5,.85,.25,1.8)] group-aria-expanded:rotate-45"
-              />
-              <path
-                d="M4 12H20"
-                className="origin-center translate-y-[7px] transition-all duration-300 [transition-timing-function:cubic-bezier(.5,.85,.25,1.1)] group-aria-expanded:translate-y-0 group-aria-expanded:rotate-[135deg]"
-              />
-            </svg>
-          </Button>
+        {/* Logo */}
+        <Link
+          href={`/${locale}`}
+          className="font-heading text-base font-normal text-black hover:opacity-70 transition"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {COMPANY_METADATA.name}
+        </Link>
+
+        {/* Desktop nav links */}
+        <div className="hidden md:flex items-center gap-1">
+          {NAVIGATION_LINKS.map((item: NavigationItem) => {
+            const localeData = getLocaleData(item, locale);
+            const active = isActive(localeData.href, pathname);
+            return (
+              <Link
+                key={item.link}
+                href={localeData.href}
+                className={`${desktopLinkStyles} ${active ? linkStylesActive : ""}`}
+              >
+                {localeData.name}
+              </Link>
+            );
+          })}
         </div>
 
-        <DesktopNavigation
-          pathname={pathname}
-          locale={locale}
-          isScrolled={isScrolled}
-          openPopover={openPopover}
-          setOpenPopover={setOpenPopover}
-        />
+        {/* Desktop right: language + CTA */}
+        <div className="hidden md:flex items-center gap-4">
+          {SITE_CONFIG.i18n.languageSwitcher.showOnDesktop && <LanguageSwitcher />}
+          {NAVIGATION_CTA.map((item: NavigationItem) => {
+            const localeData = getLocaleData(item, locale);
+            return (
+              <Link
+                key={item.link}
+                href={localeData.href}
+                className="bg-brand-primary text-white text-sm font-body px-5 py-2.5 rounded-full hover:opacity-90 transition whitespace-nowrap"
+              >
+                {localeData.name}
+              </Link>
+            );
+          })}
+        </div>
 
-        {/* Mobile menu */}
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <MobileNavigation
-              mobileMenuOpen={mobileMenuOpen}
-              setMobileMenuOpen={setMobileMenuOpen}
-              openMobileSubmenu={openMobileSubmenu}
-              toggleMobileSubmenu={toggleMobileSubmenu}
-              pathname={pathname}
-              locale={locale}
-              router={router}
-            />
-          )}
-        </AnimatePresence>
+        {/* Mobile hamburger */}
+        <button
+          className="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5"
+          onClick={() => setMobileMenuOpen((prev) => !prev)}
+          aria-expanded={mobileMenuOpen}
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+        >
+          <span className={`block h-0.5 w-6 bg-black transition-all duration-300 ${mobileMenuOpen ? "rotate-45 translate-y-2" : ""}`} />
+          <span className={`block h-0.5 w-6 bg-black transition-all duration-300 ${mobileMenuOpen ? "opacity-0" : ""}`} />
+          <span className={`block h-0.5 w-6 bg-black transition-all duration-300 ${mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+        </button>
       </nav>
-    </div>
+
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <MobileNavigation
+            mobileMenuOpen={mobileMenuOpen}
+            setMobileMenuOpen={setMobileMenuOpen}
+            openMobileSubmenu={openMobileSubmenu}
+            toggleMobileSubmenu={toggleMobileSubmenu}
+            pathname={pathname}
+            locale={locale}
+            router={router}
+          />
+        )}
+      </AnimatePresence>
+    </header>
   );
 }

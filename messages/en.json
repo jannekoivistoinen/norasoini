@@ -1,248 +1,231 @@
 {
-  "component": {
-    "terminalCTA": {
-      "title": "## Discover the art of wine with Vinovardag",
-      "description": "Ready to explore the world of wine like never before? With Vinovardag, each sip becomes a story and every experience is crafted to delight. Book your journey into Swedish Lapland's unique wine culture today!",
-      "label": "Get in touch"
+  "page": {
+    "homepage": {
+      "metadata": {
+        "title": "Nora Soini – Therapist & Craniosacral Therapy Espoo",
+        "description": "Short-term therapist in presence and systemic approaches and craniosacral therapy student, based in Espoo.",
+        "keywords": ["therapy", "short-term therapy", "craniosacral therapy", "espoo", "nora soini"]
+      },
+      "hero": {
+        "heading": "Gently by your side through change",
+        "description": "Clarity, peace and connection to yourself.",
+        "cta": "Book a session",
+        "secondaryCta": "About Nora",
+        "trust1": "Safe space",
+        "trust2": "At your pace",
+        "trust3": "Espoo & online"
+      },
+      "situations": {
+        "heading": "Situations I can help with",
+        "description": "Every situation is unique. You are welcome to come, for example, when:",
+        "cards": [
+          { "title": "Stress and exhaustion", "description": "You feel stressed, burnt out, or your nervous system is overactivated and recovery feels hard." },
+          { "title": "Life transitions", "description": "You are at a crossroads or looking for clarity about your direction." },
+          { "title": "Connection to self", "description": "You long for a deeper connection to yourself, your feelings and your body's wisdom." },
+          { "title": "Lingering tension", "description": "You carry experiences or tensions that still affect your everyday life." }
+        ]
+      },
+      "about": {
+        "quote": "\"I believe every person already holds within them a direction towards balance.\"",
+        "attribution": "Nora Soini",
+        "heading": "Gently by your side through change",
+        "description": "I am a short-term therapist in presence and systemic approaches and I am training to become a craniosacral therapist (graduating autumn 2026).",
+        "description2": "What matters most in my work is a safe, calm space where a person can be met as a whole – body, emotions and mind.",
+        "description3": "My path to this work has run through a long journey of personal growth. My own experiences have taught me a great deal about humanity and how a person can find their way back to connection with themselves.",
+        "cta": "Read more about Nora"
+      },
+      "pillars": {
+        "heading": "Three cornerstones of my practice",
+        "description": "I combine conversation, presence and somatic listening to create a holistic and safe space.",
+        "items": [
+          { "icon": "comments", "title": "Conversation", "description": "Together we explore feelings, bodily experiences and the relationships and life history that shape you – in a genuine, safe encounter." },
+          { "icon": "flower", "title": "Presence", "description": "A moment where you get to be seen and heard exactly as you are – without hurry or demands." },
+          { "icon": "seedling", "title": "Body awareness", "description": "Craniosacral therapy calms the nervous system through gentle touch. The body holds wisdom that words cannot always reach." }
+        ]
+      },
+      "process": {
+        "heading": "How to get started",
+        "description": "The first step of reaching out can feel big – that is why I want to make it as easy as possible.",
+        "steps": [
+          { "number": "1", "title": "Free introductory call", "description": "A short, non-committal 15-minute call. You can share your situation and ask me anything." },
+          { "number": "2", "title": "Book a first appointment", "description": "You can also book directly. At the first session we will calmly go through your situation and wishes." },
+          { "number": "3", "title": "Send a message", "description": "Not sure which option suits you? Send me a message and I will help you find the right way to start." }
+        ]
+      },
+      "faq": {
+        "heading": "Answers to common questions",
+        "description": "It is completely normal for therapy or a new treatment to raise questions. You can also reach me at nora@norasoini.fi",
+        "items": [
+          { "question": "How do I know if I need therapy?", "answer": "If something is weighing on your mind or your life situation feels burdensome, therapy can help. You don't need a 'big enough' problem. The first meeting is a free introduction." },
+          { "question": "Is therapy confidential?", "answer": "Yes. Everything discussed in therapy sessions is confidential. I am bound by professional secrecy." },
+          { "question": "How long does therapy last?", "answer": "Short-term therapy is typically 5–20 sessions. The length of the process is planned individually according to your needs." },
+          { "question": "How much does therapy cost?", "answer": "Short-term therapy sessions are €89 / 60 min. Short-term therapy is not currently covered by Kela reimbursement, but it is worth checking with your employer or insurance company." },
+          { "question": "Can sessions be arranged remotely?", "answer": "Yes, short-term therapy sessions can be arranged remotely via video call. Craniosacral therapy is always in Espoo." },
+          { "question": "Do I need to know anything in particular?", "answer": "Nothing in particular. Come as you are." },
+          { "question": "What is craniosacral therapy?", "answer": "Craniosacral therapy is a gentle and calm treatment in which the body is listened to through light touch. The aim is to release tensions, support nervous system balance and promote the body's own recovery." },
+          { "question": "What does a craniosacral therapy session involve?", "answer": "The treatment is carried out fully clothed on a therapy table. Touch is very light and the session progresses calmly, listening to the client's body. Many people find the treatment deeply relaxing." },
+          { "question": "What can craniosacral therapy help with?", "answer": "People come for craniosacral therapy when there is stress, anxiety or chronic tension in body or mind. It can help you pause, calm down and strengthen your connection to your own body." },
+          { "question": "What is LST therapy based on?", "answer": "Presence and Systemic Therapy (LST) combines several therapeutic approaches: family constellation, emotion-focused therapy (EFT), ACT (acceptance and commitment therapy), solution-focused therapy and mindfulness. The person is seen as a whole." },
+          { "question": "Is craniosacral therapy covered by insurance?", "answer": "Craniosacral therapy does not replace a doctor's examination or other healthcare services, and no medical diagnosis is made. The treatment is not covered by Kela reimbursement." }
+        ]
+      }
     },
-    "footer": {
-      "copyright": "© 2025 Vinovardag & Outdoor North 67°",
-      "instagram": "Follow Vinovardag on Instagram",
-      "terms": "Terms & Conditions"
-    },
-    "faq": {
-      "title": "## Frequently asked questions",
-      "description": "Discover answers to your questions about Vinovardag's unique wine experiences and services.\n\nQuestions? Get in touch at hanna@vinovardag.se",
+    "services": {
+      "metadata": {
+        "title": "Services – Nora Soini",
+        "description": "Short-term therapy and craniosacral therapy in Espoo and online. I also offer combined holistic sessions.",
+        "keywords": ["short-term therapy", "craniosacral therapy", "combination treatment", "espoo", "nora soini"]
+      },
+      "hero": {
+        "heading": "Short-term therapy and craniosacral therapy in Espoo and online",
+        "cta": "Book a session"
+      },
+      "cardQuote": "You are welcome to reach out – I will help you find the right option for you.",
       "items": [
         {
-          "question": "What services do you offer?",
-          "answer": "We provide a range of services including sommelier consultations, wine tastings, and culinary experiences. Our offerings are tailored to meet the needs of local businesses and international tourists. Each experience is designed to highlight the best of Swedish Lapland's wine culture."
+          "title": "Short-term therapy",
+          "subtitle": "Espoo & online · 60 min · €89 / session",
+          "cta": "Book a session"
         },
         {
-          "question": "How can I book?",
-          "answer": "You can book our services directly through our website using the booking form, or by contacting us via email or phone. For customized experiences, we recommend reaching out directly so we can tailor the experience to your preferences."
+          "title": "Craniosacral therapy",
+          "subtitle": "Espoo · 60 min · Student rate €69 (→ €95 from 1 Sep 2026)",
+          "cta": "Book a session"
         },
         {
-          "question": "Are your experiences customizable?",
-          "answer": "Yes, most of our experiences can be customized to meet your specific preferences and needs. Whether you're looking for a private wine tasting, a corporate event, or a specialized culinary experience, we can work with you to create the perfect offering."
-        },
-        {
-          "question": "What is your location?",
-          "answer": "We are located in Kiruna, Sweden, the northernmost city in Swedish Lapland. Situated 145 km north of the Arctic Circle, Kiruna offers a magical setting with the northern lights in winter and the midnight sun in summer. Our location provides the perfect backdrop for exceptional wine experiences surrounded by Lapland's pristine wilderness and stunning natural beauty."
-        },
-        {
-          "question": "Do you offer tastings?",
-          "answer": "Yes, we offer a variety of wine tastings featuring carefully selected wines from around the world, with special attention to unique and boutique wineries. Our tastings can be paired with local delicacies for a complete culinary experience."
-        },
-        {
-          "question": "I don't drink alcohol, can I still participate?",
-          "answer": "Absolutely! We offer non-alcoholic alternatives for all our tastings and experiences. Our goal is to create inclusive experiences where everyone can enjoy the culinary journey, regardless of their beverage preferences."
+          "title": "Combination session",
+          "subtitle": "Espoo · 90 min · €129 / session",
+          "cta": "Book a session"
         }
       ]
     },
-    "aboutHanna": {
-      "quote": "Hanna's expertise in wine is unmatched. She effortlessly combines deep knowledge with a warm, approachable style, creating unforgettable tasting experiences.",
-      "quoteAttribution": "**Jane Doe** – Title, Company AB",
-      "heading": "## Sommelier Hanna crafts unforgettable wine experiences, blending the flavors of the Lappish wilderness with her passion for wine.",
-      "paragraph": "Based in the heart of Swedish Lapland, in the city of Kiruna, Hanna creates experiences that not only highlight the best of international and local wines but also reflect the stunning natural beauty and rich culture of the region.\n\nWhether it's uncovering rare vintages or showcasing sustainable winemaking practices, Hanna's expertise sets the stage for truly unforgettable wine experiences.",
-      "continueReading": "Continue reading"
+    "about": {
+      "metadata": {
+        "title": "Nora Soini – About the therapist",
+        "description": "Short-term therapist and craniosacral therapy student based in Espoo.",
+        "keywords": ["nora soini", "therapist", "espoo"]
+      },
+      "hero": {
+        "heading": "I am a short-term therapist in presence and systemic approaches – and I am training to become a craniosacral therapist.",
+        "cta": "Book a session"
+      },
+      "intro": {
+        "heading": "My path to this work",
+        "paragraphs": [
+          "I am in my early sixties, a mother of two grown-up children, and I have been married for a long time. In 2011 I became an entrepreneur – before that I worked for many years in an international company.",
+          "Through my own therapy journey I discovered the healer within myself years ago. When your own inner work goes deep enough, a desire often arises to also be of support to others on their journey.",
+          "Along the way I have faced profound challenges. As a teenager my parents divorced; as a young adult I was abandoned without explanation; and as an adult I was subjected to prolonged bullying. These experiences left their mark, but they have also taught me a great deal about people, vulnerability and how a person can find their way back to connection with themselves.",
+          "Today I see those experiences as some of the greatest learning moments of my life. They have cultivated gratitude, compassion, sensitivity and the ability to meet another person genuinely.",
+          "What matters most in my work is a safe, calm space where a person can be met as a whole – body, emotions and mind. I believe every person already holds within them a direction towards balance and wholeness."
+        ]
+      },
+      "testimonials": [
+        { "quote": "*Client testimonial coming soon*", "attribution": "Client feedback" },
+        { "quote": "*Client testimonial coming soon*", "attribution": "Client feedback" }
+      ]
+    },
+    "contact": {
+      "metadata": {
+        "title": "Contact – Nora Soini",
+        "description": "Get in touch and book a session.",
+        "keywords": ["contact", "book a session", "nora soini", "espoo"]
+      },
+      "hero": {
+        "title": "Get in touch",
+        "description": "The first step of reaching out can feel big. That is why I want to make booking as easy and safe as possible for you.",
+        "buttonText": "Go to contact form"
+      },
+      "contact": {
+        "title": "Contact details",
+        "info": "Sessions in Espoo and online via video call.",
+        "email": "nora@norasoini.fi",
+        "formTitle": "Send a message"
+      }
+    },
+    "terms": {
+      "metadata": {
+        "title": "Terms – Nora Soini",
+        "description": "Terms and conditions"
+      },
+      "page": {
+        "title": "Terms and conditions",
+        "content": "Terms and conditions"
+      }
+    }
+  },
+  "component": {
+    "nav": {
+      "about": "About Nora",
+      "services": "Services",
+      "contact": "Contact",
+      "cta": "Book a session"
+    },
+    "footer": {
+      "cta": "You don't need the perfect words.",
+      "ctaDescription": "Just reach out – come as you are. The first meeting is a getting-to-know-you session.",
+      "ctaButton": "Book a session",
+      "name": "Nora Soini",
+      "tagline": "Therapist & craniosacral therapy · Espoo",
+      "email": "nora@norasoini.fi",
+      "copyright": "© 2026 – Site crafted by Damngood",
+      "terms": "Terms"
+    },
+    "terminalCTA": {
+      "title": "You don't need the perfect words.",
+      "description": "Just reach out – come as you are.",
+      "label": "Book a session"
+    },
+    "quoteSlider": {
+      "slides": [
+        {
+          "quote": "Welcome exactly as you are.",
+          "description": "I offer you a calm and safe space to pause – without hurry, without demands."
+        },
+        {
+          "quote": "Every person already holds within them a direction towards balance.",
+          "description": "Sometimes we only need another person to walk beside us for a moment."
+        }
+      ]
+    },
+    "testimonials": {
+      "items": [
+        { "name": "*Client testimonial coming soon*", "quote": "*Client testimonial coming soon*" },
+        { "name": "*Client testimonial coming soon*", "quote": "*Client testimonial coming soon*" }
+      ]
     },
     "contactForm": {
       "placeholders": {
         "firstName": "First name",
         "lastName": "Last name",
         "email": "Email",
-        "phone": "Phone with country code e.g. +358",
+        "phone": "Phone number",
         "message": "Message"
       },
       "validation": {
         "firstNameRequired": "First name is required",
         "lastNameRequired": "Last name is required",
-        "emailRequired": "Your email is required",
-        "emailInvalid": "Please enter a valid email",
-        "phoneRequired": "Your phone number is required",
-        "phoneInvalid": "Please enter a valid phone number",
-        "messageRequired": "A message is required"
+        "emailRequired": "Email is required",
+        "emailInvalid": "Email address is invalid",
+        "messageRequired": "Message is required",
+        "phoneRequired": "Phone number is required",
+        "phoneInvalid": "Phone number is invalid"
       },
-      "submitButton": "Send message",
-      "errorMessage": "Something went wrong. Please try later."
+      "submitButton": "Send",
+      "successMessage": "Thank you for your message! I will be in touch soon.",
+      "errorMessage": "Something went wrong. Please try again."
     },
-    "values": {
-      "sectionTitle": "## Values & Philosophy",
+    "faq": {
+      "title": "Answers to common questions",
+      "description": "It is completely normal for therapy to raise questions.",
       "items": [
-        {
-          "title": "### Sustainability at Heart",
-          "text": "Rooted in the breathtaking landscapes of Swedish Lapland, sustainability guides our choices. We partner with vineyards that share our respect for the environment and strive to deliver authentic wine experiences that honor nature's balance and the purity of our Arctic home."
-        },
-        {
-          "title": "### Ethically Sourced, Exceptionally Crafted",
-          "text": "We believe that great wine tells a story of integrity. That's why we meticulously select wines from producers who are committed to ethical practices, ensuring every bottle reflects quality, responsibility, and a deep respect for the craft and the people behind it."
-        },
-        {
-          "title": "### Fostering Community & Connection",
-          "text": "Vinovardag is dedicated to enriching our community by creating shared experiences. We aim to connect people through the joy of wine, celebrating local culture and fostering a welcoming space for discovery, learning, and genuine human connection in the heart of Swedish Lapland."
-        }
+        { "question": "How do I know if I need therapy?", "answer": "If something is weighing on your mind or your life situation feels burdensome, therapy can help." },
+        { "question": "Is therapy confidential?", "answer": "Yes. Everything discussed in therapy sessions is confidential." },
+        { "question": "How long does therapy last?", "answer": "Short-term therapy is typically 5–20 sessions." },
+        { "question": "How much does therapy cost?", "answer": "Sessions are €89. Short-term therapy is not currently covered by Kela reimbursement." },
+        { "question": "Can sessions be arranged remotely?", "answer": "Yes, sessions can also be arranged remotely." },
+        { "question": "Do I need to know anything in particular?", "answer": "Nothing in particular. Come as you are." },
+        { "question": "Do I need to prepare for the meeting?", "answer": "No special preparation is needed." }
       ]
-    },
-    "testimonials": {
-      "items": [
-        {
-          "name": "**Jane Doe** – Title, Company AB",
-          "quote": "Hanna's knowledge of wine is exceptional. She curated the perfect selection for our wedding and our guests were impressed. Highly recommend her services!"
-        },
-        {
-          "name": "**Jane Doe** – Title, Company AB",
-          "quote": "Hanna's knowledge of wine is exceptional. She curated the perfect selection for our wedding and our guests were impressed. Highly recommend her services!"
-        },
-        {
-          "name": "**Jane Doe** – Title, Company AB",
-          "quote": "Hanna's knowledge of wine is exceptional. She curated the perfect selection for our wedding and our guests were impressed. Highly recommend her services!"
-        }
-      ]
-    }
-  },
-  "page": {
-    "homepage": {
-      "metadata": {
-        "title": "Vinovardag | Premium Wine Experiences in Swedish Lapland",
-        "description": "Discover exceptional wine tastings and culinary adventures with Vinovardag in the heart of Swedish Lapland. Personalized experiences for locals and international travelers.",
-        "keywords": [
-          "wine tastings",
-          "Swedish Lapland",
-          "sommelier",
-          "culinary experiences",
-          "wine tourism",
-          "Nordic cuisine",
-          "Arctic dining",
-          "Finnish Swedish Lapland"
-        ]
-      },
-      "hero": {
-        "title": "# Whether you're a local business or an international traveler, Vinovardag's personalized services are designed to elevate your culinary journey in Swedish Lapland."
-      },
-      "services": {
-        "title": "## Wine tastings and culinary adventures",
-        "service": [
-          {
-            "title": "### Exquisite wine tastings",
-            "imageKey": "vinovardagWinetastings",
-            "altText": "One snowboarding riding powder in Ylläs-Pallas National Park"
-          },
-          {
-            "title": "### Outdoor culinary experiences",
-            "imageKey": "vinovardagOutdoor",
-            "altText": "One snowboarding riding powder in Ylläs-Pallas National Park"
-          },
-          {
-            "title": "### Customized culinary journeys",
-            "imageKey": "vinovardagCulinaryJourneys",
-            "altText": "One snowboarding riding powder in Ylläs-Pallas National Park"
-          },
-          {
-            "title": "### Customized culinary journeys",
-            "imageKey": "vinovardagHero",
-            "altText": "One snowboarding riding powder in Ylläs-Pallas National Park"
-          }
-        ]
-      }
-    },
-    "about": {
-      "metadata": {
-        "title": "About Vinovardag | Wine and Culinary Experiences in Swedish Lapland",
-        "description": "Learn about Vinovardag and sommelier Hanna's passion for creating unique wine and culinary experiences in the heart of Swedish Lapland.",
-        "keywords": [
-          "wine experiences",
-          "sommelier",
-          "Swedish Lapland",
-          "culinary journeys",
-          "wine tastings"
-        ]
-      },
-      "hero": {
-        "title": "# Bringing exceptional wine experiences to the Swedish Arctic",
-        "description": "At Vinovardag, we believe that extraordinary wine experiences should be accessible everywhere - even in the remote beauty of Swedish Lapland. Our mission is to create memorable moments where wine culture meets the pristine arctic environment.",
-        "buttonText": "Get in touch"
-      },
-      "about": {
-        "title": "## Vinovardag's Story",
-        "description": "Founded with a passion for wine and a deep connection to the Arctic region, Vinovardag has grown from a dream to a recognized destination for wine lovers and culinary enthusiasts. We've created a space where traditional wine culture harmoniously blends with the unique flavors and experiences of Swedish Lapland.\n\nOur journey started with a simple idea: to bring the world of fine wines to the heart of the north, creating experiences that respect both the sophistication of wine culture and the authenticity of Arctic traditions.\n\nThe serene landscapes of Swedish Lapland are not just a backdrop for our experiences; they are an integral part of them. We believe that the purity of the Arctic air and the tranquility of its vast wilderness enhance the appreciation of fine wines, creating a sensory journey unlike any other. Our events often incorporate elements of the local environment, from foraged ingredients to outdoor tastings under the Northern Lights or midnight sun.\n\nAt Vinovardag, every detail is thoughtfully curated, from the selection of wines to the ambiance of each gathering. We are dedicated to continuous learning and exploration within the world of wine, ensuring that we always bring fresh perspectives and exceptional quality to our guests. Our aim is not just to serve wine, but to share stories, create connections, and leave a lasting impression of warmth and discovery."
-      },
-      "hannaProfile": {
-        "title": "## Meet Hanna",
-        "subtitle": "Founder & Sommelier",
-        "bio": "As a certified sommelier and native of Swedish Lapland, Hanna brings a unique perspective to the world of wine. Her journey began with a curiosity about how global wine traditions could be experienced through the lens of Nordic culture.\n\nHanna's expertise spans from classic European wines to emerging regions, always with an eye for sustainable and authentic productions. She has trained in prestigious wine regions across Europe and brings this knowledge back to create experiences that are both educational and deeply enjoyable.\n\nWith over a decade of experience in hospitality and wine education, Hanna has developed a teaching style that makes wine accessible to everyone - from curious beginners to seasoned connoisseurs.",
-        "quote": "Wine is not just about what's in the glass – it's about creating connections between people, places, and moments in time."
-      }
-    },
-    "contact": {
-      "metadata": {
-        "title": "Contact Vinovardag | Book Your Wine Experience in Swedish Lapland",
-        "description": "Get in touch with Vinovardag to book your personalized wine tasting, corporate event, or culinary experience in the pristine nature of Swedish Lapland.",
-        "keywords": [
-          "book wine tasting",
-          "sommelier services",
-          "Swedish Lapland wine experiences",
-          "corporate events",
-          "contact sommelier",
-          "Finnish wine tourism",
-          "Pyhätunturi"
-        ]
-      },
-      "hero": {
-        "title": "# Get in touch",
-        "description": "Thank you for your interest in my wine tasting services. Whether you're planning a special event, seeking wine education, or looking for personalized recommendations, I'm here to elevate your wine experience.",
-        "buttonText": "Send a message"
-      },
-      "contact": {
-        "title": "### Contact information",
-        "info": "**Vinovardag AB**\n\nStreet address\n\nKiruna 00100\n\nSweden",
-        "formTitle": "### Send a message",
-        "email": "e. hanna@vinovardag.se\n\np. +46 123 4567"
-      }
-    },
-    "services": {
-      "metadata": {
-        "title": "Services | Wine Tastings & Culinary Adventures by Vinovardag",
-        "description": "Explore Vinovardag's professional sommelier services including wine tastings, outdoor culinary experiences, and customized wine journeys in Swedish Lapland.",
-        "keywords": [
-          "wine tastings",
-          "sommelier services",
-          "outdoor dining",
-          "culinary adventures",
-          "Swedish Lapland experiences",
-          "corporate wine events",
-          "wine education",
-          "Arctic cuisine"
-        ]
-      },
-      "hero": {
-        "title": "# Discover the art of wine with a professional sommelier",
-        "description": "With over a decade of experience in the world's finest wine regions, I offer personalized services that bring the vineyard experience to you. Whether you're hosting an intimate gathering or a large corporate event, my expertise will ensure your wine selection perfectly complements your occasion.",
-        "buttonText": "Get in touch"
-      },
-      "services": {
-        "title": "## Wine tastings and culinary adventures",
-        "service": [
-          {
-            "title": "### Exquisite wine tastings",
-            "description": "Experience the art of wine tasting with a professional sommelier. Our wine tastings are designed to be educational and enjoyable, and are perfect for groups of any size.\n\n- Customized wine selection\n- Professional tasting notes\n- Wine region education\n- Available for groups of 2-20",
-            "imageKey": "vinovardagWinetastings",
-            "altText": "One snowboarding riding powder in Ylläs-Pallas National Park"
-          },
-          {
-            "title": "### Outdoor culinary experiences",
-            "description": "Combine the beauty of nature with exceptional wines. These outdoor experiences pair scenic locations with perfectly matched wines and seasonal cuisine.\n\n- Vineyard picnics\n- Garden tastings\n- Seasonal food pairings",
-            "imageKey": "vinovardagOutdoor",
-            "altText": "One snowboarding riding powder in Ylläs-Pallas National Park"
-          },
-          {
-            "title": "### Customized Culinary Journeys",
-            "description": "A complete sensory experience that pairs fine wines with gourmet cuisine. Work with me to create a memorable journey through complementary flavors.\n\n- Multi-course wine pairings\n- Chef collaboration\n- Custom menu development\n- Private dining experiences",
-            "imageKey": "vinovardagCulinaryJourneys",
-            "altText": "One snowboarding riding powder in Ylläs-Pallas National Park"
-          }
-        ]
-      }
     }
   }
 }

@@ -1,101 +1,130 @@
-"use client";
-
-import { FAQ } from "@/components/FAQ";
-import MarkdownText from "@/components/MarkdownText";
-import { useTranslations, useLocale } from "next-intl";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import Image from "next/image";
-import { images } from "@/app/assets/images";
-import Values from "@/components/Values";
+import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 import { SITE_CONFIG } from "@/lib/constants";
+import PillarsSection from "@/components/sections/PillarsSection";
+import ProcessSection from "@/components/sections/ProcessSection";
+import FaqSection from "@/components/sections/FaqSection";
+import QuoteSlider from "@/components/sections/QuoteSlider";
+import PageHero from "@/components/sections/PageHero";
 
 export default function AboutPage() {
   const t = useTranslations("page.about");
   const locale = useLocale();
 
+  const contactHref = `/${locale}/${SITE_CONFIG.i18n.routes.contact[locale as keyof typeof SITE_CONFIG.i18n.routes.contact]}`;
+  const paragraphs = t.raw("intro.paragraphs") as string[];
+  const testimonials = t.raw("testimonials") as { quote: string; attribution: string }[];
+
   return (
     <>
-      <section className="container">
-        <div className="mx-auto text-center max-w-4xl">
-          <MarkdownText className="mb-3 md:mb-6">
-            {t("hero.title")}
-          </MarkdownText>
-          <MarkdownText className="p-lg content">
-            {t("hero.description")}
-          </MarkdownText>
-          <Button
-            size="lg"
-            className="mx-auto mt-8 !text-white hover:no-underline"
-            asChild
-          >
-            <Link
-              href={`/${locale}/${
-                SITE_CONFIG.i18n.routes.contact[
-                  locale as keyof typeof SITE_CONFIG.i18n.routes.contact
-                ]
-              }`}
-              className="hover:no-underline"
-            >
-              {t("hero.buttonText")}
-            </Link>
-          </Button>
+      {/* Hero */}
+      <PageHero heading={t("hero.heading")} />
+
+      {/* Full-width hero image with play button */}
+      <section className="px-6">
+        <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "1440/776" }}>
+          <Image
+            src="/images/about-hero.jpg"
+            alt="Nora Soini – terapiasessio"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-16 h-16 rounded-full bg-brand-bg/80 flex items-center justify-center">
+              {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+              <FontAwesomeIcon icon={faCirclePlay as any} className="text-brand-primary w-8 h-8" />
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="hanna-profile" className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24 items-center">
-          <div>
+      {/* Bio */}
+      <section className="px-6 py-20">
+        <div className="max-w-[882px] mx-auto">
+          <h2 className="font-heading italic text-3xl md:text-4xl lg:text-5xl leading-tight mb-12">
+            {t("intro.heading")}
+          </h2>
+          <div className="md:ml-[15%] md:max-w-[70%]">
+            {paragraphs.map((para, i) => (
+              <p key={i} className="font-body text-sm md:text-base text-black/70 mb-5 leading-relaxed">
+                {para}
+              </p>
+            ))}
+            <div className="mt-10">
+              <Link
+                href={contactHref}
+                className="bg-brand-primary text-white text-sm font-body px-6 py-3 rounded-full hover:opacity-90 transition"
+              >
+                {t("hero.cta")}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Photo grid */}
+      <section className="px-6 pb-20">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "706/935" }}>
             <Image
-              src={images.hannaKarkea}
-              alt="Hanna Karkea"
-              className="w-full h-auto object-cover aspect-[4/5]"
-              quality={90}
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              priority
+              src="/images/about-left.jpg"
+              alt="Nora Soini"
+              fill
+              className="object-cover"
             />
           </div>
-          <div className="flex flex-col h-full">
-            <MarkdownText className="mb-3">
-              {t("hannaProfile.title")}
-            </MarkdownText>
-            <h3 className="text-lg font-medium text-brand-brown mb-6">
-              {t("hannaProfile.subtitle")}
-            </h3>
-            <MarkdownText className="p-lg mb-8 content">
-              {t("hannaProfile.bio")}
-            </MarkdownText>
-            <blockquote className="text-brand-brown italic p-lg border-l-4 border-brand-brown pl-4 mt-auto">
-              {t("hannaProfile.quote")}
-            </blockquote>
+          <div className="flex flex-col gap-3">
+            <div className="relative w-full rounded-2xl overflow-hidden flex-1" style={{ aspectRatio: "706/458" }}>
+              <Image
+                src="/images/about-right-top.jpg"
+                alt="Nora Soini"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative w-full rounded-2xl overflow-hidden flex-1" style={{ aspectRatio: "706/458" }}>
+              <Image
+                src="/images/about-right-bottom.jpg"
+                alt="Nora Soini"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <Values />
-
-      <section id="story" className="container mb-16 md:mb-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24 items-center">
-          <div>
-            <Image
-              src={images.vinovardagWinetastings}
-              alt="Hanna Karkea"
-              className="w-full h-auto object-cover aspect-[4/5]"
-              quality={90}
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              priority
-            />
+      {/* Testimonials */}
+      {testimonials.length > 0 && (
+        <section className="px-6 pb-20">
+          <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+            {testimonials.map((item, i) => (
+              <div key={i} className="bg-brand-card rounded-2xl p-10 flex flex-col justify-between min-h-[280px]">
+                <blockquote className="font-heading italic text-xl md:text-2xl leading-snug text-black/80">
+                  {item.quote}
+                </blockquote>
+                <p className="text-xs font-body text-black/40 mt-8">{item.attribution}</p>
+              </div>
+            ))}
           </div>
-          <div className="flex flex-col h-full">
-            <MarkdownText className="mb-6">{t("about.title")}</MarkdownText>
-            <MarkdownText className="mb-12 p-lg content">
-              {t("about.description")}
-            </MarkdownText>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
-      <FAQ />
+      {/* Quote Slider */}
+      <QuoteSlider />
+
+      {/* Pillars */}
+      <PillarsSection />
+
+      {/* Process */}
+      <ProcessSection />
+
+      {/* FAQ */}
+      <FaqSection />
     </>
   );
 }

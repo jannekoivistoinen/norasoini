@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone:*)",
+      "Bash(rsync -a /tmp/norasoini-clone/ /Users/janne/Work/Norasoini/)",
+      "Bash(rm -rf /tmp/norasoini-clone)",
+      "Bash(git -C /Users/janne/Work/Norasoini log --oneline -3)",
+      "Bash(git remote:*)",
+      "Bash(gh repo:*)",
+      "Bash(git push:*)",
+      "mcp__5a62e1c7-0e68-49d8-a19d-fe1fc8b60bb7__deploy_to_vercel",
+      "Bash(vercel --version)",
+      "Bash(npx vercel:*)",
+      "Bash(npm install:*)",
+      "Bash(node -e \"console.log\\(require\\('./node_modules/next/package.json'\\).version\\)\")",
+      "Bash(npm show:*)",
+      "Bash(node -e \"const v=require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\); const versions=JSON.parse\\(v\\); console.log\\(versions.filter\\(v=>v.startsWith\\('15.'\\)\\).slice\\(-5\\).join\\('\\\\n'\\)\\)\")",
+      "Bash(node -e \"const v=require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\); const versions=JSON.parse\\(v\\); console.log\\(versions.filter\\(v=>/^15\\\\.\\\\d+\\\\.\\\\d+$/.test\\(v\\)\\).slice\\(-5\\).join\\('\\\\n'\\)\\)\")",
+      "Bash(git -C /Users/janne/Work/Norasoini add package.json package-lock.json)",
+      "Bash(git -C /Users/janne/Work/Norasoini commit -m ':*)",
+      "Bash(git -C /Users/janne/Work/Norasoini push)",
+      "Bash(rm /Users/janne/Work/Norasoini/.git/index.lock)",
+      "Bash(git -C /Users/janne/Work/Norasoini status)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(npm run:*)"
+    ]
+  }
+}

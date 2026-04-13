@@ -1,5 +1,6 @@
-// Animation variants for stagger effect
-export const containerVariants = {
+import type { Variants } from "motion/react";
+
+export const containerVariants: Variants = {
   hidden: {
     opacity: 0,
     transition: {
@@ -16,7 +17,7 @@ export const containerVariants = {
   },
 };
 
-export const itemVariants = {
+export const itemVariants: Variants = {
   hidden: {
     opacity: 0,
     y: -10,
@@ -36,7 +37,7 @@ export const itemVariants = {
 };
 
 // Animation variants for bottom elements
-export const bottomElementsVariants = {
+export const bottomElementsVariants: Variants = {
   hidden: {
     opacity: 0,
     y: -10,

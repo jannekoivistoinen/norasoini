@@ -10,14 +10,18 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        body: "var(--font-haskoy)",
-        heading: "var(--font-cabinet-grotesk)",
+        heading: ["var(--font-instrument-serif)", "serif"],
+        body: ["var(--font-kaisei-decol)", "serif"],
       },
       colors: {
-        "brand-dark": "#A77E16",
-        "brand-primary": "#D3A01C",
-        "brand-light": "#EBE0D6",
-        "brand-brown": "#503825",
+        brand: {
+          bg: "#E1D9CB",
+          primary: "#2F4F46",
+          text: "#000000",
+          "footer-text": "#F0ECE5",
+          "quote-bg": "#D9D1C3",
+          card: "#EDE8DF",
+        },
       },
     },
   },

@@ -149,12 +149,12 @@ export function Slider({
       </div>
 
       {showPagination && slidesCount > 1 && (
-        <div className="flex justify-center mt-4 gap-2">
+        <div className="flex justify-center mt-6 gap-2">
           {Array.from({ length: slidesCount }).map((_, idx) => (
             <span
               key={idx}
               className={`w-2 h-2 rounded-full transition-colors ${
-                currentSlide === idx ? "bg-[#0a5778]" : "bg-[#ccc]"
+                currentSlide === idx ? "bg-brand-primary" : "bg-black/20"
               }`}
             />
           ))}

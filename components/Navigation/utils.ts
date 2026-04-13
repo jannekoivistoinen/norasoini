@@ -4,8 +4,8 @@ import { LocaleData, NavigationItem, isLocaleData } from "./types";
 
 // Locale names mapping
 export const localeNames: Record<string, string> = {
-  en: "English",
-  sv: "Svenska",
+  fi: "FI",
+  en: "EN",
 };
 
 // Shared language switching function
@@ -25,7 +25,7 @@ export function handleLanguageChange(
 export function isActive(itemHref: string, pathname: string) {
   if (itemHref === "#") return false;
 
-  // For locale-specific paths like "/en" and "/sv" (homepage),
+  // For locale-specific paths like "/fi" and "/en" (homepage),
   // only activate on exact match
   if (itemHref.match(/^\/[a-z]{2}$/)) {
     return pathname === itemHref;
