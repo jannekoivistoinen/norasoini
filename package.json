@@ -27,7 +27,7 @@
     "lucide-react": "^0.460.0",
     "motion": "^11.11.17",
     "negotiator": "^1.0.0",
-    "next": "15.0.3",
+    "next": "^15.5.15",
     "next-intl": "^3.25.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
