@@ -35,12 +35,16 @@ export const SITE_CONFIG = {
         en: "services",
       },
       about: {
-        fi: "nora",
+        fi: "noran-tarina",
         en: "about",
       },
       contact: {
         fi: "yhteystiedot",
         en: "contact",
+      },
+      pricing: {
+        fi: "hinnasto",
+        en: "pricing",
       },
       terms: {
         fi: "kayttoehdot",
@@ -61,7 +65,8 @@ export const SITE_CONFIG = {
     },
     fonts: {
       heading: "Instrument Serif, serif",
-      body: "Kaisei Decol, serif",
+      body: "Instrument Sans, system-ui, sans-serif",
+      link: "Kaisei Decol, serif",
     },
   },
 };

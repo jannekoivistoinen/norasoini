@@ -4,11 +4,17 @@
       "metadata": {
         "title": "Nora Soini – Lyhytterapeutti & kraniosakraaliterapeutti Espoo",
         "description": "Läsnäolon ja systeemisyyden lyhytterapeutti sekä kraniosakraaliterapeuttiopiskelija Espoossa. Tarjoan yksilöterapiaa ja kehollisia hoitoja.",
-        "keywords": ["terapia", "lyhytterapia", "kraniosakraaliterapia", "espoo", "nora soini"]
+        "keywords": [
+          "terapia",
+          "lyhytterapia",
+          "kraniosakraaliterapia",
+          "espoo",
+          "nora soini"
+        ]
       },
       "hero": {
         "heading": "Lempeästi rinnallasi muutoksessa",
-        "description": "Selkeyttä, rauhaa ja yhteyttä itseesi.",
+        "description": "Selkeyttä, rauhaa ja yhteyttä itseesi. Yhdessä luomme tilaa, jossa saat pysähtyä, hengittää ja kuulla itseäsi. Lempeällä tuella – sinun tahdissasi.",
         "cta": "Varaa aika",
         "secondaryCta": "Tutustu Noraan",
         "trust1": "Turvallinen tila",
@@ -19,16 +25,36 @@
         "heading": "Millaisissa tilanteissa voin auttaa",
         "description": "Jokainen tilanne on ainutlaatuinen. Voit tulla luokseni esimerkiksi silloin, kun:",
         "cards": [
-          { "title": "Stressi ja kuormitus", "description": "Tunnet stressiä, uupumusta tai kehosi on ylivirittynyt ja palautuminen on vaikeaa." },
-          { "title": "Elämän murrosvaihe", "description": "Olet muutoksen äärellä tai etsit selkeyttä omasta suunnastasi." },
-          { "title": "Yhteys itseen", "description": "Kaipaat syvempää yhteyttä itseesi, tunteisiisi ja kehosi viisauteen." },
-          { "title": "Pitkittyneet jännitykset", "description": "Kannat mukanasi kokemuksia tai jännityksiä, jotka vaikuttavat yhä arjessasi." }
+          {
+            "title": "Stressi, kuormitus tai uupumus",
+            "description": "Kun elämä kuormittaa tai uuvut helposti, tai kun kehosi ja mielesi kaipaavat tilaa rauhoittua ja palautua."
+          },
+          {
+            "title": "Elämän murros",
+            "description": "Olet elämän murroskohdassa – uusi vaihe, päätös tai muutos pyytää tilaa ja kuulluksi tulemista."
+          },
+          {
+            "title": "Selkeys ja suunta",
+            "description": "Kaipaat selkeyttä tai suuntaa: haluat tunnistaa omia toiveitasi ja tehdä valintoja, jotka tuntuvat omilta."
+          },
+          {
+            "title": "Syvempi itseymmärrys",
+            "description": "Haluat ymmärtää itseäsi ja kokemuksiasi syvemmin – lempeässä ja turvallisessa tahdissa, ilman kiirettä."
+          },
+          {
+            "title": "Kehollista tukea palautumiseen",
+            "description": "Toivot lempeää, kehollista tukea palautumiseen – tilaa kuunnella kehoa, tunteita ja hermoston rauhaa."
+          }
         ]
+      },
+      "servicesSlider": {
+        "heading": "Palvelut",
+        "description": "Lyhytterapia, kraniosakraaliterapia ja yhdistelmähoito."
       },
       "about": {
         "quote": "\"Uskon, että jokaisessa ihmisessä on jo olemassa suunta kohti tasapainoa.\"",
         "attribution": "Nora Soini",
-        "heading": "Lempeästi rinnallasi muutoksessa",
+        "heading": "Työskentelyni on rauhallista, asiakaslähtöistä ja luottamuksellista.",
         "description": "Olen läsnäolon ja systeemisyyden lyhytterapeutti sekä opiskelen kraniosakraaliterapeutiksi (valmistun syksyllä 2026).",
         "description2": "Työskentelyssäni tärkeintä on turvallinen, rauhallinen tila, jossa ihminen voi tulla kohdatuksi kokonaisena – kehon, tunteiden ja mielen tasolla.",
         "description3": "Oma matkani tähän työhön on kulkenut pitkän henkilökohtaisen kasvun kautta. Omat kokemukseni ovat opettaneet minulle paljon ihmisyydestä ja siitä, miten ihminen voi löytää tien takaisin yhteyteen itseensä.",
@@ -38,89 +64,189 @@
         "heading": "Kolme työskentelyni kulmakiveä",
         "description": "Yhdistän keskustelun, läsnäolon ja kehollisen kuuntelun luodakseni kokonaisvaltaisen ja turvallisen tilan.",
         "items": [
-          { "icon": "comments", "title": "Keskustelu", "description": "Tutkimme yhdessä tunteita, kehon kokemuksia sekä elämäsi taustalla vaikuttavia ihmissuhteita – aidossa, turvallisessa kohtaamisessa." },
-          { "icon": "flower", "title": "Läsnäolo", "description": "Hetki, jossa saat tulla nähdyksi ja kuulluksi sellaisena kuin olet – ilman kiirettä tai vaatimuksia." },
-          { "icon": "seedling", "title": "Kehotietoisuus", "description": "Kraniosakraaliterapia rauhoittaa hermostoa kevyen kosketuksen avulla. Keho kantaa viisautta, jota sanat eivät aina tavoita." }
+          {
+            "icon": "comments",
+            "title": "Keskustelu",
+            "description": "Tutkimme yhdessä tunteita, kehon kokemuksia sekä elämäsi taustalla vaikuttavia ihmissuhteita – aidossa, turvallisessa kohtaamisessa. Saat puhua siitä, mikä juuri nyt on tärkeää."
+          },
+          {
+            "icon": "flower",
+            "title": "Läsnäolo",
+            "description": "Hetki, jossa saat tulla nähdyksi ja kuulluksi sellaisena kuin olet – ilman kiirettä tai vaatimuksia. Läsnäolo on itsessään parantava kokemus."
+          },
+          {
+            "icon": "seedling",
+            "title": "Kehotietoisuus",
+            "description": "Kraniosakraaliterapia rauhoittaa hermostoa kevyen kosketuksen avulla. Keho kantaa viisautta, jota sanat eivät aina tavoita."
+          }
         ]
       },
       "process": {
         "heading": "Näin aloitat",
         "description": "Ensimmäinen yhteydenotto voi tuntua isolta askeleelta – siksi haluan tehdä siitä mahdollisimman helpon.",
         "steps": [
-          { "number": "1", "title": "Maksuton tutustumispuhelu", "description": "15 minuutin lyhyt, sitoutumaton puhelu. Voit kertoa tilanteestasi ja kysyä mitä tahansa." },
-          { "number": "2", "title": "Varaa ensikäynti", "description": "Voit varata suoraan ensimmäisen vastaanottoajan. Käymme rauhassa läpi tilanteesi ja toiveesi." },
-          { "number": "3", "title": "Lähetä viesti", "description": "Epävarma, mikä sopii sinulle? Lähetä viesti – autan sinua löytämään sopivan tavan aloittaa." }
+          {
+            "number": "1",
+            "title": "Maksuton tutustumispuhelu",
+            "description": "15 minuutin lyhyt, sitoutumaton puhelu. Voit kertoa tilanteestasi ja kysyä mitä tahansa."
+          },
+          {
+            "number": "2",
+            "title": "Varaa ensikäynti",
+            "description": "Voit varata suoraan ensimmäisen vastaanottoajan. Käymme rauhassa läpi tilanteesi ja toiveesi."
+          },
+          {
+            "number": "3",
+            "title": "Lähetä viesti",
+            "description": "Epävarma, mikä sopii sinulle? Lähetä viesti – autan sinua löytämään sopivan tavan aloittaa."
+          }
         ]
       },
       "faq": {
         "heading": "Vastauksia yleisimpiin kysymyksiin",
         "description": "On täysin tavallista, että terapia tai uusi hoitomuoto herättää kysymyksiä. Voit myös ottaa yhteyttä minuun sähköpostilla, nora@norasoini.fi",
         "items": [
-          { "question": "Miten tiedän, tarvitsenko terapiaa?", "answer": "Jos jokin asia painaa mieltä tai elämäntilanne tuntuu kuormittavalta, terapia voi auttaa. Et tarvitse \"tarpeeksi suurta\" ongelmaa. Ensimmäinen tapaaminen on maksuton tutustuminen." },
-          { "question": "Onko terapia luottamuksellista?", "answer": "Kyllä. Kaikki terapiasessioissa käsitellyt asiat ovat luottamuksellisia. Minulla on salassapitovelvollisuus." },
-          { "question": "Kuinka pitkään terapia kestää?", "answer": "Lyhytterapia on tyypillisesti 5–20 tapaamista. Prosessin pituus suunnitellaan yksilöllisesti tarpeidesi mukaan." },
-          { "question": "Paljonko terapia maksaa ja saako sille Kela-korvausta?", "answer": "Lyhytterapia-tapaaminen on 89 € / 60 min. Lyhytterapia ei tällä hetkellä kuulu Kela-korvauksen piiriin, mutta kannattaa tarkistaa työnantajasi tai vakuutusyhtiösi tilanne." },
-          { "question": "Voidaanko tapaamiset järjestää etänä?", "answer": "Kyllä, lyhytterapiatapaamiset voidaan järjestää myös etänä videopuhelun välityksellä. Kraniosakraaliterapia tehdään aina Espoossa." },
-          { "question": "Pitääkö minun tietää jotain erityistä?", "answer": "Ei mitään erityistä. Tulet sellaisena kuin olet." },
-          { "question": "Mitä kraniosakraaliterapia on?", "answer": "Kraniosakraaliterapia on lempeä ja rauhallinen hoitomuoto, jossa kehoa kuunnellaan kevyen kosketuksen avulla. Tavoitteena on vapauttaa jännityksiä, tukea hermoston tasapainoa ja edistää kehon omaa palautumista." },
-          { "question": "Millainen kraniosakraaliterapia-hoito on käytännössä?", "answer": "Hoito tehdään vaatteet päällä hoitopöydällä leväten. Kosketus on hyvin kevyt ja hoito etenee rauhallisesti, asiakkaan kehoa kuunnellen. Monet kokevat hoidon syvästi rentouttavana." },
-          { "question": "Mihin kraniosakraaliterapia voi sopia?", "answer": "Hoitoon tullaan usein silloin, kun kehossa tai mielessä on kuormitusta, stressiä, levottomuutta tai pitkittyneitä jännityksiä. Hoito voi auttaa pysähtymään, rauhoittumaan ja vahvistamaan yhteyttä omaan kehoon." },
-          { "question": "Mihin LST perustuu?", "answer": "Läsnäolon ja systeemisyyden terapia (LST) yhdistää useita terapeuttisia suuntauksia: perhekonstellation, tunnekeskeisen terapian (EFT), HOT:n (hyväksymis- ja omistautumisterapia), ratkaisukeskeisen terapian sekä mindfulnessin. Ihmistä tarkastellaan kokonaisuutena." },
-          { "question": "Korvataanko kraniosakraaliterapia Kelalla?", "answer": "Kraniosakraaliterapia ei korvaa lääkärin tutkimusta tai muuta terveydenhuollon palvelua, eikä siinä tehdä lääketieteellistä diagnoosia. Hoito ei kuulu Kela-korvauksen piiriin." }
+          {
+            "question": "Miten tiedän, tarvitsenko terapiaa?",
+            "answer": "Jos jokin asia painaa mieltä tai elämäntilanne tuntuu kuormittavalta, terapia voi auttaa. Et tarvitse \"tarpeeksi suurta\" ongelmaa. Ensimmäinen tapaaminen on maksuton tutustuminen."
+          },
+          {
+            "question": "Onko terapia luottamuksellista?",
+            "answer": "Kyllä. Kaikki terapiasessioissa käsitellyt asiat ovat luottamuksellisia. Minulla on salassapitovelvollisuus."
+          },
+          {
+            "question": "Kuinka pitkään terapia kestää?",
+            "answer": "Lyhytterapia on tyypillisesti 5–20 tapaamista. Prosessin pituus suunnitellaan yksilöllisesti tarpeidesi mukaan."
+          },
+          {
+            "question": "Paljonko terapia maksaa ja saako sille Kela-korvausta?",
+            "answer": "Lyhytterapia-tapaaminen on 89 € / 60 min. Lyhytterapia ei tällä hetkellä kuulu Kela-korvauksen piiriin, mutta kannattaa tarkistaa työnantajasi tai vakuutusyhtiösi tilanne."
+          },
+          {
+            "question": "Voidaanko tapaamiset järjestää etänä?",
+            "answer": "Kyllä, lyhytterapiatapaamiset voidaan järjestää myös etänä videopuhelun välityksellä. Kraniosakraaliterapia tehdään aina Espoossa."
+          },
+          {
+            "question": "Pitääkö minun tietää jotain erityistä?",
+            "answer": "Ei mitään erityistä. Tulet sellaisena kuin olet."
+          },
+          {
+            "question": "Mitä kraniosakraaliterapia on?",
+            "answer": "Kraniosakraaliterapia on lempeä ja rauhallinen hoitomuoto, jossa kehoa kuunnellaan kevyen kosketuksen avulla. Hoidon tavoitteena on vapauttaa jännityksiä, tukea hermoston tasapainoa ja edistää kehon omaa palautumista. Kraniosakraaliterapia ei korvaa lääkärin tutkimusta, hoitoa tai muuta terveydenhuollon palvelua, eikä siinä tehdä lääketieteellistä diagnoosia."
+          },
+          {
+            "question": "Millainen hoito on käytännössä?",
+            "answer": "Hoito tehdään vaatteet päällä hoitopöydällä leväten. Kosketus on hyvin kevyt ja hoito etenee rauhallisesti, asiakkaan kehoa kuunnellen. Monet kokevat hoidon syvästi rentouttavana."
+          },
+          {
+            "question": "Mihin hoito voi sopia?",
+            "answer": "Kraniosakraaliterapiaan tullaan usein silloin, kun kehossa tai mielessä on kuormitusta, stressiä, levottomuutta tai pitkittyneitä jännityksiä. Hoito voi auttaa pysähtymään, rauhoittumaan ja vahvistamaan yhteyttä omaan kehoon."
+          },
+          {
+            "question": "Hoidon ajatus",
+            "answer": "Kraniosakraaliterapiassa ajatellaan, että keholla on luontainen kyky hakeutua kohti tasapainoa. Hoito tukee tätä luonnollista palautumista lempeästi ja yksilöllisesti."
+          },
+          {
+            "question": "Mihin LST perustuu?",
+            "answer": "Läsnäolon ja systeemisyyden terapia (LST) yhdistää useita terapeuttisia suuntauksia: perhekonstellation, tunnekeskeisen terapian (EFT), HOT:n (hyväksymis- ja omistautumisterapia), ratkaisukeskeisen terapian sekä mindfulnessin. Ihmistä tarkastellaan kokonaisuutena."
+          },
+          {
+            "question": "Korvataanko kraniosakraaliterapia Kelalla?",
+            "answer": "Kraniosakraaliterapia ei korvaa lääkärin tutkimusta tai muuta terveydenhuollon palvelua, eikä siinä tehdä lääketieteellistä diagnoosia. Hoito ei kuulu Kela-korvauksen piiriin."
+          }
         ]
       }
     },
     "services": {
       "metadata": {
-        "title": "Palvelut – Nora Soini",
-        "description": "Lyhytterapia ja kraniosakraaliterapia Espoossa ja verkossa. Tarjoan myös näitä yhdistävää kokonaisvaltaista hoitoa.",
-        "keywords": ["lyhytterapia", "kraniosakraaliterapia", "yhdistelmähoito", "espoo", "nora soini"]
+        "title": "Lyhytterapia ja kraniosakraaliterapia Espoossa ja verkossa – Nora Soini",
+        "description": "Tarjoan lyhytterapiaa Espoossa ja etänä, kraniosakraaliterapiaa Espoossa sekä näitä yhdistävää kokonaisvaltaista hoitoa. Voit valita sinulle sopivimman tavan – keskustelun, kehollisen hoidon tai molemmat yhdessä.",
+        "keywords": [
+          "lyhytterapia",
+          "kraniosakraaliterapia",
+          "yhdistelmähoito",
+          "espoo",
+          "nora soini"
+        ]
       },
       "hero": {
         "heading": "Lyhytterapia ja kraniosakraaliterapia Espoossa ja verkossa",
+        "ingress": "Tarjoan lyhytterapiaa Espoossa ja etänä, kraniosakraaliterapiaa Espoossa sekä näitä yhdistävää kokonaisvaltaista hoitoa. Voit valita sinulle sopivimman tavan – keskustelun, kehollisen hoidon tai molemmat yhdessä.",
         "cta": "Varaa aika"
       },
       "cardQuote": "Voit tulla luokseni matalalla kynnyksellä – autan sinua löytämään sopivimman vaihtoehdon.",
+      "visitFlow": {
+        "heading": "Miten käynti etenee?",
+        "description": "Aloitamme rauhallisella keskustelulla, jonka jälkeen siirrytään kraniosakraaliterapiaan. Tämä mahdollistaa sekä asioiden jäsentymisen että kehon syvän rentoutumisen.",
+        "steps": [
+          {
+            "number": "1",
+            "title": "Saapuminen ja alkuhetki",
+            "description": "Kun saavut vastaanottolle, otetaan ensin hetki rauhoittua. Sinulle ei tarvitse olla valmiita vastauksia – voit tulla juuri sellaisena kuin olet."
+          },
+          {
+            "number": "2",
+            "title": "Rauhallinen keskustelu",
+            "description": "Aloitamme rauhallisella keskustelulla. Voit kertoa, mitä mielessä liikkuu tai mikä sinut tänään toi paikalle."
+          },
+          {
+            "number": "3",
+            "title": "Kraniosakraaliterapia",
+            "description": "Siirrytään keholliseen hoitoon. Lempeä kosketus rauhoittaa hermostoa ja mahdollistaa sekä asioiden jäsentymisen että kehon syvän rentoutumisen."
+          }
+        ]
+      },
       "items": [
         {
-          "title": "Lyhytterapia",
-          "subtitle": "Espoossa ja etänä · 60 min · 89 € / kerta",
-          "cta": "Varaa aika"
+          "title": "Lyhytterapia Espoossa ja etänä",
+          "intro": "Tavoitteellista ja käytännönläheistä keskusteluapua, joka auttaa jäsentämään ajatuksia, käsittelemään kuormitusta ja löytämään suuntaa eteenpäin.",
+          "body": "Lyhytterapia on tavoitteellista ja käytännönläheistä keskusteluapua, joka auttaa sinua jäsentämään ajatuksia, käsittelemään kuormitusta ja löytämään suuntaa eteenpäin.\n\n- Vastaanotto Espoossa tai verkossa\n- Kesto: 60 min\n- Hinta: 89 € / kerta\n\n**Lyhytterapia sopii sinulle, jos:**\n\n- koet stressiä, uupumusta tai ahdistusta\n- kaipaat selkeyttä elämäntilanteeseesi\n- haluat turvallisen tilan puhua ja tulla kuulluksi",
+          "cta": "Varaa lyhytterapia-aika"
         },
         {
-          "title": "Kraniosakraaliterapia",
-          "subtitle": "Espoossa · 60 min · Opiskelijahinta 69 € (→ 95 € 1.9.2026)",
-          "cta": "Varaa aika"
+          "title": "Kraniosakraaliterapia Espoossa",
+          "intro": "Lempeä ja syvärentouttava hoitomuoto, joka rauhoittaa hermostoa ja auttaa kehoa palautumaan.",
+          "body": "Kraniosakraaliterapia on lempeä ja syvärentouttava hoitomuoto, joka rauhoittaa hermostoa ja auttaa kehoa palautumaan.\n\n- Vastaanotto Espoossa\n- Kesto: 60 min\n- Opiskelijahinta: 69 € / kerta (voimassa elokuuhun 2026 asti)\n- Normaalihinta: 95 € / kerta (1.9.2026 alkaen)\n\n**Hoito sopii sinulle, jos:**\n\n- kehosi on jännittynyt tai ylivirittynyt\n- kärsit stressistä tai palautuminen on vaikeaa\n- kaipaat syvää rentoutumista",
+          "cta": "Varaa kraniosakraaliterapia-aika"
         },
         {
-          "title": "Yhdistelmähoito",
-          "subtitle": "Espoossa · 90 min · 129 € / kerta",
-          "cta": "Varaa aika"
+          "title": "Yhdistelmähoito: lyhytterapia + kraniosakraaliterapia Espoossa",
+          "intro": "Kokonaisvaltainen hoito, jossa mieli ja keho huomioidaan saman käynnin aikana – sekä keskustelutukea että kehollinen hoito.",
+          "body": "Yhdistelmähoidossa huomioidaan sekä mieli että keho. Saat saman käynnin aikana sekä keskustelutukea että kehollisen hoidon.\n\nTämä sopii erityisesti silloin, kun kuormitus tuntuu sekä ajatuksissa että kehossa.\n\n- Vastaanotto Espoossa\n- Kesto: 90 min\n- Hinta: 129 € / kerta\n\n**Yhdistelmähoito sopii sinulle, jos:**\n\n- koet kokonaisvaltaista kuormitusta tai uupumusta\n- kehosi ja mielesi kaipaavat yhtä aikaa tukea\n- pelkkä puhuminen tai pelkkä hoito ei tunnu riittävältä",
+          "cta": "Varaa yhdistelmähoito-aika"
         }
       ]
     },
     "about": {
       "metadata": {
-        "title": "Nora Soini – Tietoa terapeutista",
-        "description": "Läsnäolon ja systeemisyyden lyhytterapeutti ja kraniosakraaliterapeuttiopiskelija Espoossa.",
+        "title": "Olen Nora Soini, Läsnäolon ja systeemisyyden lyhytterapeutti Espoosta.",
+        "description": "Opiskelen kraniosakraaliterapeutiksi (valmistun syksyllä 2026) ja energiahoitajaksi (kevät 2027). Lyhytterapeutti Espoossa.",
         "keywords": ["nora soini", "terapeutti", "espoo"]
       },
       "hero": {
-        "heading": "Olen läsnäolon ja systeemisyyden lyhytterapeutti – ja opiskelen kraniosakraaliterapeutiksi.",
+        "heading": "Olen Nora Soini, Läsnäolon ja systeemisyyden lyhytterapeutti Espoosta.",
+        "ingress": "Opiskelen parhaillaan kraniosakraaliterapeutiksi, valmistun syksyllä 2026. Teen opintojeni aikana harjoitushoitoja edulliseen hintaan. Lisäksi opiskelen energiahoitajaksi ja valmistun keväällä 2027.",
         "cta": "Varaa aika"
       },
       "intro": {
-        "heading": "Oma matkani tähän työhön",
-        "paragraphs": [
-          "Olen kuudenkympin hujakoilla oleva kahden aikuisen lapsen äiti ja elän pitkässä avioliitossa. Vuonna 2011 lähdin yrittäjäksi – ennen sitä työskentelin pitkään kansainvälisessä yrityksessä.",
-          "Oman terapian myötä löysin vuosia sitten auttajan myös itsestäni. Kun oma työ kulkee riittävän pitkälle, syntyy usein halu olla tukena myös muille heidän matkallaan.",
-          "Elämäni varrella olen kohdannut myös syviä haasteita. Teini-iässä vanhempani erosivat, nuorena aikuisena tulin hylätyksi ilman selitystä ja aikuisena jouduin pitkäaikaisen kiusaamisen kohteeksi. Nämä kokemukset jättivät jälkensä, mutta ne ovat myös opettaneet minulle paljon ihmisestä, haavoittuvuudesta ja siitä, miten ihminen voi löytää tien takaisin yhteyteen itseensä.",
-          "Tänään näen nuo kokemukset osana elämäni suurimpia oppimisen paikkoja. Ne ovat kasvattaneet kiitollisuutta, myötätuntoa, herkkyyttä ja kykyä kohdata toinen ihminen aidosti rakkaudessa.",
-          "Työskentelyssäni tärkeintä on turvallinen, rauhallinen tila, jossa ihminen voi tulla kohdatuksi kokonaisena – kehon, tunteiden ja mielen tasolla. Uskon, että jokaisessa ihmisessä on jo olemassa suunta kohti tasapainoa ja eheyttä."
-        ]
+        "ingressBelowPhoto": "Olen kuudenkympin hujakoilla oleva kahden aikuisen lapsen äiti ja elän pitkässä avioliitossa. Elämä on opettanut minulle paljon ihmisyydestä, ihmissuhteista ja siitä, miten syvästi kokemuksemme muovaavat meitä.",
+        "paragraphsBeforeBento": [
+          "Vuonna 2011 lähdin yrittäjäksi. Ennen yrittäjyyttä työskentelin pitkään kansainvälisessä yrityksessä.",
+          "Oma matkani tähän työhön on kulkenut pitkän henkilökohtaisen kasvun kautta. Oman terapian myötä löysin vuosia sitten auttajan myös itsestäni. Kun oma työ kulkee riittävän pitkälle, syntyy usein halu olla tukena myös muille heidän matkallaan."
+        ],
+        "afterBento": {
+          "ingress": "Elämäni varrella olen kohdannut myös syviä haasteita.",
+          "paragraphs": [
+            "Teini-iässä vanhempani erosivat, nuorena aikuisena tulin hylätyksi ilman selitystä ja aikuisena jouduin pitkäaikaisen kiusaamisen kohteeksi. Nämä kokemukset jättivät jälkensä, mutta ne ovat myös opettaneet minulle paljon ihmisestä, haavoittuvuudesta ja siitä, miten ihminen voi löytää tien takaisin yhteyteen itseensä.",
+            "Työskentelyssäni tärkeintä on turvallinen, rauhallinen tila, jossa ihminen voi tulla kohdatuksi kokonaisena; kehon, tunteiden ja mielen tasolla. Uskon, että jokaisessa ihmisessä on jo olemassa suunta kohti tasapainoa ja eheyttä. Joskus tarvitsemme vain hetken pysähtyä ja tulla nähdyksi matkallamme."
+          ]
+        }
       },
       "testimonials": [
-        { "quote": "*Asiakaspalaute tulossa*", "attribution": "Asiakaspalaute" },
+        {
+          "quote": "*Asiakaspalaute tulossa*",
+          "attribution": "Asiakaspalaute"
+        },
         { "quote": "*Asiakaspalaute tulossa*", "attribution": "Asiakaspalaute" }
       ]
     },
@@ -142,10 +268,28 @@
         "formTitle": "Lähetä viesti"
       }
     },
+    "pricing": {
+      "metadata": {
+        "title": "Hinnasto – Nora Soini",
+        "description": "Palveluiden hinnasto ja kestot.",
+        "keywords": ["hinnasto", "hinta", "varaa aika", "espoo", "nora soini"]
+      },
+      "hero": {
+        "heading": "Hinnasto",
+        "ingress": "Alla hinnat lyhytterapiaan, kraniosakraaliterapiaan ja yhdistelmähoitoon."
+      },
+      "body": "**Lyhytterapia** (60 min) — 89 € / kerta · Espoossa tai etänä\n\n**Kraniosakraaliterapia** (60 min) — opiskelijahinta 69 € / kerta (voimassa elokuuhun 2026 asti); normaalihinta 95 € / kerta (1.9.2026 alkaen) · Espoossa\n\n**Yhdistelmähoito: lyhytterapia + kraniosakraaliterapia** (90 min) — 129 € / kerta · Espoossa"
+    },
     "terms": {
       "metadata": {
         "title": "Käyttöehdot – Nora Soini",
-        "description": "Käyttöehdot"
+        "description": "Käyttöehdot",
+        "keywords": [
+          "käyttöehdot",
+          "tietosuoja",
+          "verkkosivun ehdot",
+          "nora soini"
+        ]
       },
       "page": {
         "title": "Käyttöehdot",
@@ -161,11 +305,12 @@
       "cta": "Varaa aika"
     },
     "footer": {
-      "cta": "Et tarvitse täydellisiä sanoja.",
-      "ctaDescription": "Vain yhteydenottoa – voit tulla sellaisena kuin olet. Ensimmäinen tapaaminen on tutustumishetki.",
+      "cta": "Tervetuloa juuri sellaisena kuin olet",
+      "ctaDescription": "Uskon, että jokaisessa ihmisessä on jo olemassa suunta kohti tasapainoa. Joskus tarvitsemme vain toisen ihmisen kulkemaan hetken rinnalla.",
       "ctaButton": "Varaa aika",
+      "ctaButtonSecondary": "Hinnasto",
       "name": "Nora Soini",
-      "tagline": "Lyhytterapeutti & kraniosakraaliterapeutti · Espoo",
+      "tagline": "Läsnäolon ja systeemisyyden lyhytterapeutti (LSLT)",
       "email": "nora@norasoini.fi",
       "copyright": "© 2026 – Site crafted by Damngood",
       "terms": "Käyttöehdot"
@@ -178,19 +323,33 @@
     "quoteSlider": {
       "slides": [
         {
-          "quote": "Tervetuloa juuri sellaisena kuin olet.",
-          "description": "Tarjoan sinulle rauhallisen ja turvallisen tilan pysähtyä – ilman kiirettä, ilman vaatimuksia."
+          "quote": "Onko elämässäsi kohta, jossa jokin ei enää tunnu entiseltä?",
+          "description": "Ehkä olet väsynyt, kuormittunut tai epävarma suunnasta. Ehkä kannat mukanasi kokemuksia, jotka vaikuttavat yhä arjessasi. Et ole yksin."
         },
         {
-          "quote": "Jokaisessa ihmisessä on jo suunta kohti tasapainoa.",
-          "description": "Joskus tarvitsemme vain toisen ihmisen kulkemaan hetken rinnalla."
+          "quote": "Tarjoan sinulle rauhallisen ja turvallisen tilan pysähtyä.",
+          "description": "Tilan, jossa voit tulla kohdatuksi juuri sellaisena kuin olet – ilman kiirettä, ilman vaatimuksia."
+        },
+        {
+          "quote": "Työskentelyssä yhdistyvät keskustelu, läsnäolo ja kehollinen kuuntelu.",
+          "description": "Voimme yhdessä tutkia sitä, mitä sinussa tapahtuu, ja antaa tilaa muutokselle sinun omassa tahdissasi."
+        },
+        {
+          "quote": "Usein jo se, että pysähdymme hetkeksi, voi alkaa muuttaa jotain.",
+          "description": "Hoidossa ja terapiassa tavoitteena ei ole korjata sinua, vaan auttaa sinua löytämään takaisin yhteys itseesi, omiin tunteisiisi ja kehosi viisauteen."
         }
       ]
     },
     "testimonials": {
       "items": [
-        { "name": "*Asiakaspalaute tulossa*", "quote": "*Asiakaspalaute tulossa*" },
-        { "name": "*Asiakaspalaute tulossa*", "quote": "*Asiakaspalaute tulossa*" }
+        {
+          "name": "*Asiakaspalaute tulossa*",
+          "quote": "*Asiakaspalaute tulossa*"
+        },
+        {
+          "name": "*Asiakaspalaute tulossa*",
+          "quote": "*Asiakaspalaute tulossa*"
+        }
       ]
     },
     "contactForm": {
@@ -217,14 +376,92 @@
     "faq": {
       "title": "Vastauksia yleisimpiin kysymyksiin",
       "description": "On täysin tavallista, että terapia herättää kysymyksiä.",
-      "items": [
-        { "question": "Miten tiedän, tarvitsenko terapiaa?", "answer": "Jos jokin asia painaa mieltä tai elämäntilanne tuntuu kuormittavalta, terapia voi auttaa." },
-        { "question": "Onko terapia luottamuksellista?", "answer": "Kyllä. Kaikki terapiasessioissa käsitellyt asiat ovat luottamuksellisia." },
-        { "question": "Kuinka pitkään terapia kestää?", "answer": "Lyhytterapia on tyypillisesti 5–20 tapaamista." },
-        { "question": "Paljonko terapia maksaa ja saako sille Kela-korvausta?", "answer": "Tapaamisen hinta on 89 €. Lyhytterapia ei tällä hetkellä kuulu Kela-korvauksen piiriin." },
-        { "question": "Voidaanko tapaamiset järjestää etänä?", "answer": "Kyllä, tapaamisia voidaan järjestää myös etänä." },
-        { "question": "Pitääkö minun tietää jotain erityistä?", "answer": "Ei mitään erityistä. Tulet sellaisena kuin olet." },
-        { "question": "Pitääkö tapaamisen valmistautua jotenkin?", "answer": "Ei tarvita mitään erityistä valmistautumista." }
+      "categories": [
+        {
+          "name": "Terapia",
+          "items": [
+            {
+              "question": "Miten tiedän, tarvitsenko terapiaa?",
+              "answer": "Jos jokin asia painaa mieltä, elämäntilanne tuntuu kuormittavalta tai sinulla on tunne, että pyörität samoja asioita yhä uudelleen – terapia voi olla juuri oikea paikka pysähtyä. Et tarvitse kriisiä tai diagnoosia. Riittää, että jokin asia kaipaa tilaa tulla kuulluksi."
+            },
+            {
+              "question": "Onko terapia luottamuksellista?",
+              "answer": "Kyllä, ehdottomasti. Kaikki terapiasessioissa käsitellyt asiat ovat täysin luottamuksellisia. Minulla on vaitiolovelvollisuus, eikä tietojasi jaeta eteenpäin ilman lupaasi. Turvallisuuden ja luottamuksen tunne on koko työskentelymme perusta."
+            },
+            {
+              "question": "Pitääkö minun tietää jotain erityistä?",
+              "answer": "Ei tarvitse. Et tarvitse aiempaa kokemusta terapiasta tai erityistä syytä tulla. Tulet sellaisena kuin olet, juuri tähän hetkeen – se on täysin riittävää. Ensimmäinen tapaaminen on aina rauhallinen tutustuminen, jossa katsotaan yhdessä, mitä tarvitset."
+            }
+          ]
+        },
+        {
+          "name": "Kraniosakraaliterapia",
+          "items": [
+            {
+              "question": "Mitä kraniosakraaliterapia on?",
+              "answer": "Kraniosakraaliterapia on lempeä ja rauhallinen hoitomuoto, jossa kehoa kuunnellaan kevyen kosketuksen avulla. Hoidon tavoitteena on vapauttaa jännityksiä, tukea hermoston tasapainoa ja edistää kehon omaa palautumista. Kraniosakraaliterapia ei korvaa lääkärin tutkimusta, hoitoa tai muuta terveydenhuollon palvelua, eikä siinä tehdä lääketieteellistä diagnoosia."
+            },
+            {
+              "question": "Millainen hoito on käytännössä?",
+              "answer": "Hoito tehdään vaatteet päällä hoitopöydällä leväten – sinun ei tarvitse tehdä mitään erityistä. Kosketus on hyvin kevyt, lähes huomaamaton, ja hoito etenee rauhallisesti kehon omaa rytmiä kuunnellen. Monet kokevat hoidon syvästi rentouttavana ja rauhoittavana; jotkut nukahtavat kesken hoidon."
+            },
+            {
+              "question": "Mihin hoito voi sopia?",
+              "answer": "Kraniosakraaliterapiaan tullaan usein silloin, kun kehossa tai mielessä on kuormitusta, stressiä, levottomuutta tai pitkittyneitä jännityksiä. Hoito sopii hyvin myös niille, jotka kaipaavat pysähtymistä ja hiljentymistä arjen keskellä. Se voi auttaa vahvistamaan yhteyttä omaan kehoon ja lisäämään kokonaisvaltaista hyvinvoinnin tunnetta."
+            },
+            {
+              "question": "Hoidon ajatus",
+              "answer": "Kraniosakraaliterapiassa ajatellaan, että keholla on luontainen kyky hakeutua kohti tasapainoa, kun se saa siihen tuen ja rauhan. Hoito ei pakota eikä korjaa – se kuuntelee ja luo tilaa. Tämä tekee siitä erityisen lempeän tavan lähestyä kehon ja mielen hyvinvointia."
+            }
+          ]
+        },
+        {
+          "name": "Tapaamiset",
+          "items": [
+            {
+              "question": "Kuinka pitkään terapia kestää?",
+              "answer": "Lyhytterapia on tyypillisesti 5–20 tapaamista, ja tapaamisia on yleensä kerran viikossa tai joka toinen viikko. Terapian kesto riippuu aina yksilöllisistä tarpeista – joillekin muutama tapaaminen riittää, toiset hyötyvät pidemmästä työskentelystä. Sovimme yhdessä sopivan rytmin ja arvioimme tilannetta matkan varrella."
+            },
+            {
+              "question": "Voidaanko tapaamiset järjestää etänä?",
+              "answer": "Kyllä, terapiatapaamiset voidaan järjestää myös etänä videopuhelun välityksellä. Etätapaamiset ovat hyvä vaihtoehto, jos et pysty tulemaan paikan päälle tai arvostat kotoa käsin työskentelemistä. Kraniosakraalihoidot tehdään aina lähitapaamisina."
+            },
+            {
+              "question": "Pitääkö tapaamisen valmistautua jotenkin?",
+              "answer": "Et tarvitse erityistä valmistautumista. On hyvä varata hetki rauhoittumiseen ennen tapaamista, jos se on mahdollista – mutta sekään ei ole pakollista. Tule omana itsenäsi, juuri sen hetkisessä tilanteessasi. Se on täysin riittävää."
+            }
+          ]
+        },
+        {
+          "name": "Maksut ja varaaminen",
+          "items": [
+            {
+              "question": "Paljonko terapia maksaa ja saako sille Kela-korvausta?",
+              "answer": "Tapaamisen hinta on 89 €. Lyhytterapia ei tällä hetkellä kuulu Kela-korvauksen piiriin, joten se maksetaan kokonaan itse. Jotkut työnantajat tukevat terapiaa työhyvinvointietuuden kautta – kannattaa tarkistaa oman työnantajasi käytännöt."
+            },
+            {
+              "question": "Miten voin varata ajan?",
+              "answer": "Voit varata ajan ottamalla yhteyttä sähköpostilla osoitteeseen nora@norasoini.fi tai täyttämällä yhteydenottolomakkeen tällä sivustolla. Vastataan viesteihin yleensä 1–2 arkipäivän kuluessa ja sovitaan yhdessä sopiva aika."
+            },
+            {
+              "question": "Millä tavalla voin maksaa?",
+              "answer": "Tapaaminen maksetaan tilisiirolla laskun mukaisesti. Lasku lähetetään sähköpostitse tapaamisen jälkeen, ja maksuaikaa on 14 päivää."
+            }
+          ]
+        },
+        {
+          "name": "Peruutukset",
+          "items": [
+            {
+              "question": "Miten peruutan ajan?",
+              "answer": "Peruutukset tehdään sähköpostilla osoitteeseen nora@norasoini.fi. Ilmoita peruutuksesta mahdollisimman pian, jotta aika voidaan tarjota toiselle sitä tarvitsevalle."
+            },
+            {
+              "question": "Mitä tapahtuu jos peruutan myöhässä?",
+              "answer": "Peruutuksista tulee ilmoittaa viimeistään 24 tuntia ennen tapaamista. Myöhemmistä peruutuksista veloitetaan täysi tapaamismaksu, koska varattua aikaa ei enää pystytä täyttämään. Ymmärrän, että yllättäviä tilanteita sattuu – jos sinulla on jokin erityinen syy, voidaan asiasta sopia erikseen."
+            }
+          ]
+        }
       ]
     }
   }

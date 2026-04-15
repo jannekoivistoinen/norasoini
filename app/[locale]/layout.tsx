@@ -5,27 +5,13 @@ import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Instrument_Serif, Kaisei_Decol } from "next/font/google";
-import { SITE_CONFIG } from "@/lib/constants";
+import { COMPANY_METADATA, SITE_CONFIG } from "@/lib/constants";
 import { Metadata } from "next";
+import { fontHtmlClassName } from "../fonts";
 import "../globals.css";
 
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: ["400"],
-  style: ["normal", "italic"],
-  variable: "--font-instrument-serif",
-  display: "swap",
-});
-
-const kaiseiDecol = Kaisei_Decol({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-kaisei-decol",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
+  metadataBase: new URL(COMPANY_METADATA.url),
   title: SITE_CONFIG.company.name,
   description: SITE_CONFIG.company.description,
   alternates: { canonical: SITE_CONFIG.company.url },
@@ -60,11 +46,8 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html
-      lang={locale}
-      className={`${instrumentSerif.variable} ${kaiseiDecol.variable}`}
-    >
-      <body className="flex flex-col min-h-screen bg-brand-bg font-body">
+    <html lang={locale} className={fontHtmlClassName}>
+      <body className="flex flex-col min-h-screen bg-brand-bg">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navigation />
           <main className="flex-grow overflow-x-hidden">{children}</main>

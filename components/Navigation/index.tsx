@@ -6,7 +6,12 @@ import { usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
 import { AnimatePresence } from "framer-motion";
-import { COMPANY_METADATA, NAVIGATION_LINKS, NAVIGATION_CTA, SITE_CONFIG } from "@/lib/constants";
+import {
+  COMPANY_METADATA,
+  NAVIGATION_LINKS,
+  NAVIGATION_CTA,
+  SITE_CONFIG,
+} from "@/lib/constants";
 import LanguageSwitcher from "./LanguageSwitcher";
 import MobileNavigation from "./MobileNavigation";
 import { getLocaleData, isActive, SCROLL_THRESHOLD } from "./utils";
@@ -17,7 +22,9 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
-  const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null);
+  const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(
+    null,
+  );
   const locale = useLocale();
   const router = useRouter();
 
@@ -30,7 +37,8 @@ export default function Navigation() {
 
   useEffect(() => {
     if (mobileMenuOpen) {
-      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
       document.documentElement.style.paddingRight = `${scrollbarWidth}px`;
       document.body.style.overflow = "hidden";
     } else {
@@ -55,12 +63,12 @@ export default function Navigation() {
     >
       <nav
         aria-label="Global"
-        className="mx-auto max-w-[1440px] flex items-center justify-between px-6 md:px-10 py-4"
+        className="relative z-[9992] w-full flex items-center justify-between px-6 md:px-10 py-4"
       >
         {/* Logo */}
         <Link
           href={`/${locale}`}
-          className="font-heading text-base font-normal text-black hover:opacity-70 transition"
+          className="text-2xl font-bold tracking-tighter hover:opacity-70 transition text-brand-primary"
           onClick={() => setMobileMenuOpen(false)}
         >
           {COMPANY_METADATA.name}
@@ -85,14 +93,16 @@ export default function Navigation() {
 
         {/* Desktop right: language + CTA */}
         <div className="hidden md:flex items-center gap-4">
-          {SITE_CONFIG.i18n.languageSwitcher.showOnDesktop && <LanguageSwitcher />}
+          {SITE_CONFIG.i18n.languageSwitcher.showOnDesktop && (
+            <LanguageSwitcher />
+          )}
           {NAVIGATION_CTA.map((item: NavigationItem) => {
             const localeData = getLocaleData(item, locale);
             return (
               <Link
                 key={item.link}
                 href={localeData.href}
-                className="bg-brand-primary text-white text-sm font-body px-5 py-2.5 rounded-full hover:opacity-90 transition whitespace-nowrap"
+                className="bg-brand-primary text-white text-sm px-5 py-2.5 rounded-full hover:opacity-90 transition whitespace-nowrap"
               >
                 {localeData.name}
               </Link>
@@ -107,9 +117,15 @@ export default function Navigation() {
           aria-expanded={mobileMenuOpen}
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
-          <span className={`block h-0.5 w-6 bg-black transition-all duration-300 ${mobileMenuOpen ? "rotate-45 translate-y-2" : ""}`} />
-          <span className={`block h-0.5 w-6 bg-black transition-all duration-300 ${mobileMenuOpen ? "opacity-0" : ""}`} />
-          <span className={`block h-0.5 w-6 bg-black transition-all duration-300 ${mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+          <span
+            className={`block h-0.5 w-6 bg-black transition-all duration-300 ${mobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}
+          />
+          <span
+            className={`block h-0.5 w-6 bg-black transition-all duration-300 ${mobileMenuOpen ? "opacity-0" : ""}`}
+          />
+          <span
+            className={`block h-0.5 w-6 bg-black transition-all duration-300 ${mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+          />
         </button>
       </nav>
 

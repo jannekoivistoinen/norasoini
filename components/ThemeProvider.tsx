@@ -1,6 +1,13 @@
 "use client";
 
-import { createContext, useContext, ReactNode, useEffect } from "react";
+import {
+  createContext,
+  useContext,
+  ReactNode,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import { SITE_CONFIG } from "@/lib/constants";
 
 // Theme context type
@@ -67,16 +74,20 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
     // Set font variables
     root.style.setProperty("--font-heading", SITE_CONFIG.theme.fonts.heading);
     root.style.setProperty("--font-body", SITE_CONFIG.theme.fonts.body);
+    root.style.setProperty("--font-link", SITE_CONFIG.theme.fonts.link);
   }, []);
 
+  const contextValue = useMemo(
+    () => ({
+      theme: SITE_CONFIG.theme,
+      isDarkMode,
+      toggleDarkMode,
+    }),
+    [isDarkMode],
+  );
+
   return (
-    <ThemeContext.Provider
-      value={{
-        theme: SITE_CONFIG.theme,
-        isDarkMode,
-        toggleDarkMode,
-      }}
-    >
+    <ThemeContext.Provider value={contextValue}>
       {children}
     </ThemeContext.Provider>
   );
@@ -90,6 +101,3 @@ export function useTheme() {
   }
   return context;
 }
-
-// Import useState at the top
-import { useState } from "react";

@@ -87,7 +87,7 @@ export default function MobileNavigation({
                 <button
                   key={loc}
                   onClick={() => { handleLanguageChange(loc, router, pathname); setMobileMenuOpen(false); }}
-                  className={`text-sm font-body px-3 py-1.5 rounded-full border transition ${
+                  className={`text-sm px-3 py-1.5 rounded-full border transition ${
                     locale === loc
                       ? "border-brand-primary text-brand-primary"
                       : "border-black/30 text-black hover:border-black"
@@ -106,7 +106,7 @@ export default function MobileNavigation({
                 key={item.link}
                 href={localeData.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="bg-brand-primary text-white text-sm font-body py-3 text-center rounded-full hover:opacity-90 transition"
+                className="bg-brand-primary text-white text-sm py-3 text-center rounded-full hover:opacity-90 transition"
               >
                 {localeData.name}
               </Link>

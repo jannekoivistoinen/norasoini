@@ -3,31 +3,50 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import MarkdownText from "@/components/MarkdownText";
-import Image from "next/image";
-import { images } from "@/app/assets/images";
 
-interface FAQItemProps {
+interface FAQItem {
   question: string;
   answer: string;
-  isOpen: boolean;
-  onClick: () => void;
+}
+
+interface FAQCategory {
+  name: string;
+  items: FAQItem[];
 }
 
 interface FAQProps {
   className?: string;
 }
 
-const FAQItem = ({ question, answer, isOpen, onClick }: FAQItemProps) => {
+const FAQCategory = ({
+  category,
+  index,
+  isOpen,
+  onClick,
+}: {
+  category: FAQCategory;
+  index: number;
+  isOpen: boolean;
+  onClick: () => void;
+}) => {
   return (
-    <div className="border-b border-neutral-200">
+    <div className={`${index !== 0 ? "border-t border-black/10" : ""}`}>
       <button
-        className="flex w-full items-center py-4 text-left"
-        onMouseDown={onClick}
+        type="button"
+        className="flex w-full items-center justify-between py-5 text-left"
+        onClick={onClick}
       >
-        <span className="mr-4 text-brand-brown">{isOpen ? "−" : "+"}</span>
-        <span className="text-lg font-medium">{question}</span>
+        <span className="font-heading text-xl italic font-semibold leading-snug text-black">
+          {index + 1}. {category.name}
+        </span>
+        <span
+          className="flex-shrink-0 text-[20px] font-medium leading-none text-brand-primary"
+          aria-hidden
+        >
+          {isOpen ? "−" : "+"}
+        </span>
       </button>
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
@@ -36,9 +55,18 @@ const FAQItem = ({ question, answer, isOpen, onClick }: FAQItemProps) => {
             transition={{ duration: 0.2, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <MarkdownText className="pb-8 pl-6 md:pl-12 p-base text-brand-brown">
-              {answer}
-            </MarkdownText>
+            <div className="space-y-5 pb-6 pl-4">
+              {category.items.map((item, i) => (
+                <div key={i}>
+                  <p className="text-[15px] font-semibold leading-snug text-black">
+                    {item.question}
+                  </p>
+                  <MarkdownText className="mt-1 text-base leading-relaxed text-black/60 [&_p]:mb-0 [&_p+p]:mt-2">
+                    {item.answer}
+                  </MarkdownText>
+                </div>
+              ))}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -47,50 +75,47 @@ const FAQItem = ({ question, answer, isOpen, onClick }: FAQItemProps) => {
 };
 
 export function FAQ({}: FAQProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndices, setOpenIndices] = useState<Set<number>>(
+    () => new Set([0]),
+  );
   const t = useTranslations("component.faq");
 
-  const items = t.raw("items") as Array<{
-    question: string;
-    answer: string;
-  }>;
+  const categories = t.raw("categories") as FAQCategory[];
 
   const handleClick = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+    setOpenIndices((prev) => {
+      const next = new Set(prev);
+      if (next.has(index)) {
+        next.delete(index);
+      } else {
+        next.add(index);
+      }
+      return next;
+    });
   };
 
   return (
-    <section id="FAQ">
-      <div className="container">
-        <Image
-          src={images.placeholderImage}
-          alt="Test Image"
-          className="w-full h-full object-cover aspect-[3/2] lg:aspect-[3/1] mb-8 lg:mb-16"
-          quality={80}
-          sizes="(min-width: 1920px) 2000px, (min-width: 1280px) 1440px, (min-width: 780px) 50vw, 90vw"
-        />
-      </div>
-      <div className="container grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-2">
-        <div>
-          <div className="mb-4 md:mb-8 max-w-[400px]">
-            <MarkdownText>{t("title")}</MarkdownText>
-          </div>
-          <MarkdownText className="content p-base max-w-xl">
+    <section id="FAQ" className="container">
+      <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+        <div className="md:sticky md:top-28 md:self-start">
+          <h2 className="font-heading text-4xl italic leading-[1.1] text-black md:text-[56px] md:leading-[1.1]">
+            {t("title")}
+          </h2>
+          <MarkdownText className="mt-6 text-[18px] leading-relaxed text-black/60 [&_p]:mb-0">
             {t("description")}
           </MarkdownText>
         </div>
-        <div>
-          <div className="max-w-3xl">
-            {items.map((item, index) => (
-              <FAQItem
-                key={index}
-                question={item.question}
-                answer={item.answer}
-                isOpen={openIndex === index}
-                onClick={() => handleClick(index)}
-              />
-            ))}
-          </div>
+        <div className="min-w-0">
+          {categories.map((category, index) => (
+            <FAQCategory
+              key={index}
+              category={category}
+              index={index}
+              isOpen={openIndices.has(index)}
+              onClick={() => handleClick(index)}
+            />
+          ))}
+          <div className="border-t border-black/10" />
         </div>
       </div>
     </section>

@@ -15,9 +15,9 @@ type FormData = {
 };
 
 const inputBase =
-  "w-full bg-brand-card text-black px-4 py-3 rounded-xl font-body text-sm placeholder:text-black/40 border border-transparent focus:outline-none focus:ring-1 focus:ring-brand-primary/50 transition";
+  "w-full bg-brand-card text-black px-4 py-3 rounded-xl text-sm placeholder:text-black/40 border border-transparent focus:outline-none focus:ring-1 focus:ring-brand-primary/50 transition";
 const inputError =
-  "w-full bg-brand-card text-black px-4 py-3 rounded-xl font-body text-sm placeholder:text-black/40 border border-red-400/60 focus:outline-none focus:ring-1 focus:ring-red-400 transition";
+  "w-full bg-brand-card text-black px-4 py-3 rounded-xl text-sm placeholder:text-black/40 border border-red-400/60 focus:outline-none focus:ring-1 focus:ring-red-400 transition";
 
 const ContactFormContent = () => {
   const t = useTranslations("component.contactForm");
@@ -48,7 +48,7 @@ const ContactFormContent = () => {
 
   if (isSuccess) {
     return (
-      <p className="font-body text-sm text-brand-primary py-6">
+      <p className="text-sm text-brand-primary py-6">
         {t("successMessage")}
       </p>
     );
@@ -135,7 +135,7 @@ const ContactFormContent = () => {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="bg-brand-primary text-white text-sm font-body px-6 py-3 rounded-full hover:opacity-90 transition disabled:opacity-60 mt-2"
+        className="bg-brand-primary text-white text-sm px-6 py-3 rounded-full hover:opacity-90 transition disabled:opacity-60 mt-2"
       >
         {isSubmitting ? "…" : t("submitButton")}
       </button>
@@ -149,7 +149,7 @@ const ContactFormContent = () => {
 
 export default function ContactForm() {
   return (
-    <Suspense>
+    <Suspense fallback={null}>
       <ContactFormContent />
     </Suspense>
   );

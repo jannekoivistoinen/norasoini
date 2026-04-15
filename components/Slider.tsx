@@ -18,6 +18,8 @@ interface SliderProps {
   showPagination?: boolean;
 }
 
+const DEFAULT_SLIDES_PER_VIEW = { mobile: 1, tablet: 1, desktop: 1 };
+
 const WheelControls = (slider: KeenSliderInstance) => {
   let touchTimeout: NodeJS.Timeout;
   let position: { x: number; y: number };
@@ -71,7 +73,7 @@ const WheelControls = (slider: KeenSliderInstance) => {
 
 export function Slider({
   children,
-  slidesPerView = { mobile: 1, tablet: 1, desktop: 1 },
+  slidesPerView = DEFAULT_SLIDES_PER_VIEW,
   spacing = 16,
   mobileSpacing = 12,
   showPagination = false,

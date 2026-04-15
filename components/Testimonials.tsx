@@ -1,7 +1,5 @@
 "use client";
 
-import { useParams } from "next/navigation";
-import { useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { Slider } from "./Slider";
@@ -11,20 +9,17 @@ interface TestimonialItem {
   quote: string;
 }
 
-export default function Testimonials() {
-  const { locale } = useParams();
-  const t = useTranslations("component.testimonials");
+const TESTIMONIALS_SLIDES_PER_VIEW = { mobile: 1.2, tablet: 1.5, desktop: 2 };
 
-  useEffect(() => {
-    console.log("Current locale:", locale);
-  }, [locale]);
+export default function Testimonials() {
+  const t = useTranslations("component.testimonials");
 
   const testimonialItems = t.raw("items") as TestimonialItem[];
 
   return (
     <>
       <Slider
-        slidesPerView={{ mobile: 1.2, tablet: 1.5, desktop: 2 }}
+        slidesPerView={TESTIMONIALS_SLIDES_PER_VIEW}
         showPagination={false}
       >
         {testimonialItems &&

@@ -1,23 +1,35 @@
-"use client";
-
 import { FAQ } from "@/components/FAQ";
 import MarkdownText from "@/components/MarkdownText";
-import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default function TermsPage() {
-  const t = useTranslations("page.terms");
+type TermsContent = {
+  hero: {
+    title: string;
+    description: string;
+    buttonText: string;
+  };
+  terms: {
+    title: string;
+    description: string;
+  };
+};
+
+interface TermsPageProps {
+  content: TermsContent;
+}
+
+export default function TermsPage({ content }: TermsPageProps) {
 
   return (
     <>
       <section className="container">
         <div className="mx-auto text-center max-w-4xl mb-8 lg:mb-24">
           <MarkdownText className="text-brand-dark mb-3 md:mb-6">
-            {t("hero.title")}
+            {content.hero.title}
           </MarkdownText>
           <MarkdownText className="p-lg content">
-            {t("hero.description")}
+            {content.hero.description}
           </MarkdownText>
           <Button
             size="lg"
@@ -25,7 +37,7 @@ export default function TermsPage() {
             asChild
           >
             <Link href="#" className="hover:no-underline" target="_blank">
-              {t("hero.buttonText")}
+              {content.hero.buttonText}
             </Link>
           </Button>
         </div>
@@ -34,10 +46,10 @@ export default function TermsPage() {
       <section id="terms" className="container content">
         <div className="md:mx-auto md:text-center max-w-4xl">
           <MarkdownText className="text-brand-dark mb-6">
-            {t("terms.title")}
+            {content.terms.title}
           </MarkdownText>
           <MarkdownText className="mb-12 p-lg">
-            {t("terms.description")}
+            {content.terms.description}
           </MarkdownText>
         </div>
       </section>

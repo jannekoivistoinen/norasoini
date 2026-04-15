@@ -1,7 +1,5 @@
 "use client";
 
-import { useParams } from "next/navigation";
-import { useEffect } from "react";
 import { useTranslations } from "next-intl";
 import MarkdownText from "./MarkdownText";
 import { ValueCard } from "@/components/ValueCard";
@@ -12,13 +10,10 @@ interface ValueItem {
   text: string;
 }
 
-export default function Values() {
-  const { locale } = useParams();
-  const t = useTranslations("component.values");
+const VALUES_SLIDES_PER_VIEW = { mobile: 1.2, tablet: 1.5, desktop: 2 };
 
-  useEffect(() => {
-    console.log("Current locale:", locale);
-  }, [locale]);
+export default function Values() {
+  const t = useTranslations("component.values");
 
   const valueItems = t.raw("items") as ValueItem[];
 
@@ -28,7 +23,7 @@ export default function Values() {
         {t("sectionTitle")}
       </MarkdownText>
       <Slider
-        slidesPerView={{ mobile: 1.2, tablet: 1.5, desktop: 2 }}
+        slidesPerView={VALUES_SLIDES_PER_VIEW}
         showPagination={false}
       >
         {valueItems &&

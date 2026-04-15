@@ -1,11 +1,11 @@
-import { setLanguageCookie } from "@/lib/utils";
+import { setLanguageCookie } from "@/lib/cookie-utils";
 import type { useRouter as UseRouter } from "next/navigation";
 import { LocaleData, NavigationItem, isLocaleData } from "./types";
 
 // Locale names mapping
 export const localeNames: Record<string, string> = {
-  fi: "FI",
-  en: "EN",
+  fi: "Suomi",
+  en: "English",
 };
 
 // Shared language switching function

@@ -2,11 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "./assets/Logo.png";
 import { Button } from "@/components/ui/button";
+import { fontHtmlClassName } from "./fonts";
+import "./globals.css";
 
 export default function NotFound() {
   return (
-    <html lang="en">
-      <body className="font-body">
+    <html lang="en" className={fontHtmlClassName}>
+      <body>
         <div className="min-h-screen flex flex-col items-center justify-center">
           <div className="text-center">
             <Image

@@ -1,14 +1,8 @@
-import testimonialAvatar from "./testimonialAvatar.jpg";
-import placeholderImage from "./image.png";
-
 // FontAwesome Free Icons
 import { faComments, faSeedling, faArrowRight, faClover } from "@fortawesome/free-solid-svg-icons";
 import { faPerson } from "@fortawesome/free-solid-svg-icons";
 
-export const images = {
-  testimonialAvatar,
-  placeholderImage,
-} as const;
+export const images = {} as const;
 
 export const navigationIcons = {
   comments: faComments,

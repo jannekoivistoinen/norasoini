@@ -1,17 +1,16 @@
 /* TEAM */
-Company: Lucky Ranch Oy
-Site: https://luckyranch.fi
-Location: Pyhä, Finland
-Content: Thomas Lindqvist
-Photographers: Thomas Lindqvist, Mélanie Ba, Krista Ylinen, Miika Hämäläinen, Toni Eskelinen, Fiia Ketonen
+Company: Nora Soini
+Site: https://norasoini.fi
+Location: Espoo, Finland
+Content: Nora Soini
 Developer: Janne Koivistoinen, Damngood
 Designer: Janne Koivistoinen, Damngood
 
 /* SITE */
-Last update: 2025
+Last update: 2026
 Stack: Next.js, Tailwind CSS, Framer Motion
 Software: Cursor IDE, Sketch
 
-Built with attention to detail in Äkäslompolo, Finland.
+Built with attention to detail in Finland.
 
 A damn good website by Damngood.
