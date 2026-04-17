@@ -10,12 +10,14 @@ interface TerminalCTAProps {
   title: string;
   paragraph: string;
   buttons: CTAButton[];
+  onPrimaryClick?: () => void;
 }
 
 export default function TerminalCTA({
   title,
   paragraph,
   buttons,
+  onPrimaryClick,
 }: TerminalCTAProps) {
   return (
     <section className="bg-brand-primary text-brand-footer-text py-[15vh] px-6 text-center">
@@ -35,6 +37,15 @@ export default function TerminalCTA({
             >
               {btn.label}
             </Link>
+          ) : onPrimaryClick ? (
+            <button
+              key={i}
+              type="button"
+              onClick={onPrimaryClick}
+              className="inline-block bg-brand-footer-text text-brand-primary text-sm px-6 py-3 rounded-full border border-brand-footer-text hover:opacity-90 transition"
+            >
+              {btn.label}
+            </button>
           ) : (
             <Link
               key={i}

@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import VelloModal from "@/components/VelloModal";
 import { COMPANY_METADATA, SITE_CONFIG } from "@/lib/constants";
 import { Metadata } from "next";
 import { fontHtmlClassName } from "../fonts";
@@ -50,6 +51,7 @@ export default async function LocaleLayout({
       <body className="flex flex-col min-h-screen bg-brand-bg">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navigation />
+          <VelloModal />
           <main className="flex-grow overflow-x-hidden">{children}</main>
           <Footer />
         </NextIntlClientProvider>

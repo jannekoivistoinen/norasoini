@@ -88,6 +88,10 @@
         "cta": "Book a session"
       },
       "cardQuote": "You are welcome to reach out – I will help you find the right option for you.",
+      "terminalCta": {
+        "title": "Not sure what suits you?",
+        "paragraph": "You can book a session or get in touch with no pressure. I will help you find the right option for your situation."
+      },
       "visitFlow": {
         "heading": "How does a session unfold?",
         "description": "We begin with a gentle conversation, then move into craniosacral therapy. This allows both clarity of mind and deep relaxation of the body.",

@@ -38,7 +38,7 @@ export default function ServicesSlider() {
               style={{ aspectRatio: "467/700" }}
             >
               <Image
-                src={`/images/service-${i + 1}.jpg`}
+                src={`/images/service-${(i % 3) + 1}.jpg`}
                 alt={item.title}
                 fill
                 sizes="(max-width: 768px) 83vw, (max-width: 1024px) 50vw, 33vw"

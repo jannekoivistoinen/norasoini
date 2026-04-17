@@ -17,6 +17,7 @@ import MobileNavigation from "./MobileNavigation";
 import { getLocaleData, isActive, SCROLL_THRESHOLD } from "./utils";
 import { desktopLinkStyles, linkStylesActive } from "./styles";
 import { NavigationItem } from "./types";
+import { openVelloModal } from "@/lib/openVelloModal";
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -99,13 +100,14 @@ export default function Navigation() {
           {NAVIGATION_CTA.map((item: NavigationItem) => {
             const localeData = getLocaleData(item, locale);
             return (
-              <Link
+              <button
                 key={item.link}
-                href={localeData.href}
+                type="button"
+                onClick={openVelloModal}
                 className="bg-brand-primary text-white text-sm px-5 py-2.5 rounded-full hover:opacity-90 transition whitespace-nowrap"
               >
                 {localeData.name}
-              </Link>
+              </button>
             );
           })}
         </div>

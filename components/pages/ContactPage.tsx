@@ -2,14 +2,18 @@ import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
 import ContactForm from "@/components/ContactForm";
 import PageHero from "@/components/sections/PageHero";
+import ProcessSection from "@/components/sections/ProcessSection";
+import TerminalCTA from "@/components/sections/TerminalCTA";
 import { SITE_CONFIG } from "@/lib/constants";
 
-const FAQ = dynamic(
-  () => import("@/components/FAQ").then((module) => module.FAQ),
+const FAQ = dynamic(() =>
+  import("@/components/FAQ").then((module) => module.FAQ),
 );
 
 export default function ContactPage() {
   const t = useTranslations("page.contact");
+  const tFooter = useTranslations("component.footer");
+  const contactHref = `mailto:${SITE_CONFIG.company.contact.email}`;
 
   return (
     <>
@@ -46,7 +50,15 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <ProcessSection />
+
       <FAQ />
+
+      <TerminalCTA
+        title={tFooter("cta")}
+        paragraph={tFooter("ctaDescription")}
+        buttons={[{ label: tFooter("ctaButton"), href: contactHref }]}
+      />
     </>
   );
 }

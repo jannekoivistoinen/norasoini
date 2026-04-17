@@ -175,6 +175,10 @@
         "cta": "Varaa aika"
       },
       "cardQuote": "Voit tulla luokseni matalalla kynnyksellä – autan sinua löytämään sopivimman vaihtoehdon.",
+      "terminalCta": {
+        "title": "Etkö ole varma, mikä sopii sinulle?",
+        "paragraph": "Voit varata ajan tai ottaa yhteyttä matalalla kynnyksellä. Autan sinua löytämään tilanteeseesi sopivan vaihtoehdon."
+      },
       "visitFlow": {
         "heading": "Miten käynti etenee?",
         "description": "Aloitamme rauhallisella keskustelulla, jonka jälkeen siirrytään kraniosakraaliterapiaan. Tämä mahdollistaa sekä asioiden jäsentymisen että kehon syvän rentoutumisen.",

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
@@ -10,6 +12,7 @@ import QuoteSlider from "@/components/sections/QuoteSlider";
 import PageHero from "@/components/sections/PageHero";
 import TerminalCTA from "@/components/sections/TerminalCTA";
 import { Button } from "@/components/ui/button";
+import { openVelloModal } from "@/lib/openVelloModal";
 
 const FAQ = dynamic(() =>
   import("@/components/FAQ").then((module) => module.FAQ),
@@ -38,11 +41,6 @@ export default function ServicesPage() {
   const cardQuote = t("cardQuote");
   const terminalButtons: TerminalCTAButton[] = [
     { label: tFooter("ctaButton"), href: contactHref },
-    {
-      label: tFooter("ctaButtonSecondary"),
-      href: pricingHref,
-      variant: "secondary",
-    },
   ];
 
   return (
@@ -52,6 +50,7 @@ export default function ServicesPage() {
         ingress={t("hero.ingress")}
         ctaLabel={t("hero.cta")}
         ctaHref={contactHref}
+        onCtaClick={openVelloModal}
       />
 
       <section className="container pb-24">
@@ -74,10 +73,11 @@ export default function ServicesPage() {
                   <ReactMarkdown>{item.body}</ReactMarkdown>
                 </div>
                 <Button
-                  asChild
+                  type="button"
+                  onClick={openVelloModal}
                   className="self-start rounded-full px-7 py-4 text-sm mb-8 h-auto"
                 >
-                  <Link href={contactHref}>{item.cta}</Link>
+                  {item.cta}
                 </Button>
                 <p className="text-black/50 text-sm">{cardQuote}</p>
               </div>
@@ -91,9 +91,10 @@ export default function ServicesPage() {
       <FAQ />
 
       <TerminalCTA
-        title="Etkö ole varma, mikä sopii sinulle?"
-        paragraph="Voit varata ajan tai ottaa yhteyttä matalalla kynnyksellä. Autan sinua löytämään tilanteeseesi sopivan vaihtoehdon."
+        title={t("terminalCta.title")}
+        paragraph={t("terminalCta.paragraph")}
         buttons={terminalButtons}
+        onPrimaryClick={openVelloModal}
       />
     </>
   );

@@ -7,6 +7,7 @@ import { mobileLinkStyles, mobileLinkStylesActive } from "./styles";
 import { getLocaleData, isActive, handleLanguageChange, localeNames } from "./utils";
 import { containerVariants, itemVariants, bottomElementsVariants } from "./animations";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
+import { openVelloModal } from "@/lib/openVelloModal";
 
 type MobileNavigationProps = {
   mobileMenuOpen: boolean;
@@ -102,14 +103,17 @@ export default function MobileNavigation({
           {NAVIGATION_CTA.map((item: NavigationItem) => {
             const localeData = getLocaleData(item, locale);
             return (
-              <Link
+              <button
                 key={item.link}
-                href={localeData.href}
-                onClick={() => setMobileMenuOpen(false)}
+                type="button"
+                onClick={() => {
+                  openVelloModal();
+                  setMobileMenuOpen(false);
+                }}
                 className="bg-brand-primary text-white text-sm py-3 text-center rounded-full hover:opacity-90 transition"
               >
                 {localeData.name}
-              </Link>
+              </button>
             );
           })}
         </motion.div>

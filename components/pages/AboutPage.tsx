@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import { useTranslations, useLocale } from "next-intl";
 import { SITE_CONFIG } from "@/lib/constants";
 import PillarsSection from "@/components/sections/PillarsSection";
-import ProcessSection from "@/components/sections/ProcessSection";
+import VisitFlowSection from "@/components/sections/VisitFlowSection";
 import QuoteSlider from "@/components/sections/QuoteSlider";
 import PageHero from "@/components/sections/PageHero";
 import TerminalCTA from "@/components/sections/TerminalCTA";
@@ -29,16 +29,9 @@ export default function AboutPage() {
   const pricingHref = `/${locale}/${SITE_CONFIG.i18n.routes.pricing[locale as keyof typeof SITE_CONFIG.i18n.routes.pricing]}`;
   const terminalButtons: TerminalCTAButton[] = [
     { label: tFooter("ctaButton"), href: contactHref },
-    {
-      label: tFooter("ctaButtonSecondary"),
-      href: pricingHref,
-      variant: "secondary",
-    },
   ];
   const paragraphsBeforeBento = t.raw("intro.paragraphsBeforeBento") as string[];
   const afterBento = t.raw("intro.afterBento") as { ingress: string; paragraphs: string[] };
-  const testimonials = t.raw("testimonials") as { quote: string; attribution: string }[];
-
   return (
     <>
       {/* Hero */}
@@ -121,30 +114,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      {testimonials.length > 0 && (
-        <section className="container pb-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {testimonials.map((item, i) => (
-              <div key={i} className="bg-brand-card rounded-2xl p-10 flex flex-col justify-between min-h-[280px]">
-                <blockquote className="font-heading italic text-xl md:text-2xl leading-snug text-black/80">
-                  {item.quote}
-                </blockquote>
-                <p className="text-xs text-black/40 mt-8">{item.attribution}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
       {/* Quote Slider */}
       <QuoteSlider />
 
       {/* Pillars */}
       <PillarsSection />
 
-      {/* Process */}
-      <ProcessSection />
+      {/* Visit Flow */}
+      <VisitFlowSection />
 
       {/* FAQ */}
       <FAQ />

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
@@ -13,6 +15,7 @@ import SituationsSlider from "@/components/sections/SituationsSlider";
 import ServicesSlider from "@/components/sections/ServicesSlider";
 import TerminalCTA from "@/components/sections/TerminalCTA";
 import HomeAboutVideo from "@/components/sections/HomeAboutVideo";
+import { openVelloModal } from "@/lib/openVelloModal";
 
 const FAQ = dynamic(() =>
   import("@/components/FAQ").then((module) => module.FAQ),
@@ -34,11 +37,6 @@ export default function HomePage() {
   const pricingHref = `/${locale}/${SITE_CONFIG.i18n.routes.pricing[locale as keyof typeof SITE_CONFIG.i18n.routes.pricing]}`;
   const terminalButtons: TerminalCTAButton[] = [
     { label: tFooter("ctaButton"), href: contactHref },
-    {
-      label: tFooter("ctaButtonSecondary"),
-      href: pricingHref,
-      variant: "secondary",
-    },
   ];
 
   return (
@@ -47,19 +45,20 @@ export default function HomePage() {
       <section className="container pt-0 pb-0">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center max-w-6xl mx-auto">
           <div className="max-w-xl mx-auto md:mx-0 text-center md:text-left">
-            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl leading-tighter mb-6">
+            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl mb-6">
               {t("hero.heading")}
             </h1>
             <p className="text-black/70 text-base md:text-lg max-w-md mb-8 mx-auto md:mx-0">
               {t("hero.description")}
             </p>
             <div className="flex flex-wrap gap-4 mb-10 justify-center md:justify-start">
-              <Link
-                href={contactHref}
+              <button
+                type="button"
+                onClick={openVelloModal}
                 className="bg-brand-primary text-white text-sm px-7 py-4 rounded-full hover:opacity-90 transition"
               >
                 {t("hero.cta")}
-              </Link>
+              </button>
               <Link
                 href={aboutHref}
                 className="border border-black/30 text-black text-sm px-7 py-4 rounded-full hover:border-black transition"
@@ -157,6 +156,7 @@ export default function HomePage() {
         title={tFooter("cta")}
         paragraph={tFooter("ctaDescription")}
         buttons={terminalButtons}
+        onPrimaryClick={openVelloModal}
       />
     </>
   );

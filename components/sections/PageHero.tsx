@@ -5,6 +5,7 @@ interface PageHeroProps {
   ingress?: string;
   ctaLabel?: string;
   ctaHref?: string;
+  onCtaClick?: () => void;
 }
 
 export default function PageHero({
@@ -12,6 +13,7 @@ export default function PageHero({
   ingress,
   ctaLabel,
   ctaHref,
+  onCtaClick,
 }: PageHeroProps) {
   return (
     <section className="px-6 pt-16 pb-20 md:pt-24 md:pb-28 text-center max-w-[1200px] mx-auto">
@@ -25,12 +27,22 @@ export default function PageHero({
       ) : null}
       {ctaLabel && ctaHref ? (
         <div className="mt-10">
-          <Link
-            href={ctaHref}
-            className="inline-block bg-brand-primary text-white text-sm px-6 py-3 rounded-full hover:opacity-90 transition"
-          >
-            {ctaLabel}
-          </Link>
+          {onCtaClick ? (
+            <button
+              type="button"
+              onClick={onCtaClick}
+              className="inline-block bg-brand-primary text-white text-sm px-6 py-3 rounded-full hover:opacity-90 transition"
+            >
+              {ctaLabel}
+            </button>
+          ) : (
+            <Link
+              href={ctaHref}
+              className="inline-block bg-brand-primary text-white text-sm px-6 py-3 rounded-full hover:opacity-90 transition"
+            >
+              {ctaLabel}
+            </Link>
+          )}
         </div>
       ) : null}
     </section>
