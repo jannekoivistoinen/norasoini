@@ -12,7 +12,7 @@ interface PageHeroProps {
 }
 
 const heroAnim = (delay: number) => ({
-  initial: { opacity: 0, y: 22 },
+  initial: { opacity: 0, y: 14 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.75, delay, ease: [0.25, 0.1, 0.25, 1] as const },
 });

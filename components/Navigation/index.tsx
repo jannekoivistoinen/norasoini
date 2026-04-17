@@ -20,7 +20,7 @@ import { NavigationItem } from "./types";
 import { openVelloModal } from "@/lib/openVelloModal";
 
 const navAnim = (delay: number) => ({
-  initial: { opacity: 0, y: -10 },
+  initial: { opacity: 0, y: -8 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.55, delay, ease: [0.25, 0.1, 0.25, 1] as const },
 });

@@ -20,7 +20,7 @@ export default function TerminalCTA({
   onPrimaryClick,
 }: TerminalCTAProps) {
   return (
-    <section className="bg-brand-primary text-brand-footer-text py-[15vh] px-6 text-center">
+    <div className="bg-brand-primary text-brand-footer-text py-[15vh] px-6 text-center">
       <h2 className="font-heading italic text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 max-w-2xl mx-auto">
         {title}
       </h2>
@@ -57,6 +57,6 @@ export default function TerminalCTA({
           ),
         )}
       </div>
-    </section>
+    </div>
   );
 }
