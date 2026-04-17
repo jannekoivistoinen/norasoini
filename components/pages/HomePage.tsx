@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import NoraSoinImage from "@/app/assets/NoraSoini.png";
 import { useTranslations, useLocale } from "next-intl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCirclePlay, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { SITE_CONFIG } from "@/lib/constants";
 import PillarsSection from "@/components/sections/PillarsSection";
 import VisitFlowSection from "@/components/sections/VisitFlowSection";
@@ -12,6 +12,7 @@ import QuoteSlider from "@/components/sections/QuoteSlider";
 import SituationsSlider from "@/components/sections/SituationsSlider";
 import ServicesSlider from "@/components/sections/ServicesSlider";
 import TerminalCTA from "@/components/sections/TerminalCTA";
+import HomeAboutVideo from "@/components/sections/HomeAboutVideo";
 
 const FAQ = dynamic(() =>
   import("@/components/FAQ").then((module) => module.FAQ),
@@ -100,19 +101,8 @@ export default function HomePage() {
       {/* About */}
       <section className="container py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
-          {/* Left: video placeholder */}
-          <div
-            className="relative w-full bg-[#d8d8d8] rounded-2xl flex items-center justify-center flex-shrink-0"
-            style={{ aspectRatio: "709/921" }}
-          >
-            <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center">
-              {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-              <FontAwesomeIcon
-                icon={faCirclePlay as any}
-                className="text-white w-10 h-10"
-              />
-            </div>
-          </div>
+          {/* Left: video */}
+          <HomeAboutVideo />
 
           {/* Right: testimonial + content */}
           <div className="flex flex-col justify-between h-full">
