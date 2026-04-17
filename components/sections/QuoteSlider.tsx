@@ -8,7 +8,7 @@ export default function QuoteSlider() {
   const slides = t.raw("slides") as { quote: string; description: string }[];
 
   return (
-    <section className="container">
+    <div className="container">
       <Slider slidesPerView={1} spacing={20} mobileSpacing={16} showPagination>
         {slides.map((slide, i) => (
           <div
@@ -26,6 +26,6 @@ export default function QuoteSlider() {
           </div>
         ))}
       </Slider>
-    </section>
+    </div>
   );
 }

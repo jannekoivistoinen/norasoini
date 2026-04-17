@@ -120,7 +120,7 @@
           },
           {
             "question": "Paljonko terapia maksaa ja saako sille Kela-korvausta?",
-            "answer": "Lyhytterapia-tapaaminen on 89 € / 60 min. Lyhytterapia ei tällä hetkellä kuulu Kela-korvauksen piiriin, mutta kannattaa tarkistaa työnantajasi tai vakuutusyhtiösi tilanne."
+            "answer": "Tapaamiset alkavat 69 €:sta (voimassa elokuuhun 2026 asti), ja 1.9.2026 alkaen alkaen 95 €:sta. Lyhytterapia ei tällä hetkellä kuulu Kela-korvauksen piiriin, mutta kannattaa tarkistaa työnantajasi tai vakuutusyhtiösi tilanne."
           },
           {
             "question": "Voidaanko tapaamiset järjestää etänä?",
@@ -204,7 +204,7 @@
         {
           "title": "Lyhytterapia Espoossa ja etänä",
           "intro": "Tavoitteellista ja käytännönläheistä keskusteluapua, joka auttaa jäsentämään ajatuksia, käsittelemään kuormitusta ja löytämään suuntaa eteenpäin.",
-          "body": "Lyhytterapia on tavoitteellista ja käytännönläheistä keskusteluapua, joka auttaa sinua jäsentämään ajatuksia, käsittelemään kuormitusta ja löytämään suuntaa eteenpäin.\n\n- Vastaanotto Espoossa tai verkossa\n- Kesto: 60 min\n- Hinta: 89 € / kerta\n\n**Lyhytterapia sopii sinulle, jos:**\n\n- koet stressiä, uupumusta tai ahdistusta\n- kaipaat selkeyttä elämäntilanteeseesi\n- haluat turvallisen tilan puhua ja tulla kuulluksi",
+          "body": "Lyhytterapia on tavoitteellista ja käytännönläheistä keskusteluapua, joka auttaa sinua jäsentämään ajatuksia, käsittelemään kuormitusta ja löytämään suuntaa eteenpäin.\n\n- Vastaanotto Espoossa tai verkossa\n- Kesto: 60 min\n- Hinta: alkaen 69 € / kerta (elokuuhun 2026 asti), alkaen 95 € / kerta (1.9.2026 alkaen)\n\n**Lyhytterapia sopii sinulle, jos:**\n\n- koet stressiä, uupumusta tai ahdistusta\n- kaipaat selkeyttä elämäntilanteeseesi\n- haluat turvallisen tilan puhua ja tulla kuulluksi",
           "cta": "Varaa lyhytterapia-aika"
         },
         {
@@ -441,15 +441,15 @@
           "items": [
             {
               "question": "Paljonko terapia maksaa ja saako sille Kela-korvausta?",
-              "answer": "Tapaamisen hinta on 89 €. Lyhytterapia ei tällä hetkellä kuulu Kela-korvauksen piiriin, joten se maksetaan kokonaan itse. Jotkut työnantajat tukevat terapiaa työhyvinvointietuuden kautta – kannattaa tarkistaa oman työnantajasi käytännöt."
+              "answer": "Tapaamiset alkavat 69 €:sta (voimassa elokuuhun 2026 asti), ja 1.9.2026 alkaen alkaen 95 €:sta. Lyhytterapia ei tällä hetkellä kuulu Kela-korvauksen piiriin, joten se maksetaan kokonaan itse. Jotkut työnantajat tukevat terapiaa työhyvinvointietuuden kautta – kannattaa tarkistaa oman työnantajasi käytännöt."
             },
             {
               "question": "Miten voin varata ajan?",
-              "answer": "Voit varata ajan ottamalla yhteyttä sähköpostilla osoitteeseen nora@norasoini.fi tai täyttämällä yhteydenottolomakkeen tällä sivustolla. Vastataan viesteihin yleensä 1–2 arkipäivän kuluessa ja sovitaan yhdessä sopiva aika."
+              "answer": "Voit varata ajan suoraan \"Varaa aika\" -painikkeesta, ottamalla yhteyttä sähköpostilla osoitteeseen nora@norasoini.fi tai täyttämällä yhteydenottolomakkeen tällä sivustolla. Vastataan viesteihin yleensä 1–2 arkipäivän kuluessa ja sovitaan yhdessä sopiva aika."
             },
             {
               "question": "Millä tavalla voin maksaa?",
-              "answer": "Tapaaminen maksetaan tilisiirolla laskun mukaisesti. Lasku lähetetään sähköpostitse tapaamisen jälkeen, ja maksuaikaa on 14 päivää."
+              "answer": "Tapaaminen maksetaan etukäteen luottokortilla varauksen yhteydessä."
             }
           ]
         },

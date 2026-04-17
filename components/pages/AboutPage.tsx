@@ -9,6 +9,7 @@ import QuoteSlider from "@/components/sections/QuoteSlider";
 import PageHero from "@/components/sections/PageHero";
 import TerminalCTA from "@/components/sections/TerminalCTA";
 import AboutHeroVideo from "@/components/sections/AboutHeroVideo";
+import FadeIn from "@/components/ui/FadeIn";
 
 const FAQ = dynamic(
   () => import("@/components/FAQ").then((module) => module.FAQ),
@@ -37,100 +38,118 @@ export default function AboutPage() {
       {/* Hero */}
       <PageHero heading={t("hero.heading")} ingress={t("hero.ingress")} />
 
-      <AboutHeroVideo />
+      <FadeIn>
+        <AboutHeroVideo />
+      </FadeIn>
 
       {/* Bio (before bento) */}
-      <section className="container py-20">
-        <div className="max-w-[882px] mx-auto">
-          <p className="font-heading italic text-2xl md:text-3xl lg:text-4xl leading-snug text-black/85 mb-12 md:ml-[15%] md:max-w-[70%]">
-            {t("intro.ingressBelowPhoto")}
-          </p>
-          <div className="md:ml-[15%] md:max-w-[70%]">
-            {paragraphsBeforeBento.map((para, i) => (
-              <p key={i} className="text-sm md:text-base text-black/70 mb-5 leading-relaxed">
-                {para}
-              </p>
-            ))}
+      <FadeIn>
+        <section className="container py-20">
+          <div className="max-w-[882px] mx-auto">
+            <p className="font-heading italic text-2xl md:text-3xl lg:text-4xl leading-snug text-black/85 mb-12 md:ml-[15%] md:max-w-[70%]">
+              {t("intro.ingressBelowPhoto")}
+            </p>
+            <div className="md:ml-[15%] md:max-w-[70%]">
+              {paragraphsBeforeBento.map((para, i) => (
+                <p key={i} className="text-sm md:text-base text-black/70 mb-5 leading-relaxed">
+                  {para}
+                </p>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </FadeIn>
 
       {/* Bento photo grid */}
-      <section className="container pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "706/935" }}>
-            <Image
-              src="/images/about-left.jpg"
-              alt="Nora Soini"
-              fill
-              className="object-cover"
-              sizes="(min-width: 768px) 50vw, 100vw"
-            />
-          </div>
-          <div className="flex flex-col gap-3">
-            <div className="relative w-full rounded-2xl overflow-hidden flex-1" style={{ aspectRatio: "706/458" }}>
+      <FadeIn>
+        <section className="container pb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "706/935" }}>
               <Image
-                src="/images/about-right-top.jpg"
+                src="/images/about-left.jpg"
                 alt="Nora Soini"
                 fill
                 className="object-cover"
                 sizes="(min-width: 768px) 50vw, 100vw"
               />
             </div>
-            <div className="relative w-full rounded-2xl overflow-hidden flex-1" style={{ aspectRatio: "706/458" }}>
-              <Image
-                src="/images/about-right-bottom.jpg"
-                alt="Nora Soini"
-                fill
-                className="object-cover"
-                sizes="(min-width: 768px) 50vw, 100vw"
-              />
+            <div className="flex flex-col gap-3">
+              <div className="relative w-full rounded-2xl overflow-hidden flex-1" style={{ aspectRatio: "706/458" }}>
+                <Image
+                  src="/images/about-right-top.jpg"
+                  alt="Nora Soini"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
+              </div>
+              <div className="relative w-full rounded-2xl overflow-hidden flex-1" style={{ aspectRatio: "706/458" }}>
+                <Image
+                  src="/images/about-right-bottom.jpg"
+                  alt="Nora Soini"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </FadeIn>
 
       {/* Bio (after bento) */}
-      <section className="container pb-20">
-        <div className="max-w-[882px] mx-auto">
-          <p className="font-heading italic text-2xl md:text-3xl lg:text-4xl leading-snug text-black/85 mb-8 md:ml-[15%] md:max-w-[70%]">
-            {afterBento.ingress}
-          </p>
-          <div className="md:ml-[15%] md:max-w-[70%]">
-            {afterBento.paragraphs.map((para, i) => (
-              <p key={i} className="text-sm md:text-base text-black/70 mb-5 leading-relaxed">
-                {para}
-              </p>
-            ))}
-            <div className="mt-10">
-              <Link
-                href={contactHref}
-                className="bg-brand-primary text-white text-sm px-6 py-3 rounded-full hover:opacity-90 transition"
-              >
-                {t("hero.cta")}
-              </Link>
+      <FadeIn>
+        <section className="container pb-20">
+          <div className="max-w-[882px] mx-auto">
+            <p className="font-heading italic text-2xl md:text-3xl lg:text-4xl leading-snug text-black/85 mb-8 md:ml-[15%] md:max-w-[70%]">
+              {afterBento.ingress}
+            </p>
+            <div className="md:ml-[15%] md:max-w-[70%]">
+              {afterBento.paragraphs.map((para, i) => (
+                <p key={i} className="text-sm md:text-base text-black/70 mb-5 leading-relaxed">
+                  {para}
+                </p>
+              ))}
+              <div className="mt-10">
+                <Link
+                  href={contactHref}
+                  className="bg-brand-primary text-white text-sm px-6 py-3 rounded-full hover:opacity-90 transition"
+                >
+                  {t("hero.cta")}
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </FadeIn>
 
       {/* Quote Slider */}
-      <QuoteSlider />
+      <FadeIn>
+        <QuoteSlider />
+      </FadeIn>
 
       {/* Pillars */}
-      <PillarsSection />
+      <FadeIn>
+        <PillarsSection />
+      </FadeIn>
 
       {/* Visit Flow */}
-      <VisitFlowSection />
+      <FadeIn>
+        <VisitFlowSection />
+      </FadeIn>
 
       {/* FAQ */}
-      <FAQ />
+      <FadeIn>
+        <FAQ />
+      </FadeIn>
 
-      <TerminalCTA
-        title={tFooter("cta")}
-        paragraph={tFooter("ctaDescription")}
-        buttons={terminalButtons}
-      />
+      <FadeIn>
+        <TerminalCTA
+          title={tFooter("cta")}
+          paragraph={tFooter("ctaDescription")}
+          buttons={terminalButtons}
+        />
+      </FadeIn>
     </>
   );
 }

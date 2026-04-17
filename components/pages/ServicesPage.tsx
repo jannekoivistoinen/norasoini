@@ -12,6 +12,7 @@ import QuoteSlider from "@/components/sections/QuoteSlider";
 import PageHero from "@/components/sections/PageHero";
 import TerminalCTA from "@/components/sections/TerminalCTA";
 import { Button } from "@/components/ui/button";
+import FadeIn from "@/components/ui/FadeIn";
 import { openVelloModal } from "@/lib/openVelloModal";
 
 const FAQ = dynamic(() =>
@@ -56,46 +57,54 @@ export default function ServicesPage() {
       <section className="container pb-24">
         <div className="flex flex-col gap-4">
           {items.map((item, i) => (
-            <div key={i} className="grid grid-cols-1 md:grid-cols-2">
-              <div className="relative">
-                <Image
-                  src={`/images/service-${i + 1}.jpg`}
-                  alt={item.title}
-                  fill
-                  className="object-cover relative"
-                />
-              </div>
-              <div className="bg-brand-card px-10 py-16 md:px-16 md:py-20 flex flex-col justify-center">
-                <h2 className="font-heading italic text-3xl lg:text-4xl mb-6">
-                  {item.title}
-                </h2>
-                <div className="prose prose-sm text-black/70 mb-8 [&_strong]:text-black/80 [&_strong]:font-medium [&_li::marker]:text-black/70">
-                  <ReactMarkdown>{item.body}</ReactMarkdown>
+            <FadeIn key={i} delay={i * 0.08}>
+              <div className="grid grid-cols-1 md:grid-cols-2">
+                <div className="relative">
+                  <Image
+                    src={`/images/service-${i + 1}.jpg`}
+                    alt={item.title}
+                    fill
+                    className="object-cover relative"
+                  />
                 </div>
-                <Button
-                  type="button"
-                  onClick={openVelloModal}
-                  className="self-start rounded-full px-7 py-4 text-sm mb-8 h-auto"
-                >
-                  {item.cta}
-                </Button>
-                <p className="text-black/50 text-sm">{cardQuote}</p>
+                <div className="bg-brand-card px-10 py-16 md:px-16 md:py-20 flex flex-col justify-center">
+                  <h2 className="font-heading italic text-3xl lg:text-4xl mb-6">
+                    {item.title}
+                  </h2>
+                  <div className="prose prose-sm text-black/70 mb-8 [&_strong]:text-black/80 [&_strong]:font-medium [&_li::marker]:text-black/70">
+                    <ReactMarkdown>{item.body}</ReactMarkdown>
+                  </div>
+                  <Button
+                    type="button"
+                    onClick={openVelloModal}
+                    className="self-start rounded-full px-7 py-4 text-sm mb-8 h-auto"
+                  >
+                    {item.cta}
+                  </Button>
+                  <p className="text-black/50 text-sm">{cardQuote}</p>
+                </div>
               </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </section>
 
-      <VisitFlowSection />
+      <FadeIn>
+        <VisitFlowSection />
+      </FadeIn>
 
-      <FAQ />
+      <FadeIn>
+        <FAQ />
+      </FadeIn>
 
-      <TerminalCTA
-        title={t("terminalCta.title")}
-        paragraph={t("terminalCta.paragraph")}
-        buttons={terminalButtons}
-        onPrimaryClick={openVelloModal}
-      />
+      <FadeIn>
+        <TerminalCTA
+          title={t("terminalCta.title")}
+          paragraph={t("terminalCta.paragraph")}
+          buttons={terminalButtons}
+          onPrimaryClick={openVelloModal}
+        />
+      </FadeIn>
     </>
   );
 }

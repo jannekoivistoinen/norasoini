@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import { motion } from "motion/react";
 import NoraSoinImage from "@/app/assets/NoraSoini.png";
 import { useTranslations, useLocale } from "next-intl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,7 +16,14 @@ import SituationsSlider from "@/components/sections/SituationsSlider";
 import ServicesSlider from "@/components/sections/ServicesSlider";
 import TerminalCTA from "@/components/sections/TerminalCTA";
 import HomeAboutVideo from "@/components/sections/HomeAboutVideo";
+import FadeIn from "@/components/ui/FadeIn";
 import { openVelloModal } from "@/lib/openVelloModal";
+
+const heroAnim = (delay: number) => ({
+  initial: { opacity: 0, y: 22 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.75, delay, ease: [0.25, 0.1, 0.25, 1] as const },
+});
 
 const FAQ = dynamic(() =>
   import("@/components/FAQ").then((module) => module.FAQ),
@@ -45,13 +53,22 @@ export default function HomePage() {
       <section className="container pt-0 pb-0">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center max-w-6xl mx-auto">
           <div className="max-w-xl mx-auto md:mx-0 text-center md:text-left">
-            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl mb-6">
+            <motion.h1
+              {...heroAnim(0.05)}
+              className="font-heading text-5xl md:text-6xl lg:text-7xl mb-6"
+            >
               {t("hero.heading")}
-            </h1>
-            <p className="text-black/70 text-base md:text-lg max-w-md mb-8 mx-auto md:mx-0">
+            </motion.h1>
+            <motion.p
+              {...heroAnim(0.18)}
+              className="text-black/70 text-base md:text-lg max-w-md mb-8 mx-auto md:mx-0"
+            >
               {t("hero.description")}
-            </p>
-            <div className="flex flex-wrap gap-4 mb-10 justify-center md:justify-start">
+            </motion.p>
+            <motion.div
+              {...heroAnim(0.3)}
+              className="flex flex-wrap gap-4 mb-10 justify-center md:justify-start"
+            >
               <button
                 type="button"
                 onClick={openVelloModal}
@@ -65,8 +82,11 @@ export default function HomePage() {
               >
                 {t("hero.secondaryCta")}
               </Link>
-            </div>
-            <ul className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-center md:items-start">
+            </motion.div>
+            <motion.ul
+              {...heroAnim(0.42)}
+              className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-center md:items-start"
+            >
               {[t("hero.trust1"), t("hero.trust2"), t("hero.trust3")].map(
                 (signal, i) => (
                   <li
@@ -78,86 +98,104 @@ export default function HomePage() {
                   </li>
                 ),
               )}
-            </ul>
+            </motion.ul>
           </div>
-          <Image
-            src={NoraSoinImage}
-            alt=""
-            className="w-full h-auto object-cover"
-          />
+          <motion.div {...heroAnim(0.2)}>
+            <Image
+              src={NoraSoinImage}
+              alt=""
+              className="w-full h-auto object-cover"
+            />
+          </motion.div>
         </div>
       </section>
 
       {/* Quote Slider */}
-      <QuoteSlider />
+      <FadeIn>
+        <QuoteSlider />
+      </FadeIn>
 
       {/* Situations */}
-      <SituationsSlider />
+      <FadeIn>
+        <SituationsSlider />
+      </FadeIn>
 
       {/* Services */}
-      <ServicesSlider />
+      <FadeIn>
+        <ServicesSlider />
+      </FadeIn>
 
       {/* About */}
-      <section className="container py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
-          {/* Left: video */}
-          <HomeAboutVideo />
+      <FadeIn>
+        <section className="container py-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+            {/* Left: video */}
+            <HomeAboutVideo />
 
-          {/* Right: testimonial + content */}
-          <div className="flex flex-col justify-between h-full">
-            {/* Testimonial */}
-            <div className="mb-16">
-              <blockquote className="font-heading italic text-lg md:text-xl text-black/80 mb-3 leading-snug">
-                {t("about.quote")}
-              </blockquote>
-              <p className="text-sm text-black/40">{t("about.attribution")}</p>
-            </div>
+            {/* Right: testimonial + content */}
+            <div className="flex flex-col justify-between h-full">
+              {/* Testimonial */}
+              <div className="mb-16">
+                <blockquote className="font-heading italic text-lg md:text-xl text-black/80 mb-3 leading-snug">
+                  {t("about.quote")}
+                </blockquote>
+                <p className="text-sm text-black/40">{t("about.attribution")}</p>
+              </div>
 
-            {/* Content */}
-            <div>
-              <h2 className="font-heading italic leading-tight mb-8">
-                {t("about.heading")}
-              </h2>
-              <p className="text-sm md:text-base text-black/70 mb-4 leading-relaxed">
-                {t("about.description")}
-              </p>
-              <p className="text-sm md:text-base text-black/70 mb-4 leading-relaxed">
-                {t("about.description2")}
-              </p>
-              <p className="text-sm md:text-base text-black/70 mb-10 leading-relaxed">
-                {t("about.description3")}
-              </p>
-              <Link
-                href={aboutHref}
-                className="inline-flex items-center gap-2 text-sm text-brand-primary hover:opacity-70 transition"
-              >
-                {t("about.cta")}
-                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-                <FontAwesomeIcon
-                  icon={faArrowRight as any}
-                  className="w-3 h-3"
-                />
-              </Link>
+              {/* Content */}
+              <div>
+                <h2 className="font-heading italic leading-tight mb-8">
+                  {t("about.heading")}
+                </h2>
+                <p className="text-sm md:text-base text-black/70 mb-4 leading-relaxed">
+                  {t("about.description")}
+                </p>
+                <p className="text-sm md:text-base text-black/70 mb-4 leading-relaxed">
+                  {t("about.description2")}
+                </p>
+                <p className="text-sm md:text-base text-black/70 mb-10 leading-relaxed">
+                  {t("about.description3")}
+                </p>
+                <Link
+                  href={aboutHref}
+                  className="inline-flex items-center gap-2 text-sm text-brand-primary hover:opacity-70 transition"
+                >
+                  {t("about.cta")}
+                  {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                  <FontAwesomeIcon
+                    icon={faArrowRight as any}
+                    className="w-3 h-3"
+                  />
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </FadeIn>
 
       {/* Pillars */}
-      <PillarsSection />
+      <FadeIn>
+        <PillarsSection />
+      </FadeIn>
 
       {/* Process */}
-      <VisitFlowSection />
+      <FadeIn>
+        <VisitFlowSection />
+      </FadeIn>
 
       {/* FAQ */}
-      <FAQ />
+      <FadeIn>
+        <FAQ />
+      </FadeIn>
 
-      <TerminalCTA
-        title={tFooter("cta")}
-        paragraph={tFooter("ctaDescription")}
-        buttons={terminalButtons}
-        onPrimaryClick={openVelloModal}
-      />
+      <FadeIn>
+        <TerminalCTA
+          title={tFooter("cta")}
+          paragraph={tFooter("ctaDescription")}
+          buttons={terminalButtons}
+          onPrimaryClick={openVelloModal}
+        />
+      </FadeIn>
     </>
   );
 }

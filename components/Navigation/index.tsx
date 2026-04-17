@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   COMPANY_METADATA,
   NAVIGATION_LINKS,
@@ -18,6 +18,12 @@ import { getLocaleData, isActive, SCROLL_THRESHOLD } from "./utils";
 import { desktopLinkStyles, linkStylesActive } from "./styles";
 import { NavigationItem } from "./types";
 import { openVelloModal } from "@/lib/openVelloModal";
+
+const navAnim = (delay: number) => ({
+  initial: { opacity: 0, y: -10 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.55, delay, ease: [0.25, 0.1, 0.25, 1] as const },
+});
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -67,33 +73,36 @@ export default function Navigation() {
         className="relative z-[9992] w-full flex items-center justify-between px-6 md:px-10 py-4"
       >
         {/* Logo */}
-        <Link
-          href={`/${locale}`}
-          className="text-2xl font-bold tracking-tighter hover:opacity-70 transition text-brand-primary"
-          onClick={() => setMobileMenuOpen(false)}
-        >
-          {COMPANY_METADATA.name}
-        </Link>
+        <motion.div {...navAnim(0)}>
+          <Link
+            href={`/${locale}`}
+            className="text-2xl font-bold tracking-tighter hover:opacity-70 transition text-brand-primary"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            {COMPANY_METADATA.name}
+          </Link>
+        </motion.div>
 
         {/* Desktop nav links */}
         <div className="hidden md:flex items-center gap-1">
-          {NAVIGATION_LINKS.map((item: NavigationItem) => {
+          {NAVIGATION_LINKS.map((item: NavigationItem, index: number) => {
             const localeData = getLocaleData(item, locale);
             const active = isActive(localeData.href, pathname);
             return (
-              <Link
-                key={item.link}
-                href={localeData.href}
-                className={`${desktopLinkStyles} ${active ? linkStylesActive : ""}`}
-              >
-                {localeData.name}
-              </Link>
+              <motion.div key={item.link} {...navAnim(0.1 + index * 0.07)}>
+                <Link
+                  href={localeData.href}
+                  className={`${desktopLinkStyles} ${active ? linkStylesActive : ""}`}
+                >
+                  {localeData.name}
+                </Link>
+              </motion.div>
             );
           })}
         </div>
 
         {/* Desktop right: language + CTA */}
-        <div className="hidden md:flex items-center gap-4">
+        <motion.div {...navAnim(0.38)} className="hidden md:flex items-center gap-4">
           {SITE_CONFIG.i18n.languageSwitcher.showOnDesktop && (
             <LanguageSwitcher />
           )}
@@ -110,10 +119,11 @@ export default function Navigation() {
               </button>
             );
           })}
-        </div>
+        </motion.div>
 
         {/* Mobile hamburger */}
-        <button
+        <motion.button
+          {...navAnim(0.15)}
           className="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5"
           onClick={() => setMobileMenuOpen((prev) => !prev)}
           aria-expanded={mobileMenuOpen}
@@ -128,7 +138,7 @@ export default function Navigation() {
           <span
             className={`block h-0.5 w-6 bg-black transition-all duration-300 ${mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
           />
-        </button>
+        </motion.button>
       </nav>
 
       {/* Mobile menu */}

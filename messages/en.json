@@ -64,7 +64,7 @@
           { "question": "How do I know if I need therapy?", "answer": "If something is weighing on your mind or your life situation feels burdensome, therapy can help. You don't need a 'big enough' problem. The first meeting is a free introduction." },
           { "question": "Is therapy confidential?", "answer": "Yes. Everything discussed in therapy sessions is confidential. I am bound by professional secrecy." },
           { "question": "How long does therapy last?", "answer": "Short-term therapy is typically 5–20 sessions. The length of the process is planned individually according to your needs." },
-          { "question": "How much does therapy cost?", "answer": "Short-term therapy sessions are €89 / 60 min. Short-term therapy is not currently covered by Kela reimbursement, but it is worth checking with your employer or insurance company." },
+          { "question": "How much does therapy cost?", "answer": "Sessions start from €69 (until August 2026), and from €95 from 1 September 2026. Short-term therapy is not currently covered by Kela reimbursement, but it is worth checking with your employer or insurance company." },
           { "question": "Can sessions be arranged remotely?", "answer": "Yes, short-term therapy sessions can be arranged remotely via video call. Craniosacral therapy is always in Espoo." },
           { "question": "Do I need to know anything in particular?", "answer": "Nothing in particular. Come as you are." },
           { "question": "What is craniosacral therapy?", "answer": "Craniosacral therapy is a gentle, calm form of treatment in which the body is listened to through light touch. The aim is to release tension, support nervous system balance and promote the body's own recovery. Craniosacral therapy does not replace a doctor's examination, treatment or other healthcare services, and no medical diagnosis is made." },
@@ -105,7 +105,7 @@
         {
           "title": "Short-term therapy in Espoo and remotely",
           "intro": "Goal-oriented, practical conversational support that helps you organise your thoughts, process strain, and find a way forward.",
-          "body": "Short-term therapy is goal-oriented, practical conversational support that helps you organise your thoughts, process strain, and find a way forward.\n\n- Sessions in Espoo or online\n- Duration: 60 min\n- Price: €89 per session\n\n**Short-term therapy may suit you if:**\n\n- you feel stress, exhaustion or anxiety\n- you long for clarity in your life situation\n- you want a safe space to speak and be heard",
+          "body": "Short-term therapy is goal-oriented, practical conversational support that helps you organise your thoughts, process strain, and find a way forward.\n\n- Sessions in Espoo or online\n- Duration: 60 min\n- Price: from €69 per session (until August 2026), from €95 per session (from 1 Sep 2026)\n\n**Short-term therapy may suit you if:**\n\n- you feel stress, exhaustion or anxiety\n- you long for clarity in your life situation\n- you want a safe space to speak and be heard",
           "cta": "Book short-term therapy"
         },
         {
@@ -296,9 +296,9 @@
         {
           "name": "Payments & booking",
           "items": [
-            { "question": "How much does therapy cost?", "answer": "Sessions are €89. Short-term therapy is not currently covered by Kela reimbursement, so it is paid for out of pocket. Some employers cover therapy as part of occupational wellbeing benefits – it is worth checking your employer's policy." },
-            { "question": "How can I book an appointment?", "answer": "You can book by emailing nora@norasoini.fi or filling in the contact form on this website. I typically reply within 1–2 business days and we will find a time that works for you." },
-            { "question": "How can I pay?", "answer": "Sessions are paid by bank transfer according to the invoice. The invoice is sent by email after the session, with a 14-day payment term." }
+            { "question": "How much does therapy cost?", "answer": "Sessions start from €69 (until August 2026), and from €95 from 1 September 2026. Short-term therapy is not currently covered by Kela reimbursement, so it is paid for out of pocket. Some employers cover therapy as part of occupational wellbeing benefits – it is worth checking your employer's policy." },
+            { "question": "How can I book an appointment?", "answer": "You can book directly using the \"Book an appointment\" button, by emailing nora@norasoini.fi, or by filling in the contact form on this website. I typically reply within 1–2 business days and we will find a time that works for you." },
+            { "question": "How can I pay?", "answer": "Sessions are paid in advance by credit card at the time of booking." }
           ]
         },
         {

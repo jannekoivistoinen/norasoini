@@ -4,6 +4,7 @@ import ContactForm from "@/components/ContactForm";
 import PageHero from "@/components/sections/PageHero";
 import ProcessSection from "@/components/sections/ProcessSection";
 import TerminalCTA from "@/components/sections/TerminalCTA";
+import FadeIn from "@/components/ui/FadeIn";
 import { SITE_CONFIG } from "@/lib/constants";
 
 const FAQ = dynamic(() =>
@@ -19,46 +20,54 @@ export default function ContactPage() {
     <>
       <PageHero heading={t("hero.title")} />
 
-      <section className="container py-10 pb-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
-          {/* Info */}
-          <div>
-            <h2 className="font-heading italic text-3xl md:text-4xl leading-tight mb-6">
-              {t("contact.title")}
-            </h2>
-            <p className="text-sm md:text-base text-black/70 mb-6 leading-relaxed">
-              {t("hero.description")}
-            </p>
-            <p className="text-sm md:text-base text-black/60 mb-6 leading-relaxed">
-              {t("contact.info")}
-            </p>
-            <a
-              href={`mailto:${SITE_CONFIG.company.contact.email}`}
-              className="text-sm text-brand-primary hover:opacity-70 transition"
-            >
-              {SITE_CONFIG.company.contact.email}
-            </a>
+      <FadeIn>
+        <section className="container py-10 pb-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
+            {/* Info */}
+            <div>
+              <h2 className="font-heading italic text-3xl md:text-4xl leading-tight mb-6">
+                {t("contact.title")}
+              </h2>
+              <p className="text-sm md:text-base text-black/70 mb-6 leading-relaxed">
+                {t("hero.description")}
+              </p>
+              <p className="text-sm md:text-base text-black/60 mb-6 leading-relaxed">
+                {t("contact.info")}
+              </p>
+              <a
+                href={`mailto:${SITE_CONFIG.company.contact.email}`}
+                className="text-sm text-brand-primary hover:opacity-70 transition"
+              >
+                {SITE_CONFIG.company.contact.email}
+              </a>
+            </div>
+
+            {/* Form */}
+            <div>
+              <h2 className="font-heading italic text-3xl md:text-4xl leading-tight mb-8">
+                {t("contact.formTitle")}
+              </h2>
+              <ContactForm />
+            </div>
           </div>
+        </section>
+      </FadeIn>
 
-          {/* Form */}
-          <div>
-            <h2 className="font-heading italic text-3xl md:text-4xl leading-tight mb-8">
-              {t("contact.formTitle")}
-            </h2>
-            <ContactForm />
-          </div>
-        </div>
-      </section>
+      <FadeIn>
+        <ProcessSection />
+      </FadeIn>
 
-      <ProcessSection />
+      <FadeIn>
+        <FAQ />
+      </FadeIn>
 
-      <FAQ />
-
-      <TerminalCTA
-        title={tFooter("cta")}
-        paragraph={tFooter("ctaDescription")}
-        buttons={[{ label: tFooter("ctaButton"), href: contactHref }]}
-      />
+      <FadeIn>
+        <TerminalCTA
+          title={tFooter("cta")}
+          paragraph={tFooter("ctaDescription")}
+          buttons={[{ label: tFooter("ctaButton"), href: contactHref }]}
+        />
+      </FadeIn>
     </>
   );
 }

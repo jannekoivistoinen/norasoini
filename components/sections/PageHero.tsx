@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "motion/react";
 
 interface PageHeroProps {
   heading: string;
@@ -7,6 +10,12 @@ interface PageHeroProps {
   ctaHref?: string;
   onCtaClick?: () => void;
 }
+
+const heroAnim = (delay: number) => ({
+  initial: { opacity: 0, y: 22 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.75, delay, ease: [0.25, 0.1, 0.25, 1] as const },
+});
 
 export default function PageHero({
   heading,
@@ -17,16 +26,22 @@ export default function PageHero({
 }: PageHeroProps) {
   return (
     <section className="px-6 pt-16 pb-20 md:pt-24 md:pb-28 text-center max-w-[1200px] mx-auto">
-      <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight max-w-4xl mx-auto text-balance">
+      <motion.h1
+        {...heroAnim(0.05)}
+        className="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight max-w-4xl mx-auto text-balance"
+      >
         {heading}
-      </h1>
+      </motion.h1>
       {ingress ? (
-        <p className="mt-8 max-w-[682px] mx-auto text-sm md:text-base text-black/70 leading-relaxed">
+        <motion.p
+          {...heroAnim(0.18)}
+          className="mt-8 max-w-[682px] mx-auto text-sm md:text-base text-black/70 leading-relaxed"
+        >
           {ingress}
-        </p>
+        </motion.p>
       ) : null}
       {ctaLabel && ctaHref ? (
-        <div className="mt-10">
+        <motion.div {...heroAnim(0.3)} className="mt-10">
           {onCtaClick ? (
             <button
               type="button"
@@ -43,7 +58,7 @@ export default function PageHero({
               {ctaLabel}
             </Link>
           )}
-        </div>
+        </motion.div>
       ) : null}
     </section>
   );
