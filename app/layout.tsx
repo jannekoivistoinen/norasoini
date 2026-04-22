@@ -1,7 +1,14 @@
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 export default function RootLayout({
-  children,
+ children,
 }: {
-  children: React.ReactNode;
+ children: React.ReactNode;
 }) {
-  return children;
+ return (
+  <>
+   {children}
+   <GoogleAnalytics gaId="G-1HM4VJEXGE" />
+  </>
+ );
 }

@@ -36,6 +36,7 @@ export default function Navigation() {
   const locale = useLocale();
   const router = useRouter();
 
+  // Track scroll position for header styling
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > SCROLL_THRESHOLD);
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -43,6 +44,7 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock body scroll while menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
       const scrollbarWidth =
@@ -59,14 +61,24 @@ export default function Navigation() {
     };
   }, [mobileMenuOpen]);
 
+  // Close menu + reset submenu on route change
+  useEffect(() => {
+    setMobileMenuOpen(false);
+    setOpenMobileSubmenu(null);
+  }, [pathname]);
+
   const toggleMobileSubmenu = (itemName: string) => {
     setOpenMobileSubmenu(openMobileSubmenu === itemName ? null : itemName);
   };
 
   return (
     <header
-      className={`sticky z-[9999] top-0 w-full transition-all duration-300 bg-brand-bg ${
-        isScrolled ? "border-b border-black/10" : ""
+      className={`sticky z-[9999] top-0 w-full transition-all duration-300 ${
+        mobileMenuOpen
+          ? "bg-brand-bg"
+          : isScrolled
+            ? "bg-brand-bg/85 backdrop-blur-xl border-b border-black/10"
+            : "bg-brand-bg"
       }`}
     >
       <nav
@@ -124,24 +136,44 @@ export default function Navigation() {
           })}
         </motion.div>
 
-        {/* Mobile hamburger */}
-        <motion.button
-          {...navAnim(0.15)}
-          className="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5"
-          onClick={() => setMobileMenuOpen((prev) => !prev)}
-          aria-expanded={mobileMenuOpen}
-          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-        >
-          <span
-            className={`block h-0.5 w-6 bg-black transition-all duration-300 ${mobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}
-          />
-          <span
-            className={`block h-0.5 w-6 bg-black transition-all duration-300 ${mobileMenuOpen ? "opacity-0" : ""}`}
-          />
-          <span
-            className={`block h-0.5 w-6 bg-black transition-all duration-300 ${mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
-          />
-        </motion.button>
+        {/* Mobile hamburger / close toggle */}
+        <motion.div {...navAnim(0.15)} className="md:hidden">
+          <Button
+            className="group"
+            variant="outline"
+            size="icon"
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
+            aria-expanded={mobileMenuOpen}
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          >
+            <svg
+              className="pointer-events-none"
+              width={18}
+              height={18}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 12L20 12"
+                className="origin-center -translate-y-[7px] transition-all duration-300 [transition-timing-function:cubic-bezier(.5,.85,.25,1.1)] group-aria-expanded:translate-x-0 group-aria-expanded:translate-y-0 group-aria-expanded:rotate-[315deg]"
+              />
+              <path
+                d="M4 12H20"
+                className="origin-center transition-all duration-300 [transition-timing-function:cubic-bezier(.5,.85,.25,1.8)] group-aria-expanded:rotate-45"
+              />
+              <path
+                d="M4 12H20"
+                className="origin-center translate-y-[7px] transition-all duration-300 [transition-timing-function:cubic-bezier(.5,.85,.25,1.1)] group-aria-expanded:translate-y-0 group-aria-expanded:rotate-[135deg]"
+              />
+            </svg>
+          </Button>
+        </motion.div>
       </nav>
 
       {/* Mobile menu */}

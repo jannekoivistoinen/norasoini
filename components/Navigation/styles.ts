@@ -1,6 +1,10 @@
 // Shared styles
+// Note: use `transition-colors` (not the broad `transition`) so Tailwind only
+// CSS-transitions color/opacity hover changes. The broad `transition` class
+// includes `transform`, which collides with Framer Motion's slide animations
+// and produces a visible "step/settle" glitch after items fade in.
 export const linkStyles =
-  "text-black text-md font-medium tracking-tight transition";
+  "text-black text-md font-medium tracking-tight transition-colors";
 export const linkStylesActive = "text-brand-primary";
 export const descriptionStyles = "text-sm text-gray-500";
 
@@ -18,7 +22,7 @@ export const desktopPopoverLinkTitleStyles =
 export const desktopPopoverLinkDescStyles = descriptionStyles;
 
 // Mobile styles
-export const mobileLinkStyles = `${linkStyles} block text-lg hover:opacity-60 py-2`;
+export const mobileLinkStyles = `${linkStyles} block text-3xl hover:opacity-60 py-1`;
 export const mobileSubmenuLinkStyles =
   "block text-base text-gray-600 hover:bg-brand-card rounded-md transition-colors py-3 px-4";
 export const mobileLinkStylesActive = "text-brand-primary";
