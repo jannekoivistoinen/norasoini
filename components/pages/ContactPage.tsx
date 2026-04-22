@@ -30,10 +30,10 @@ export default function ContactPage() {
               <h2 className="font-heading italic text-3xl md:text-4xl leading-tight">
                 {t("contact.title")}
               </h2>
-              <p className="text-sm md:text-base text-black/70 leading-relaxed">
-                {t("hero.description")}
-              </p>
-              <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "1024/683" }}>
+              <div
+                className="relative w-full rounded-2xl overflow-hidden"
+                style={{ aspectRatio: "1024/683" }}
+              >
                 <Image
                   src={noraSoiniPortrait}
                   alt="Nora Soini – terapeutti Espoossa"
@@ -42,9 +42,16 @@ export default function ContactPage() {
                   className="object-cover"
                 />
               </div>
+              <p className="text-sm md:text-base text-black/70 leading-relaxed">
+                {t("hero.description")}
+              </p>
               <div>
-                <p className="font-medium text-black/90">{SITE_CONFIG.company.name}</p>
-                <p className="text-sm text-black/60">Lyhytterapeutti &amp; kraniosakraaliterapeutti</p>
+                <p className="font-medium text-black/90">
+                  {SITE_CONFIG.company.name}
+                </p>
+                <p className="text-sm text-black/60">
+                  Lyhytterapeutti &amp; kraniosakraaliterapeutti
+                </p>
               </div>
               <a
                 href={`mailto:${SITE_CONFIG.company.contact.email}`}
@@ -73,13 +80,11 @@ export default function ContactPage() {
         <FAQ />
       </FadeIn>
 
-      <FadeIn>
-        <TerminalCTA
-          title={tFooter("cta")}
-          paragraph={tFooter("ctaDescription")}
-          buttons={[{ label: tFooter("ctaButton"), href: contactHref }]}
-        />
-      </FadeIn>
+      <TerminalCTA
+        title={tFooter("cta")}
+        paragraph={tFooter("ctaDescription")}
+        buttons={[{ label: tFooter("ctaButton"), href: contactHref }]}
+      />
     </>
   );
 }

@@ -1,10 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { BatteryLow, Milestone, Compass, Eye, Leaf } from "lucide-react";
 import { Slider } from "@/components/Slider";
 
 const SITUATIONS_SLIDES_PER_VIEW = { mobile: 1.2, tablet: 2, desktop: 3 };
+
+const situationIcons = [BatteryLow, Milestone, Compass, Eye, Leaf] as const;
 
 export default function SituationsSlider() {
   const t = useTranslations("page.homepage");
@@ -26,23 +28,32 @@ export default function SituationsSlider() {
         spacing={20}
         mobileSpacing={16}
       >
-        {cards.map((card, i) => (
-          <div key={i} className="flex flex-col">
-            <div className="relative w-full rounded-2xl overflow-hidden mb-5 aspect-[467/700]">
-              <Image
-                src={`/images/situation-${i + 1}.jpg`}
-                alt={card.title}
-                fill
-                sizes="(max-width: 768px) 83vw, (max-width: 1024px) 50vw, 33vw"
-                className="object-cover"
-              />
+        {cards.map((card, i) => {
+          const Icon = situationIcons[i];
+          return (
+            <div
+              key={i}
+              className="relative overflow-hidden rounded-2xl bg-[#d8cdbb]"
+              style={{ aspectRatio: "467/418" }}
+            >
+              <div className="absolute inset-0 p-8 flex flex-col justify-between">
+                <div>
+                  <Icon
+                    className="text-brand-primary w-7 h-7"
+                    strokeWidth={1.5}
+                    aria-hidden
+                  />
+                </div>
+                <div>
+                  <h3 className="font-heading italic text-2xl mb-3">
+                    {card.title}
+                  </h3>
+                  <p className="text-sm text-black/70">{card.description}</p>
+                </div>
+              </div>
             </div>
-            <h3 className="font-heading italic text-2xl mb-2">{card.title}</h3>
-            <p className="text-sm text-black/60 leading-relaxed">
-              {card.description}
-            </p>
-          </div>
-        ))}
+          );
+        })}
       </Slider>
     </section>
   );

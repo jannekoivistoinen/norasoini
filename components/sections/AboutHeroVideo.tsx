@@ -25,7 +25,7 @@ export default function AboutHeroVideo() {
   }
 
   return (
-    <section className="container">
+    <div className="container">
       <div
         className="relative w-full rounded-2xl overflow-hidden"
         style={{ aspectRatio: "1440/776" }}
@@ -48,11 +48,14 @@ export default function AboutHeroVideo() {
           >
             <div className="w-16 h-16 rounded-full bg-brand-bg/80 flex items-center justify-center">
               {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-              <FontAwesomeIcon icon={faCirclePlay as any} className="text-brand-primary w-8 h-8" />
+              <FontAwesomeIcon
+                icon={faCirclePlay as any}
+                className="text-brand-primary w-8 h-8"
+              />
             </div>
           </div>
         )}
       </div>
-    </section>
+    </div>
   );
 }

@@ -11,8 +11,8 @@ import AboutHeroVideo from "@/components/sections/AboutHeroVideo";
 import FadeIn from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
 
-const FAQ = dynamic(
-  () => import("@/components/FAQ").then((module) => module.FAQ),
+const FAQ = dynamic(() =>
+  import("@/components/FAQ").then((module) => module.FAQ),
 );
 
 type TerminalCTAButton = {
@@ -31,8 +31,13 @@ export default function AboutPage() {
   const terminalButtons: TerminalCTAButton[] = [
     { label: tFooter("ctaButton"), href: contactHref },
   ];
-  const paragraphsBeforeBento = t.raw("intro.paragraphsBeforeBento") as string[];
-  const afterBento = t.raw("intro.afterBento") as { ingress: string; paragraphs: string[] };
+  const paragraphsBeforeBento = t.raw(
+    "intro.paragraphsBeforeBento",
+  ) as string[];
+  const afterBento = t.raw("intro.afterBento") as {
+    ingress: string;
+    paragraphs: string[];
+  };
   return (
     <>
       {/* Hero */}
@@ -51,7 +56,10 @@ export default function AboutPage() {
             </p>
             <div className="md:ml-[15%] md:max-w-[70%]">
               {paragraphsBeforeBento.map((para, i) => (
-                <p key={i} className="text-sm md:text-base text-black/70 mb-5 leading-relaxed">
+                <p
+                  key={i}
+                  className="text-sm md:text-base text-black/70 mb-5 leading-relaxed"
+                >
                   {para}
                 </p>
               ))}
@@ -62,9 +70,12 @@ export default function AboutPage() {
 
       {/* Bento photo grid */}
       <FadeIn>
-        <section className="container pb-20">
+        <div className="container pb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "706/935" }}>
+            <div
+              className="relative w-full rounded-2xl overflow-hidden"
+              style={{ aspectRatio: "706/935" }}
+            >
               <Image
                 src="/images/about-left.jpg"
                 alt="Nora Soini"
@@ -74,7 +85,10 @@ export default function AboutPage() {
               />
             </div>
             <div className="flex flex-col gap-3">
-              <div className="relative w-full rounded-2xl overflow-hidden flex-1" style={{ aspectRatio: "706/458" }}>
+              <div
+                className="relative w-full rounded-2xl overflow-hidden flex-1"
+                style={{ aspectRatio: "706/458" }}
+              >
                 <Image
                   src="/images/about-right-top.jpg"
                   alt="Nora Soini"
@@ -83,7 +97,10 @@ export default function AboutPage() {
                   sizes="(min-width: 768px) 50vw, 100vw"
                 />
               </div>
-              <div className="relative w-full rounded-2xl overflow-hidden flex-1" style={{ aspectRatio: "706/458" }}>
+              <div
+                className="relative w-full rounded-2xl overflow-hidden flex-1"
+                style={{ aspectRatio: "706/458" }}
+              >
                 <Image
                   src="/images/about-right-bottom.jpg"
                   alt="Nora Soini"
@@ -94,30 +111,28 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </FadeIn>
 
       {/* Bio (after bento) */}
       <FadeIn>
-        <section className="container pb-20">
+        <div className="container pb-20">
           <div className="max-w-[882px] mx-auto">
             <p className="font-heading italic text-2xl md:text-3xl lg:text-4xl leading-snug text-black/85 mb-8 md:ml-[15%] md:max-w-[70%]">
               {afterBento.ingress}
             </p>
             <div className="md:ml-[15%] md:max-w-[70%]">
               {afterBento.paragraphs.map((para, i) => (
-                <p key={i} className="text-sm md:text-base text-black/70 mb-5 leading-relaxed">
+                <p
+                  key={i}
+                  className="text-sm md:text-base text-black/70 mb-5 leading-relaxed"
+                >
                   {para}
                 </p>
               ))}
-              <div className="mt-10">
-                <Button asChild>
-                  <Link href={contactHref}>{t("hero.cta")}</Link>
-                </Button>
-              </div>
             </div>
           </div>
-        </section>
+        </div>
       </FadeIn>
 
       {/* Pillars */}
@@ -130,13 +145,11 @@ export default function AboutPage() {
         <FAQ />
       </FadeIn>
 
-      <FadeIn>
-        <TerminalCTA
-          title={tFooter("cta")}
-          paragraph={tFooter("ctaDescription")}
-          buttons={terminalButtons}
-        />
-      </FadeIn>
+      <TerminalCTA
+        title={tFooter("cta")}
+        paragraph={tFooter("ctaDescription")}
+        buttons={terminalButtons}
+      />
     </>
   );
 }
