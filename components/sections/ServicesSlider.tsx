@@ -42,7 +42,7 @@ export default function ServicesSlider() {
               />
             </div>
             <h3 className="font-heading italic text-2xl mb-2">{item.title}</h3>
-            <p className="text-sm text-black/60 leading-relaxed line-clamp-2 mb-2">
+            <p className="text-sm text-black/60 leading-relaxed mb-2">
               {item.intro}
             </p>
             <Link
