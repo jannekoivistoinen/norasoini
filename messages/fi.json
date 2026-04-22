@@ -262,12 +262,13 @@
       },
       "hero": {
         "title": "Ota yhteyttä",
+        "ingress": "Vastaanotto Espoossa sekä etänä videopuhelun välityksellä. Tarjoan myös maksuttoman 15 minuutin tutustumispuhelun – lyhyt, sitoutumaton puhelu, jossa voit kertoa tilanteestasi ja kysyä mitä tahansa.",
         "description": "Ensimmäinen yhteydenotto voi tuntua isolta askeleelta. Siksi haluan tehdä ajan varaamisesta sinulle mahdollisimman helppoa ja turvallista.",
         "buttonText": "Siirry lomakkeelle"
       },
       "contact": {
         "title": "Yhteystiedot",
-        "info": "Vastaanotto Espoossa sekä etänä videopuhelun välityksellä.",
+        "info": "Vastaanotto Espoossa sekä etänä videopuhelun välityksellä. Tarjoan myös maksuttoman 15 minuutin tutustumispuhelun – lyhyt, sitoutumaton puhelu, jossa voit kertoa tilanteestasi ja kysyä mitä tahansa.",
         "email": "nora@norasoini.fi",
         "formTitle": "Lähetä viesti"
       }

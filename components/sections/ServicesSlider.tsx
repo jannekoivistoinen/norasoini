@@ -4,14 +4,13 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { Slider } from "@/components/Slider";
+import { serviceImages } from "@/app/assets/images";
 
 type ServiceItem = {
   title: string;
   intro: string;
   details: string[];
 };
-
-const SERVICES_SLIDES_PER_VIEW = { mobile: 1.2, tablet: 2, desktop: 3 };
 
 export default function ServicesSlider() {
   const tHome = useTranslations("page.homepage");
@@ -27,18 +26,15 @@ export default function ServicesSlider() {
         {tHome("servicesSlider.description")}
       </p>
       <Slider
-        slidesPerView={SERVICES_SLIDES_PER_VIEW}
+        slidesPerView={{ mobile: 1.2, tablet: 2, desktop: 2 }}
         spacing={20}
         mobileSpacing={16}
       >
         {items.map((item, i) => (
           <div key={i} className="flex flex-col">
-            <div
-              className="relative w-full rounded-2xl overflow-hidden mb-5"
-              style={{ aspectRatio: "467/700" }}
-            >
+            <div className="relative w-full rounded-2xl overflow-hidden mb-5 aspect-square">
               <Image
-                src={`/images/service-${(i % 3) + 1}.jpg`}
+                src={serviceImages[i % serviceImages.length]}
                 alt={item.title}
                 fill
                 sizes="(max-width: 768px) 83vw, (max-width: 1024px) 50vw, 33vw"

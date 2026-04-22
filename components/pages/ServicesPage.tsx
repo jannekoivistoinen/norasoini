@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { serviceImages } from "@/app/assets/images";
 import dynamic from "next/dynamic";
 import { useTranslations, useLocale } from "next-intl";
 import ReactMarkdown from "react-markdown";
@@ -58,13 +59,13 @@ export default function ServicesPage() {
         <div className="flex flex-col gap-4">
           {items.map((item, i) => (
             <FadeIn key={i} delay={i * 0.08}>
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="relative">
+              <div className="grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden">
+                <div className="relative min-h-64">
                   <Image
-                    src={`/images/service-${i + 1}.jpg`}
+                    src={serviceImages[i % serviceImages.length]}
                     alt={item.title}
                     fill
-                    className="object-cover relative"
+                    className="object-cover"
                   />
                 </div>
                 <div className="bg-brand-card px-10 py-16 md:px-16 md:py-20 flex flex-col justify-center">
@@ -74,11 +75,7 @@ export default function ServicesPage() {
                   <div className="prose prose-sm text-black/70 mb-8 [&_strong]:text-black/80 [&_strong]:font-medium [&_li::marker]:text-black/70">
                     <ReactMarkdown>{item.body}</ReactMarkdown>
                   </div>
-                  <Button
-                    type="button"
-                    onClick={openVelloModal}
-                    className="self-start rounded-full px-7 py-4 text-sm mb-8 h-auto"
-                  >
+                  <Button onClick={openVelloModal} className="self-start mb-8">
                     {item.cta}
                   </Button>
                   <p className="text-black/50 text-sm">{cardQuote}</p>
@@ -97,14 +94,12 @@ export default function ServicesPage() {
         <FAQ />
       </FadeIn>
 
-      <FadeIn>
-        <TerminalCTA
-          title={t("terminalCta.title")}
-          paragraph={t("terminalCta.paragraph")}
-          buttons={terminalButtons}
-          onPrimaryClick={openVelloModal}
-        />
-      </FadeIn>
+      <TerminalCTA
+        title={t("terminalCta.title")}
+        paragraph={t("terminalCta.paragraph")}
+        buttons={terminalButtons}
+        onPrimaryClick={openVelloModal}
+      />
     </>
   );
 }

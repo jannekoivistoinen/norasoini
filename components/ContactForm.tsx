@@ -1,18 +1,13 @@
 "use client";
 
 import { useState, Suspense } from "react";
+import { Button } from "@/components/ui/button";
 import { useForm } from "react-hook-form";
-import useWeb3Forms from "@web3forms/react";
 import { useTranslations } from "next-intl";
-
-type FormData = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  message: string;
-  botcheck: string;
-};
+import type {
+  ContactApiResult,
+  ContactFormData,
+} from "@/lib/contact/schema";
 
 const inputBase =
   "w-full bg-brand-card text-black px-4 py-3 rounded-xl text-sm placeholder:text-black/40 border border-transparent focus:outline-none focus:ring-1 focus:ring-brand-primary/50 transition";
@@ -29,22 +24,26 @@ const ContactFormContent = () => {
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm<FormData>({ mode: "onTouched" });
+  } = useForm<ContactFormData>({ mode: "onTouched" });
 
-  const { submit: onSubmit } = useWeb3Forms({
-    access_key: process.env.PUBLIC_ACCESS_KEY || "",
-    settings: {
-      from_name: "Nora Soini",
-      subject: "Uusi yhteydenotto – norasoini.fi",
-    },
-    onSuccess: () => {
+  const onSubmit = async (data: ContactFormData) => {
+    setErrorMsg("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const json = (await res.json()) as ContactApiResult;
+      if (!res.ok || !json.ok) {
+        throw new Error("error" in json ? json.error : "Failed");
+      }
       reset();
       setIsSuccess(true);
-    },
-    onError: (msg) => {
-      setErrorMsg(msg);
-    },
-  });
+    } catch (err) {
+      setErrorMsg(err instanceof Error ? err.message : "");
+    }
+  };
 
   if (isSuccess) {
     return (
@@ -132,13 +131,13 @@ const ContactFormContent = () => {
         )}
       </div>
 
-      <button
+      <Button
         type="submit"
         disabled={isSubmitting}
-        className="bg-brand-primary text-white text-sm px-6 py-3 rounded-full hover:opacity-90 transition disabled:opacity-60 mt-2"
+        className="mt-2"
       >
         {isSubmitting ? "…" : t("submitButton")}
-      </button>
+      </Button>
 
       {errorMsg && (
         <p className="text-xs text-red-500 text-center">{t("errorMessage")}</p>

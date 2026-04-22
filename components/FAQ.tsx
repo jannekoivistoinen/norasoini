@@ -36,7 +36,7 @@ const FAQCategory = ({
         className="flex w-full items-center justify-between py-5 text-left"
         onClick={onClick}
       >
-        <span className="font-heading text-xl italic font-semibold leading-snug text-black">
+        <span className="font-heading text-xl italic font-semibold tracking-looser text-black">
           {index + 1}. {category.name}
         </span>
         <span
@@ -98,7 +98,7 @@ export function FAQ({}: FAQProps) {
     <section id="FAQ" className="container">
       <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
         <div className="md:sticky md:top-28 md:self-start">
-          <h2 className="font-heading text-4xl italic leading-[1.1] text-black md:text-[56px] md:leading-[1.1]">
+          <h2 className="font-heading text-4xl italic tracking-looser leading-[1.1] text-black md:text-[56px] md:leading-[1.1]">
             {t("title")}
           </h2>
           <MarkdownText className="mt-6 text-[18px] leading-relaxed text-black/60 [&_p]:mb-0">

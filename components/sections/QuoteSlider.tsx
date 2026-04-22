@@ -8,7 +8,7 @@ export default function QuoteSlider() {
   const slides = t.raw("slides") as { quote: string; description: string }[];
 
   return (
-    <div className="container">
+    <div className="container mb-24">
       <Slider slidesPerView={1} spacing={20} mobileSpacing={16} showPagination>
         {slides.map((slide, i) => (
           <div

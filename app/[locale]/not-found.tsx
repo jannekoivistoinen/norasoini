@@ -1,29 +1,27 @@
-import Image from "next/image";
 import Link from "next/link";
-import Logo from "../assets/Logo.png";
 import { Button } from "@/components/ui/button";
+import TerminalCTA from "@/components/sections/TerminalCTA";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center">
-      <div className="text-center">
-        <Image
-          src={Logo}
-          alt="Lucky Ranch Logo"
-          width={120}
-          height={120}
-          className="mx-auto mb-12"
-        />
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">
-          404 - Page Not Found
+    <>
+      <div className="flex-grow flex flex-col items-center justify-center py-64 px-6 text-center">
+        <h1 className="font-heading italic text-6xl md:text-8xl text-brand-primary mb-4">
+          404
         </h1>
-        <p className="text-gray-600 mb-8">
-          The page you are looking for doesn't exist or it has moved.
+        <p className="text-xl text-gray-700 mb-2">Sivua ei löydy</p>
+        <p className="text-gray-500 mb-10 max-w-md">
+          Etsimääsi sivua ei ole olemassa tai se on siirretty.
         </p>
-        <Button size="lg" asChild>
-          <Link href="/">Return to Homepage</Link>
+        <Button asChild>
+          <Link href="/fi">Palaa etusivulle</Link>
         </Button>
       </div>
-    </div>
+      <TerminalCTA
+        title="Tervetuloa juuri sellaisena kuin olet"
+        paragraph="Uskon, että jokaisessa ihmisessä on jo olemassa suunta kohti tasapainoa. Joskus tarvitsemme vain toisen ihmisen kulkemaan hetken rinnalla."
+        buttons={[{ label: "Varaa aika", href: "/fi/yhteystiedot" }]}
+      />
+    </>
   );
 }

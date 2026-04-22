@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 interface CTAButton {
   label: string;
@@ -30,30 +31,17 @@ export default function TerminalCTA({
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
         {buttons.map((btn, i) =>
           btn.variant === "secondary" ? (
-            <Link
-              key={i}
-              href={btn.href}
-              className="inline-block border border-brand-footer-text text-brand-footer-text text-sm px-6 py-3 rounded-full bg-transparent hover:bg-brand-footer-text/10 transition"
-            >
-              {btn.label}
-            </Link>
+            <Button key={i} asChild variant="terminal-outline">
+              <Link href={btn.href}>{btn.label}</Link>
+            </Button>
           ) : onPrimaryClick ? (
-            <button
-              key={i}
-              type="button"
-              onClick={onPrimaryClick}
-              className="inline-block bg-brand-footer-text text-brand-primary text-sm px-6 py-3 rounded-full border border-brand-footer-text hover:opacity-90 transition"
-            >
+            <Button key={i} variant="terminal" onClick={onPrimaryClick}>
               {btn.label}
-            </button>
+            </Button>
           ) : (
-            <Link
-              key={i}
-              href={btn.href}
-              className="inline-block bg-brand-footer-text text-brand-primary text-sm px-6 py-3 rounded-full border border-brand-footer-text hover:opacity-90 transition"
-            >
-              {btn.label}
-            </Link>
+            <Button key={i} asChild variant="terminal">
+              <Link href={btn.href}>{btn.label}</Link>
+            </Button>
           ),
         )}
       </div>

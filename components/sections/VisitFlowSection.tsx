@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Slider } from "@/components/Slider";
+import { visitFlowImages } from "@/app/assets/images";
 
 type VisitStep = {
   number: string;
@@ -31,21 +32,17 @@ export default function VisitFlowSection() {
       >
         {steps.map((step, i) => (
           <div key={i}>
-            <div
-              className="relative w-full rounded-2xl overflow-hidden mb-5"
-              style={{ aspectRatio: "467/584" }}
-            >
+            <div className="relative w-full rounded-2xl overflow-hidden mb-5 aspect-[4/5]">
               <Image
-                src={`/images/process-${i + 1}.jpg`}
+                src={visitFlowImages[i % visitFlowImages.length]}
                 alt={step.title}
                 fill
+                sizes="(max-width: 768px) 83vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="w-14 h-14 rounded-full bg-brand-bg/90 flex items-center justify-center font-heading italic text-2xl text-black">
-                  {i + 1}
-                </span>
-              </div>
+              <span className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-brand-primary flex items-center justify-center font-heading italic text-3xl text-white">
+                {i + 1}
+              </span>
             </div>
             <h3 className="font-heading italic text-xl mb-2">{step.title}</h3>
             <p className="text-sm text-black/60 leading-relaxed">

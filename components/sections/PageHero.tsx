@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
+import { Button } from "@/components/ui/button";
 
 interface PageHeroProps {
   heading: string;
@@ -43,20 +44,11 @@ export default function PageHero({
       {ctaLabel && ctaHref ? (
         <motion.div {...heroAnim(0.3)} className="mt-10">
           {onCtaClick ? (
-            <button
-              type="button"
-              onClick={onCtaClick}
-              className="inline-block bg-brand-primary text-white text-sm px-6 py-3 rounded-full hover:opacity-90 transition"
-            >
-              {ctaLabel}
-            </button>
+            <Button onClick={onCtaClick}>{ctaLabel}</Button>
           ) : (
-            <Link
-              href={ctaHref}
-              className="inline-block bg-brand-primary text-white text-sm px-6 py-3 rounded-full hover:opacity-90 transition"
-            >
-              {ctaLabel}
-            </Link>
+            <Button asChild>
+              <Link href={ctaHref}>{ctaLabel}</Link>
+            </Button>
           )}
         </motion.div>
       ) : null}

@@ -28,10 +28,7 @@ export default function SituationsSlider() {
       >
         {cards.map((card, i) => (
           <div key={i} className="flex flex-col">
-            <div
-              className="relative w-full rounded-2xl overflow-hidden mb-5"
-              style={{ aspectRatio: "467/700" }}
-            >
+            <div className="relative w-full rounded-2xl overflow-hidden mb-5 aspect-[467/700]">
               <Image
                 src={`/images/situation-${i + 1}.jpg`}
                 alt={card.title}

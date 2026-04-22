@@ -18,6 +18,7 @@ import { getLocaleData, isActive, SCROLL_THRESHOLD } from "./utils";
 import { desktopLinkStyles, linkStylesActive } from "./styles";
 import { NavigationItem } from "./types";
 import { openVelloModal } from "@/lib/openVelloModal";
+import { Button } from "@/components/ui/button";
 
 const navAnim = (delay: number) => ({
   initial: { opacity: 0, y: -8 },
@@ -70,7 +71,7 @@ export default function Navigation() {
     >
       <nav
         aria-label="Global"
-        className="relative z-[9992] w-full flex items-center justify-between px-6 md:px-10 py-4"
+        className="relative z-[9992] w-full flex items-center justify-between px-6 md:px-10 py-6"
       >
         {/* Logo */}
         <motion.div {...navAnim(0)}>
@@ -102,21 +103,23 @@ export default function Navigation() {
         </div>
 
         {/* Desktop right: language + CTA */}
-        <motion.div {...navAnim(0.38)} className="hidden md:flex items-center gap-4">
+        <motion.div
+          {...navAnim(0.38)}
+          className="hidden md:flex items-center gap-4"
+        >
           {SITE_CONFIG.i18n.languageSwitcher.showOnDesktop && (
             <LanguageSwitcher />
           )}
           {NAVIGATION_CTA.map((item: NavigationItem) => {
             const localeData = getLocaleData(item, locale);
             return (
-              <button
+              <Button
                 key={item.link}
-                type="button"
                 onClick={openVelloModal}
-                className="bg-brand-primary text-white text-sm px-5 py-2.5 rounded-full hover:opacity-90 transition whitespace-nowrap"
+                className="whitespace-nowrap"
               >
                 {localeData.name}
-              </button>
+              </Button>
             );
           })}
         </motion.div>

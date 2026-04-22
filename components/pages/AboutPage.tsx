@@ -4,12 +4,12 @@ import dynamic from "next/dynamic";
 import { useTranslations, useLocale } from "next-intl";
 import { SITE_CONFIG } from "@/lib/constants";
 import PillarsSection from "@/components/sections/PillarsSection";
-import VisitFlowSection from "@/components/sections/VisitFlowSection";
 import QuoteSlider from "@/components/sections/QuoteSlider";
 import PageHero from "@/components/sections/PageHero";
 import TerminalCTA from "@/components/sections/TerminalCTA";
 import AboutHeroVideo from "@/components/sections/AboutHeroVideo";
 import FadeIn from "@/components/ui/FadeIn";
+import { Button } from "@/components/ui/button";
 
 const FAQ = dynamic(
   () => import("@/components/FAQ").then((module) => module.FAQ),
@@ -111,31 +111,18 @@ export default function AboutPage() {
                 </p>
               ))}
               <div className="mt-10">
-                <Link
-                  href={contactHref}
-                  className="bg-brand-primary text-white text-sm px-6 py-3 rounded-full hover:opacity-90 transition"
-                >
-                  {t("hero.cta")}
-                </Link>
+                <Button asChild>
+                  <Link href={contactHref}>{t("hero.cta")}</Link>
+                </Button>
               </div>
             </div>
           </div>
         </section>
       </FadeIn>
 
-      {/* Quote Slider */}
-      <FadeIn>
-        <QuoteSlider />
-      </FadeIn>
-
       {/* Pillars */}
       <FadeIn>
         <PillarsSection />
-      </FadeIn>
-
-      {/* Visit Flow */}
-      <FadeIn>
-        <VisitFlowSection />
       </FadeIn>
 
       {/* FAQ */}
