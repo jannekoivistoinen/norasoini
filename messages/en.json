@@ -147,6 +147,23 @@
           ]
         }
       },
+      "credentials": {
+        "titles": [
+          "Presence and Systems Therapist",
+          "Craniosacral Therapist",
+          "Energy Healer"
+        ],
+        "teachersHeading": "Thanks to my teachers:",
+        "teachers": [
+          { "name": "Rainer Puittinen", "url": "https://www.rainerpuittinen.com" },
+          { "name": "Deepthi (Kirsi Ranto)", "url": "https://www.pyhanainen.com" },
+          { "name": "Jutta Niala", "url": "https://www.instagram.com/juttaniala" },
+          { "name": "Annika Witting", "url": "https://www.instagram.com/annika.aurinko" },
+          { "name": "Marianna Soveri", "url": "https://www.instagram.com/mariannasoveri_healinghouse.fi" },
+          { "name": "Jani Roman", "url": "https://www.ioast.fi" },
+          { "name": "Maippi Tuovinen ja Maarit Vilpas", "url": "https://www.instagram.com/kraniopulssi" }
+        ]
+      },
       "testimonials": [
         { "quote": "*Client testimonial coming soon*", "attribution": "Client feedback" },
         { "quote": "*Client testimonial coming soon*", "attribution": "Client feedback" }
