@@ -38,6 +38,11 @@ export default function AboutPage() {
     ingress: string;
     paragraphs: string[];
   };
+  const credentials = t.raw("credentials") as {
+    titles: string[];
+    teachersHeading: string;
+    teachers: { name: string; url: string }[];
+  };
   return (
     <>
       {/* Hero */}
@@ -130,6 +135,40 @@ export default function AboutPage() {
                   {para}
                 </p>
               ))}
+            </div>
+          </div>
+        </div>
+      </FadeIn>
+
+      {/* Credentials & teachers */}
+      <FadeIn>
+        <div className="container pb-20">
+          <div className="max-w-[882px] mx-auto">
+            <div className="md:ml-[15%] md:max-w-[70%]">
+              <p className="text-sm md:text-base font-semibold text-black/85 mb-1">
+                Nora Soini
+              </p>
+              {credentials.titles.map((title, i) => (
+                <p key={i} className="text-sm md:text-base text-black/70 leading-relaxed">
+                  {title}
+                </p>
+              ))}
+              <p className="text-sm md:text-base text-black/70 mt-5 leading-relaxed">
+                {credentials.teachersHeading}{" "}
+                {credentials.teachers.map((teacher, i) => (
+                  <span key={i}>
+                    <Link
+                      href={teacher.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline underline-offset-2 hover:text-black transition-colors"
+                    >
+                      {teacher.name}
+                    </Link>
+                    {i < credentials.teachers.length - 1 && ", "}
+                  </span>
+                ))}
+              </p>
             </div>
           </div>
         </div>
