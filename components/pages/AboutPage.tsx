@@ -161,7 +161,7 @@ export default function AboutPage() {
                       href={teacher.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline underline-offset-2 hover:text-black transition-colors"
+                      className="hover:text-black transition-colors"
                     >
                       {teacher.name}
                     </Link>

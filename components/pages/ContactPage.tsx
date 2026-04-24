@@ -20,7 +20,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <PageHero heading={t("hero.title")} ingress={t("hero.ingress")} />
+      <PageHero heading={t("hero.title")} />
 
       <FadeIn>
         <section className="container py-10 pb-24">
@@ -49,16 +49,16 @@ export default function ContactPage() {
                 <p className="font-medium text-black/90">
                   {SITE_CONFIG.company.name}
                 </p>
-                <p className="text-sm text-black/60">
+                <p className="text-base text-black/70">
                   Lyhytterapeutti &amp; kraniosakraaliterapeutti
                 </p>
+                <a
+                  href={`mailto:${SITE_CONFIG.company.contact.email}`}
+                  className="text-base text-brand-primary hover:opacity-70 transition"
+                >
+                  {SITE_CONFIG.company.contact.email}
+                </a>
               </div>
-              <a
-                href={`mailto:${SITE_CONFIG.company.contact.email}`}
-                className="text-base md:text-lg text-brand-primary hover:opacity-70 transition"
-              >
-                {SITE_CONFIG.company.contact.email}
-              </a>
             </div>
 
             {/* Form */}

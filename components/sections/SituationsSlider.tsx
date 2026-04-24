@@ -17,10 +17,10 @@ export default function SituationsSlider() {
 
   return (
     <section className="container">
-      <h2 className="font-heading italic text-4xl md:text-3xl lg:text-5xl leading-tight mb-4">
+      <h2 className="font-heading italic text-4xl md:text-3xl lg:text-5xl leading-tighter mb-4">
         {t("situations.heading")}
       </h2>
-      <p className="text-black/60 text-sm md:text-base max-w-2xl mb-8">
+      <p className="text-black/70 text-sm md:text-base max-w-2xl mb-8">
         {t("situations.description")}
       </p>
       <Slider

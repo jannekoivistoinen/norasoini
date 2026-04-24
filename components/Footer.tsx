@@ -11,14 +11,45 @@ const Footer = () => {
     <footer>
       {/* Bottom bar */}
       <div className="bg-brand-primary border-t border-white/[0.05] px-6 py-12">
-        <div className="container flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-brand-footer-text/70 text-xs">
+        <div className="container flex flex-col md:flex-row justify-between items-center gap-4 text-brand-footer-text/70 text-xs text-center md:text-left">
           <div>
-            <p className="font-link text-xl font-medium text-white mb-1.5">
-              {t("name")}
-            </p>
+            <div className="flex items-center justify-center md:justify-start gap-2 mb-1.5">
+              <p className="font-link text-xl font-medium text-white">
+                {t("name")}
+              </p>
+              <Link
+                href="https://www.instagram.com/norasoini"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/50 hover:text-white transition-colors mt-1"
+                aria-label="Instagram"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.75"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="0.5"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+              </Link>
+            </div>
             <p className="text-base">{t("tagline")}</p>
           </div>
-          <div className="text-right">
+          <div className="md:text-right">
             <a
               href={`mailto:${SITE_CONFIG.company.contact.email}`}
               className="text-white hover:opacity-80 transition text-xl font-medium"

@@ -22,14 +22,10 @@ export default function VisitFlowSection() {
       <h2 className="font-heading italic mb-4 text-center mx-auto">
         {t("visitFlow.heading")}
       </h2>
-      <p className="text-black/60 text-sm md:text-base max-w-md mb-12 text-center mx-auto">
+      <p className="text-black/70 text-sm md:text-base max-w-md mb-12 text-center mx-auto">
         {t("visitFlow.description")}
       </p>
-      <Slider
-        slidesPerView={VISIT_FLOW_SLIDES_PER_VIEW}
-        spacing={20}
-        mobileSpacing={16}
-      >
+      <div className="flex flex-col gap-8 md:hidden">
         {steps.map((step, i) => (
           <div key={i}>
             <div className="relative w-full rounded-2xl overflow-hidden mb-5 aspect-[4/5]">
@@ -37,7 +33,7 @@ export default function VisitFlowSection() {
                 src={visitFlowImages[i % visitFlowImages.length]}
                 alt={step.title}
                 fill
-                sizes="(max-width: 768px) 83vw, (max-width: 1024px) 50vw, 33vw"
+                sizes="100vw"
                 className="object-cover"
               />
               <span className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-brand-primary flex items-center justify-center font-heading italic text-3xl text-white">
@@ -45,12 +41,40 @@ export default function VisitFlowSection() {
               </span>
             </div>
             <h3 className="font-heading italic text-xl mb-2">{step.title}</h3>
-            <p className="text-sm text-black/60 leading-relaxed">
+            <p className="text-sm text-black/70 leading-relaxed">
               {step.description}
             </p>
           </div>
         ))}
-      </Slider>
+      </div>
+      <div className="hidden md:block">
+        <Slider
+          slidesPerView={VISIT_FLOW_SLIDES_PER_VIEW}
+          spacing={20}
+          mobileSpacing={16}
+        >
+          {steps.map((step, i) => (
+            <div key={i}>
+              <div className="relative w-full rounded-2xl overflow-hidden mb-5 aspect-[4/5]">
+                <Image
+                  src={visitFlowImages[i % visitFlowImages.length]}
+                  alt={step.title}
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
+                />
+                <span className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-brand-primary flex items-center justify-center font-heading italic text-3xl text-white">
+                  {i + 1}
+                </span>
+              </div>
+              <h3 className="font-heading italic text-xl mb-2">{step.title}</h3>
+              <p className="text-sm md:text-base text-black/70 leading-relaxed">
+                {step.description}
+              </p>
+            </div>
+          ))}
+        </Slider>
+      </div>
     </section>
   );
 }

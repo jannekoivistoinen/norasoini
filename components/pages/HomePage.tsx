@@ -13,6 +13,7 @@ import QuoteSlider from "@/components/sections/QuoteSlider";
 import SituationsSlider from "@/components/sections/SituationsSlider";
 import ServicesSlider from "@/components/sections/ServicesSlider";
 import TerminalCTA from "@/components/sections/TerminalCTA";
+import MarkdownText from "@/components/MarkdownText";
 import HomeAboutVideo from "@/components/sections/HomeAboutVideo";
 import FadeIn from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
@@ -120,37 +121,31 @@ export default function HomePage() {
             <div className="flex flex-col justify-between h-full">
               {/* Testimonial */}
               <div className="mb-16">
-                <blockquote className="font-heading italic text-lg md:text-xl text-black/80 mb-3 leading-snug">
+                <blockquote className="font-heading italic text-lg md:text-2xl text-black/80 mb-3 leading-snug text-balance">
                   {t("about.quote")}
                 </blockquote>
-                <p className="text-sm text-black/40">
+                <p className="text-base text-black/70">
                   {t("about.attribution")}
                 </p>
               </div>
 
               {/* Content */}
               <div>
-                <h2 className="font-heading italic leading-tight mb-8">
+                <h2 className="font-heading italic leading-tighter mb-8">
                   {t("about.heading")}
                 </h2>
-                <p className="text-sm md:text-base text-black/70 mb-4 leading-relaxed">
+                <MarkdownText className="text-sm md:text-base text-black/70 mb-10 leading-relaxed space-y-4">
                   {t("about.description")}
-                </p>
-                <p className="text-sm md:text-base text-black/70 mb-4 leading-relaxed">
-                  {t("about.description2")}
-                </p>
-                <p className="text-sm md:text-base text-black/70 mb-10 leading-relaxed">
-                  {t("about.description3")}
-                </p>
+                </MarkdownText>
                 <Link
                   href={aboutHref}
-                  className="inline-flex items-center gap-2 text-sm text-brand-primary hover:opacity-70 transition"
+                  className="inline-flex items-center gap-2 text-base text-brand-primary hover:opacity-70 transition"
                 >
                   {t("about.cta")}
                   {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                   <FontAwesomeIcon
                     icon={faArrowRight as any}
-                    className="w-3 h-3"
+                    className="w-3 h-3 mt-1"
                   />
                 </Link>
               </div>

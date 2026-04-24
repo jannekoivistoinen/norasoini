@@ -19,10 +19,10 @@ export default function ServicesSlider() {
 
   return (
     <section className="container">
-      <h2 className="font-heading italic text-4xl md:text-3xl lg:text-5xl leading-tight mb-4">
+      <h2 className="font-heading italic text-4xl md:text-3xl lg:text-5xl leading-tighter mb-4">
         {tHome("servicesSlider.heading")}
       </h2>
-      <p className="text-black/60 text-sm md:text-base max-w-2xl mb-8">
+      <p className="text-black/70 text-sm md:text-base max-w-2xl mb-8">
         {tHome("servicesSlider.description")}
       </p>
       <Slider
@@ -42,12 +42,12 @@ export default function ServicesSlider() {
               />
             </div>
             <h3 className="font-heading italic text-2xl mb-2">{item.title}</h3>
-            <p className="text-sm text-black/60 leading-relaxed mb-2">
+            <p className="text-sm md:text-base text-black/70 leading-relaxed mb-2">
               {item.intro}
             </p>
             <Link
               href="/services"
-              className="text-sm underline underline-offset-2"
+              className="text-sm md:text-base underline underline-offset-2"
             >
               Lue lisää
             </Link>

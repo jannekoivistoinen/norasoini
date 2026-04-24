@@ -72,7 +72,7 @@ export default function ServicesPage() {
                   <h2 className="font-heading italic text-3xl lg:text-4xl mb-6">
                     {item.title}
                   </h2>
-                  <div className="prose prose-sm text-black/70 mb-8 [&_strong]:text-black/80 [&_strong]:font-medium [&_li::marker]:text-black/70">
+                  <div className="prose prose-base text-black/70 mb-8 [&_strong]:text-black/80 [&_strong]:font-medium [&_li::marker]:text-black/70 [&_li]:leading-snug">
                     <ReactMarkdown>{item.body}</ReactMarkdown>
                   </div>
                   <Button onClick={openVelloModal} className="self-start mb-8">

@@ -19,7 +19,7 @@ export default function PillarsSection() {
       <h2 className="font-heading italic mb-4 text-center">
         {t("pillars.heading")}
       </h2>
-      <p className="text-black/60 text-sm md:text-base mb-12 text-center max-w-2xl mx-auto">
+      <p className="text-black/70 text-sm md:text-base mb-12 text-center max-w-2xl mx-auto">
         {t("pillars.description")}
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

@@ -95,6 +95,14 @@
   }
 }
 
+.prose ul {
+  list-style-type: disc;
+}
+
+.prose p + ul li:last-child {
+  margin-bottom: 2rem;
+}
+
 section {
   padding-bottom: 72px;
 }

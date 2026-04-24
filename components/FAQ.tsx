@@ -61,7 +61,7 @@ const FAQCategory = ({
                   <p className="text-[15px] font-semibold leading-snug text-black">
                     {item.question}
                   </p>
-                  <MarkdownText className="mt-1 text-base leading-relaxed text-black/60 [&_p]:mb-0 [&_p+p]:mt-2">
+                  <MarkdownText className="mt-1 text-base leading-relaxed text-black/70 [&_p]:mb-0 [&_p+p]:mt-2">
                     {item.answer}
                   </MarkdownText>
                 </div>
@@ -101,7 +101,7 @@ export function FAQ({}: FAQProps) {
           <h2 className="font-heading text-4xl italic tracking-looser leading-[1.1] text-black md:text-[56px] md:leading-[1.1]">
             {t("title")}
           </h2>
-          <MarkdownText className="mt-6 text-[18px] leading-relaxed text-black/60 [&_p]:mb-0">
+          <MarkdownText className="mt-6 text-[18px] leading-relaxed text-black/70 [&_p]:mb-0">
             {t("description")}
           </MarkdownText>
         </div>
