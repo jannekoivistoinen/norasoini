@@ -39,6 +39,7 @@ export default function ServicesSlider() {
                 fill
                 sizes="(max-width: 768px) 83vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover"
+                priority={i === 0}
               />
             </div>
             <h3 className="font-heading italic text-2xl mb-2">{item.title}</h3>

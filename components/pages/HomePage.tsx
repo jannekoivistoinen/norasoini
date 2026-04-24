@@ -95,6 +95,7 @@ export default function HomePage() {
               src={NoraSoinImage}
               alt=""
               className="w-full h-auto object-cover"
+              priority
             />
           </motion.div>
         </div>
