@@ -15,7 +15,7 @@ export default function PillarsSection() {
   }[];
 
   return (
-    <section className="container py-12 md:py-20">
+    <section className="container">
       <h2 className="mb-4 md:text-center">{t("pillars.heading")}</h2>
       <p className="text-black/70  mb-8 md:mb-12 md:text-center max-w-2xl mx-auto">
         {t("pillars.description")}

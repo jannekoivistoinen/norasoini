@@ -42,7 +42,7 @@ export function AnimatedSignature({
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 0.85", "end start"],
+    offset: ["start 1", "end start"],
   });
 
   // Calculate total animation duration including stagger

@@ -172,7 +172,7 @@ export default function AboutPage() {
                   {title}
                 </p>
               ))}
-              <p className=" text-black/70 mt-5 leading-relaxed">
+              <p className=" text-black/70 mt-12 leading-relaxed text-sm">
                 {credentials.teachersHeading}{" "}
                 {credentials.teachers.map((teacher, i) => (
                   <span key={i}>
@@ -180,7 +180,7 @@ export default function AboutPage() {
                       href={teacher.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-black transition-colors"
+                      className="hover:text-black transition-colors font-body"
                     >
                       {teacher.name}
                     </Link>
