@@ -52,6 +52,126 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function Page({ params }: Props) {
-  await params;
-  return <PricingPage />;
+  const { locale } = await params;
+
+  const priceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: locale === "fi" ? "Hinnasto" : "Pricing",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@type": "Offer",
+          name: locale === "fi" ? "Lyhytterapia" : "Short-term therapy",
+          description:
+            locale === "fi"
+              ? "Tavoitteellista ja käytännönläheistä keskusteluapua, 60 min, Espoossa tai etänä"
+              : "Goal-oriented conversational support, 60 min, in Espoo or online",
+          price: "89",
+          priceCurrency: "EUR",
+          priceSpecification: {
+            "@type": "PriceSpecification",
+            price: "89",
+            priceCurrency: "EUR",
+          },
+          seller: {
+            "@type": "LocalBusiness",
+            "@id": `${COMPANY_METADATA.url}#localbusiness`,
+          },
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@type": "Offer",
+          name:
+            locale === "fi"
+              ? "Kraniosakraaliterapia (opiskelijahinta)"
+              : "Craniosacral therapy (student rate)",
+          description:
+            locale === "fi"
+              ? "Lempeä ja syvärentouttava hoitomuoto, 60 min, Espoossa (voimassa elokuuhun 2026)"
+              : "Gentle, deeply relaxing treatment, 60 min, in Espoo (valid until August 2026)",
+          price: "69",
+          priceCurrency: "EUR",
+          priceSpecification: {
+            "@type": "PriceSpecification",
+            price: "69",
+            priceCurrency: "EUR",
+            validThrough: "2026-08-31",
+          },
+          seller: {
+            "@type": "LocalBusiness",
+            "@id": `${COMPANY_METADATA.url}#localbusiness`,
+          },
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        item: {
+          "@type": "Offer",
+          name:
+            locale === "fi"
+              ? "Kraniosakraaliterapia"
+              : "Craniosacral therapy",
+          description:
+            locale === "fi"
+              ? "Lempeä ja syvärentouttava hoitomuoto, 60 min, Espoossa"
+              : "Gentle, deeply relaxing treatment, 60 min, in Espoo",
+          price: "95",
+          priceCurrency: "EUR",
+          priceSpecification: {
+            "@type": "PriceSpecification",
+            price: "95",
+            priceCurrency: "EUR",
+            validFrom: "2026-09-01",
+          },
+          seller: {
+            "@type": "LocalBusiness",
+            "@id": `${COMPANY_METADATA.url}#localbusiness`,
+          },
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        item: {
+          "@type": "Offer",
+          name:
+            locale === "fi"
+              ? "Yhdistelmähoito: lyhytterapia + kraniosakraaliterapia"
+              : "Combination session: short-term therapy + craniosacral therapy",
+          description:
+            locale === "fi"
+              ? "Kokonaisvaltainen hoito, 90 min, Espoossa"
+              : "Holistic care for both mind and body, 90 min, in Espoo",
+          price: "129",
+          priceCurrency: "EUR",
+          priceSpecification: {
+            "@type": "PriceSpecification",
+            price: "129",
+            priceCurrency: "EUR",
+          },
+          seller: {
+            "@type": "LocalBusiness",
+            "@id": `${COMPANY_METADATA.url}#localbusiness`,
+          },
+        },
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(priceSchema) }}
+      />
+      <PricingPage />
+    </>
+  );
 }

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { COMPANY_METADATA, SITE_CONFIG } from "@/lib/constants";
+import { COMPANY_METADATA } from "@/lib/constants";
 import { getTranslations } from "next-intl/server";
 import HomePage from "@/components/pages/HomePage";
 
@@ -131,9 +131,6 @@ export default async function Page({ params }: Props) {
             itemOffered: { "@type": "Service", name },
           })),
         },
-        sameAs: [
-          `${COMPANY_METADATA.url}/fi/${SITE_CONFIG.i18n.routes.about.fi}`,
-        ],
       },
     ],
   };

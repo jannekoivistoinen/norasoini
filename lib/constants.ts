@@ -6,7 +6,7 @@ export const SITE_CONFIG = {
     domain: "norasoini.fi",
     url: "https://norasoini.fi",
     description:
-      "Laillistettu läsnäolon ja systeemisyyden lyhytterapeutti Helsingistä. Tarjoan yksilö- ja pariterapiaa sekä hoitomuotoja elämän muutoskohtiin.",
+      "Laillistettu läsnäolon ja systeemisyyden lyhytterapeutti Espoosta. Tarjoan yksilöterapiaa sekä kraniosakraaliterapiaa elämän muutoskohtiin.",
     sitemapUrl: "https://norasoini.fi/sitemap.xml",
     logo: {
       default: "/logo.svg",

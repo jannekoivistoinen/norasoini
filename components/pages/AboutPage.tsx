@@ -48,6 +48,7 @@ export default function AboutPage() {
     teachersHeading: string;
     teachers: { name: string; url: string }[];
   };
+  const bento = t.raw("bento") as { imageAlt1: string; imageAlt2: string; imageAlt3: string };
   return (
     <>
       {/* Hero */}
@@ -67,8 +68,9 @@ export default function AboutPage() {
             >
               <Image
                 src="/images/about-left.jpg"
-                alt="Nora Soini"
+                alt={bento.imageAlt1}
                 fill
+                priority
                 className="object-cover"
                 sizes="(min-width: 768px) 50vw, 100vw"
               />
@@ -82,7 +84,7 @@ export default function AboutPage() {
               >
                 <Image
                   src="/images/about-right-top.jpg"
-                  alt="Nora Soini"
+                  alt={bento.imageAlt2}
                   fill
                   className="object-cover"
                   sizes="(min-width: 768px) 50vw, 100vw"
@@ -96,7 +98,7 @@ export default function AboutPage() {
               >
                 <Image
                   src="/images/about-right-bottom.jpg"
-                  alt="Nora Soini"
+                  alt={bento.imageAlt3}
                   fill
                   className="object-cover"
                   sizes="(min-width: 768px) 50vw, 100vw"

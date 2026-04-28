@@ -28,7 +28,8 @@
       },
       "servicesSlider": {
         "heading": "Services",
-        "description": "Short-term therapy, craniosacral therapy, and combination sessions."
+        "description": "Short-term therapy, craniosacral therapy, and combination sessions.",
+        "readMore": "Read more"
       },
       "about": {
         "quote": "\"I believe every person already holds within them a direction towards balance.\"",
@@ -131,6 +132,11 @@
         "heading": "I am Nora Soini, a short-term therapist in presence and systemic approaches from Espoo.",
         "ingress": "I am currently training to become a craniosacral therapist, graduating in autumn 2026. During my studies I offer practice sessions at an affordable rate. I am also studying to become an energy healer, graduating in spring 2027.",
         "cta": "Book a session"
+      },
+      "bento": {
+        "imageAlt1": "Nora Soini short-term therapist in Espoo",
+        "imageAlt2": "Nora's therapy space in Espoo",
+        "imageAlt3": "Nora Soini craniosacral therapy"
       },
       "intro": {
         "ingressBelowPhoto": "Life has taught me a great deal about being human, about relationships, and about how deeply our experiences shape us.",

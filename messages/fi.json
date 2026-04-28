@@ -49,7 +49,8 @@
       },
       "servicesSlider": {
         "heading": "Palvelut",
-        "description": "Lyhytterapia, kraniosakraaliterapia ja yhdistelmähoito."
+        "description": "Lyhytterapia, kraniosakraaliterapia ja yhdistelmähoito.",
+        "readMore": "Lue lisää"
       },
       "about": {
         "quote": "\"Uskon, että jokaisessa ihmisessä on jo olemassa suunta kohti tasapainoa.\"",
@@ -230,6 +231,11 @@
         "heading": "Olen Nora Soini, Läsnäolon ja systeemisyyden lyhytterapeutti Espoosta.",
         "ingress": "Opiskelen parhaillaan kraniosakraaliterapeutiksi, valmistun syksyllä 2026. Teen opintojeni aikana harjoitushoitoja edulliseen hintaan. Lisäksi opiskelen energiahoitajaksi ja valmistun keväällä 2027.",
         "cta": "Varaa aika"
+      },
+      "bento": {
+        "imageAlt1": "Nora Soini lyhytterapeutti Espoossa",
+        "imageAlt2": "Noran terapiatila Espoossa",
+        "imageAlt3": "Nora Soini kraniosakraaliterapia"
       },
       "intro": {
         "ingressBelowPhoto": "Elämä on opettanut minulle paljon ihmisyydestä, ihmissuhteista ja siitä, miten syvästi kokemuksemme muovaavat meitä.",

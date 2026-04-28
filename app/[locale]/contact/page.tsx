@@ -52,8 +52,41 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// Update Page component to handle Promise params
 export default async function Page({ params }: Props) {
-  await params; // Ensure params are resolved
-  return <ContactPage />;
+  const { locale } = await params;
+
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${COMPANY_METADATA.url}#localbusiness`,
+    name: COMPANY_METADATA.name,
+    url: COMPANY_METADATA.url,
+    email: COMPANY_METADATA.contact.email,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Espoo",
+      addressCountry: "FI",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: COMPANY_METADATA.contact.email,
+      contactType: "customer service",
+      availableLanguage: ["Finnish", "English"],
+      contactOption: "TollFree",
+    },
+    areaServed: [
+      { "@type": "City", name: "Espoo" },
+      locale === "fi" ? "Verkossa" : "Online",
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+      />
+      <ContactPage />
+    </>
+  );
 }
