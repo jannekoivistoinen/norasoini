@@ -39,8 +39,10 @@ export default function PillarsSection() {
                   />
                 </div>
                 <div>
-                  <h3 className="mb-3">{pillar.title}</h3>
-                  <p className=" text-black/70">{pillar.description}</p>
+                  <h3 className="mb-3 text-2xl">{pillar.title}</h3>
+                  <p className=" text-black/70 text-base">
+                    {pillar.description}
+                  </p>
                 </div>
               </div>
             </div>

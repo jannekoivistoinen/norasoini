@@ -38,7 +38,7 @@ export default function QuoteSlider() {
                   ”
                 </span>
               </blockquote>
-              <p className=" text-black/70 max-w-lg mx-auto whitespace-pre-line">
+              <p className=" text-black/70 max-w-lg mx-auto whitespace-pre-line text-base">
                 {slide.description}
               </p>
             </div>

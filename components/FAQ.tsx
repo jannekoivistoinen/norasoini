@@ -59,8 +59,10 @@ const FAQCategory = ({
             <div className="space-y-5 pb-6 pl-4">
               {category.items.map((item, i) => (
                 <div key={i}>
-                  <p className="font-medium  text-black">{item.question}</p>
-                  <MarkdownText className="mt-3 text-base text-black/70 [&_p]:mb-6 mb-6 md:mb-10 [&_p+p]:mt-6 md:[&_p+p]:mt-10">
+                  <p className="content font-medium text-black">
+                    {item.question}
+                  </p>
+                  <MarkdownText className="content mt-3 text-base text-black/70 [&_p]:mb-6 mb-6 md:mb-10 [&_p+p]:mt-6 md:[&_p+p]:mt-10">
                     {item.answer}
                   </MarkdownText>
                 </div>

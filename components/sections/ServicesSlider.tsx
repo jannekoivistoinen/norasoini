@@ -47,7 +47,7 @@ export default function ServicesSlider() {
               />
             </div>
             <h3 className="mb-3">{item.title}</h3>
-            <p className=" text-black/70 leading-relaxed mb-4 font-body">
+            <p className=" text-black/70 leading-relaxed mb-4 font-body text-base">
               {item.intro}
             </p>
             <span className="inline-flex items-center gap-2 font-body text-base font-semibold text-brand-primary transition-colors duration-300 group-hover:text-brand-text">
