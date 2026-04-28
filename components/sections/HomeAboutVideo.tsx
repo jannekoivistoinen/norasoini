@@ -50,6 +50,7 @@ export default function HomeAboutVideo() {
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
               priority
+              fetchPriority="high"
             />
             <div className="relative z-10 w-16 h-16 rounded-full bg-brand-bg/80 flex items-center justify-center">
               {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}

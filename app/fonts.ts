@@ -1,4 +1,5 @@
-import { Instrument_Serif, Instrument_Sans, Kaisei_Decol } from "next/font/google";
+import localFont from "next/font/local";
+import { Instrument_Serif, Instrument_Sans } from "next/font/google";
 
 export const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
@@ -8,16 +9,25 @@ export const instrumentSerif = Instrument_Serif({
   display: "swap",
 });
 
-export const kaiseiDecol = Kaisei_Decol({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
+export const kaiseiDecol = localFont({
+  src: [
+    {
+      path: "../public/fonts/kaisei-decol-latin-400.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/kaisei-decol-latin-500.woff2",
+      weight: "500",
+      style: "normal",
+    },
+  ],
   variable: "--font-kaisei-decol",
   display: "swap",
 });
 
 export const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
   variable: "--font-instrument-sans",
   display: "swap",
 });
