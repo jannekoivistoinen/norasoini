@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         fi: `${COMPANY_METADATA.url}/fi/${SITE_CONFIG.i18n.routes.services.fi}`,
         en: `${COMPANY_METADATA.url}/en/${SITE_CONFIG.i18n.routes.services.en}`,
+        "x-default": `${COMPANY_METADATA.url}/fi/${SITE_CONFIG.i18n.routes.services.fi}`,
       },
     },
     openGraph: {
@@ -32,6 +33,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t("description"),
       url: canonicalUrl,
       siteName: COMPANY_METADATA.name,
+      locale: locale === "fi" ? "fi_FI" : "en_US",
+      type: "website",
       images: [
         {
           url: `${COMPANY_METADATA.url}/og-image.jpg`,
@@ -49,8 +52,40 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// Update Page component to handle Promise params
+type ServiceItem = { title: string; intro: string };
+
 export default async function Page({ params }: Props) {
-  await params; // Ensure params are resolved
-  return <ServicesPage />;
+  const { locale } = await params;
+  const tServices = await getTranslations({ locale, namespace: "page.services" });
+  const serviceItems = tServices.raw("items") as ServiceItem[];
+
+  const serviceSchemas = serviceItems.map((item, i) => ({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${COMPANY_METADATA.url}#service-${i + 1}`,
+    name: item.title,
+    description: item.intro,
+    provider: {
+      "@type": "LocalBusiness",
+      "@id": `${COMPANY_METADATA.url}#localbusiness`,
+      name: COMPANY_METADATA.name,
+      url: COMPANY_METADATA.url,
+    },
+    areaServed: i === 0
+      ? [{ "@type": "City", name: "Espoo" }, locale === "fi" ? "Verkossa" : "Online"]
+      : { "@type": "City", name: "Espoo" },
+  }));
+
+  return (
+    <>
+      {serviceSchemas.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+      <ServicesPage />
+    </>
+  );
 }

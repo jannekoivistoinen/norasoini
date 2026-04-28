@@ -1,9 +1,8 @@
 import { Metadata } from "next";
-import { COMPANY_METADATA } from "@/lib/constants";
+import { COMPANY_METADATA, SITE_CONFIG } from "@/lib/constants";
 import { getTranslations } from "next-intl/server";
 import HomePage from "@/components/pages/HomePage";
 
-// Update Props type to use PageProps
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -11,6 +10,11 @@ type Props = {
 type FaqItem = {
   question: string;
   answer: string;
+};
+
+type FaqCategory = {
+  name: string;
+  items: FaqItem[];
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -30,6 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         fi: `${COMPANY_METADATA.url}/fi`,
         en: `${COMPANY_METADATA.url}/en`,
+        "x-default": `${COMPANY_METADATA.url}/fi`,
       },
     },
     openGraph: {
@@ -37,6 +42,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t("description"),
       url: canonicalUrl,
       siteName: COMPANY_METADATA.name,
+      locale: locale === "fi" ? "fi_FI" : "en_US",
+      type: "website",
       images: [
         {
           url: `${COMPANY_METADATA.url}/og-image.jpg`,
@@ -54,18 +61,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// Update Page component to handle Promise params
 export default async function Page({ params }: Props) {
   const { locale } = await params;
-  const t = await getTranslations({
-    locale,
-    namespace: "page.homepage",
-  });
-  const faqItems = t.raw("faq.items") as FaqItem[];
+  const tComponent = await getTranslations({ locale, namespace: "component.faq" });
+  const faqCategories = tComponent.raw("categories") as FaqCategory[];
+  const allFaqItems = faqCategories.flatMap((cat) => cat.items);
+
+  const serviceNames =
+    locale === "fi"
+      ? ["Lyhytterapia", "Kraniosakraaliterapia", "Yhdistelmähoito"]
+      : ["Short-term therapy", "Craniosacral therapy", "Combination session"];
 
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${COMPANY_METADATA.url}#website`,
     name: COMPANY_METADATA.name,
     url: COMPANY_METADATA.url,
     inLanguage: ["fi", "en"],
@@ -76,53 +86,54 @@ export default async function Page({ params }: Props) {
     "@graph": [
       {
         "@type": "Person",
-        name: COMPANY_METADATA.name,
+        "@id": `${COMPANY_METADATA.url}#person`,
+        name: "Nora Soini",
         url: COMPANY_METADATA.url,
         email: COMPANY_METADATA.contact.email,
+        image: `${COMPANY_METADATA.url}/og-image.jpg`,
+        jobTitle:
+          locale === "fi"
+            ? "Läsnäolon ja systeemisyyden lyhytterapeutti"
+            : "Short-term Therapist",
         address: {
           "@type": "PostalAddress",
           addressLocality: "Espoo",
           addressCountry: "FI",
         },
+        worksFor: { "@id": `${COMPANY_METADATA.url}#localbusiness` },
       },
       {
-        "@type": "LocalBusiness",
+        "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
+        "@id": `${COMPANY_METADATA.url}#localbusiness`,
         name: COMPANY_METADATA.name,
         url: COMPANY_METADATA.url,
         email: COMPANY_METADATA.contact.email,
+        image: `${COMPANY_METADATA.url}/og-image.jpg`,
+        priceRange: "€€",
         address: {
           "@type": "PostalAddress",
           addressLocality: "Espoo",
           addressCountry: "FI",
         },
-        areaServed: ["Espoo", "Finland", "Online"],
+        areaServed: [
+          { "@type": "City", name: "Espoo" },
+          locale === "fi"
+            ? { "@type": "Country", name: "Suomi" }
+            : { "@type": "Country", name: "Finland" },
+          locale === "fi" ? "Verkossa" : "Online",
+        ],
+        employee: { "@id": `${COMPANY_METADATA.url}#person` },
         hasOfferCatalog: {
           "@type": "OfferCatalog",
-          name: "Therapy services",
-          itemListElement: [
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Short-term therapy",
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Craniosacral therapy",
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Combination session",
-              },
-            },
-          ],
+          name: locale === "fi" ? "Terapiapalvelut" : "Therapy services",
+          itemListElement: serviceNames.map((name) => ({
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name },
+          })),
         },
+        sameAs: [
+          `${COMPANY_METADATA.url}/fi/${SITE_CONFIG.i18n.routes.about.fi}`,
+        ],
       },
     ],
   };
@@ -130,7 +141,7 @@ export default async function Page({ params }: Props) {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqItems.map((item) => ({
+    mainEntity: allFaqItems.map((item) => ({
       "@type": "Question",
       name: item.question,
       acceptedAnswer: {
@@ -142,12 +153,20 @@ export default async function Page({ params }: Props) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personLocalBusinessSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(personLocalBusinessSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <HomePage />
     </>
   );

@@ -13,7 +13,7 @@ export default function ProcessSection() {
 
   return (
     <section className="container py-20">
-      <h2 className="font-heading italic mb-4 text-center mx-auto">
+      <h2 className="mb-4 text-center mx-auto">
         {t("process.heading")}
       </h2>
       <p className="text-black/70 text-sm md:text-base max-w-md mb-12 text-center mx-auto">
@@ -21,7 +21,7 @@ export default function ProcessSection() {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {processSteps.map((step, i) => (
-          <div key={i}>
+          <div key={i} className="step-card">
             <div
               className="relative w-full rounded-2xl overflow-hidden mb-5"
               style={{ aspectRatio: "467/584" }}
@@ -30,6 +30,7 @@ export default function ProcessSection() {
                 src={`/images/process-${i + 1}.jpg`}
                 alt={step.title}
                 fill
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 flex items-center justify-center">
@@ -38,7 +39,7 @@ export default function ProcessSection() {
                 </span>
               </div>
             </div>
-            <h3 className="font-heading italic text-xl mb-2">{step.title}</h3>
+            <h3 className="mb-2">{step.title}</h3>
             <p className="text-sm md:text-base text-black/70 leading-relaxed">
               {step.description}
             </p>

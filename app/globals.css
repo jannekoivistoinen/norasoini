@@ -119,16 +119,8 @@ section:first-of-type {
 
 @media (min-width: 64rem) {
   section:first-of-type {
-    padding-top: 72px;
+    padding-top: 96px;
   }
-}
-
-section a {
-  color: #835f3f;
-}
-
-section a:hover {
-  color: #000;
 }
 
 h1,
@@ -138,25 +130,41 @@ h4,
 h5,
 h6 {
   font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
   text-wrap: balance;
-}
-
-h1,
-h2 {
-  font-size: 1.625rem;
-  line-height: 110%;
   -webkit-font-smoothing: antialiased;
 }
 
+/* Page hero title */
+h1 {
+  font-size: 1.625rem;
+  line-height: 110%;
+  letter-spacing: -0.0625rem;
+}
+
 @media (min-width: 48rem) {
-  h1,
-  h2 {
-    font-size: 3rem;
+  h1 {
+    font-size: 3.5rem;
   }
 }
 
+/* Section titles */
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.15;
+}
+
+@media (min-width: 48rem) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Prominent card / subsection titles */
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 500;
 }
 
 h4 {
@@ -176,4 +184,86 @@ h4 {
 
 .moder-highlight-bg path {
   fill: white !important;
+}
+
+/* ContactForm: neutralize autofill (UA tint, flash, ring/halo from inset vs Tailwind ring) */
+.contact-form {
+  color-scheme: light;
+  accent-color: #2f4f46;
+}
+
+.contact-form input:-webkit-autofill,
+.contact-form textarea:-webkit-autofill,
+.contact-form input:-webkit-autofill:hover,
+.contact-form textarea:-webkit-autofill:hover,
+.contact-form input:-webkit-autofill:active,
+.contact-form textarea:-webkit-autofill:active {
+  border-radius: 0.75rem !important;
+  border: 1px solid #d8cdbb !important;
+  background-image: none !important;
+  background-color: #d8cdbb !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
+  -webkit-box-shadow: 0 0 0 2000px #d8cdbb inset !important;
+  box-shadow: 0 0 0 2000px #d8cdbb inset !important;
+  -webkit-text-fill-color: #000000 !important;
+  caret-color: #000000;
+  transition: background-color 50000s ease-in-out 0s !important;
+}
+
+.contact-form input[aria-invalid="true"]:-webkit-autofill,
+.contact-form textarea[aria-invalid="true"]:-webkit-autofill,
+.contact-form input[aria-invalid="true"]:-webkit-autofill:hover,
+.contact-form textarea[aria-invalid="true"]:-webkit-autofill:hover,
+.contact-form input[aria-invalid="true"]:-webkit-autofill:active,
+.contact-form textarea[aria-invalid="true"]:-webkit-autofill:active {
+  border: 1px solid rgba(248, 113, 113, 0.6) !important;
+}
+
+.contact-form input:-webkit-autofill:focus,
+.contact-form textarea:-webkit-autofill:focus {
+  border-radius: 0.75rem !important;
+  border: 1px solid transparent !important;
+  background-image: none !important;
+  background-color: #d8cdbb !important;
+  -webkit-box-shadow: 0 0 0 2000px #d8cdbb inset !important;
+  box-shadow: 0 0 0 2000px #d8cdbb inset !important;
+  -webkit-text-fill-color: #000000 !important;
+  caret-color: #000000;
+  outline: 2px solid rgba(47, 79, 70, 0.5) !important;
+  outline-offset: 0 !important;
+}
+
+.contact-form input[aria-invalid="true"]:-webkit-autofill:focus,
+.contact-form textarea[aria-invalid="true"]:-webkit-autofill:focus {
+  outline: 2px solid rgba(248, 113, 113, 0.6) !important;
+}
+
+.contact-form input:autofill,
+.contact-form textarea:autofill {
+  appearance: none;
+  border-radius: 0.75rem !important;
+  border: 1px solid #d8cdbb !important;
+  background-image: none !important;
+  background-color: #d8cdbb !important;
+  box-shadow: 0 0 0 2000px #d8cdbb inset !important;
+  color: #000000;
+}
+
+.contact-form input[aria-invalid="true"]:autofill,
+.contact-form textarea[aria-invalid="true"]:autofill {
+  border: 1px solid rgba(248, 113, 113, 0.6) !important;
+}
+
+.contact-form input:autofill:focus,
+.contact-form textarea:autofill:focus {
+  border: 1px solid transparent !important;
+  box-shadow: 0 0 0 2000px #d8cdbb inset !important;
+  outline: 2px solid rgba(47, 79, 70, 0.5) !important;
+  outline-offset: 0 !important;
+}
+
+.contact-form input[aria-invalid="true"]:autofill:focus,
+.contact-form textarea[aria-invalid="true"]:autofill:focus {
+  outline: 2px solid rgba(248, 113, 113, 0.6) !important;
 }

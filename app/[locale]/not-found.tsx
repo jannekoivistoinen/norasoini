@@ -5,8 +5,8 @@ import TerminalCTA from "@/components/sections/TerminalCTA";
 export default function NotFound() {
   return (
     <>
-      <div className="flex-grow flex flex-col items-center justify-center py-64 px-6 text-center">
-        <h1 className="font-heading italic text-6xl md:text-8xl text-brand-primary mb-4">
+      <div className="http-error-page flex-grow flex flex-col items-center justify-center py-64 px-6 text-center">
+        <h1 className="mb-4">
           404
         </h1>
         <p className="text-xl text-gray-700 mb-2">Sivua ei löydy</p>

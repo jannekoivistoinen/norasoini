@@ -16,8 +16,8 @@ export default function SituationsSlider() {
   }[];
 
   return (
-    <section className="container">
-      <h2 className="font-heading italic text-4xl md:text-3xl lg:text-5xl leading-tighter mb-4">
+    <section className="container section-heading-xl">
+      <h2 className="mb-4">
         {t("situations.heading")}
       </h2>
       <p className="text-black/70 text-sm md:text-base max-w-2xl mb-8">
@@ -45,7 +45,7 @@ export default function SituationsSlider() {
                   />
                 </div>
                 <div>
-                  <h3 className="font-heading italic text-2xl mb-3">
+                  <h3 className="mb-3">
                     {card.title}
                   </h3>
                   <p className="text-sm text-black/70">{card.description}</p>

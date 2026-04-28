@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { openVelloModal } from "@/lib/openVelloModal";
 
 interface CTAButton {
   label: string;
@@ -21,8 +24,8 @@ export default function TerminalCTA({
   onPrimaryClick,
 }: TerminalCTAProps) {
   return (
-    <div className="bg-brand-primary text-brand-footer-text py-[15vh] px-6 text-center">
-      <h2 className="font-heading italic text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 max-w-2xl mx-auto">
+    <div className="terminal-cta bg-brand-primary text-brand-footer-text py-[15vh] px-6 text-center">
+      <h2 className="mb-3 md:mb-6 max-w-2xl mx-auto text-4xl md:text-6xl">
         {title}
       </h2>
       <p className="text-brand-footer-text/80 text-sm md:text-base max-w-xl mx-auto mb-10 leading-relaxed">
@@ -34,13 +37,13 @@ export default function TerminalCTA({
             <Button key={i} asChild variant="terminal-outline">
               <Link href={btn.href}>{btn.label}</Link>
             </Button>
-          ) : onPrimaryClick ? (
-            <Button key={i} variant="terminal" onClick={onPrimaryClick}>
-              {btn.label}
-            </Button>
           ) : (
-            <Button key={i} asChild variant="terminal">
-              <Link href={btn.href}>{btn.label}</Link>
+            <Button
+              key={i}
+              variant="terminal"
+              onClick={onPrimaryClick ?? openVelloModal}
+            >
+              {btn.label}
             </Button>
           ),
         )}

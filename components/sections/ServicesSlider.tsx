@@ -5,6 +5,8 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { Slider } from "@/components/Slider";
 import { serviceImages } from "@/app/assets/images";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 type ServiceItem = {
   title: string;
@@ -18,10 +20,8 @@ export default function ServicesSlider() {
   const items = tServices.raw("items") as ServiceItem[];
 
   return (
-    <section className="container">
-      <h2 className="font-heading italic text-4xl md:text-3xl lg:text-5xl leading-tighter mb-4">
-        {tHome("servicesSlider.heading")}
-      </h2>
+    <section className="container section-heading-xl !pt-0">
+      <h2 className="mb-4">{tHome("servicesSlider.heading")}</h2>
       <p className="text-black/70 text-sm md:text-base max-w-2xl mb-8">
         {tHome("servicesSlider.description")}
       </p>
@@ -31,28 +31,34 @@ export default function ServicesSlider() {
         mobileSpacing={16}
       >
         {items.map((item, i) => (
-          <div key={i} className="flex flex-col">
-            <div className="relative w-full rounded-2xl overflow-hidden mb-5 aspect-square">
+          <Link
+            key={i}
+            href="/services"
+            className="group flex flex-col text-left rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
+          >
+            <div className="relative w-full rounded-2xl overflow-hidden mb-6 aspect-square">
               <Image
                 src={serviceImages[i % serviceImages.length]}
                 alt={item.title}
                 fill
                 sizes="(max-width: 768px) 83vw, (max-width: 1024px) 50vw, 33vw"
-                className="object-cover"
+                className="object-cover hover:scale-[101%] transition-transform duration-500"
                 priority={i === 0}
               />
             </div>
-            <h3 className="font-heading italic text-2xl mb-2">{item.title}</h3>
-            <p className="text-sm md:text-base text-black/70 leading-relaxed mb-2">
+            <h3 className="mb-3">{item.title}</h3>
+            <p className="text-sm md:text-base text-black/70 leading-relaxed mb-4">
               {item.intro}
             </p>
-            <Link
-              href="/services"
-              className="text-sm md:text-base underline underline-offset-2"
-            >
+            <span className="inline-flex items-center gap-2 text-base font-semibold text-brand-primary transition-colors duration-300 group-hover:text-brand-text">
               Lue lisää
-            </Link>
-          </div>
+              {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+              <FontAwesomeIcon
+                icon={faArrowRight as any}
+                className="w-3 h-3 mt-1 shrink-0 text-current transition-transform duration-300 ease-out group-hover:translate-x-[10px]"
+              />
+            </span>
+          </Link>
         ))}
       </Slider>
     </section>

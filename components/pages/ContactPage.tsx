@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import ContactForm from "@/components/ContactForm";
 import { noraSoiniPortrait } from "@/app/assets/images";
 import PageHero from "@/components/sections/PageHero";
+import ContactTestimonialsSlider from "@/components/sections/ContactTestimonialsSlider";
 import VisitFlowSection from "@/components/sections/VisitFlowSection";
 import TerminalCTA from "@/components/sections/TerminalCTA";
 import FadeIn from "@/components/ui/FadeIn";
@@ -20,16 +21,18 @@ export default function ContactPage() {
 
   return (
     <>
-      <PageHero heading={t("hero.title")} />
+      <PageHero heading={t("hero.title")} ingress={t("hero.ingress")} />
 
-      <FadeIn>
-        <section className="container py-10 pb-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
-            {/* Info */}
-            <div className="flex flex-col gap-6">
-              <h2 className="font-heading italic text-3xl md:text-4xl leading-tight">
-                {t("contact.title")}
-              </h2>
+      <ContactTestimonialsSlider />
+
+      <section className="container py-10 pb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
+          {/* Info */}
+          <div className="flex flex-col gap-6">
+            <FadeIn delay={0}>
+              <h2>{t("contact.title")}</h2>
+            </FadeIn>
+            <FadeIn delay={0.08}>
               <div
                 className="relative w-full rounded-2xl overflow-hidden"
                 style={{ aspectRatio: "1024/683" }}
@@ -42,9 +45,8 @@ export default function ContactPage() {
                   className="object-cover"
                 />
               </div>
-              <p className="text-sm md:text-base text-black/70 leading-relaxed">
-                {t("hero.description")}
-              </p>
+            </FadeIn>
+            <FadeIn delay={0.14}>
               <div>
                 <p className="font-medium text-black/90">
                   {SITE_CONFIG.company.name}
@@ -59,26 +61,26 @@ export default function ContactPage() {
                   {SITE_CONFIG.company.contact.email}
                 </a>
               </div>
-            </div>
-
-            {/* Form */}
-            <div>
-              <h2 className="font-heading italic text-3xl md:text-4xl leading-tight mb-8">
-                {t("contact.formTitle")}
-              </h2>
-              <ContactForm />
-            </div>
+            </FadeIn>
           </div>
-        </section>
-      </FadeIn>
+
+          {/* Form */}
+          <div className="flex flex-col">
+            <FadeIn delay={0.06}>
+              <h2 className="mb-8">{t("contact.formTitle")}</h2>
+            </FadeIn>
+            <FadeIn delay={0.12}>
+              <ContactForm />
+            </FadeIn>
+          </div>
+        </div>
+      </section>
 
       <FadeIn>
         <VisitFlowSection />
       </FadeIn>
 
-      <FadeIn>
-        <FAQ />
-      </FadeIn>
+      <FAQ />
 
       <TerminalCTA
         title={tFooter("cta")}

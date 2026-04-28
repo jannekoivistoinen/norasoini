@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         fi: `${COMPANY_METADATA.url}/fi/${SITE_CONFIG.i18n.routes.about.fi}`,
         en: `${COMPANY_METADATA.url}/en/${SITE_CONFIG.i18n.routes.about.en}`,
+        "x-default": `${COMPANY_METADATA.url}/fi/${SITE_CONFIG.i18n.routes.about.fi}`,
       },
     },
     openGraph: {
@@ -32,6 +33,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t("description"),
       url: canonicalUrl,
       siteName: COMPANY_METADATA.name,
+      locale: locale === "fi" ? "fi_FI" : "en_US",
+      type: "website",
       images: [
         {
           url: `${COMPANY_METADATA.url}/og-image.jpg`,
@@ -49,8 +52,37 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// Update Page component to handle Promise params
 export default async function Page({ params }: Props) {
-  await params; // Ensure params are resolved
-  return <AboutPage />;
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "page.about" });
+
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${COMPANY_METADATA.url}#person`,
+    name: "Nora Soini",
+    url: COMPANY_METADATA.url,
+    email: COMPANY_METADATA.contact.email,
+    image: `${COMPANY_METADATA.url}/og-image.jpg`,
+    jobTitle: t("credentials.titles.0"),
+    description: t("hero.ingress"),
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Espoo",
+      addressCountry: "FI",
+    },
+    worksFor: {
+      "@id": `${COMPANY_METADATA.url}#localbusiness`,
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      <AboutPage />
+    </>
+  );
 }

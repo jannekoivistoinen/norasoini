@@ -1,4 +1,4 @@
-import { IconKey } from "@/app/assets/images";
+import { IconKey } from "@/app/assets/icons";
 
 export type LocaleData = {
   name: string;

@@ -52,7 +52,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navigation />
           <VelloModal />
-          <main className="flex-grow overflow-x-hidden">{children}</main>
+          <main className="flex-grow overflow-x-clip">{children}</main>
           <Footer />
         </NextIntlClientProvider>
       </body>

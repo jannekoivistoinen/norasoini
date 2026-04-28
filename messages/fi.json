@@ -118,7 +118,7 @@
           },
           {
             "question": "Paljonko terapia maksaa ja saako sille Kela-korvausta?",
-            "answer": "Tapaamiset alkavat 69 €:sta (voimassa elokuuhun 2026 asti), ja 1.9.2026 alkaen alkaen 95 €:sta. Lyhytterapia ei tällä hetkellä kuulu Kela-korvauksen piiriin, mutta kannattaa tarkistaa työnantajasi tai vakuutusyhtiösi tilanne."
+            "answer": "Lyhytterapian hinta on 89 € / kerta (60 min). Kraniosakraaliterapiassa opiskelijahinta on 69 € / kerta (voimassa elokuuhun 2026 asti) ja normaalihinta 95 € / kerta (1.9.2026 alkaen). Lyhytterapia ei tällä hetkellä kuulu Kela-korvauksen piiriin, mutta kannattaa tarkistaa työnantajasi tai vakuutusyhtiösi tilanne."
           },
           {
             "question": "Voidaanko tapaamiset järjestää etänä?",
@@ -130,7 +130,7 @@
           },
           {
             "question": "Mitä kraniosakraaliterapia on?",
-            "answer": "Kraniosakraaliterapia on lempeä ja rauhallinen hoitomuoto, jossa kehoa kuunnellaan kevyen kosketuksen avulla. Hoidon tavoitteena on vapauttaa jännityksiä, tukea hermoston tasapainoa ja edistää kehon omaa palautumista. Kraniosakraaliterapia ei korvaa lääkärin tutkimusta, hoitoa tai muuta terveydenhuollon palvelua, eikä siinä tehdä lääketieteellistä diagnoosia."
+            "answer": "Kraniosakraaliterapia on lempeä ja syvärentouttava hoitomuoto, joka tukee kehon luonnollista tasapainoa ja palautumista. Hoito perustuu kevyeen, kuuntelevaan kosketukseen, jonka avulla pyritään rauhoittamaan hermostoa ja vapauttamaan kehon jännitystiloja. Kraniosakraaliterapia ei korvaa lääkärin tutkimusta, hoitoa tai muuta terveydenhuollon palvelua, eikä siinä tehdä lääketieteellistä diagnoosia."
           },
           {
             "question": "Millainen hoito on käytännössä?",
@@ -198,11 +198,12 @@
           }
         ]
       },
+      "testimonialsHeading": "Asiakaspalautteet",
       "items": [
         {
           "title": "Lyhytterapia Espoossa ja etänä",
           "intro": "Tavoitteellista ja käytännönläheistä keskusteluapua, joka auttaa jäsentämään ajatuksia, käsittelemään kuormitusta ja löytämään suuntaa eteenpäin.",
-          "body": "Lyhytterapia on tavoitteellista ja käytännönläheistä keskusteluapua, joka auttaa sinua jäsentämään ajatuksia, käsittelemään kuormitusta ja löytämään suuntaa eteenpäin.\n\n- Vastaanotto Tapiolan alueella Espoossa tai verkossa\n- Kesto: 60 min\n- Hinta: alkaen 69 € / kerta (elokuuhun 2026 asti), alkaen 95 € / kerta (1.9.2026 alkaen)\n\n ## Lyhytterapia sopii sinulle, jos:\n\n- koet stressiä, uupumusta tai ahdistusta\n- kaipaat selkeyttä elämäntilanteeseesi\n- haluat turvallisen tilan puhua ja tulla kuulluksi",
+          "body": "Lyhytterapia on tavoitteellista ja käytännönläheistä keskusteluapua, joka auttaa sinua jäsentämään ajatuksia, käsittelemään kuormitusta ja löytämään suuntaa eteenpäin.\n\n- Vastaanotto Tapiolan alueella Espoossa tai verkossa\n- Kesto: 60 min\n- Hinta: 89 € / kerta\n\n ## Lyhytterapia sopii sinulle, jos:\n\n- koet stressiä, uupumusta tai ahdistusta\n- kaipaat selkeyttä elämäntilanteeseesi\n- haluat turvallisen tilan puhua ja tulla kuulluksi",
           "cta": "Varaa lyhytterapia-aika"
         },
         {
@@ -221,7 +222,7 @@
     },
     "about": {
       "metadata": {
-        "title": "Olen Nora Soini, Läsnäolon ja systeemisyyden lyhytterapeutti Espoosta.",
+        "title": "Nora Soini – Läsnäolon terapeutti Espoossa",
         "description": "Opiskelen kraniosakraaliterapeutiksi (valmistun syksyllä 2026) ja energiahoitajaksi (kevät 2027). Lyhytterapeutti Espoossa.",
         "keywords": ["nora soini", "terapeutti", "espoo"]
       },
@@ -231,16 +232,17 @@
         "cta": "Varaa aika"
       },
       "intro": {
-        "ingressBelowPhoto": "Olen kuudenkympin hujakoilla oleva kahden aikuisen lapsen äiti ja elän pitkässä avioliitossa. Elämä on opettanut minulle paljon ihmisyydestä, ihmissuhteista ja siitä, miten syvästi kokemuksemme muovaavat meitä.",
+        "ingressBelowPhoto": "Elämä on opettanut minulle paljon ihmisyydestä, ihmissuhteista ja siitä, miten syvästi kokemuksemme muovaavat meitä.",
         "paragraphsBeforeBento": [
-          "Vuonna 2011 lähdin yrittäjäksi. Ennen yrittäjyyttä työskentelin pitkään kansainvälisessä yrityksessä.",
+          "Olen kuudenkympin hujakoilla oleva kahden aikuisen lapsen äiti ja elän pitkässä avioliitossa. Vuonna 2011 lähdin yrittäjäksi. Ennen yrittäjyyttä työskentelin pitkään kansainvälisessä yrityksessä.",
           "Oma matkani tähän työhön on kulkenut pitkän henkilökohtaisen kasvun kautta. Oman terapian myötä löysin vuosia sitten auttajan myös itsestäni. Kun oma työ kulkee riittävän pitkälle, syntyy usein halu olla tukena myös muille heidän matkallaan."
         ],
         "afterBento": {
           "ingress": "Elämäni varrella olen kohdannut myös syviä haasteita.",
           "paragraphs": [
             "Teini-iässä vanhempani erosivat, nuorena aikuisena tulin hylätyksi ilman selitystä ja aikuisena jouduin pitkäaikaisen kiusaamisen kohteeksi. Nämä kokemukset jättivät jälkensä, mutta ne ovat myös opettaneet minulle paljon ihmisestä, haavoittuvuudesta ja siitä, miten ihminen voi löytää tien takaisin yhteyteen itseensä.",
-            "Työskentelyssäni tärkeintä on turvallinen, rauhallinen tila, jossa ihminen voi tulla kohdatuksi kokonaisena; kehon, tunteiden ja mielen tasolla. Uskon, että jokaisessa ihmisessä on jo olemassa suunta kohti tasapainoa ja eheyttä. Joskus tarvitsemme vain hetken pysähtyä ja tulla nähdyksi matkallamme."
+            "Työskentelyssäni tärkeintä on turvallinen, rauhallinen tila, jossa ihminen voi tulla kohdatuksi kokonaisena; kehon, tunteiden ja mielen tasolla. Uskon, että jokaisessa ihmisessä on jo olemassa suunta kohti tasapainoa ja eheyttä.",
+            "Joskus tarvitsemme vain hetken pysähtyä ja tulla nähdyksi matkallamme."
           ]
         }
       },
@@ -290,13 +292,12 @@
     "contact": {
       "metadata": {
         "title": "Yhteystiedot – Nora Soini",
-        "description": "Ota yhteyttä ja varaa aika.",
+        "description": "Varaa aika lyhytterapiaan tai kraniosakraaliterapiaan Espoossa tai etänä. Tarjoan maksuttoman 15 min tutustumispuhelun. Vastaan 1–2 arkipäivässä.",
         "keywords": ["yhteystiedot", "varaa aika", "nora soini", "espoo"]
       },
       "hero": {
         "title": "Ota yhteyttä",
-        "ingress": "Vastaanotto Tapiolan alueella Espoossa sekä etänä videopuhelun välityksellä. Tarjoan myös maksuttoman 15 minuutin tutustumispuhelun – lyhyt, sitoutumaton puhelu, jossa voit kertoa tilanteestasi ja kysyä mitä tahansa.",
-        "description": "Ensimmäinen yhteydenotto voi tuntua isolta askeleelta. Siksi haluan tehdä ajan varaamisesta sinulle mahdollisimman helppoa ja turvallista.",
+        "ingress": "Ensimmäinen yhteydenotto voi tuntua isolta askeleelta. Siksi haluan tehdä ajan varaamisesta sinulle mahdollisimman helppoa ja turvallista.",
         "buttonText": "Siirry lomakkeelle"
       },
       "contact": {
@@ -304,12 +305,50 @@
         "info": "Vastaanotto Tapiolan alueella Espoossa sekä etänä videopuhelun välityksellä. Tarjoan myös maksuttoman 15 minuutin tutustumispuhelun – lyhyt, sitoutumaton puhelu, jossa voit kertoa tilanteestasi ja kysyä mitä tahansa.",
         "email": "nora@norasoini.fi",
         "formTitle": "Lähetä viesti"
+      },
+      "testimonials": {
+        "heading": "Asiakaspalautteita",
+        "description": "Kiitos jokaiselle, joka on jakanut kokemuksensa – jokainen sana on arvokas.",
+        "items": [
+          {
+            "text": "Työskentely Noran kanssa oli poikkeuksellisen turvallinen, lämmin ja aidosti kohdatuksi tulemisen kokemus. Nora kohtasi minut kokonaisvaltaisesti, aidolla läsnäololla ja sydämellä. Kun uskaltaa avata sydämensä, tällaisessa seurassa ei tule ainoastaan kuulluksi – vaan samalla jokin sisällä alkaa eheytyä.",
+            "attribution": "Anette"
+          },
+          {
+            "text": "Terapia Noran kanssa tuntui alusta asti lämpimältä ja turvalliselta. Nora on empaattinen ja kohtaa ihmisen aidosti, osaten ohjata ajattelua uusiin suuntiin luontevalla tavalla. Erityisen hienoa on hänen tapansa olla läsnä – se tekee työskentelystä aidosti merkityksellistä.",
+            "attribution": "Sari"
+          },
+          {
+            "text": "Noran kyky kuunnella ja myötäelää, välittää kokemusta, että \"mä tiedän mitä sä käyt läpi\", ja sen jälkeen lempeästi nostaa valoa ja toivoa kohti – se on todella terapeuttista!",
+            "attribution": "Katja, 57 v"
+          },
+          {
+            "text": "Noran kraniohoito oli lempeää ja rauhoittavaa, tarjosi kokonaisvaltaisen kuulluksi ja kannatelluksi tulemisen kokemuksen, ja jätti hermostoon pitkään pysyvän levollisuuden kokemuksen.",
+            "attribution": "Terapeuttikollega"
+          },
+          {
+            "text": "Nora kohtaa sinut äärettömän läsnäolevalla energialla. Auttaen yhdessä ymmärtämään mielessäsi pyöriviä ajatuksia nähden mahdollisuuksia ja tarvittaessa haastaen. Lämmin suositus Noran palveluille.",
+            "attribution": "Miia"
+          },
+          {
+            "text": "Kranio hoito tuntui äärettömän lempeältä läsnä olevalta kosketukselta, keho ja mieli rentoutui jo hoitopöydällä.\n\nSuosittelen kranio hoitoja kaikille joiden keho tai mieli kaipaa rauhaa ja läsnäoloa. Olo keveni jo ensimmäisellä kerralla. Kiitos Nora!",
+            "attribution": "Miia"
+          },
+          {
+            "text": "En ole aiemmin ajatellut, että lyhytterapia olisi mua varten, mutta olin tosi väärässä. Nora on ollut lempeän johdonmukainen ja auttanut mua juuri niissä kohdissa, kun olen tarvinnut erilaista perspektiiviä ja konkreettisia keinoja käsitellä vaikeita asioita. Nora on antanut mulle tosi paljon ajateltavaa ja sopivassa suhteessa haastanut mua tekemään oivalluksia omista ajatusmalleistani.",
+            "attribution": "Jenni"
+          },
+          {
+            "text": "Tapaaminen Noran kanssa sisälsi alkukeskustelun, kraniosakraalihoidon sekä ehdotukset, kuinka hoidon jälkeen vielä maadoittaa itseä. Hoito auttoi linjaamaan paitsi kehoa, myös mielen tasolla tapahtui selkeytymistä. Kokemus oli kaikkiaan miellyttävä ja keskustelusta jäi inspiroitunut olo. Kiitos Nora kauniista kohtaamisesta, jossa otat huomioon ihmisyyden eri tasot.",
+            "attribution": "Elina"
+          }
+        ]
       }
     },
     "pricing": {
       "metadata": {
         "title": "Hinnasto – Nora Soini",
-        "description": "Palveluiden hinnasto ja kestot.",
+        "description": "Lyhytterapia alkaen 69 €, kraniosakraaliterapia alkaen 69 € ja yhdistelmähoito 129 €. Kaikki hinnat ja kestot – Nora Soini, Espoo.",
         "keywords": ["hinnasto", "hinta", "varaa aika", "espoo", "nora soini"]
       },
       "hero": {
@@ -361,20 +400,24 @@
     "quoteSlider": {
       "slides": [
         {
-          "quote": "Onko elämässäsi kohta, jossa jokin ei enää tunnu entiseltä?",
+          "name": "Jenni",
+          "quote": "En ole aiemmin ajatellut, että lyhytterapia olisi mua varten, mutta olin tosi väärässä.",
+          "description": "Riittää, että tulet sellaisena kuin olet. Tämä on turvallinen tila, jossa saat puhua vapaasti, tulla kuulluksi ja olla ilman suorituspaineita. Ensimmäinen askel riittää."
+        },
+        {
+          "name": "Miia",
+          "quote": "Kraniohoito tuntui äärettömän lempeältä läsnä olevalta kosketukselta, keho ja mieli rentoutui jo hoitopöydällä.",
+          "description": "Tarjoan sinulle rauhallisen ja turvallisen tilan pysähtyä. Tilan, jossa voit tulla kohdatuksi juuri sellaisena kuin olet – ilman kiirettä, ilman vaatimuksia."
+        },
+        {
+          "name": "Katja",
+          "quote": "Noran kyky kuunnella ja myötäelää, välittää kokemusta, että \"mä tiedän mitä sä käyt läpi\", ja sen jälkeen lempeästi nostaa valoa ja toivoa kohti.",
           "description": "Ehkä olet väsynyt, kuormittunut tai epävarma suunnasta. Ehkä kannat mukanasi kokemuksia, jotka vaikuttavat yhä arjessasi. Et ole yksin."
         },
         {
-          "quote": "Tarjoan sinulle rauhallisen ja turvallisen tilan pysähtyä.",
-          "description": "Tilan, jossa voit tulla kohdatuksi juuri sellaisena kuin olet – ilman kiirettä, ilman vaatimuksia."
-        },
-        {
-          "quote": "Työskentelyssä yhdistyvät keskustelu, läsnäolo ja kehollinen kuuntelu.",
-          "description": "Voimme yhdessä tutkia sitä, mitä sinussa tapahtuu, ja antaa tilaa muutokselle sinun omassa tahdissasi."
-        },
-        {
-          "quote": "Usein jo se, että pysähdymme hetkeksi, voi alkaa muuttaa jotain.",
-          "description": "Hoidossa ja terapiassa tavoitteena ei ole korjata sinua, vaan auttaa sinua löytämään takaisin yhteys itseesi, omiin tunteisiisi ja kehosi viisauteen."
+          "name": "Miia",
+          "quote": "Nora kohtaa sinut äärettömän läsnäolevalla energialla. Auttaen yhdessä ymmärtämään mielessäsi pyöriviä ajatuksia nähden mahdollisuuksia ja tarvittaessa haastaen.",
+          "description": "Työskentelyssä yhdistyvät keskustelu, läsnäolo ja kehollinen kuuntelu. Voimme yhdessä tutkia sitä, mitä sinussa tapahtuu, ja antaa tilaa muutokselle sinun omassa tahdissasi."
         }
       ]
     },
@@ -441,7 +484,7 @@
           "items": [
             {
               "question": "Mitä kraniosakraaliterapia on?",
-              "answer": "Kraniosakraaliterapia on lempeä ja rauhallinen hoitomuoto, jossa kehoa kuunnellaan kevyen kosketuksen avulla. Hoidon tavoitteena on vapauttaa jännityksiä, tukea hermoston tasapainoa ja edistää kehon omaa palautumista. Kraniosakraaliterapia ei korvaa lääkärin tutkimusta, hoitoa tai muuta terveydenhuollon palvelua, eikä siinä tehdä lääketieteellistä diagnoosia."
+              "answer": "Kraniosakraaliterapia on lempeä ja syvärentouttava hoitomuoto, joka tukee kehon luonnollista tasapainoa ja palautumista. Hoito perustuu kevyeen, kuuntelevaan kosketukseen, jonka avulla pyritään rauhoittamaan hermostoa ja vapauttamaan kehon jännitystiloja. Kraniosakraaliterapia ei korvaa lääkärin tutkimusta, hoitoa tai muuta terveydenhuollon palvelua, eikä siinä tehdä lääketieteellistä diagnoosia."
             },
             {
               "question": "Millainen hoito on käytännössä?",
@@ -479,7 +522,7 @@
           "items": [
             {
               "question": "Paljonko terapia maksaa ja saako sille Kela-korvausta?",
-              "answer": "Tapaamiset alkavat 69 €:sta (voimassa elokuuhun 2026 asti), ja 1.9.2026 alkaen alkaen 95 €:sta. Lyhytterapia ei tällä hetkellä kuulu Kela-korvauksen piiriin, joten se maksetaan kokonaan itse. Jotkut työnantajat tukevat terapiaa työhyvinvointietuuden kautta – kannattaa tarkistaa oman työnantajasi käytännöt."
+              "answer": "Lyhytterapian hinta on 89 € / kerta (60 min). Kraniosakraaliterapiassa opiskelijahinta on 69 € / kerta (voimassa elokuuhun 2026 asti) ja normaalihinta 95 € / kerta (1.9.2026 alkaen). Lyhytterapia ei tällä hetkellä kuulu Kela-korvauksen piiriin, joten se maksetaan kokonaan itse. Jotkut työnantajat tukevat terapiaa työhyvinvointietuuden kautta – kannattaa tarkistaa oman työnantajasi käytännöt."
             },
             {
               "question": "Miten voin varata ajan?",

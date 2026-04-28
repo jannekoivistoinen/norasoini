@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         fi: `${COMPANY_METADATA.url}/fi/${SITE_CONFIG.i18n.routes.pricing.fi}`,
         en: `${COMPANY_METADATA.url}/en/${SITE_CONFIG.i18n.routes.pricing.en}`,
+        "x-default": `${COMPANY_METADATA.url}/fi/${SITE_CONFIG.i18n.routes.pricing.fi}`,
       },
     },
     openGraph: {
@@ -31,6 +32,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t("description"),
       url: canonicalUrl,
       siteName: COMPANY_METADATA.name,
+      locale: locale === "fi" ? "fi_FI" : "en_US",
+      type: "website",
       images: [
         {
           url: `${COMPANY_METADATA.url}/og-image.jpg`,

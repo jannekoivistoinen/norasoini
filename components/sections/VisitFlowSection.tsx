@@ -19,7 +19,7 @@ export default function VisitFlowSection() {
 
   return (
     <section className="container py-20">
-      <h2 className="font-heading italic mb-4 text-center mx-auto">
+      <h2 className="mb-4 text-center mx-auto">
         {t("visitFlow.heading")}
       </h2>
       <p className="text-black/70 text-sm md:text-base max-w-md mb-12 text-center mx-auto">
@@ -27,7 +27,7 @@ export default function VisitFlowSection() {
       </p>
       <div className="flex flex-col gap-8 md:hidden">
         {steps.map((step, i) => (
-          <div key={i}>
+          <div key={i} className="step-card">
             <div className="relative w-full rounded-2xl overflow-hidden mb-5 aspect-[4/5]">
               <Image
                 src={visitFlowImages[i % visitFlowImages.length]}
@@ -40,7 +40,7 @@ export default function VisitFlowSection() {
                 {i + 1}
               </span>
             </div>
-            <h3 className="font-heading italic text-xl mb-2">{step.title}</h3>
+            <h3 className="mb-2">{step.title}</h3>
             <p className="text-sm text-black/70 leading-relaxed">
               {step.description}
             </p>
@@ -54,7 +54,7 @@ export default function VisitFlowSection() {
           mobileSpacing={16}
         >
           {steps.map((step, i) => (
-            <div key={i}>
+            <div key={i} className="step-card">
               <div className="relative w-full rounded-2xl overflow-hidden mb-5 aspect-[4/5]">
                 <Image
                   src={visitFlowImages[i % visitFlowImages.length]}
@@ -67,7 +67,7 @@ export default function VisitFlowSection() {
                   {i + 1}
                 </span>
               </div>
-              <h3 className="font-heading italic text-xl mb-2">{step.title}</h3>
+              <h3 className="mb-2">{step.title}</h3>
               <p className="text-sm md:text-base text-black/70 leading-relaxed">
                 {step.description}
               </p>

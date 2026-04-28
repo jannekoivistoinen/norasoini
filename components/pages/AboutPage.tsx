@@ -7,9 +7,14 @@ import PillarsSection from "@/components/sections/PillarsSection";
 import QuoteSlider from "@/components/sections/QuoteSlider";
 import PageHero from "@/components/sections/PageHero";
 import TerminalCTA from "@/components/sections/TerminalCTA";
-import AboutHeroVideo from "@/components/sections/AboutHeroVideo";
 import FadeIn from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
+import { AnimatedSignature } from "@/components/AnimatedSignature";
+import {
+  noraStorySignatureColor,
+  noraStorySignaturePaths,
+  noraStorySignatureViewBox,
+} from "@/components/noraStorySignaturePath";
 
 const FAQ = dynamic(() =>
   import("@/components/FAQ").then((module) => module.FAQ),
@@ -46,17 +51,67 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <PageHero heading={t("hero.heading")} ingress={t("hero.ingress")} />
+      <PageHero
+        heading={t("hero.heading")}
+        ingress={t("hero.ingress")}
+        ingressClassName="max-w-[50ch] mx-auto"
+      />
 
-      <FadeIn>
-        <AboutHeroVideo />
-      </FadeIn>
+      {/* Bento photo grid */}
+      <div className="container pb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <FadeIn delay={0} className="min-w-0">
+            <div
+              className="relative w-full rounded-2xl overflow-hidden"
+              style={{ aspectRatio: "706/935" }}
+            >
+              <Image
+                src="/images/about-left.jpg"
+                alt="Nora Soini"
+                fill
+                className="object-cover"
+                sizes="(min-width: 768px) 50vw, 100vw"
+              />
+            </div>
+          </FadeIn>
+          <div className="flex flex-col gap-3 min-w-0">
+            <FadeIn delay={0.1}>
+              <div
+                className="relative w-full rounded-2xl overflow-hidden flex-1"
+                style={{ aspectRatio: "706/458" }}
+              >
+                <Image
+                  src="/images/about-right-top.jpg"
+                  alt="Nora Soini"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <div
+                className="relative w-full rounded-2xl overflow-hidden flex-1"
+                style={{ aspectRatio: "706/458" }}
+              >
+                <Image
+                  src="/images/about-right-bottom.jpg"
+                  alt="Nora Soini"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </div>
 
       {/* Bio (before bento) */}
       <FadeIn>
         <section className="container py-20">
           <div className="max-w-[882px] mx-auto">
-            <p className="font-heading italic text-2xl md:text-3xl lg:text-4xl leading-snug text-black/85 mb-12 md:ml-[15%] md:max-w-[70%]">
+            <p className="font-heading italic text-2xl md:text-3xl lg:text-4xl leading-snug text-black/85 mb-12 max-w-[70%] mx-auto text-balance">
               {t("intro.ingressBelowPhoto")}
             </p>
             <div className="md:ml-[15%] md:max-w-[70%]">
@@ -73,57 +128,11 @@ export default function AboutPage() {
         </section>
       </FadeIn>
 
-      {/* Bento photo grid */}
-      <FadeIn>
-        <div className="container pb-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <div
-              className="relative w-full rounded-2xl overflow-hidden"
-              style={{ aspectRatio: "706/935" }}
-            >
-              <Image
-                src="/images/about-left.jpg"
-                alt="Nora Soini"
-                fill
-                className="object-cover"
-                sizes="(min-width: 768px) 50vw, 100vw"
-              />
-            </div>
-            <div className="flex flex-col gap-3">
-              <div
-                className="relative w-full rounded-2xl overflow-hidden flex-1"
-                style={{ aspectRatio: "706/458" }}
-              >
-                <Image
-                  src="/images/about-right-top.jpg"
-                  alt="Nora Soini"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                />
-              </div>
-              <div
-                className="relative w-full rounded-2xl overflow-hidden flex-1"
-                style={{ aspectRatio: "706/458" }}
-              >
-                <Image
-                  src="/images/about-right-bottom.jpg"
-                  alt="Nora Soini"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </FadeIn>
-
       {/* Bio (after bento) */}
       <FadeIn>
         <div className="container pb-20">
           <div className="max-w-[882px] mx-auto">
-            <p className="font-heading italic text-2xl md:text-3xl lg:text-4xl leading-snug text-black/85 mb-8 md:ml-[15%] md:max-w-[70%]">
+            <p className="font-heading italic text-2xl md:text-3xl lg:text-4xl leading-snug text-black/85 mb-8 max-w-[70%] mx-auto text-balance">
               {afterBento.ingress}
             </p>
             <div className="md:ml-[15%] md:max-w-[70%]">
@@ -145,11 +154,24 @@ export default function AboutPage() {
         <div className="container pb-20">
           <div className="max-w-[882px] mx-auto">
             <div className="md:ml-[15%] md:max-w-[70%]">
-              <p className="text-sm md:text-base font-semibold text-black/85 mb-1">
-                Nora Soini
-              </p>
+              <AnimatedSignature
+                paths={[...noraStorySignaturePaths]}
+                viewBox={noraStorySignatureViewBox}
+                width={280}
+                height={59}
+                strokeWidth={2.25}
+                strokeColor={noraStorySignatureColor}
+                fillColor="none"
+                duration={0.1}
+                delay={0}
+                stagger={0.04}
+                className="flex justify-start mb-1 -ml-12 lg:-ml-12 opacity-80"
+              />
               {credentials.titles.map((title, i) => (
-                <p key={i} className="text-sm md:text-base text-black/70 leading-relaxed">
+                <p
+                  key={i}
+                  className="text-sm md:text-base text-black/70 leading-relaxed"
+                >
                   {title}
                 </p>
               ))}
@@ -180,9 +202,7 @@ export default function AboutPage() {
       </FadeIn>
 
       {/* FAQ */}
-      <FadeIn>
-        <FAQ />
-      </FadeIn>
+      <FAQ />
 
       <TerminalCTA
         title={tFooter("cta")}

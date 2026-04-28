@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { fontHtmlClassName } from "./fonts";
 import { SITE_CONFIG, NAVIGATION_LINKS, COMPANY_METADATA } from "@/lib/constants";
 import TerminalCTA from "@/components/sections/TerminalCTA";
+import VelloModal from "@/components/VelloModal";
 import "./globals.css";
 
 export default function Error({
@@ -16,6 +17,7 @@ export default function Error({
   return (
     <html lang="fi" className={fontHtmlClassName}>
       <body className="flex flex-col min-h-screen bg-brand-bg">
+        <VelloModal />
         <header className="sticky z-[9999] top-0 w-full bg-brand-bg border-b border-black/10">
           <nav className="w-full flex items-center justify-between px-6 md:px-10 py-6">
             <Link
@@ -43,8 +45,8 @@ export default function Error({
           </nav>
         </header>
 
-        <main className="flex-grow flex flex-col items-center justify-center py-64 px-6 text-center">
-          <h1 className="font-heading italic text-6xl md:text-8xl text-brand-primary mb-4">
+        <main className="http-error-page flex-grow flex flex-col items-center justify-center py-64 px-6 text-center">
+          <h1 className="mb-4">
             500
           </h1>
           <p className="text-xl text-gray-700 mb-2">Palvelinvirhe</p>

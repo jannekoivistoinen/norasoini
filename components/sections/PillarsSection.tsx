@@ -16,7 +16,7 @@ export default function PillarsSection() {
 
   return (
     <section className="container py-20">
-      <h2 className="font-heading italic mb-4 text-center">
+      <h2 className="mb-4 text-center">
         {t("pillars.heading")}
       </h2>
       <p className="text-black/70 text-sm md:text-base mb-12 text-center max-w-2xl mx-auto">
@@ -31,12 +31,6 @@ export default function PillarsSection() {
               className="relative overflow-hidden rounded-2xl"
               style={{ aspectRatio: "467/418" }}
             >
-              <Image
-                src={`/images/pillar-${i + 1}.jpg`}
-                alt={pillar.title}
-                fill
-                className="object-cover"
-              />
               <div className="absolute inset-0 bg-[#d8cdbb]/80" />
               <div className="absolute inset-0 p-8 flex flex-col justify-between">
                 <div>
@@ -47,7 +41,7 @@ export default function PillarsSection() {
                   />
                 </div>
                 <div>
-                  <h3 className="font-heading italic text-2xl mb-3">
+                  <h3 className="mb-3">
                     {pillar.title}
                   </h3>
                   <p className="text-sm text-black/70">{pillar.description}</p>
