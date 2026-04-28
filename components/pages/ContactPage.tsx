@@ -25,8 +25,8 @@ export default function ContactPage() {
 
       <ContactTestimonialsSlider />
 
-      <section className="container py-10 pb-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
+      <section className="container py-10 pb-16 md:pb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-20">
           {/* Info */}
           <div className="flex flex-col gap-6">
             <FadeIn delay={0}>

@@ -49,7 +49,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="text-center container mt-12">
+      <section className="text-center container">
         <motion.h1 {...heroAnim(0.05)}>{t("hero.heading")}</motion.h1>
         <motion.p
           {...heroAnim(0.18)}
@@ -66,7 +66,7 @@ export default function HomePage() {
             <Link href={aboutHref}>{t("hero.secondaryCta")}</Link>
           </Button>
         </motion.div>
-        <ul className="flex flex-col sm:flex-row gap-1 sm:gap-8 items-center justify-center mt-36 mb-10 text-black/70">
+        <ul className="flex flex-col sm:flex-row gap-1 sm:gap-8 items-center justify-center mt-16 sm:mt-24 md:mt-36 mb-10 text-black/70">
           {[t("hero.trust1"), t("hero.trust2"), t("hero.trust3")].map(
             (signal, i) => (
               <motion.li
@@ -99,8 +99,8 @@ export default function HomePage() {
 
       {/* About */}
       <FadeIn>
-        <section className="container py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+        <section className="container py-12 md:py-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-start">
             <div
               className="relative w-full rounded-2xl overflow-hidden"
               style={{ aspectRatio: "706/935" }}
@@ -114,7 +114,7 @@ export default function HomePage() {
               />
             </div>
             <div className="flex flex-col justify-between h-full">
-              <div className="mb-16">
+              <div className="mb-8 md:mb-16">
                 <blockquote className="font-heading italic text-lg md:text-2xl text-black/80 mb-3 text-balance max-w-[50ch]">
                   {t("about.quote")}
                 </blockquote>

@@ -18,7 +18,7 @@ export function TestimonialCard({
 }: TestimonialCardProps) {
   return (
     <div
-      className={`block overflow-hidden bg-brand-beige-lightest p-12 h-full ${className}`}
+      className={`block overflow-hidden bg-brand-beige-lightest p-6 md:p-10 lg:p-12 h-full ${className}`}
     >
       {imageUrl && altText && (
         <div className="relative aspect-[2/3]">
@@ -37,7 +37,7 @@ export function TestimonialCard({
       <div className="flex flex-col justify-between h-full">
         <div>
           {quote && (
-            <MarkdownText className="italic text-base mt-auto p-base text-brand-brown mb-40">
+            <MarkdownText className="italic text-base mt-auto p-base text-brand-brown mb-10 md:mb-20 lg:mb-40">
               {quote}
             </MarkdownText>
           )}

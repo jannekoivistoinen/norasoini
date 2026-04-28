@@ -10,11 +10,11 @@ const Footer = () => {
   return (
     <footer>
       {/* Bottom bar */}
-      <div className="bg-brand-primary border-t border-white/[0.05] px-6 py-12">
+      <div className="bg-brand-primary border-t border-white/[0.05] px-6 py-8 md:py-12">
         <div className="container flex flex-col md:flex-row justify-between items-center gap-4 text-brand-footer-text/70 text-xs text-center md:text-left">
           <div>
             <div className="flex items-center justify-center md:justify-start gap-2 mb-1.5">
-              <p className="font-link text-xl font-medium text-white">
+              <p className="font-link text-lg md:text-xl font-medium text-white">
                 {t("name")}
               </p>
               <Link
@@ -52,7 +52,7 @@ const Footer = () => {
           <div className="md:text-right">
             <a
               href={`mailto:${SITE_CONFIG.company.contact.email}`}
-              className="text-white hover:opacity-80 transition text-xl font-medium"
+              className="text-white hover:opacity-80 transition text-lg md:text-xl font-medium"
             >
               {SITE_CONFIG.company.contact.email}
             </a>

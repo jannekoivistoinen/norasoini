@@ -35,7 +35,7 @@ export function ServiceDetailsCard({
 
       <div>
         <MarkdownText className="mt-8 mb-4">{title}</MarkdownText>
-        <MarkdownText className="text-slate-700 mb-4 content p-base mr-8 lg:mr-16">
+        <MarkdownText className="text-slate-700 mb-4 content p-base mr-0 md:mr-8 lg:mr-16">
           {description}
         </MarkdownText>
       </div>

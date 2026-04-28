@@ -27,7 +27,7 @@ export default function HomeAboutVideo() {
 
   return (
     <div>
-      <div className="relative px-24 aspect-video overflow-hidden rounded-2xl">
+      <div className="relative px-0 sm:px-8 md:px-16 lg:px-24 aspect-video overflow-hidden rounded-2xl">
         <video
           ref={videoRef}
           className="absolute inset-0 w-full h-full object-cover"

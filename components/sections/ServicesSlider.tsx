@@ -20,7 +20,7 @@ export default function ServicesSlider() {
   const items = tServices.raw("items") as ServiceItem[];
 
   return (
-    <section className="container section-heading-xl !pt-0">
+    <section className="container">
       <h2 className="mb-4">{tHome("servicesSlider.heading")}</h2>
       <p className="text-black/70 text-sm md:text-base max-w-2xl mb-8">
         {tHome("servicesSlider.description")}

@@ -18,11 +18,11 @@ export default function VisitFlowSection() {
   const steps = t.raw("visitFlow.steps") as VisitStep[];
 
   return (
-    <section className="container py-20">
+    <section className="container py-12 md:py-20">
       <h2 className="mb-4 text-center mx-auto">
         {t("visitFlow.heading")}
       </h2>
-      <p className="text-black/70 text-sm md:text-base max-w-md mb-12 text-center mx-auto">
+      <p className="text-black/70 text-sm md:text-base max-w-md mb-8 md:mb-12 text-center mx-auto">
         {t("visitFlow.description")}
       </p>
       <div className="flex flex-col gap-8 md:hidden">

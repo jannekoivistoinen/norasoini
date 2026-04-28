@@ -86,12 +86,12 @@ export default function ServicesPage() {
         heading={t("hero.heading")}
         ingress={t("hero.ingress")}
         ctaLabel={t("hero.cta")}
-        headingClassName="text-4xl md:text-6xl"
+        headingClassName="text-3xl md:text-5xl lg:text-6xl"
         ctaHref={contactHref}
         onCtaClick={openVelloModal}
       />
 
-      <section className="container pb-24">
+      <section className="container pb-16 md:pb-24">
         <div className="flex flex-col gap-4">
           {items.map((item, i) => (
             <div
@@ -107,7 +107,7 @@ export default function ServicesPage() {
                 />
               </motion.div>
               <motion.div
-                className="bg-brand-card px-10 py-16 md:px-16 md:py-20 flex flex-col justify-center"
+                className="bg-brand-card px-6 py-10 md:px-16 md:py-20 flex flex-col justify-center"
                 {...serviceCardPart(i, 0)}
               >
                 <motion.h2 className="mb-6" {...serviceCardTextReveal(i, 0.18)}>

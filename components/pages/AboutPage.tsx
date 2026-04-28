@@ -59,7 +59,7 @@ export default function AboutPage() {
       />
 
       {/* Bento photo grid */}
-      <div className="container pb-20">
+      <div className="container pb-12 md:pb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <FadeIn delay={0} className="min-w-0">
             <div
@@ -111,9 +111,9 @@ export default function AboutPage() {
 
       {/* Bio (before bento) */}
       <FadeIn>
-        <section className="container py-20">
+        <section className="container py-12 md:py-20">
           <div className="max-w-[882px] mx-auto">
-            <p className="font-heading italic text-2xl md:text-3xl lg:text-4xl leading-snug text-black/85 mb-12 max-w-[70%] mx-auto text-balance">
+            <p className="font-heading italic text-2xl md:text-3xl lg:text-4xl leading-snug text-black/85 mb-8 md:mb-12 max-w-full md:max-w-[70%] mx-auto text-balance">
               {t("intro.ingressBelowPhoto")}
             </p>
             <div className="md:ml-[15%] md:max-w-[70%]">
@@ -132,9 +132,9 @@ export default function AboutPage() {
 
       {/* Bio (after bento) */}
       <FadeIn>
-        <div className="container pb-20">
+        <div className="container pb-12 md:pb-20">
           <div className="max-w-[882px] mx-auto">
-            <p className="font-heading italic text-2xl md:text-3xl lg:text-4xl leading-snug text-black/85 mb-8 max-w-[70%] mx-auto text-balance">
+            <p className="font-heading italic text-2xl md:text-3xl lg:text-4xl leading-snug text-black/85 mb-8 max-w-full md:max-w-[70%] mx-auto text-balance">
               {afterBento.ingress}
             </p>
             <div className="md:ml-[15%] md:max-w-[70%]">
@@ -153,7 +153,7 @@ export default function AboutPage() {
 
       {/* Credentials & teachers */}
       <FadeIn>
-        <div className="container pb-20">
+        <div className="container pb-12 md:pb-20">
           <div className="max-w-[882px] mx-auto">
             <div className="md:ml-[15%] md:max-w-[70%]">
               <AnimatedSignature
@@ -167,7 +167,7 @@ export default function AboutPage() {
                 duration={0.1}
                 delay={0}
                 stagger={0.04}
-                className="flex justify-start mb-1 -ml-12 lg:-ml-12 opacity-80"
+                className="flex justify-start mb-1 -ml-4 md:-ml-12 opacity-80"
               />
               {credentials.titles.map((title, i) => (
                 <p

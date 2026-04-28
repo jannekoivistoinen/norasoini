@@ -67,7 +67,7 @@ const Tabs: React.FC<TabsProps> = ({
         className || ""
       }`}
     >
-      <ul className="no-scrollbar relative flex gap-12 overflow-x-auto">
+      <ul className="no-scrollbar relative flex gap-6 md:gap-12 overflow-x-auto">
         {React.Children.map(children, (child, i) => {
           const tabChild = child as React.ReactElement<
             TabProps & { ref: React.Ref<HTMLLIElement> }

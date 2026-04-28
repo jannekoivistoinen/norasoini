@@ -16,7 +16,7 @@ export default function SituationsSlider() {
   }[];
 
   return (
-    <section className="container section-heading-xl">
+    <section className="container">
       <h2 className="mb-4">
         {t("situations.heading")}
       </h2>
@@ -36,7 +36,7 @@ export default function SituationsSlider() {
               className="relative overflow-hidden rounded-2xl bg-[#d8cdbb]"
               style={{ aspectRatio: "467/418" }}
             >
-              <div className="absolute inset-0 p-8 flex flex-col justify-between">
+              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
                 <div>
                   <Icon
                     className="text-brand-primary w-7 h-7"

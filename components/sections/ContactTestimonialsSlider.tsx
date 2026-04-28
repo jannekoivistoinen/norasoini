@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { motion } from "motion/react";
 import { Slider } from "@/components/Slider";
 import FadeIn from "@/components/ui/FadeIn";
 
@@ -21,10 +22,10 @@ export default function ContactTestimonialsSlider({
   const cardDelayBase = showHeading ? 0.12 : 0;
 
   return (
-    <section className={`container${showHeading ? " py-16 md:py-20" : ""}`}>
+    <section className={`container${showHeading ? " py-12 md:py-20" : ""}`}>
       {showHeading ? (
         <FadeIn>
-          <h2 className="text-center mx-auto mb-10">
+          <h2 className="text-center mx-auto mb-6 md:mb-10">
             {tServices("testimonialsHeading")}
           </h2>
         </FadeIn>
@@ -35,9 +36,15 @@ export default function ContactTestimonialsSlider({
         mobileSpacing={16}
       >
         {items.map((item, i) => (
-          <FadeIn
+          <motion.div
             key={i}
-            delay={cardDelayBase + i * 0.12}
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.7,
+              delay: cardDelayBase + i * 0.12,
+              ease: [0.25, 0.1, 0.25, 1],
+            }}
             className="h-full min-h-0"
           >
             <div className="relative overflow-hidden rounded-2xl bg-brand-card h-full flex flex-col">
@@ -50,7 +57,7 @@ export default function ContactTestimonialsSlider({
                 </p>
               </div>
             </div>
-          </FadeIn>
+          </motion.div>
         ))}
       </Slider>
     </section>

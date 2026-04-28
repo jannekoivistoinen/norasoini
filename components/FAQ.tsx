@@ -60,7 +60,7 @@ const FAQCategory = ({
               {category.items.map((item, i) => (
                 <div key={i}>
                   <p className="font-medium  text-black">{item.question}</p>
-                  <MarkdownText className="mt-3 text-base leading-relaxed text-black/70 [&_p]:mb-6 mb-10 [&_p+p]:mt-10">
+                  <MarkdownText className="mt-3 text-base leading-relaxed text-black/70 [&_p]:mb-6 mb-6 md:mb-10 [&_p+p]:mt-6 md:[&_p+p]:mt-10">
                     {item.answer}
                   </MarkdownText>
                 </div>
@@ -95,10 +95,10 @@ export function FAQ({}: FAQProps) {
 
   return (
     <section id="FAQ" className="container">
-      <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-2">
+      <div className="grid grid-cols-1 items-start gap-8 md:gap-12 md:grid-cols-2">
         <div className="md:sticky md:top-36 md:z-10 md:self-start">
           <h2>{t("title")}</h2>
-          <MarkdownText className="mt-6 text-[18px] leading-relaxed text-black/70 [&_p]:mb-0">
+          <MarkdownText className="mt-6 text-base md:text-[18px] leading-relaxed text-black/70 [&_p]:mb-0">
             {t("description")}
           </MarkdownText>
         </div>
