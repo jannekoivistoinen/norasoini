@@ -66,7 +66,7 @@ export default function VisitFlowSection() {
                 </span>
               </div>
               <h3 className="mb-2">{step.title}</h3>
-              <p className=" text-black/70 leading-relaxed text-base">
+              <p className=" text-black/70 leading-relaxed text-base pr-4">
                 {step.description}
               </p>
             </div>
