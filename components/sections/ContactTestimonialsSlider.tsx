@@ -22,7 +22,9 @@ export default function ContactTestimonialsSlider({
   const cardDelayBase = showHeading ? 0.12 : 0;
 
   return (
-    <section className={`container${showHeading ? " py-12 md:py-20" : ""}`}>
+    <section
+      className={`container${showHeading ? " pt-12 pb-20 md:pt-20 md:pb-32" : ""}`}
+    >
       {showHeading ? (
         <FadeIn>
           <h2 className="md:text-center mx-auto mb-6 md:mb-10">
@@ -34,6 +36,7 @@ export default function ContactTestimonialsSlider({
         slidesPerView={{ mobile: 1.2, tablet: 2, desktop: 3 }}
         spacing={20}
         mobileSpacing={16}
+        showPagination
       >
         {items.map((item, i) => (
           <motion.div
