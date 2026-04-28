@@ -4,6 +4,7 @@ import type { NextConfig } from "next";
 const withNextIntl = createNextIntlPlugin();
 
 const config: NextConfig = {
+  allowedDevOrigins: ["192.168.68.60"],
   trailingSlash: false,
   reactStrictMode: true,
   turbopack: {

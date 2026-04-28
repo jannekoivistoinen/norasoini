@@ -31,7 +31,7 @@ export default function PageHero({
   onCtaClick,
 }: PageHeroProps) {
   return (
-    <section className="px-6 pt-12 pb-12 md:pt-24 md:pb-28 text-center max-w-[1200px] mx-auto">
+    <section className="px-6 pt-12 pb-12 md:pt-24 md:pb-28 md:text-center max-w-[1200px] md:mx-auto">
       <motion.h1 {...heroAnim(0.05)} className={headingClassName}>
         {heading}
       </motion.h1>
@@ -39,7 +39,7 @@ export default function PageHero({
         <motion.p
           {...heroAnim(0.18)}
           className={cn(
-            "mt-6 md:mt-8 max-w-[682px] mx-auto text-sm md:text-base text-black/70 leading-relaxed",
+            "mt-6 md:mt-8 max-w-[682px] mx-auto  text-black/70",
             ingressClassName,
           )}
         >

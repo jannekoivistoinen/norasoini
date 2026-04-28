@@ -33,7 +33,7 @@ const WheelControls = (slider: KeenSliderInstance) => {
           x: position.x,
           y: position.y,
         },
-      })
+      }),
     );
   };
   const wheelStart = (e: WheelEvent) => {
@@ -88,11 +88,11 @@ export function Slider({
   const mobileSlides =
     typeof slidesPerView === "number"
       ? slidesPerView
-      : slidesPerView.mobile ?? 1;
+      : (slidesPerView.mobile ?? 1);
   const tabletSlides =
     typeof slidesPerView === "number"
       ? slidesPerView
-      : slidesPerView.tablet ?? defaultSlides;
+      : (slidesPerView.tablet ?? defaultSlides);
 
   const [sliderRef] = useKeenSlider(
     {
@@ -115,7 +115,7 @@ export function Slider({
         },
       },
       dragSpeed: 1,
-      rubberband: true,
+      rubberband: false,
       defaultAnimation: {
         duration: 500,
       },
@@ -128,7 +128,7 @@ export function Slider({
         sliderInstanceRef.current = slider;
       },
     },
-    [WheelControls]
+    [WheelControls],
   );
 
   return (

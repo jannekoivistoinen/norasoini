@@ -13,10 +13,8 @@ export default function ProcessSection() {
 
   return (
     <section className="container py-12 md:py-20">
-      <h2 className="mb-4 text-center mx-auto">
-        {t("process.heading")}
-      </h2>
-      <p className="text-black/70 text-sm md:text-base max-w-md mb-8 md:mb-12 text-center mx-auto">
+      <h2 className="mb-4 text-center mx-auto">{t("process.heading")}</h2>
+      <p className="text-black/70  max-w-md mb-8 md:mb-12 text-center mx-auto">
         {t("process.description")}
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -40,9 +38,7 @@ export default function ProcessSection() {
               </div>
             </div>
             <h3 className="mb-2">{step.title}</h3>
-            <p className="text-sm md:text-base text-black/70 leading-relaxed">
-              {step.description}
-            </p>
+            <p className=" text-black/70 leading-relaxed">{step.description}</p>
           </div>
         ))}
       </div>

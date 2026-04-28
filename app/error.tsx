@@ -3,7 +3,11 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { fontHtmlClassName } from "./fonts";
-import { SITE_CONFIG, NAVIGATION_LINKS, COMPANY_METADATA } from "@/lib/constants";
+import {
+  SITE_CONFIG,
+  NAVIGATION_LINKS,
+  COMPANY_METADATA,
+} from "@/lib/constants";
 import TerminalCTA from "@/components/sections/TerminalCTA";
 import VelloModal from "@/components/VelloModal";
 import "./globals.css";
@@ -31,7 +35,7 @@ export default function Error({
                 <Link
                   key={item.link}
                   href={item.fi.href}
-                  className="px-3 py-2 text-sm text-gray-700 hover:text-brand-primary transition"
+                  className="px-3 py-2  text-gray-700 hover:text-brand-primary transition"
                 >
                   {item.fi.name}
                 </Link>
@@ -46,9 +50,7 @@ export default function Error({
         </header>
 
         <main className="http-error-page flex-grow flex flex-col items-center justify-center py-64 px-6 text-center">
-          <h1 className="mb-4">
-            500
-          </h1>
+          <h1 className="mb-4">500</h1>
           <p className="text-xl text-gray-700 mb-2">Palvelinvirhe</p>
           <p className="text-gray-500 mb-10 max-w-md">
             Jokin meni pieleen. Yritä hetken kuluttua uudelleen.
@@ -64,7 +66,12 @@ export default function Error({
         <TerminalCTA
           title="Tervetuloa juuri sellaisena kuin olet"
           paragraph="Uskon, että jokaisessa ihmisessä on jo olemassa suunta kohti tasapainoa. Joskus tarvitsemme vain toisen ihmisen kulkemaan hetken rinnalla."
-          buttons={[{ label: "Varaa aika", href: `/fi/${SITE_CONFIG.i18n.routes.contact.fi}` }]}
+          buttons={[
+            {
+              label: "Varaa aika",
+              href: `/fi/${SITE_CONFIG.i18n.routes.contact.fi}`,
+            },
+          ]}
         />
 
         <footer>

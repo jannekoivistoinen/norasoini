@@ -119,7 +119,7 @@
           },
           {
             "question": "Paljonko terapia maksaa ja saako sille Kela-korvausta?",
-            "answer": "Lyhytterapian hinta on 89 € / kerta (60 min). Kraniosakraaliterapiassa opiskelijahinta on 69 € / kerta (voimassa elokuuhun 2026 asti) ja normaalihinta 95 € / kerta (1.9.2026 alkaen). Lyhytterapia ei tällä hetkellä kuulu Kela-korvauksen piiriin, mutta kannattaa tarkistaa työnantajasi tai vakuutusyhtiösi tilanne."
+            "answer": "Lyhytterapian ja kraniosakraaliterapian hinta on 89 € / kerta (60 min). Lyhytterapia ei tällä hetkellä kuulu Kela-korvauksen piiriin, mutta kannattaa tarkistaa työnantajasi tai vakuutusyhtiösi tilanne."
           },
           {
             "question": "Voidaanko tapaamiset järjestää etänä?",
@@ -204,19 +204,19 @@
         {
           "title": "Lyhytterapia Espoossa ja etänä",
           "intro": "Tavoitteellista ja käytännönläheistä keskusteluapua, joka auttaa jäsentämään ajatuksia, käsittelemään kuormitusta ja löytämään suuntaa eteenpäin.",
-          "body": "Lyhytterapia on tavoitteellista ja käytännönläheistä keskusteluapua, joka auttaa sinua jäsentämään ajatuksia, käsittelemään kuormitusta ja löytämään suuntaa eteenpäin.\n\n- Vastaanotto Tapiolan alueella Espoossa tai verkossa\n- Kesto: 60 min\n- Hinta: 89 € / kerta\n\n ## Lyhytterapia sopii sinulle, jos:\n\n- koet stressiä, uupumusta tai ahdistusta\n- kaipaat selkeyttä elämäntilanteeseesi\n- haluat turvallisen tilan puhua ja tulla kuulluksi",
+          "body": "Lyhytterapia on tavoitteellista ja käytännönläheistä keskusteluapua, joka auttaa sinua jäsentämään ajatuksia, käsittelemään kuormitusta ja löytämään suuntaa eteenpäin.\n\n- Vastaanotto Tapiolan alueella Espoossa tai verkossa\n- Kesto: 60 min\n- Hinta: 89 €\n\n### Lyhytterapia sopii sinulle, jos:\n\n- koet stressiä, uupumusta tai ahdistusta\n- kaipaat selkeyttä elämäntilanteeseesi\n- haluat turvallisen tilan puhua ja tulla kuulluksi",
           "cta": "Varaa lyhytterapia-aika"
         },
         {
           "title": "Kraniosakraaliterapia Espoossa",
           "intro": "Lempeä ja syvärentouttava hoitomuoto, joka tukee kehon luonnollista tasapainoa ja palautumista.",
-          "body": "Kraniosakraaliterapia on lempeä ja syvärentouttava hoitomuoto, joka tukee kehon luonnollista tasapainoa ja palautumista. Hoito perustuu kevyeen, kuuntelevaan kosketukseen, jonka avulla pyritään rauhoittamaan hermostoa ja vapauttamaan kehon jännitystiloja.\n\n- Vastaanotto Tapiolan alueella Espoossa\n- Kesto: 60 min\n- Opiskelijahinta: 69 € / kerta (voimassa elokuuhun 2026 asti)\n- Normaalihinta: 95 € / kerta (1.9.2026 alkaen)\n\n ## Hoito sopii sinulle, jos:\n\n- kehosi tuntuu jännittyneeltä tai ylivirittyneeltä\n- koet stressiä tai palautuminen on haastavaa, unettomuus vaivaa\n- kaipaat syvää rentoutumista ja rauhoittumista\n- kärsit esimerkiksi migreenistä, päänsärystä, tinnityksestä tai niska- ja selkäkivuista",
+          "body": "Kraniosakraaliterapia on lempeä ja syvärentouttava hoitomuoto, joka tukee kehon luonnollista tasapainoa ja palautumista. Hoito perustuu kevyeen, kuuntelevaan kosketukseen, jonka avulla pyritään rauhoittamaan hermostoa ja vapauttamaan kehon jännitystiloja.\n\n- Vastaanotto Tapiolan alueella Espoossa\n- Kesto: 60 min\n- Hinta: 89 €\n\n### Hoito sopii sinulle, jos:\n\n- kehosi tuntuu jännittyneeltä tai ylivirittyneeltä\n- koet stressiä tai palautuminen on haastavaa, unettomuus vaivaa\n- kaipaat syvää rentoutumista ja rauhoittumista\n- kärsit esimerkiksi migreenistä, päänsärystä, tinnityksestä tai niska- ja selkäkivuista",
           "cta": "Varaa kraniosakraaliterapia-aika"
         },
         {
           "title": "Yhdistelmähoito: lyhytterapia + kraniosakraaliterapia Espoossa",
           "intro": "Kokonaisvaltainen hoito, jossa mieli ja keho huomioidaan saman käynnin aikana – sekä keskustelutukea että kehollinen hoito.",
-          "body": "Yhdistelmähoidossa huomioidaan sekä mieli että keho. Saat saman käynnin aikana sekä keskustelutukea että kehollisen hoidon.\n\nTämä sopii erityisesti silloin, kun kuormitus tuntuu sekä ajatuksissa että kehossa.\n\n- Vastaanotto Tapiolan alueella Espoossa\n- Kesto: 90 min\n- Hinta: 129 € / kerta\n\n ## Yhdistelmähoito sopii sinulle, jos:\n\n- koet kokonaisvaltaista kuormitusta tai uupumusta\n- kehosi ja mielesi kaipaavat yhtä aikaa tukea\n- pelkkä puhuminen tai pelkkä hoito ei tunnu riittävältä",
+          "body": "Yhdistelmähoidossa huomioidaan sekä mieli että keho. Saat saman käynnin aikana sekä keskustelutukea että kehollisen hoidon.\n\nTämä sopii erityisesti silloin, kun kuormitus tuntuu sekä ajatuksissa että kehossa.\n\n- Vastaanotto Tapiolan alueella Espoossa\n- Kesto: 90 min\n- Hinta: 129 € / kerta\n\n### Yhdistelmähoito sopii sinulle, jos:\n\n- koet kokonaisvaltaista kuormitusta tai uupumusta\n- kehosi ja mielesi kaipaavat yhtä aikaa tukea\n- pelkkä puhuminen tai pelkkä hoito ei tunnu riittävältä",
           "cta": "Varaa yhdistelmähoito-aika"
         }
       ]
@@ -341,11 +341,11 @@
             "attribution": "Miia"
           },
           {
-            "text": "En ole aiemmin ajatellut, että lyhytterapia olisi mua varten, mutta olin tosi väärässä. Nora on ollut lempeän johdonmukainen ja auttanut mua juuri niissä kohdissa, kun olen tarvinnut erilaista perspektiiviä ja konkreettisia keinoja käsitellä vaikeita asioita. Nora on antanut mulle tosi paljon ajateltavaa ja sopivassa suhteessa haastanut mua tekemään oivalluksia omista ajatusmalleistani.",
+            "text": "En ole aiemmin ajatellut, että lyhytterapia olisi mua varten, mutta olin tosi väärässä. Nora on ollut lempeän johdonmukainen ja auttanut mua juuri niissä kohdissa, kun olen tarvinnut erilaista perspektiiviä ja konkreettisia keinoja käsitellä vaikeita asioita.\n\nNora on antanut mulle tosi paljon ajateltavaa ja sopivassa suhteessa haastanut mua tekemään oivalluksia omista ajatusmalleistani.",
             "attribution": "Jenni"
           },
           {
-            "text": "Tapaaminen Noran kanssa sisälsi alkukeskustelun, kraniosakraalihoidon sekä ehdotukset, kuinka hoidon jälkeen vielä maadoittaa itseä. Hoito auttoi linjaamaan paitsi kehoa, myös mielen tasolla tapahtui selkeytymistä. Kokemus oli kaikkiaan miellyttävä ja keskustelusta jäi inspiroitunut olo. Kiitos Nora kauniista kohtaamisesta, jossa otat huomioon ihmisyyden eri tasot.",
+            "text": "Tapaaminen Noran kanssa sisälsi alkukeskustelun, kraniosakraalihoidon sekä ehdotukset, kuinka hoidon jälkeen vielä maadoittaa itseä. Hoito auttoi linjaamaan paitsi kehoa, myös mielen tasolla tapahtui selkeytymistä. Kokemus oli kaikkiaan miellyttävä ja keskustelusta jäi inspiroitunut olo.\n\nKiitos Nora kauniista kohtaamisesta, jossa otat huomioon ihmisyyden eri tasot.",
             "attribution": "Elina"
           }
         ]
@@ -354,14 +354,14 @@
     "pricing": {
       "metadata": {
         "title": "Hinnasto – Nora Soini",
-        "description": "Lyhytterapia alkaen 69 €, kraniosakraaliterapia alkaen 69 € ja yhdistelmähoito 129 €. Kaikki hinnat ja kestot – Nora Soini, Espoo.",
+        "description": "Lyhytterapia ja kraniosakraaliterapia 89 € / kerta, yhdistelmähoito 129 €. Kaikki hinnat ja kestot – Nora Soini, Espoo.",
         "keywords": ["hinnasto", "hinta", "varaa aika", "espoo", "nora soini"]
       },
       "hero": {
         "heading": "Hinnasto",
         "ingress": "Alla hinnat lyhytterapiaan, kraniosakraaliterapiaan ja yhdistelmähoitoon."
       },
-      "body": "**Lyhytterapia** (60 min) — 89 € / kerta · Espoossa tai etänä\n\n**Kraniosakraaliterapia** (60 min) — opiskelijahinta 69 € / kerta (voimassa elokuuhun 2026 asti); normaalihinta 95 € / kerta (1.9.2026 alkaen) · Espoossa\n\n**Yhdistelmähoito: lyhytterapia + kraniosakraaliterapia** (90 min) — 129 € / kerta · Espoossa"
+      "body": "**Lyhytterapia** (60 min) — 89 € / kerta · Espoossa tai etänä\n\n**Kraniosakraaliterapia** (60 min) — 89 € / kerta · Espoossa\n\n**Yhdistelmähoito: lyhytterapia + kraniosakraaliterapia** (90 min) — 129 € / kerta · Espoossa"
     },
     "terms": {
       "metadata": {
@@ -469,7 +469,7 @@
           "items": [
             {
               "question": "Mitä lyhytterapia on?",
-              "answer": "Lyhytterapia on tavoitteellista ja käytännönläheistä keskusteluapua, joka auttaa sinua löytämään selkeyttä, suuntaa ja helpotusta nykyhetken haasteisiin. Terapiassa pysähdytään sinun tilanteesi äärelle turvallisessa ja luottamuksellisessa ilmapiirissä, jossa saat tulla aidosti kuulluksi. Työskentelyssä korostuu läsnäolo eli hetkeen pysähtyminen ja kokemusten rauhallinen tutkiminen sekä systeeminen näkökulma, jossa huomioidaan ihmissuhteet, vuorovaikutus ja elämäntilanteesi kokonaisuus. Yhdessä etsimme uusia näkökulmia ja konkreettisia keinoja arjen tueksi. Lyhytterapia etenee sinun tavoitteidesi mukaisesti ja voi tuoda jo lyhyessä ajassa merkittäviä oivalluksia ja muutosta."
+              "answer": "Lyhytterapia on tavoitteellista ja käytännönläheistä keskusteluapua, joka auttaa sinua löytämään selkeyttä, suuntaa ja helpotusta nykyhetken haasteisiin. Terapiassa pysähdytään sinun tilanteesi äärelle turvallisessa ja luottamuksellisessa ilmapiirissä, jossa saat tulla aidosti kuulluksi.\n\nTyöskentelyssä korostuu läsnäolo eli hetkeen pysähtyminen ja kokemusten rauhallinen tutkiminen sekä systeeminen näkökulma, jossa huomioidaan ihmissuhteet, vuorovaikutus ja elämäntilanteesi kokonaisuus. Yhdessä etsimme uusia näkökulmia ja konkreettisia keinoja arjen tueksi. Lyhytterapia etenee sinun tavoitteidesi mukaisesti ja voi tuoda jo lyhyessä ajassa merkittäviä oivalluksia ja muutosta."
             },
             {
               "question": "Miten tiedän, tarvitsenko terapiaa?",
@@ -498,7 +498,7 @@
             },
             {
               "question": "Mihin hoito voi sopia?",
-              "answer": "Kraniosakraaliterapiaan tullaan usein silloin, kun kehossa tai mielessä on kuormitusta, stressiä, levottomuutta tai pitkittyneitä jännityksiä. Hoito sopii myös tilanteisiin, joissa keho tuntuu ylivirittyneeltä tai palautuminen on haastavaa, tai kun kaipaat syvää rentoutumista ja rauhoittumista arjen keskellä. Monet hakeutuvat hoitoon esimerkiksi migreenin, päänsäryn, tinnituksen sekä niska- ja selkäkipujen vuoksi. Hoidon lempeä ja kehoa kuunteleva lähestymistapa voi auttaa vapauttamaan jännityksiä, rauhoittamaan hermostoa ja tukemaan kehon luonnollista palautumista. Hoito tarjoaa myös mahdollisuuden pysähtyä, hiljentyä ja vahvistaa yhteyttä omaan kehoon sekä lisätä kokonaisvaltaista hyvinvoinnin tunnetta."
+              "answer": "Kraniosakraaliterapiaan tullaan usein silloin, kun kehossa tai mielessä on kuormitusta, stressiä, levottomuutta tai pitkittyneitä jännityksiä. Hoito sopii myös tilanteisiin, joissa keho tuntuu ylivirittyneeltä tai palautuminen on haastavaa, tai kun kaipaat syvää rentoutumista ja rauhoittumista arjen keskellä. Monet hakeutuvat hoitoon esimerkiksi migreenin, päänsäryn, tinnituksen sekä niska- ja selkäkipujen vuoksi.\n\nHoidon lempeä ja kehoa kuunteleva lähestymistapa voi auttaa vapauttamaan jännityksiä, rauhoittamaan hermostoa ja tukemaan kehon luonnollista palautumista. Hoito tarjoaa myös mahdollisuuden pysähtyä, hiljentyä ja vahvistaa yhteyttä omaan kehoon sekä lisätä kokonaisvaltaista hyvinvoinnin tunnetta."
             },
             {
               "question": "Hoidon ajatus",
@@ -528,7 +528,7 @@
           "items": [
             {
               "question": "Paljonko terapia maksaa ja saako sille Kela-korvausta?",
-              "answer": "Lyhytterapian hinta on 89 € / kerta (60 min). Kraniosakraaliterapiassa opiskelijahinta on 69 € / kerta (voimassa elokuuhun 2026 asti) ja normaalihinta 95 € / kerta (1.9.2026 alkaen). Lyhytterapia ei tällä hetkellä kuulu Kela-korvauksen piiriin, joten se maksetaan kokonaan itse. Jotkut työnantajat tukevat terapiaa työhyvinvointietuuden kautta – kannattaa tarkistaa oman työnantajasi käytännöt."
+              "answer": "Lyhytterapian ja kraniosakraaliterapian hinta on 89 € / kerta (60 min). Lyhytterapia ei tällä hetkellä kuulu Kela-korvauksen piiriin, joten se maksetaan kokonaan itse. Jotkut työnantajat tukevat terapiaa työhyvinvointietuuden kautta – kannattaa tarkistaa oman työnantajasi käytännöt."
             },
             {
               "question": "Miten voin varata ajan?",

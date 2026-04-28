@@ -24,11 +24,11 @@ export default function TerminalCTA({
   onPrimaryClick,
 }: TerminalCTAProps) {
   return (
-    <div className="terminal-cta bg-brand-primary text-brand-footer-text py-12 md:py-[15vh] px-6 text-center">
-      <h2 className="mb-3 md:mb-6 max-w-2xl mx-auto text-3xl md:text-5xl lg:text-6xl">
+    <div className="terminal-cta bg-brand-primary text-brand-footer-text py-16 md:py-[15vh] px-6 text-center">
+      <h2 className="mb-3 md:mb-6 max-w-[20ch] mx-auto text-3xl md:text-5xl lg:text-6xl text-balance">
         {title}
       </h2>
-      <p className="text-brand-footer-text/80 text-sm md:text-base max-w-xl mx-auto mb-10 leading-relaxed">
+      <p className="text-brand-footer-text/80  max-w-xl mx-auto mb-10 leading-relaxed">
         {paragraph}
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

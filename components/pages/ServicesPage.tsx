@@ -36,11 +36,7 @@ type ServiceItem = {
 
 const cardEase = [0.25, 0.1, 0.25, 1] as const;
 
-function serviceCardPart(
-  cardIndex: number,
-  stepDelay: number,
-  duration = 0.7,
-) {
+function serviceCardPart(cardIndex: number, stepDelay: number, duration = 0.7) {
   return {
     initial: { opacity: 0, y: 14 },
     whileInView: { opacity: 1, y: 0 },
@@ -86,7 +82,7 @@ export default function ServicesPage() {
         heading={t("hero.heading")}
         ingress={t("hero.ingress")}
         ctaLabel={t("hero.cta")}
-        headingClassName="text-3xl md:text-5xl lg:text-6xl"
+        headingClassName="max-w-[20ch] md:mx-auto text-balance"
         ctaHref={contactHref}
         onCtaClick={openVelloModal}
       />
@@ -98,7 +94,10 @@ export default function ServicesPage() {
               key={i}
               className="grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden"
             >
-              <motion.div className="relative min-h-64" {...serviceCardPart(i, 0)}>
+              <motion.div
+                className="relative aspect-square w-full md:aspect-auto md:h-full md:min-h-0"
+                {...serviceCardPart(i, 0)}
+              >
                 <Image
                   src={serviceImages[i % serviceImages.length]}
                   alt={item.title}
@@ -107,14 +106,14 @@ export default function ServicesPage() {
                 />
               </motion.div>
               <motion.div
-                className="bg-brand-card px-6 py-10 md:px-16 md:py-20 flex flex-col justify-center"
+                className="bg-brand-card pl-8 pr-6 py-8 md:px-16 md:py-20 flex flex-col justify-center"
                 {...serviceCardPart(i, 0)}
               >
                 <motion.h2 className="mb-6" {...serviceCardTextReveal(i, 0.18)}>
                   {item.title}
                 </motion.h2>
                 <motion.div
-                  className="prose prose-base text-black/70 mb-8 [&_strong]:text-black/80 [&_strong]:font-medium [&_li::marker]:text-black/70 [&_li]:leading-snug"
+                  className="prose prose-base text-black/70 mb-8 [&_h3]:font-normal [&_strong]:text-black/80 [&_strong]:font-medium [&_li::marker]:text-black/70 [&_li]:leading-snug"
                   {...serviceCardTextReveal(i, 0.3)}
                 >
                   <ReactMarkdown>{item.body}</ReactMarkdown>

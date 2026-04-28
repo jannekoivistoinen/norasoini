@@ -89,19 +89,18 @@ export default async function Page({ params }: Props) {
           "@type": "Offer",
           name:
             locale === "fi"
-              ? "Kraniosakraaliterapia (opiskelijahinta)"
-              : "Craniosacral therapy (student rate)",
+              ? "Kraniosakraaliterapia"
+              : "Craniosacral therapy",
           description:
             locale === "fi"
-              ? "Lempeä ja syvärentouttava hoitomuoto, 60 min, Espoossa (voimassa elokuuhun 2026)"
-              : "Gentle, deeply relaxing treatment, 60 min, in Espoo (valid until August 2026)",
-          price: "69",
+              ? "Lempeä ja syvärentouttava hoitomuoto, 60 min, Espoossa"
+              : "Gentle, deeply relaxing treatment, 60 min, in Espoo",
+          price: "89",
           priceCurrency: "EUR",
           priceSpecification: {
             "@type": "PriceSpecification",
-            price: "69",
+            price: "89",
             priceCurrency: "EUR",
-            validThrough: "2026-08-31",
           },
           seller: {
             "@type": "LocalBusiness",
@@ -112,33 +111,6 @@ export default async function Page({ params }: Props) {
       {
         "@type": "ListItem",
         position: 3,
-        item: {
-          "@type": "Offer",
-          name:
-            locale === "fi"
-              ? "Kraniosakraaliterapia"
-              : "Craniosacral therapy",
-          description:
-            locale === "fi"
-              ? "Lempeä ja syvärentouttava hoitomuoto, 60 min, Espoossa"
-              : "Gentle, deeply relaxing treatment, 60 min, in Espoo",
-          price: "95",
-          priceCurrency: "EUR",
-          priceSpecification: {
-            "@type": "PriceSpecification",
-            price: "95",
-            priceCurrency: "EUR",
-            validFrom: "2026-09-01",
-          },
-          seller: {
-            "@type": "LocalBusiness",
-            "@id": `${COMPANY_METADATA.url}#localbusiness`,
-          },
-        },
-      },
-      {
-        "@type": "ListItem",
-        position: 4,
         item: {
           "@type": "Offer",
           name:

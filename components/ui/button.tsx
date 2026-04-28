@@ -25,10 +25,10 @@ const buttonVariants = cva(
           "border border-brand-footer-text !text-brand-footer-text bg-transparent hover:bg-brand-footer-text/10",
       },
       size: {
-        default: "px-6 py-3 text-sm",
-        sm: "px-5 py-2.5 text-sm",
-        lg: "px-7 py-4 text-sm",
-        icon: "h-9 w-9 text-sm",
+        default: "px-6 py-3 ",
+        sm: "px-5 py-2.5 ",
+        lg: "px-7 py-4 ",
+        icon: "h-9 w-9 ",
       },
     },
     defaultVariants: {

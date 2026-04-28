@@ -20,9 +20,9 @@ export default function ServicesSlider() {
   const items = tServices.raw("items") as ServiceItem[];
 
   return (
-    <section className="container">
+    <section className="container !pt-0">
       <h2 className="mb-4">{tHome("servicesSlider.heading")}</h2>
-      <p className="text-black/70 text-sm md:text-base max-w-2xl mb-8">
+      <p className="text-black/70  max-w-2xl mb-8">
         {tHome("servicesSlider.description")}
       </p>
       <Slider
@@ -47,10 +47,10 @@ export default function ServicesSlider() {
               />
             </div>
             <h3 className="mb-3">{item.title}</h3>
-            <p className="text-sm md:text-base text-black/70 leading-relaxed mb-4">
+            <p className=" text-black/70 leading-relaxed mb-4 font-body">
               {item.intro}
             </p>
-            <span className="inline-flex items-center gap-2 text-base font-semibold text-brand-primary transition-colors duration-300 group-hover:text-brand-text">
+            <span className="inline-flex items-center gap-2 font-body text-base font-semibold text-brand-primary transition-colors duration-300 group-hover:text-brand-text">
               {tHome("servicesSlider.readMore")}
               {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
               <FontAwesomeIcon

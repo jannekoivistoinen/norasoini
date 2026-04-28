@@ -222,7 +222,7 @@ export default function MobileNavigation({
                         setMobileMenuOpen(false);
                       }}
                       aria-current={locale === loc ? "true" : undefined}
-                      className={`flex items-center gap-2 py-2 px-4 rounded-full border text-sm transition-colors ${
+                      className={`flex items-center gap-2 py-2 px-4 rounded-full border  transition-colors ${
                         locale === loc
                           ? "border-brand-primary text-brand-primary bg-brand-card"
                           : "border-black/20 text-black hover:border-black"

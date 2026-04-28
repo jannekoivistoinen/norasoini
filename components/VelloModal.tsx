@@ -43,7 +43,7 @@ export default function VelloModal() {
         <button
           type="button"
           onClick={() => setIsOpen(false)}
-          className="absolute right-4 top-4 text-sm text-black/70 hover:text-black"
+          className="absolute right-4 top-4  text-black/70 hover:text-black"
           aria-label="Close booking modal"
         >
           Sulje

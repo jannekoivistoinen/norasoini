@@ -6,7 +6,7 @@
 export const linkStyles =
   "text-black text-md font-medium tracking-tight transition-colors";
 export const linkStylesActive = "text-brand-primary";
-export const descriptionStyles = "text-sm text-gray-500";
+export const descriptionStyles = " text-gray-500";
 
 // Desktop styles
 export const desktopLinkStyles = `${linkStyles} py-6 px-4 hover:text-brand-primary`;
@@ -22,7 +22,7 @@ export const desktopPopoverLinkTitleStyles =
 export const desktopPopoverLinkDescStyles = descriptionStyles;
 
 // Mobile styles
-export const mobileLinkStyles = `${linkStyles} block text-3xl hover:opacity-60 py-1`;
+export const mobileLinkStyles = `${linkStyles} font-heading block text-5xl hover:opacity-60 py-1`;
 export const mobileSubmenuLinkStyles =
   "block text-base text-gray-600 hover:bg-brand-card rounded-md transition-colors py-3 px-4";
 export const mobileLinkStylesActive = "text-brand-primary";

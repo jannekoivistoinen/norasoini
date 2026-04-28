@@ -89,7 +89,7 @@ export default function Navigation() {
         <motion.div {...navAnim(0)}>
           <Link
             href={`/${locale}`}
-            className="text-2xl font-bold tracking-tighter hover:opacity-70 transition text-brand-primary"
+            className="font-heading text-2xl md:text-3xl font-bold md:font-normal tracking-[-0.05rem] hover:opacity-70 transition text-brand-primary"
             onClick={() => setMobileMenuOpen(false)}
           >
             {COMPANY_METADATA.name}

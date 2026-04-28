@@ -5,15 +5,12 @@ import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useForm } from "react-hook-form";
 import { useTranslations } from "next-intl";
-import type {
-  ContactApiResult,
-  ContactFormData,
-} from "@/lib/contact/schema";
+import type { ContactApiResult, ContactFormData } from "@/lib/contact/schema";
 
 const inputBase =
-  "w-full bg-brand-card text-black px-4 py-3 rounded-xl text-sm placeholder:text-black/40 border border-transparent outline-none transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-primary/50 focus-visible:outline-offset-0";
+  "w-full bg-brand-card text-black px-4 py-3 rounded-xl  placeholder:text-black/40 border border-transparent outline-none transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-primary/50 focus-visible:outline-offset-0";
 const inputError =
-  "w-full bg-brand-card text-black px-4 py-3 rounded-xl text-sm placeholder:text-black/40 border border-red-400/60 outline-none transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-red-400 focus-visible:outline-offset-0";
+  "w-full bg-brand-card text-black px-4 py-3 rounded-xl  placeholder:text-black/40 border border-red-400/60 outline-none transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-red-400 focus-visible:outline-offset-0";
 
 const ContactFormContent = () => {
   const t = useTranslations("component.contactForm");
@@ -67,7 +64,9 @@ const ContactFormContent = () => {
             })}
           />
           {errors.firstName && (
-            <p className="mt-1 text-xs text-red-500">{errors.firstName.message}</p>
+            <p className="mt-1 text-xs text-red-500">
+              {errors.firstName.message}
+            </p>
           )}
         </div>
         <div className="flex-1">
@@ -82,7 +81,9 @@ const ContactFormContent = () => {
             })}
           />
           {errors.lastName && (
-            <p className="mt-1 text-xs text-red-500">{errors.lastName.message}</p>
+            <p className="mt-1 text-xs text-red-500">
+              {errors.lastName.message}
+            </p>
           )}
         </div>
       </div>
@@ -133,11 +134,7 @@ const ContactFormContent = () => {
         )}
       </div>
 
-      <Button
-        type="submit"
-        disabled={isSubmitting}
-        className="mt-2"
-      >
+      <Button type="submit" disabled={isSubmitting} className="mt-2">
         {isSubmitting ? (
           <>
             <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
@@ -149,7 +146,7 @@ const ContactFormContent = () => {
       </Button>
 
       {isSuccess && (
-        <p className="text-sm text-brand-primary text-center">{t("successMessage")}</p>
+        <p className=" text-brand-primary text-center">{t("successMessage")}</p>
       )}
 
       {errorMsg && (

@@ -48,7 +48,11 @@ export default function AboutPage() {
     teachersHeading: string;
     teachers: { name: string; url: string }[];
   };
-  const bento = t.raw("bento") as { imageAlt1: string; imageAlt2: string; imageAlt3: string };
+  const bento = t.raw("bento") as {
+    imageAlt1: string;
+    imageAlt2: string;
+    imageAlt3: string;
+  };
   return (
     <>
       {/* Hero */}
@@ -59,7 +63,7 @@ export default function AboutPage() {
       />
 
       {/* Bento photo grid */}
-      <div className="container pb-12 md:pb-20">
+      <div className="container pb-2">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <FadeIn delay={0} className="min-w-0">
             <div
@@ -118,10 +122,7 @@ export default function AboutPage() {
             </p>
             <div className="md:ml-[15%] md:max-w-[70%]">
               {paragraphsBeforeBento.map((para, i) => (
-                <p
-                  key={i}
-                  className="text-sm md:text-base text-black/70 mb-5 leading-relaxed"
-                >
+                <p key={i} className=" text-black/70 mb-5 leading-relaxed">
                   {para}
                 </p>
               ))}
@@ -139,10 +140,7 @@ export default function AboutPage() {
             </p>
             <div className="md:ml-[15%] md:max-w-[70%]">
               {afterBento.paragraphs.map((para, i) => (
-                <p
-                  key={i}
-                  className="text-sm md:text-base text-black/70 mb-5 leading-relaxed"
-                >
+                <p key={i} className=" text-black/70 mb-5 leading-relaxed">
                   {para}
                 </p>
               ))}
@@ -170,14 +168,11 @@ export default function AboutPage() {
                 className="flex justify-start mb-1 -ml-4 md:-ml-12 opacity-80"
               />
               {credentials.titles.map((title, i) => (
-                <p
-                  key={i}
-                  className="text-sm md:text-base text-black/70 leading-relaxed"
-                >
+                <p key={i} className=" text-black/70 leading-relaxed">
                   {title}
                 </p>
               ))}
-              <p className="text-sm md:text-base text-black/70 mt-5 leading-relaxed">
+              <p className=" text-black/70 mt-5 leading-relaxed">
                 {credentials.teachersHeading}{" "}
                 {credentials.teachers.map((teacher, i) => (
                   <span key={i}>

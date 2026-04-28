@@ -25,7 +25,7 @@ export default function ContactTestimonialsSlider({
     <section className={`container${showHeading ? " py-12 md:py-20" : ""}`}>
       {showHeading ? (
         <FadeIn>
-          <h2 className="text-center mx-auto mb-6 md:mb-10">
+          <h2 className="md:text-center mx-auto mb-6 md:mb-10">
             {tServices("testimonialsHeading")}
           </h2>
         </FadeIn>
@@ -49,7 +49,7 @@ export default function ContactTestimonialsSlider({
           >
             <div className="relative overflow-hidden rounded-2xl bg-brand-card h-full flex flex-col">
               <div className="flex flex-col flex-1 p-6 md:p-8 justify-between gap-6">
-                <p className="text-sm text-black/80 italic leading-relaxed overflow-y-auto whitespace-pre-line mb-8">
+                <p className=" text-black/80 italic leading-relaxed overflow-y-auto whitespace-pre-line mb-8 text-base">
                   {item.text}
                 </p>
                 <p className="font-heading italic text-lg md:text-xl text-black/90 shrink-0">

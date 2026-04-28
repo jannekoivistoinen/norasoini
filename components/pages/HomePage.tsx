@@ -49,24 +49,24 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="text-center container">
+      <section className="md:text-center container">
         <motion.h1 {...heroAnim(0.05)}>{t("hero.heading")}</motion.h1>
         <motion.p
           {...heroAnim(0.18)}
-          className="mt-4 max-w-[50ch] mx-auto text-sm md:text-base text-black/70 leading-relaxed"
+          className="mt-4 max-w-[50ch] md:mx-auto  text-black/70 leading-relaxed"
         >
           {t("hero.description")}
         </motion.p>
         <motion.div
           {...heroAnim(0.3)}
-          className="mt-10 flex flex-wrap gap-4 justify-center"
+          className="mt-6 md:mt-10 flex flex-wrap gap-4 md:justify-center"
         >
           <Button onClick={openVelloModal}>{t("hero.cta")}</Button>
           <Button variant="outline" asChild>
             <Link href={aboutHref}>{t("hero.secondaryCta")}</Link>
           </Button>
         </motion.div>
-        <ul className="flex flex-col sm:flex-row gap-1 sm:gap-8 items-center justify-center mt-16 sm:mt-24 md:mt-36 mb-10 text-black/70">
+        <ul className="flex flex-col sm:flex-row gap-2 sm:gap-8 md:items-center md:justify-center mt-8 sm:mt-24 md:mt-36 mb-10 text-black/70">
           {[t("hero.trust1"), t("hero.trust2"), t("hero.trust3")].map(
             (signal, i) => (
               <motion.li
@@ -114,8 +114,8 @@ export default function HomePage() {
               />
             </div>
             <div className="flex flex-col justify-between h-full">
-              <div className="mb-8 md:mb-16">
-                <blockquote className="font-heading italic text-lg md:text-2xl text-black/80 mb-3 text-balance max-w-[50ch]">
+              <div className="mb-16">
+                <blockquote className="font-heading italic text-xl md:text-2xl text-black/80 mb-2 md:mb-3 md:text-balance max-w-[50ch]">
                   {t("about.quote")}
                 </blockquote>
                 <p className="text-base text-black/70">
@@ -123,8 +123,8 @@ export default function HomePage() {
                 </p>
               </div>
               <div>
-                <h2 className="mb-8">{t("about.heading")}</h2>
-                <MarkdownText className="text-sm md:text-base text-black/70 mb-10 leading-relaxed space-y-4 max-w-[50ch]">
+                <h2 className="mb-4 md:mb-8">{t("about.heading")}</h2>
+                <MarkdownText className=" text-black/70 mb-10 leading-relaxed space-y-4 max-w-[50ch]">
                   {t("about.description")}
                 </MarkdownText>
                 <Link

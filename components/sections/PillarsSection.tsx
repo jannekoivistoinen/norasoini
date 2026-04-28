@@ -16,10 +16,8 @@ export default function PillarsSection() {
 
   return (
     <section className="container py-12 md:py-20">
-      <h2 className="mb-4 text-center">
-        {t("pillars.heading")}
-      </h2>
-      <p className="text-black/70 text-sm md:text-base mb-8 md:mb-12 text-center max-w-2xl mx-auto">
+      <h2 className="mb-4 md:text-center">{t("pillars.heading")}</h2>
+      <p className="text-black/70  mb-8 md:mb-12 md:text-center max-w-2xl mx-auto">
         {t("pillars.description")}
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -41,10 +39,8 @@ export default function PillarsSection() {
                   />
                 </div>
                 <div>
-                  <h3 className="mb-3">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-sm text-black/70">{pillar.description}</p>
+                  <h3 className="mb-3">{pillar.title}</h3>
+                  <p className=" text-black/70">{pillar.description}</p>
                 </div>
               </div>
             </div>
