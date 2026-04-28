@@ -269,7 +269,8 @@
       "name": "Nora Soini",
       "tagline": "Therapist & craniosacral therapy · Espoo",
       "email": "nora@norasoini.fi",
-      "copyright": "© 2026 – Site crafted by Damngood",
+      "copyrightPrefix": "© 2026 – ",
+      "siteCredit": "Site crafted by Damngood",
       "terms": "Terms"
     },
     "terminalCTA": {

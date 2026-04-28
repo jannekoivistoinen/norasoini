@@ -1,11 +1,9 @@
 import { useTranslations } from "next-intl";
-import { useLocale } from "next-intl";
 import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/constants";
 
 const Footer = () => {
   const t = useTranslations("component.footer");
-  const locale = useLocale();
 
   return (
     <footer>
@@ -56,7 +54,17 @@ const Footer = () => {
             >
               {SITE_CONFIG.company.contact.email}
             </a>
-            <p className="text-xs md:text-base mt-1.5">{t("copyright")}</p>
+            <p className="text-xs md:text-base mt-1.5">
+              {t("copyrightPrefix")}
+              <a
+                href="https://damngood.fi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-body hover:text-white transition-colors"
+              >
+                {t("siteCredit")}
+              </a>
+            </p>
           </div>
         </div>
       </div>
