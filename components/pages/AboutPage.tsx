@@ -11,8 +11,12 @@ import FadeIn from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
 import { AnimatedSignature } from "@/components/AnimatedSignature";
 import {
-  noraStorySignatureColor,
+  noraStorySignatureFillColor,
+  noraStorySignatureFillRule,
   noraStorySignaturePaths,
+  noraStorySignaturePathTransforms,
+  noraStorySignatureStrokeColor,
+  noraStorySignatureStrokeWidth,
   noraStorySignatureViewBox,
 } from "@/components/noraStorySignaturePath";
 
@@ -44,6 +48,7 @@ export default function AboutPage() {
     paragraphs: string[];
   };
   const credentials = t.raw("credentials") as {
+    name: string;
     titles: string[];
     teachersHeading: string;
     teachers: { name: string; url: string }[];
@@ -133,7 +138,7 @@ export default function AboutPage() {
 
       {/* Bio (after bento) */}
       <FadeIn>
-        <div className="container pb-12 md:pb-20">
+        <div className="container pb-12">
           <div className="max-w-[882px] mx-auto">
             <p className="font-heading italic text-2xl md:text-3xl lg:text-4xl leading-snug text-black/85 mb-8 max-w-full md:max-w-[70%] mx-auto text-balance">
               {afterBento.ingress}
@@ -156,17 +161,21 @@ export default function AboutPage() {
             <div className="md:ml-[15%] md:max-w-[70%]">
               <AnimatedSignature
                 paths={[...noraStorySignaturePaths]}
+                pathTransforms={[...noraStorySignaturePathTransforms]}
                 viewBox={noraStorySignatureViewBox}
-                width={280}
-                height={59}
-                strokeWidth={2.25}
-                strokeColor={noraStorySignatureColor}
-                fillColor="none"
-                duration={0.1}
-                delay={0}
-                stagger={0.04}
-                className="flex justify-start mb-1 -ml-4 md:-ml-12 opacity-80"
+                width={100}
+                height={80}
+                strokeWidth={noraStorySignatureStrokeWidth}
+                strokeColor={noraStorySignatureStrokeColor}
+                fillColor={noraStorySignatureFillColor}
+                fillRule={noraStorySignatureFillRule}
+                duration={0.01}
+                delay={0.0}
+                stagger={0}
+                timeline="sequential"
+                className="flex justify-start mb-0 md:-ml-8 opacity-80"
               />
+              <p className="mt-6">{credentials.name}</p>
               {credentials.titles.map((title, i) => (
                 <p key={i} className=" text-black/70 leading-relaxed">
                   {title}

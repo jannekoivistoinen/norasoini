@@ -50,7 +50,7 @@ export default function ServicesSlider() {
             <p className=" text-black/70 leading-relaxed mb-4 font-body text-base">
               {item.intro}
             </p>
-            <span className="inline-flex items-center gap-2 font-body text-base font-semibold text-brand-primary transition-colors duration-300 group-hover:text-brand-text">
+            <span className="inline-flex items-center gap-2 text-base font-semibold text-brand-primary transition-colors duration-300 group-hover:text-brand-text">
               {tHome("servicesSlider.readMore")}
               {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
               <FontAwesomeIcon
