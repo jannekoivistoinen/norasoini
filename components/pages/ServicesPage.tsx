@@ -7,7 +7,7 @@ import { serviceImages } from "@/app/assets/images";
 import dynamic from "next/dynamic";
 import { useTranslations, useLocale } from "next-intl";
 import ReactMarkdown from "react-markdown";
-import { SITE_CONFIG } from "@/lib/constants";
+import { SITE_CONFIG, localePath } from "@/lib/constants";
 import PillarsSection from "@/components/sections/PillarsSection";
 import VisitFlowSection from "@/components/sections/VisitFlowSection";
 import QuoteSlider from "@/components/sections/QuoteSlider";
@@ -68,8 +68,8 @@ export default function ServicesPage() {
   const tFooter = useTranslations("component.footer");
   const locale = useLocale();
 
-  const contactHref = `/${locale}/${SITE_CONFIG.i18n.routes.contact[locale as keyof typeof SITE_CONFIG.i18n.routes.contact]}`;
-  const pricingHref = `/${locale}/${SITE_CONFIG.i18n.routes.pricing[locale as keyof typeof SITE_CONFIG.i18n.routes.pricing]}`;
+  const contactHref = localePath(locale, SITE_CONFIG.i18n.routes.contact[locale as keyof typeof SITE_CONFIG.i18n.routes.contact]);
+  const pricingHref = localePath(locale, SITE_CONFIG.i18n.routes.pricing[locale as keyof typeof SITE_CONFIG.i18n.routes.pricing]);
   const items = t.raw("items") as ServiceItem[];
   const cardQuote = t("cardQuote");
   const terminalButtons: TerminalCTAButton[] = [
@@ -102,6 +102,7 @@ export default function ServicesPage() {
                   src={serviceImages[i % serviceImages.length]}
                   alt={item.title}
                   fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
                   className="object-cover"
                 />
               </motion.div>

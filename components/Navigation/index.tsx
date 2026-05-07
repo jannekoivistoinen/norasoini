@@ -88,7 +88,7 @@ export default function Navigation() {
         {/* Logo */}
         <motion.div {...navAnim(0)}>
           <Link
-            href={`/${locale}`}
+            href={locale === "fi" ? "/" : `/${locale}`}
             className="font-heading text-2xl md:text-3xl font-bold md:font-normal tracking-[-0.05rem] hover:opacity-70 transition text-brand-primary"
             onClick={() => setMobileMenuOpen(false)}
           >

@@ -18,7 +18,7 @@ export default function NotFound() {
         <header className="sticky z-[9999] top-0 w-full bg-brand-bg border-b border-black/10">
           <nav className="w-full flex items-center justify-between px-6 md:px-10 py-6">
             <Link
-              href="/fi"
+              href="/"
               className="text-2xl font-bold tracking-tighter hover:opacity-70 transition text-brand-primary"
             >
               {COMPANY_METADATA.name}
@@ -35,7 +35,7 @@ export default function NotFound() {
               ))}
             </div>
             <Button asChild>
-              <Link href={`/fi/${SITE_CONFIG.i18n.routes.contact.fi}`}>
+              <Link href={`/${SITE_CONFIG.i18n.routes.contact.fi}`}>
                 Varaa aika
               </Link>
             </Button>
@@ -49,7 +49,7 @@ export default function NotFound() {
             Etsimääsi sivua ei ole olemassa tai se on siirretty.
           </p>
           <Button asChild>
-            <Link href="/fi">Palaa etusivulle</Link>
+            <Link href="/">Palaa etusivulle</Link>
           </Button>
         </main>
 
@@ -59,7 +59,7 @@ export default function NotFound() {
           buttons={[
             {
               label: "Varaa aika",
-              href: `/fi/${SITE_CONFIG.i18n.routes.contact.fi}`,
+              href: `/${SITE_CONFIG.i18n.routes.contact.fi}`,
             },
           ]}
         />

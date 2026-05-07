@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale,
     namespace: "page.homepage.metadata",
   });
-  const canonicalUrl = `${COMPANY_METADATA.url}/${locale}`;
+  const canonicalUrl = locale === "fi" ? COMPANY_METADATA.url : `${COMPANY_METADATA.url}/${locale}`;
 
   return {
     title: t("title"),
@@ -32,9 +32,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        fi: `${COMPANY_METADATA.url}/fi`,
+        fi: COMPANY_METADATA.url,
         en: `${COMPANY_METADATA.url}/en`,
-        "x-default": `${COMPANY_METADATA.url}/fi`,
+        "x-default": COMPANY_METADATA.url,
       },
     },
     openGraph: {

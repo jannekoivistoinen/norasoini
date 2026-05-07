@@ -8,7 +8,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { noraSoiniAboutPortrait } from "@/app/assets/images";
-import { SITE_CONFIG } from "@/lib/constants";
+import { SITE_CONFIG, localePath } from "@/lib/constants";
 import QuoteSlider from "@/components/sections/QuoteSlider";
 import SituationsSlider from "@/components/sections/SituationsSlider";
 import ServicesSlider from "@/components/sections/ServicesSlider";
@@ -40,8 +40,8 @@ export default function HomePage() {
   const tFooter = useTranslations("component.footer");
   const locale = useLocale();
 
-  const contactHref = `/${locale}/${SITE_CONFIG.i18n.routes.contact[locale as keyof typeof SITE_CONFIG.i18n.routes.contact]}`;
-  const aboutHref = `/${locale}/${SITE_CONFIG.i18n.routes.about[locale as keyof typeof SITE_CONFIG.i18n.routes.about]}`;
+  const contactHref = localePath(locale, SITE_CONFIG.i18n.routes.contact[locale as keyof typeof SITE_CONFIG.i18n.routes.contact]);
+  const aboutHref = localePath(locale, SITE_CONFIG.i18n.routes.about[locale as keyof typeof SITE_CONFIG.i18n.routes.about]);
   const terminalButtons: TerminalCTAButton[] = [
     { label: tFooter("ctaButton"), href: contactHref },
   ];

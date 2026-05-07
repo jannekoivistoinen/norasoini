@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useTranslations, useLocale } from "next-intl";
-import { SITE_CONFIG } from "@/lib/constants";
+import { SITE_CONFIG, localePath } from "@/lib/constants";
 import PillarsSection from "@/components/sections/PillarsSection";
 import QuoteSlider from "@/components/sections/QuoteSlider";
 import PageHero from "@/components/sections/PageHero";
@@ -35,8 +35,8 @@ export default function AboutPage() {
   const tFooter = useTranslations("component.footer");
   const locale = useLocale();
 
-  const contactHref = `/${locale}/${SITE_CONFIG.i18n.routes.contact[locale as keyof typeof SITE_CONFIG.i18n.routes.contact]}`;
-  const pricingHref = `/${locale}/${SITE_CONFIG.i18n.routes.pricing[locale as keyof typeof SITE_CONFIG.i18n.routes.pricing]}`;
+  const contactHref = localePath(locale, SITE_CONFIG.i18n.routes.contact[locale as keyof typeof SITE_CONFIG.i18n.routes.contact]);
+  const pricingHref = localePath(locale, SITE_CONFIG.i18n.routes.pricing[locale as keyof typeof SITE_CONFIG.i18n.routes.pricing]);
   const terminalButtons: TerminalCTAButton[] = [
     { label: tFooter("ctaButton"), href: contactHref },
   ];

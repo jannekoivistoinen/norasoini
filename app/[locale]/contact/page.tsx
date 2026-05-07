@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { COMPANY_METADATA, SITE_CONFIG } from "@/lib/constants";
+import { COMPANY_METADATA, SITE_CONFIG, localePath } from "@/lib/constants";
 import { getTranslations } from "next-intl/server";
 import ContactPage from "@/components/pages/ContactPage";
 
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale,
     namespace: "page.contact.metadata",
   });
-  const canonicalUrl = `${COMPANY_METADATA.url}/${locale}/${SITE_CONFIG.i18n.routes.contact[locale as keyof typeof SITE_CONFIG.i18n.routes.contact]}`;
+  const canonicalUrl = `${COMPANY_METADATA.url}${localePath(locale, SITE_CONFIG.i18n.routes.contact[locale as keyof typeof SITE_CONFIG.i18n.routes.contact])}`;
 
   return {
     title: t("title"),
@@ -23,9 +23,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        fi: `${COMPANY_METADATA.url}/fi/${SITE_CONFIG.i18n.routes.contact.fi}`,
+        fi: `${COMPANY_METADATA.url}/${SITE_CONFIG.i18n.routes.contact.fi}`,
         en: `${COMPANY_METADATA.url}/en/${SITE_CONFIG.i18n.routes.contact.en}`,
-        "x-default": `${COMPANY_METADATA.url}/fi/${SITE_CONFIG.i18n.routes.contact.fi}`,
+        "x-default": `${COMPANY_METADATA.url}/${SITE_CONFIG.i18n.routes.contact.fi}`,
       },
     },
     openGraph: {

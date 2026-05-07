@@ -15,19 +15,19 @@ export function handleLanguageChange(
   pathname: string
 ) {
   setLanguageCookie(newLocale);
-  const segments = pathname.split("/");
-  segments[1] = newLocale;
-  const newPathname = segments.join("/");
-  router.push(newPathname);
+  // Strip a leading /fi or /en locale segment if present
+  const withoutLocale = pathname.replace(/^\/(fi|en)(\/|$)/, "/");
+  const newPathname =
+    newLocale === "fi" ? withoutLocale : `/${newLocale}${withoutLocale === "/" ? "" : withoutLocale}`;
+  router.push(newPathname || "/");
 }
 
 // Helper function to check if a link is active
 export function isActive(itemHref: string, pathname: string) {
   if (itemHref === "#") return false;
 
-  // For locale-specific paths like "/fi" and "/en" (homepage),
-  // only activate on exact match
-  if (itemHref.match(/^\/[a-z]{2}$/)) {
+  // For locale homepages like "/" and "/en", only activate on exact match
+  if (itemHref === "/" || itemHref.match(/^\/[a-z]{2}$/)) {
     return pathname === itemHref;
   }
 

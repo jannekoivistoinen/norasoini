@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { COMPANY_METADATA, SITE_CONFIG } from "@/lib/constants";
+import { COMPANY_METADATA, SITE_CONFIG, localePath } from "@/lib/constants";
 import { getTranslations } from "next-intl/server";
 import PricingPage from "@/components/pages/PricingPage";
 
@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale,
     namespace: "page.pricing.metadata",
   });
-  const canonicalUrl = `${COMPANY_METADATA.url}/${locale}/${SITE_CONFIG.i18n.routes.pricing[locale as keyof typeof SITE_CONFIG.i18n.routes.pricing]}`;
+  const canonicalUrl = `${COMPANY_METADATA.url}${localePath(locale, SITE_CONFIG.i18n.routes.pricing[locale as keyof typeof SITE_CONFIG.i18n.routes.pricing])}`;
 
   return {
     title: t("title"),
@@ -22,9 +22,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        fi: `${COMPANY_METADATA.url}/fi/${SITE_CONFIG.i18n.routes.pricing.fi}`,
+        fi: `${COMPANY_METADATA.url}/${SITE_CONFIG.i18n.routes.pricing.fi}`,
         en: `${COMPANY_METADATA.url}/en/${SITE_CONFIG.i18n.routes.pricing.en}`,
-        "x-default": `${COMPANY_METADATA.url}/fi/${SITE_CONFIG.i18n.routes.pricing.fi}`,
+        "x-default": `${COMPANY_METADATA.url}/${SITE_CONFIG.i18n.routes.pricing.fi}`,
       },
     },
     openGraph: {

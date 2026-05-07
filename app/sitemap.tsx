@@ -22,10 +22,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Create sitemap entries for each path and both languages
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
-  // Add entries for Finnish paths
+  // Add entries for Finnish paths (no locale prefix for default locale)
   paths.forEach((path) => {
     sitemapEntries.push({
-      url: `${baseUrl}/fi${pathnames[path].fi}`,
+      url: `${baseUrl}${pathnames[path].fi}`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: path === "/" ? 1 : 0.8,
@@ -42,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // Add homepage entry and locale-specific homepages
+  // Add homepage entries (Finnish is the bare domain, English is /en)
   const homepageEntries: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
@@ -52,12 +52,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/en`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/fi`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,

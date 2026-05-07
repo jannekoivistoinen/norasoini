@@ -22,6 +22,7 @@ export const routing = defineRouting({
   locales: SITE_CONFIG.i18n.locales,
   defaultLocale: SITE_CONFIG.i18n.defaultLocale,
   localeDetection: false,
+  localePrefix: "as-needed",
   pathnames: generatePathnames(),
 });
 

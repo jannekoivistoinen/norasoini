@@ -75,6 +75,9 @@ export const COMPANY_METADATA = SITE_CONFIG.company;
 export const locales = SITE_CONFIG.i18n.locales;
 export const defaultLocale = SITE_CONFIG.i18n.defaultLocale;
 
+export const localePath = (locale: string, path: string) =>
+  locale === defaultLocale ? `/${path}` : `/${locale}/${path}`;
+
 export type NavigationItem = {
   link: string;
   fi: { name: string; href: string; description?: string };
@@ -92,7 +95,7 @@ export const NAVIGATION_LINKS: NavigationItem[] = [
     link: "about",
     fi: {
       name: "Noran tarina",
-      href: `/fi/${SITE_CONFIG.i18n.routes.about.fi}`,
+      href: `/${SITE_CONFIG.i18n.routes.about.fi}`,
     },
     en: {
       name: "About Nora",
@@ -103,7 +106,7 @@ export const NAVIGATION_LINKS: NavigationItem[] = [
     link: "services",
     fi: {
       name: "Palvelut",
-      href: `/fi/${SITE_CONFIG.i18n.routes.services.fi}`,
+      href: `/${SITE_CONFIG.i18n.routes.services.fi}`,
     },
     en: {
       name: "Services",
@@ -114,7 +117,7 @@ export const NAVIGATION_LINKS: NavigationItem[] = [
     link: "contact",
     fi: {
       name: "Yhteystiedot",
-      href: `/fi/${SITE_CONFIG.i18n.routes.contact.fi}`,
+      href: `/${SITE_CONFIG.i18n.routes.contact.fi}`,
     },
     en: {
       name: "Contact",
@@ -128,7 +131,7 @@ export const NAVIGATION_CTA: NavigationItem[] = [
     link: "cta",
     fi: {
       name: "Varaa aika",
-      href: `/fi/${SITE_CONFIG.i18n.routes.contact.fi}`,
+      href: `/${SITE_CONFIG.i18n.routes.contact.fi}`,
     },
     en: {
       name: "Book a session",
