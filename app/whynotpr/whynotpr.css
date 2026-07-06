@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Why Not PR — standalone brand theme (PLACEHOLDER).
+ * Swap these tokens for the real brand colors/fonts before launch.
+ * Fonts (--wnp-font-*) are injected by app/whynotpr/layout.tsx via next/font.
+ */
+.wnp {
+  --wnp-bg: #f6f4ef;
+  --wnp-surface: #ffffff;
+  --wnp-ink: #17150f;
+  --wnp-muted: #545048;
+  --wnp-line: #e4dfd5;
+  --wnp-accent: #9a7b4f;
+  --wnp-accent-ink: #ffffff;
+
+  background-color: var(--wnp-bg);
+  color: var(--wnp-ink);
+  font-family: var(--wnp-font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+.wnp h1,
+.wnp h2,
+.wnp h3,
+.wnp h4 {
+  font-family: var(--wnp-font-display), "Bodoni Moda", Georgia, serif;
+}
+
+.wnp a {
+  color: inherit;
+}
+
+.wnp-showroom a {
+  text-decoration: none;
+}
+
+.wnp-admin a {
+  text-decoration: none;
+}
+
+.wnp-product-card {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 320px;
+}
+
+/* Rendered HTML coming from the product sheet. */
+.wnp-prose {
+  line-height: 1.6;
+  color: var(--wnp-ink);
+}
+.wnp-prose p {
+  margin-bottom: 1rem;
+}
+.wnp-prose p:last-child {
+  margin-bottom: 0;
+}
+.wnp-prose ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+.wnp-prose strong {
+  font-weight: 600;
+}

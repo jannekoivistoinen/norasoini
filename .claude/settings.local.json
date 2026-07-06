@@ -25,7 +25,12 @@
       "Bash(git commit -m ':*)",
       "Bash(npm run:*)",
       "Bash(npx tsc *)",
-      "Bash(echo \"exit: $?\")"
+      "Bash(echo \"exit: $?\")",
+      "Read(//Users/janne/Downloads/**)",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -sL __TRACKED_VAR__/pub?output=csv)",
+      "Bash(git checkout *)",
+      "Bash(grep -iA6 \"i18n\\\\|locales\")"
     ]
   }
 }
