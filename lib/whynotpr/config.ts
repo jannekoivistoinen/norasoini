@@ -18,6 +18,7 @@ export const AGENCY = {
   introTagline: "Asiantuntevaa PR:ää. Pitkäjänteisiä suhteita. Vaikuttavia tuloksia.",
   contact: {
     name: "Nora Soini",
+    company: "WHY NOT PR Oy",
     email: "nora@whynotpr.fi",
     phone: "+358 40 550 1155",
   },

@@ -33,7 +33,8 @@ export default function WhyNotPrLanding() {
 
       <div className="mt-12 text-sm">
         <p>{AGENCY.contact.name}</p>
-        <p className="mt-1">
+        <p>{AGENCY.contact.company}</p>
+        <p className="mt-3">
           <a
             href={`mailto:${AGENCY.contact.email}`}
             className="hover:text-[var(--wnp-accent)]"
