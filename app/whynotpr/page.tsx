@@ -17,6 +17,9 @@ export default function WhyNotPrLanding() {
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
+        <p className="mt-8 max-w-xl font-medium text-[var(--wnp-ink)]">
+          {AGENCY.introTagline}
+        </p>
       </header>
 
       <div className="mt-12">
@@ -24,7 +27,7 @@ export default function WhyNotPrLanding() {
           href="/showroom"
           className="inline-flex items-center rounded-full bg-[var(--wnp-accent)] px-7 py-3 text-sm font-medium !text-white transition-opacity hover:opacity-90"
         >
-          Showroom
+          Kuvapankki
         </Link>
       </div>
 

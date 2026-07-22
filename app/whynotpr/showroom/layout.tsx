@@ -19,7 +19,7 @@ export default async function PortalLayout({
         <div className="container mx-auto flex items-center justify-between px-6 py-4">
           <Link href="/showroom" className="text-lg tracking-tight">
             {AGENCY.name}{" "}
-            <span className="text-[var(--wnp-muted)]">/ Showroom</span>
+            <span className="text-[var(--wnp-muted)]">/ Kuvapankki</span>
           </Link>
           <LogoutButton />
         </div>
