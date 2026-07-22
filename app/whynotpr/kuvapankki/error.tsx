@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-export default function ShowroomError({
+export default function KuvapankkiError({
   error,
   reset,
 }: {

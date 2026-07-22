@@ -21,7 +21,7 @@ export default function LoginPage() {
       body: JSON.stringify({ password }),
     });
     if (res.ok) {
-      router.replace("/showroom");
+      router.replace("/kuvapankki");
       router.refresh();
     } else {
       setError(true);
@@ -33,7 +33,7 @@ export default function LoginPage() {
     <main className="mx-auto flex min-h-screen max-w-sm flex-col justify-center px-6 py-20">
       <h1 className="text-3xl font-medium tracking-tighter">{AGENCY.name}</h1>
       <p className="mt-2 text-sm text-[var(--wnp-muted)]">
-        Syötä salasana päästäksesi Showroomiin.
+        Syötä salasana päästäksesi Kuvapankkiin.
       </p>
 
       <form onSubmit={onSubmit} className="mt-8">

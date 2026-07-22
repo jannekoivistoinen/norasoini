@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { AdminImage, AdminProduct } from "@/lib/whynotpr/products";
-import ProductImage from "@/app/whynotpr/showroom/ProductImage";
+import ProductImage from "@/app/whynotpr/kuvapankki/ProductImage";
 import { ArrowLeftIcon, ArrowRightIcon } from "@/app/whynotpr/ArrowIcon";
 
 type Img = { filename: string; url: string };
@@ -159,7 +159,7 @@ export default function PhotoEditor({ product }: { product: AdminProduct }) {
             Piilotetut kuvat ({hidden.length})
           </h2>
           <p className="mb-3 mt-1 text-xs text-[var(--wnp-muted)]">
-            Eivät näy showroomissa eivätkä latauksissa. Tiedostoja ei poisteta.
+            Eivät näy kuvapankissa eivätkä latauksissa. Tiedostoja ei poisteta.
           </p>
           <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {hidden.map((img, i) => (

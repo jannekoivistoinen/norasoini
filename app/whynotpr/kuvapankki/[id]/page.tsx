@@ -16,7 +16,7 @@ export default async function ProductDetailPage({
   return (
     <article>
       <Link
-        href="/showroom"
+        href="/kuvapankki"
         className="group inline-flex items-center gap-2 text-sm text-[var(--wnp-muted)] hover:text-[var(--wnp-ink)]"
       >
         <ArrowLeftIcon />

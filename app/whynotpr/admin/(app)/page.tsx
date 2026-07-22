@@ -11,7 +11,7 @@ export default async function AdminHome() {
         </h1>
         <p className="mt-1 text-sm text-[var(--wnp-muted)]">
           Valitse tuote muokataksesi sen kuvia: piilota, järjestä tai aseta
-          pääkuva. Muutokset näkyvät heti showroomissa.
+          pääkuva. Muutokset näkyvät heti kuvapankissa.
         </p>
       </div>
       <AdminProductList products={products} />

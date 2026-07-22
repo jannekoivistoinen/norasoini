@@ -24,7 +24,7 @@ export default function WhyNotPrLanding() {
 
       <div className="mt-12">
         <Link
-          href="/showroom"
+          href="/kuvapankki"
           className="inline-flex items-center rounded-full bg-[var(--wnp-accent)] px-7 py-3 text-sm font-medium !text-white transition-opacity hover:opacity-90"
         >
           Kuvapankki
