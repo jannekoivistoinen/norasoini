@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bodoni_Moda, Inter } from "next/font/google";
+import { Bodoni_Moda, Inter, Kaisei_Decol } from "next/font/google";
 import { AGENCY } from "@/lib/whynotpr/config";
 import "./whynotpr.css";
 
@@ -16,6 +16,13 @@ const sans = Inter({
   display: "swap",
 });
 
+const link = Kaisei_Decol({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--wnp-font-link",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: AGENCY.name,
   description: AGENCY.tagline,
@@ -28,7 +35,10 @@ export default function WhyNotPrLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fi" className={`${display.variable} ${sans.variable}`}>
+    <html
+      lang="fi"
+      className={`${display.variable} ${sans.variable} ${link.variable}`}
+    >
       <body className="wnp">{children}</body>
     </html>
   );
