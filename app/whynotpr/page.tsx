@@ -29,28 +29,30 @@ export default function WhyNotPrLanding() {
           className="-z-10 object-cover"
         />
         <WhyNotPrLogo className="wnp-hero-text h-5 w-auto text-white sm:h-6" />
-        <h1 className="wnp-hero-text mt-8 max-w-3xl text-3xl font-medium leading-tight text-white sm:text-4xl lg:text-[2.625rem]">
+        <h1 className="wnp-hero-text mt-12 max-w-[1000px] text-3xl font-medium !leading-[110%] text-white sm:text-4xl lg:text-[2.625rem] !tracking-tight">
           {AGENCY.introHeadline}
         </h1>
         <Link
           href="/kuvapankki"
-          className="mt-8 inline-flex items-center rounded-full bg-[var(--wnp-accent)] px-7 py-3 text-base font-[family-name:var(--wnp-font-link)] !text-white transition-opacity hover:opacity-90"
+          className="mt-12 inline-flex items-center rounded-full bg-[var(--wnp-accent)] px-7 py-3 text-base font-[family-name:var(--wnp-font-link)] !text-white transition-opacity hover:opacity-90"
         >
           Kuvapankki
         </Link>
       </section>
 
       {/* Intro + contact */}
-      <section className="mx-auto max-w-[600px] px-6 py-16 sm:py-24">
-        <p className="text-xl font-semibold leading-snug sm:text-2xl">
+      <section className="container mx-auto max-w-[800px] px-6 py-8 sm:py-24">
+        <p className="text-xl font-bold leading-snug sm:text-2xl tracking-tighter">
           {firstParagraph}
         </p>
-        <div className="mt-6 space-y-6 text-lg leading-relaxed">
+        <div className="mt-6 space-y-6 text-lg md:text-xl leading-relaxed tracking-tight">
           {restParagraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
-        <p className="mt-6 text-lg font-semibold">{AGENCY.introTagline}</p>
+        <p className="mt-6 text-lg md:text-xl font-bold tracking-tight">
+          {AGENCY.introTagline}
+        </p>
 
         <AnimatedSignature
           paths={[...noraStorySignaturePaths]}
@@ -62,7 +64,8 @@ export default function WhyNotPrLanding() {
           strokeColor={noraStorySignatureStrokeColor}
           fillColor={noraStorySignatureFillColor}
           fillRule={noraStorySignatureFillRule}
-          duration={0.01}
+          playMode="inView"
+          duration={0.85}
           delay={0}
           stagger={0}
           timeline="sequential"
