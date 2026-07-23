@@ -37,6 +37,13 @@
 /* Landing page uses the Bodoni display serif for body copy too. */
 .wnp-landing {
   font-family: var(--wnp-font-display), "Bodoni Moda", Georgia, serif;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "calt" 1;
+}
+.wnp-landing h1 {
+  letter-spacing: -0.015em;
+  word-spacing: 0.02em;
 }
 .wnp-landing .wnp-hero-text {
   text-shadow: 0 1px 24px rgba(0, 0, 0, 0.28);

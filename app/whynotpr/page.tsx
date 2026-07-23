@@ -1,6 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
 import { AGENCY } from "@/lib/whynotpr/config";
+import { AnimatedSignature } from "@/components/AnimatedSignature";
+import {
+  noraStorySignatureFillColor,
+  noraStorySignatureFillRule,
+  noraStorySignaturePaths,
+  noraStorySignaturePathTransforms,
+  noraStorySignatureStrokeColor,
+  noraStorySignatureStrokeWidth,
+  noraStorySignatureViewBox,
+} from "@/components/noraStorySignaturePath";
 import WhyNotPrLogo from "./WhyNotPrLogo";
 
 export default function WhyNotPrLanding() {
@@ -19,7 +29,7 @@ export default function WhyNotPrLanding() {
           className="-z-10 object-cover"
         />
         <WhyNotPrLogo className="wnp-hero-text h-5 w-auto text-white sm:h-6" />
-        <h1 className="wnp-hero-text mt-8 max-w-3xl text-3xl font-medium leading-tight text-white sm:text-4xl lg:text-5xl">
+        <h1 className="wnp-hero-text mt-8 max-w-3xl text-3xl font-medium leading-tight text-white sm:text-4xl lg:text-[2.625rem]">
           {AGENCY.introHeadline}
         </h1>
         <Link
@@ -31,7 +41,7 @@ export default function WhyNotPrLanding() {
       </section>
 
       {/* Intro + contact */}
-      <section className="mx-auto max-w-xl px-6 py-16 sm:py-24">
+      <section className="mx-auto max-w-[600px] px-6 py-16 sm:py-24">
         <p className="text-xl font-semibold leading-snug sm:text-2xl">
           {firstParagraph}
         </p>
@@ -42,12 +52,21 @@ export default function WhyNotPrLanding() {
         </div>
         <p className="mt-6 text-lg font-semibold">{AGENCY.introTagline}</p>
 
-        <Image
-          src="/whynotpr/signature.png"
-          alt={AGENCY.contact.name}
-          width={100}
-          height={76}
-          className="mt-14 h-auto w-28"
+        <AnimatedSignature
+          paths={[...noraStorySignaturePaths]}
+          pathTransforms={[...noraStorySignaturePathTransforms]}
+          viewBox={noraStorySignatureViewBox}
+          width={130}
+          height={98}
+          strokeWidth={noraStorySignatureStrokeWidth}
+          strokeColor={noraStorySignatureStrokeColor}
+          fillColor={noraStorySignatureFillColor}
+          fillRule={noraStorySignatureFillRule}
+          duration={0.01}
+          delay={0}
+          stagger={0}
+          timeline="sequential"
+          className="mt-14 opacity-80"
         />
 
         <div className="mt-4 text-lg">
