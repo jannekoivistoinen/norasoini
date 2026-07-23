@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { AdminProduct } from "@/lib/whynotpr/products";
-import ProductImage from "@/app/whynotpr/showroom/ProductImage";
+import ProductImage from "@/app/whynotpr/kuvapankki/ProductImage";
 
 export default function AdminProductList({
   products,

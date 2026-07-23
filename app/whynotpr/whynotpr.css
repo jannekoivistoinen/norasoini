@@ -8,12 +8,12 @@
  * Fonts (--wnp-font-*) are injected by app/whynotpr/layout.tsx via next/font.
  */
 .wnp {
-  --wnp-bg: #f6f4ef;
+  --wnp-bg: #e1d9cb;
   --wnp-surface: #ffffff;
   --wnp-ink: #17150f;
   --wnp-muted: #545048;
-  --wnp-line: #e4dfd5;
-  --wnp-accent: #9a7b4f;
+  --wnp-line: #d4ccbd;
+  --wnp-accent: #c7617e;
   --wnp-accent-ink: #ffffff;
 
   background-color: var(--wnp-bg);
@@ -32,6 +32,21 @@
 
 .wnp a {
   color: inherit;
+}
+
+/* Landing page uses the Bodoni display serif for body copy too. */
+.wnp-landing {
+  font-family: var(--wnp-font-display), "Bodoni Moda", Georgia, serif;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "calt" 1;
+}
+.wnp-landing h1 {
+  letter-spacing: -0.015em;
+  word-spacing: 0.02em;
+}
+.wnp-landing .wnp-hero-text {
+  text-shadow: 0 1px 24px rgba(0, 0, 0, 0.28);
 }
 
 .wnp-showroom a {

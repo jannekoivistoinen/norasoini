@@ -9,13 +9,16 @@ export const AGENCY = {
   // One or two sentences shown on the landing page.
   tagline: "Viestintä- ja PR-toimisto, joka tuo kauneus- ja lifestyle-brändit esiin.",
   introHeadline:
-    "WHY NOT PR Oy on pieni ja asiantunteva PR- ja viestintätoimisto, joka tarjoaa asiakkailleen räätälöityjä ratkaisuja ja joustavaa yhteistyötä.",
+    "WHY NOT PR on ketterä ja asiantunteva PR- ja viestintätoimisto, joka tarjoaa brändeille räätälöityjä ratkaisuja ja sujuvaa, joustavaa yhteistyötä.",
   introBody: [
-    "Perustettu elokuussa 2011, toimistomme on erikoistunut kauneusalan viestintään, ja meillä on vankat suhteet niin mediaan kuin alan asiantuntijoihin.",
-    "Online Showroom palvelut saatavilla median edustajille 24/7: painokelpoiset kuvat, tuotteiden vähittäismyyntihinnat, tiedustelunumerot lehdistölle, lisätietoja tuotteista ja brändeistä, brändien jakelukanavat ja lehdistötiedotteet lanseerausjärjestyksessä.",
+    "Elokuussa 2011 perustettu toimistomme on erikoistunut kauneusalan viestintään. Vuosien aikana olemme rakentaneet vahvat suhteet mediaan ja vaikuttajiin, mikä auttaa asiakkaitamme saavuttamaan näkyvyyttä oikeissa kanavissa ja oikeille kohderyhmille.",
+    "Räätälöimme viestinnän ja PR:n ratkaisut juuri brändisi tarpeisiin. Tuotamme vaikuttavaa sisältöä sosiaaliseen mediaan, toteutamme vaikuttajayhteistyöt alusta loppuun sekä suunnittelemme ja toteutamme tapahtumia kokonaisuuksina tai valittuina osa-alueina. Seuraamme näkyvyyttä printti- ja digitaalisessa mediassa sekä raportoimme tulokset selkeästi.",
+    "Median ja yhteistyökumppaneiden käytettävissä on kuvapankki ympäri vuorokauden. Palvelusta löytyvät painokelpoiset kuvat ja tuotteiden vähittäismyyntihinnat.",
   ],
+  introTagline: "Asiantuntevaa PR:ää. Pitkäjänteisiä suhteita. Vaikuttavia tuloksia.",
   contact: {
     name: "Nora Soini",
+    company: "WHY NOT PR Oy",
     email: "nora@whynotpr.fi",
     phone: "+358 40 550 1155",
   },

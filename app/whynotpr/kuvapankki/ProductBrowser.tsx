@@ -108,7 +108,7 @@ export default function ProductBrowser({
           {filtered.map((p) => (
             <li key={p.id} className="wnp-product-card h-full">
               <Link
-                href={`/showroom/${p.id}`}
+                href={`/kuvapankki/${p.id}`}
                 className="group flex h-full flex-col overflow-hidden rounded-xl border border-[var(--wnp-line)] bg-[var(--wnp-surface)] transition-shadow hover:shadow-md"
               >
                 <div className="aspect-square p-8">

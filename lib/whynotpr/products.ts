@@ -27,7 +27,7 @@ export type Product = {
   supplierCode: string;
 };
 
-// Minimal payload for the showroom product grid (no HTML bodies).
+// Minimal payload for the kuvapankki product grid (no HTML bodies).
 export type ProductListItem = {
   id: string;
   name: string;
@@ -146,7 +146,7 @@ const loadProducts = cache(async (): Promise<Product[]> => {
   return withOverrides(raw, overrides);
 });
 
-// Showroom-facing products with image overrides applied (hidden removed, reordered).
+// Kuvapankki-facing products with image overrides applied (hidden removed, reordered).
 export async function fetchProducts(): Promise<Product[]> {
   return loadProducts();
 }
