@@ -38,6 +38,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# whynotpr admin image overrides (local dev fallback store)
-.whynotpr-overrides.json
