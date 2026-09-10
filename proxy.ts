@@ -4,20 +4,21 @@ import { routing } from "./i18n/routing";
 
 const intlMiddleware = createMiddleware(routing);
 
-// The Why Not PR mini-site + portal live on the whynotpr.* subdomain and are
-// served from the /whynotpr route tree. Everything else is the localized main
-// site handled by next-intl.
-const WHYNOTPR_HOST_PREFIX = "whynotpr.";
+// The Why Not PR site used to be served from this app's /whynotpr route tree on
+// the whynotpr.norasoini.fi subdomain. It now lives in its own project on
+// whynotpr.fi, so anything still reaching the old subdomain — links, bookmarks,
+// crawlers — is sent there permanently.
+const LEGACY_WHYNOTPR_HOST = "whynotpr.norasoini.fi";
 
 export default function proxy(req: NextRequest) {
   const host = req.headers.get("host") ?? "";
 
-  if (host.startsWith(WHYNOTPR_HOST_PREFIX)) {
-    const url = req.nextUrl.clone();
-    if (!url.pathname.startsWith("/whynotpr")) {
-      url.pathname = `/whynotpr${url.pathname === "/" ? "" : url.pathname}`;
-    }
-    return NextResponse.rewrite(url);
+  if (host === LEGACY_WHYNOTPR_HOST) {
+    const target = new URL(
+      `${req.nextUrl.pathname}${req.nextUrl.search}`,
+      "https://whynotpr.fi",
+    );
+    return NextResponse.redirect(target, 301);
   }
 
   return intlMiddleware(req);
