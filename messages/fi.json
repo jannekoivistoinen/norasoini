@@ -3,7 +3,7 @@
     "homepage": {
       "metadata": {
         "title": "Nora Soini – Lyhytterapeutti & kraniosakraaliterapeutti Espoo",
-        "description": "Läsnäolon ja systeemisyyden lyhytterapeutti sekä kraniosakraaliterapeuttiopiskelija Espoossa. Tarjoan yksilöterapiaa ja kehollisia hoitoja.",
+        "description": "Läsnäolon ja systeemisyyden lyhytterapeutti sekä kraniosakraaliterapeutti Espoossa. Tarjoan yksilöterapiaa ja kehollisia hoitoja.",
         "keywords": [
           "terapia",
           "lyhytterapia",
@@ -56,7 +56,7 @@
         "quote": "\"Uskon, että jokaisessa ihmisessä on jo olemassa suunta kohti tasapainoa.\"",
         "attribution": "Nora Soini",
         "heading": "Työskentelyni on rauhallista, asiakaslähtöistä ja luottamuksellista.",
-        "description": "Opiskelen parhaillaan kraniosakraaliterapeutiksi, valmistun syksyllä 2026. Teen opintojeni aikana harjoitushoitoja edulliseen hintaan. Lisäksi opiskelen energiahoitajaksi ja valmistun keväällä 2027.\n\nTyöskentelyssäni tärkeintä on turvallinen, rauhallinen tila, jossa ihminen voi tulla kohdatuksi kokonaisena – kehon, tunteiden ja mielen tasolla.\n\nOma matkani tähän työhön on kulkenut pitkän henkilökohtaisen kasvun kautta. Omat kokemukseni ovat opettaneet minulle paljon ihmisyydestä ja siitä, miten ihminen voi löytää tien takaisin yhteyteen itseensä.",
+        "description": "Työskentelyssäni tärkeintä on turvallinen, rauhallinen tila, jossa ihminen voi tulla kohdatuksi kokonaisena – kehon, tunteiden ja mielen tasolla.\n\nOma matkani tähän työhön on kulkenut pitkän henkilökohtaisen kasvun kautta. Omat kokemukseni ovat opettaneet minulle paljon ihmisyydestä ja siitä, miten ihminen voi löytää tien takaisin yhteyteen itseensä.",
         "cta": "Lue lisää Norasta"
       },
       "pillars": {
@@ -224,12 +224,11 @@
     "about": {
       "metadata": {
         "title": "Nora Soini – Läsnäolon terapeutti Espoossa",
-        "description": "Opiskelen kraniosakraaliterapeutiksi (valmistun syksyllä 2026) ja energiahoitajaksi (kevät 2027). Lyhytterapeutti Espoossa.",
+        "description": "Läsnäolon ja systeemisyyden lyhytterapeutti sekä kraniosakraaliterapeutti Espoossa.",
         "keywords": ["nora soini", "terapeutti", "espoo"]
       },
       "hero": {
-        "heading": "Olen Nora Soini, Läsnäolon ja systeemisyyden lyhytterapeutti Espoosta.",
-        "ingress": "Opiskelen parhaillaan kraniosakraaliterapeutiksi, valmistun syksyllä 2026. Teen opintojeni aikana harjoitushoitoja edulliseen hintaan. Lisäksi opiskelen energiahoitajaksi ja valmistun keväällä 2027.",
+        "heading": "Olen Nora Soini, läsnäolon ja systeemisyyden lyhytterapeutti sekä kraniosakraaliterapeutti Espoosta.",
         "cta": "Varaa aika"
       },
       "bento": {

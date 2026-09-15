@@ -63,8 +63,6 @@ export default function AboutPage() {
       {/* Hero */}
       <PageHero
         heading={t("hero.heading")}
-        ingress={t("hero.ingress")}
-        ingressClassName="max-w-[50ch] mx-auto"
       />
 
       {/* Bento photo grid */}

@@ -65,7 +65,7 @@ export default async function Page({ params }: Props) {
     email: COMPANY_METADATA.contact.email,
     image: `${COMPANY_METADATA.url}/og-image.jpg`,
     jobTitle: t("credentials.titles.0"),
-    description: t("hero.ingress"),
+    description: t("hero.heading"),
     address: {
       "@type": "PostalAddress",
       addressLocality: "Espoo",
