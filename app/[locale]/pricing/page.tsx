@@ -93,8 +93,8 @@ export default async function Page({ params }: Props) {
               : "Craniosacral therapy",
           description:
             locale === "fi"
-              ? "Lempeä ja syvärentouttava hoitomuoto, 60 min, Espoossa"
-              : "Gentle, deeply relaxing treatment, 60 min, in Espoo",
+              ? "Lempeä, kuuntelevaan kosketukseen perustuva hoito, 60 min, Espoossa"
+              : "Gentle treatment based on listening touch, 60 min, in Espoo",
           price: "89",
           priceCurrency: "EUR",
           priceSpecification: {
