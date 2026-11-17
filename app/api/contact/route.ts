@@ -57,6 +57,7 @@ export async function POST(req: Request) {
     const { error } = await resend.emails.send({
       from,
       to: CONTACT_TO_EMAIL,
+      replyTo: data.email,
       subject: CONTACT_SUBJECT || "New contact form submission",
       text,
       html,

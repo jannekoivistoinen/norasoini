@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import {
@@ -35,6 +35,7 @@ export default function Navigation() {
   );
   const locale = useLocale();
   const router = useRouter();
+  const tA11y = useTranslations("component.a11y");
 
   // Track scroll position for header styling
   useEffect(() => {
@@ -82,7 +83,7 @@ export default function Navigation() {
       }`}
     >
       <nav
-        aria-label="Global"
+        aria-label={tA11y("mainNav")}
         className="relative z-[9992] w-full flex items-center justify-between px-6 md:px-10 py-6"
       >
         {/* Logo */}
@@ -139,12 +140,13 @@ export default function Navigation() {
         {/* Mobile hamburger / close toggle */}
         <motion.div {...navAnim(0.15)} className="md:hidden">
           <Button
-            className="group"
             variant="outline"
             size="icon"
+            className="group h-11 w-11"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
             aria-expanded={mobileMenuOpen}
-            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-controls="mobile-navigation"
+            aria-label={mobileMenuOpen ? tA11y("closeMenu") : tA11y("openMenu")}
           >
             <svg
               className="pointer-events-none"

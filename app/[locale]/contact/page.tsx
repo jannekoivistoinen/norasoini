@@ -57,7 +57,7 @@ export default async function Page({ params }: Props) {
 
   const contactSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
     "@id": `${COMPANY_METADATA.url}#localbusiness`,
     name: COMPANY_METADATA.name,
     url: COMPANY_METADATA.url,
@@ -72,7 +72,6 @@ export default async function Page({ params }: Props) {
       email: COMPANY_METADATA.contact.email,
       contactType: "customer service",
       availableLanguage: ["Finnish", "English"],
-      contactOption: "TollFree",
     },
     areaServed: [
       { "@type": "City", name: "Espoo" },

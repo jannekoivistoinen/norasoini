@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown, Globe } from "lucide-react";
 import {
   NAVIGATION_LINKS,
@@ -28,6 +28,7 @@ import { containerVariants, itemVariants } from "./animations";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import { openVelloModal } from "@/lib/openVelloModal";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 type MobileNavigationProps = {
   mobileMenuOpen: boolean;
@@ -48,6 +49,8 @@ export default function MobileNavigation({
   locale,
   router,
 }: MobileNavigationProps) {
+  const tA11y = useTranslations("component.a11y");
+
   // Close on ESC
   useEffect(() => {
     const handleEscKey = (event: KeyboardEvent) => {
@@ -80,9 +83,9 @@ export default function MobileNavigation({
         exit={{ y: "-100%" }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
         className="fixed inset-x-0 top-0 z-[9991] flex h-[95dvh] w-full flex-col overflow-hidden rounded-b-2xl bg-brand-bg pt-24 shadow-2xl md:hidden"
-        role="dialog"
-        aria-modal="true"
-        aria-label="Mobile navigation"
+        id="mobile-navigation"
+        role="navigation"
+        aria-label={tA11y("mobileNav")}
       >
         <div className="flex flex-1 min-h-0 flex-col overflow-y-auto px-6 pb-6">
           {/* Everything flows from the bottom up */}

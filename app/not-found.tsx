@@ -8,13 +8,17 @@ import {
 } from "@/lib/constants";
 import TerminalCTA from "@/components/sections/TerminalCTA";
 import VelloModal from "@/components/VelloModal";
+import { NextIntlClientProvider } from "next-intl";
+import fiMessages from "@/messages/fi.json";
 import "./globals.css";
 
 export default function NotFound() {
   return (
     <html lang="fi" className={fontHtmlClassName}>
       <body className="flex flex-col min-h-screen bg-brand-bg">
-        <VelloModal />
+        <NextIntlClientProvider locale="fi" messages={fiMessages}>
+          <VelloModal />
+        </NextIntlClientProvider>
         <header className="sticky z-[9999] top-0 w-full bg-brand-bg border-b border-black/10">
           <nav className="w-full flex items-center justify-between px-6 md:px-10 py-6">
             <Link

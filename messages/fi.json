@@ -111,7 +111,7 @@
           },
           {
             "question": "Onko terapia luottamuksellista?",
-            "answer": "Kyllä. Kaikki terapiasessioissa käsitellyt asiat ovat luottamuksellisia. Minulla on salassapitovelvollisuus."
+            "answer": "Kyllä. Kaikki terapiatapaamisissa käsitellyt asiat ovat luottamuksellisia. Minulla on salassapitovelvollisuus."
           },
           {
             "question": "Kuinka pitkään terapia kestää?",
@@ -159,7 +159,7 @@
     "services": {
       "metadata": {
         "title": "Lyhytterapia ja kraniosakraaliterapia Espoossa ja verkossa – Nora Soini",
-        "description": "Tarjoan lyhytterapiaa Espoossa ja etänä, kraniosakraaliterapiaa Espoossa sekä näitä yhdistävää kokonaisvaltaista hoitoa. Voit valita sinulle sopivimman tavan – keskustelun, kehollisen hoidon tai molemmat yhdessä.",
+        "description": "Lyhytterapiaa Espoossa ja etänä, kraniosakraaliterapiaa Espoossa sekä näitä yhdistävä hoito. Valitse keskustelu, kehollinen hoito tai molemmat.",
         "keywords": [
           "lyhytterapia",
           "kraniosakraaliterapia",
@@ -180,12 +180,12 @@
       },
       "visitFlow": {
         "heading": "Miten käynti etenee?",
-        "description": "Aloitamme rauhallisella keskustelulla, jonka jälkeen siirrytään kraniosakraaliterapiaan. Tämä mahdollistaa sekä asioiden jäsentymisen että kehon syvän rentoutumisen.",
+        "description": "Aloitamme rauhallisella keskustelulla, jonka jälkeen siirrymme kraniosakraaliterapiaan. Tämä mahdollistaa sekä asioiden jäsentymisen että kehon syvän rentoutumisen.",
         "steps": [
           {
             "number": "1",
             "title": "Saapuminen ja alkuhetki",
-            "description": "Kun saavut vastaanottolle, ensin rauhoitutaan hetkeksi. Sinulla ei tarvitse olla valmiina vastauksia tai kysymyksiä  – voit tulla juuri sellaisena kuin olet."
+            "description": "Kun saavut vastaanotolle, rauhoitumme ensin hetkeksi. Sinulla ei tarvitse olla valmiina vastauksia tai kysymyksiä – voit tulla juuri sellaisena kuin olet."
           },
           {
             "number": "2",
@@ -223,9 +223,13 @@
     },
     "about": {
       "metadata": {
-        "title": "Nora Soini – Läsnäolon terapeutti Espoossa",
-        "description": "Läsnäolon ja systeemisyyden lyhytterapeutti sekä kraniosakraaliterapeutti Espoossa.",
-        "keywords": ["nora soini", "terapeutti", "espoo"]
+        "title": "Noran tarina – Nora Soini, terapeutti Espoossa",
+        "description": "Kuka on Nora Soini? Lue tarinani, koulutukseni ja se, miten työskentelen läsnäolon ja systeemisyyden lyhytterapeuttina ja kraniosakraaliterapeuttina Espoossa.",
+        "keywords": [
+          "nora soini",
+          "terapeutti",
+          "espoo"
+        ]
       },
       "hero": {
         "heading": "Olen Nora Soini, läsnäolon ja systeemisyyden lyhytterapeutti sekä kraniosakraaliterapeutti Espoosta.",
@@ -280,7 +284,10 @@
             "name": "Marianna Soveri",
             "url": "https://www.instagram.com/mariannasoveri_healinghouse.fi"
           },
-          { "name": "Jani Roman", "url": "https://www.ioast.fi" },
+          {
+            "name": "Jani Roman",
+            "url": "https://www.ioast.fi"
+          },
           {
             "name": "Maippi Tuovinen ja Maarit Vilpas",
             "url": "https://www.instagram.com/kraniopulssi"
@@ -292,14 +299,22 @@
           "quote": "*Asiakaspalaute tulossa*",
           "attribution": "Asiakaspalaute"
         },
-        { "quote": "*Asiakaspalaute tulossa*", "attribution": "Asiakaspalaute" }
+        {
+          "quote": "*Asiakaspalaute tulossa*",
+          "attribution": "Asiakaspalaute"
+        }
       ]
     },
     "contact": {
       "metadata": {
         "title": "Yhteystiedot – Nora Soini",
         "description": "Varaa aika lyhytterapiaan tai kraniosakraaliterapiaan Espoossa tai etänä. Tarjoan maksuttoman 15 min tutustumispuhelun. Vastaan 1–2 arkipäivässä.",
-        "keywords": ["yhteystiedot", "varaa aika", "nora soini", "espoo"]
+        "keywords": [
+          "yhteystiedot",
+          "varaa aika",
+          "nora soini",
+          "espoo"
+        ]
       },
       "hero": {
         "title": "Ota yhteyttä",
@@ -310,7 +325,9 @@
         "title": "Yhteystiedot",
         "info": "Vastaanotto Tapiolan alueella Espoossa sekä etänä videopuhelun välityksellä. Tarjoan myös maksuttoman 15 minuutin tutustumispuhelun – lyhyt, sitoutumaton puhelu, jossa voit kertoa tilanteestasi ja kysyä mitä tahansa.",
         "email": "nora@norasoini.fi",
-        "formTitle": "Lähetä viesti"
+        "formTitle": "Lähetä viesti",
+        "portraitAlt": "Nora Soini – terapeutti Espoossa",
+        "role": "Lyhytterapeutti & kraniosakraaliterapeutti"
       },
       "testimonials": {
         "heading": "Asiakaspalautteita",
@@ -363,7 +380,13 @@
       "metadata": {
         "title": "Hinnasto – Nora Soini",
         "description": "Lyhytterapia ja kraniosakraaliterapia 89 € / kerta, yhdistelmähoito 129 €. Kaikki hinnat ja kestot – Nora Soini, Espoo.",
-        "keywords": ["hinnasto", "hinta", "varaa aika", "espoo", "nora soini"]
+        "keywords": [
+          "hinnasto",
+          "hinta",
+          "varaa aika",
+          "espoo",
+          "nora soini"
+        ]
       },
       "hero": {
         "heading": "Hinnasto",
@@ -486,7 +509,7 @@
             },
             {
               "question": "Onko terapia luottamuksellista?",
-              "answer": "Kyllä, ehdottomasti. Kaikki terapiasessioissa käsitellyt asiat ovat täysin luottamuksellisia. Minulla on vaitiolovelvollisuus, eikä tietojasi jaeta eteenpäin ilman lupaasi. Turvallisuuden ja luottamuksen tunne on koko työskentelymme perusta."
+              "answer": "Kyllä, ehdottomasti. Kaikki terapiatapaamisissa käsitellyt asiat ovat täysin luottamuksellisia. Minulla on vaitiolovelvollisuus, eikä tietojasi jaeta eteenpäin ilman lupaasi. Turvallisuuden ja luottamuksen tunne on koko työskentelymme perusta."
             },
             {
               "question": "Pitääkö minun tietää jotain erityistä?",
@@ -527,8 +550,8 @@
               "answer": "Kyllä, terapiatapaamiset voidaan järjestää myös etänä videopuhelun välityksellä. Etätapaamiset ovat hyvä vaihtoehto, jos et pysty tulemaan paikan päälle tai arvostat kotoa käsin työskentelemistä. Kraniosakraalihoidot tehdään aina lähitapaamisina."
             },
             {
-              "question": "Pitääkö tapaamisen valmistautua jotenkin?",
-              "answer": "Et tarvitse erityistä valmistautumista. On hyvä varata hetki rauhoittumiseen ennen tapaamista, jos se on mahdollista – mutta sekään ei ole pakollista. Tule omana itsenäsi, juuri sen hetkisessä tilanteessasi. Se on täysin riittävää."
+              "question": "Pitääkö tapaamiseen valmistautua jotenkin?",
+              "answer": "Et tarvitse erityistä valmistautumista. On hyvä varata hetki rauhoittumiseen ennen tapaamista, jos se on mahdollista – mutta sekään ei ole pakollista. Tule omana itsenäsi, juuri senhetkisessä tilanteessasi. Se on täysin riittävää."
             }
           ]
         },
@@ -541,7 +564,7 @@
             },
             {
               "question": "Miten voin varata ajan?",
-              "answer": "Voit varata ajan suoraan \"Varaa aika\" -painikkeesta, ottamalla yhteyttä sähköpostilla osoitteeseen nora@norasoini.fi tai täyttämällä yhteydenottolomakkeen tällä sivustolla. Vastaan viesteihin yleensä 1–2 arkipäivän kuluessa ja sovitaan yhdessä sopiva aika."
+              "answer": "Voit varata ajan suoraan \"Varaa aika\" -painikkeesta, ottamalla yhteyttä sähköpostilla osoitteeseen nora@norasoini.fi tai täyttämällä yhteydenottolomakkeen tällä sivustolla. Vastaan viesteihin yleensä 1–2 arkipäivän kuluessa, ja sovimme yhdessä sopiva aika."
             },
             {
               "question": "Millä tavalla voin maksaa?",
@@ -557,12 +580,28 @@
               "answer": "Peruutukset tehdään sähköpostilla osoitteeseen nora@norasoini.fi. Ilmoita peruutuksesta mahdollisimman pian, jotta aika voidaan tarjota toiselle sitä tarvitsevalle."
             },
             {
-              "question": "Mitä tapahtuu jos peruutan myöhässä?",
+              "question": "Mitä tapahtuu, jos peruutan liian myöhään?",
               "answer": "Peruutuksista tulee ilmoittaa viimeistään 24 tuntia ennen tapaamista. Myöhemmistä peruutuksista veloitetaan täysi tapaamismaksu, koska varattua aikaa ei enää pystytä täyttämään. Ymmärrän, että yllättäviä tilanteita sattuu – jos sinulla on jokin erityinen syy, voidaan asiasta sopia erikseen."
             }
           ]
         }
       ]
+    },
+    "a11y": {
+      "skipToContent": "Siirry sisältöön",
+      "mainNav": "Päävalikko",
+      "mobileNav": "Mobiilivalikko",
+      "openMenu": "Avaa valikko",
+      "closeMenu": "Sulje valikko",
+      "bookingDialog": "Ajanvaraus",
+      "close": "Sulje",
+      "playVideo": "Toista video",
+      "pauseVideo": "Keskeytä video"
+    },
+    "notFound": {
+      "title": "Sivua ei löydy",
+      "description": "Etsimääsi sivua ei ole olemassa tai se on siirretty.",
+      "backHome": "Palaa etusivulle"
     }
   }
 }

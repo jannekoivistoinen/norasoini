@@ -1,9 +1,14 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
-import { SITE_CONFIG } from "@/lib/constants";
+import { localePath, SITE_CONFIG } from "@/lib/constants";
 
 const Footer = () => {
   const t = useTranslations("component.footer");
+  const locale = useLocale() as "fi" | "en";
+  const pricingHref = localePath(
+    locale,
+    SITE_CONFIG.i18n.routes.pricing[locale],
+  );
 
   return (
     <footer>
@@ -46,6 +51,12 @@ const Footer = () => {
               </Link>
             </div>
             <p className="text-base text-center md:text-left">{t("tagline")}</p>
+            <Link
+              href={pricingHref}
+              className="inline-block mt-2 text-base text-white underline underline-offset-4 hover:opacity-80 transition"
+            >
+              {t("ctaButtonSecondary")}
+            </Link>
           </div>
           <div className="text-center md:text-right">
             <a

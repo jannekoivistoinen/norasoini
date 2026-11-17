@@ -49,39 +49,65 @@ const ContactFormContent = () => {
       aria-busy={isSubmitting}
       className="contact-form flex flex-col gap-4"
     >
-      <input type="checkbox" className="hidden" {...register("botcheck")} />
+      <input
+        type="checkbox"
+        className="hidden"
+        tabIndex={-1}
+        aria-hidden="true"
+        {...register("botcheck")}
+      />
 
       <div className="flex gap-4">
         <div className="flex-1">
+          <label htmlFor="contact-firstName" className="sr-only">
+            {t("placeholders.firstName")}
+          </label>
           <input
             type="text"
+            id="contact-firstName"
             placeholder={t("placeholders.firstName")}
             autoComplete="given-name"
             aria-invalid={errors.firstName ? true : undefined}
+            aria-describedby={
+              errors.firstName ? "contact-firstName-error" : undefined
+            }
             className={errors.firstName ? inputError : inputBase}
             {...register("firstName", {
               required: t("validation.firstNameRequired"),
             })}
           />
           {errors.firstName && (
-            <p className="mt-1 text-xs text-red-500">
+            <p
+              id="contact-firstName-error"
+              className="mt-1 text-sm text-red-700"
+            >
               {errors.firstName.message}
             </p>
           )}
         </div>
         <div className="flex-1">
+          <label htmlFor="contact-lastName" className="sr-only">
+            {t("placeholders.lastName")}
+          </label>
           <input
             type="text"
+            id="contact-lastName"
             placeholder={t("placeholders.lastName")}
             autoComplete="family-name"
             aria-invalid={errors.lastName ? true : undefined}
+            aria-describedby={
+              errors.lastName ? "contact-lastName-error" : undefined
+            }
             className={errors.lastName ? inputError : inputBase}
             {...register("lastName", {
               required: t("validation.lastNameRequired"),
             })}
           />
           {errors.lastName && (
-            <p className="mt-1 text-xs text-red-500">
+            <p
+              id="contact-lastName-error"
+              className="mt-1 text-sm text-red-700"
+            >
               {errors.lastName.message}
             </p>
           )}
@@ -89,11 +115,16 @@ const ContactFormContent = () => {
       </div>
 
       <div>
+        <label htmlFor="contact-email" className="sr-only">
+          {t("placeholders.email")}
+        </label>
         <input
           type="email"
+          id="contact-email"
           placeholder={t("placeholders.email")}
           autoComplete="email"
           aria-invalid={errors.email ? true : undefined}
+          aria-describedby={errors.email ? "contact-email-error" : undefined}
           className={errors.email ? inputError : inputBase}
           {...register("email", {
             required: t("validation.emailRequired"),
@@ -104,13 +135,19 @@ const ContactFormContent = () => {
           })}
         />
         {errors.email && (
-          <p className="mt-1 text-xs text-red-500">{errors.email.message}</p>
+          <p id="contact-email-error" className="mt-1 text-sm text-red-700">
+            {errors.email.message}
+          </p>
         )}
       </div>
 
       <div>
+        <label htmlFor="contact-phone" className="sr-only">
+          {t("placeholders.phone")}
+        </label>
         <input
           type="tel"
+          id="contact-phone"
           placeholder={t("placeholders.phone")}
           autoComplete="tel"
           aria-invalid={errors.phone ? true : undefined}
@@ -120,17 +157,26 @@ const ContactFormContent = () => {
       </div>
 
       <div>
+        <label htmlFor="contact-message" className="sr-only">
+          {t("placeholders.message")}
+        </label>
         <textarea
           rows={5}
+          id="contact-message"
           placeholder={t("placeholders.message")}
           aria-invalid={errors.message ? true : undefined}
+          aria-describedby={
+            errors.message ? "contact-message-error" : undefined
+          }
           className={`resize-none ${errors.message ? inputError : inputBase}`}
           {...register("message", {
             required: t("validation.messageRequired"),
           })}
         />
         {errors.message && (
-          <p className="mt-1 text-xs text-red-500">{errors.message.message}</p>
+          <p id="contact-message-error" className="mt-1 text-sm text-red-700">
+            {errors.message.message}
+          </p>
         )}
       </div>
 
@@ -145,13 +191,21 @@ const ContactFormContent = () => {
         )}
       </Button>
 
-      {isSuccess && (
-        <p className=" text-brand-primary text-center">{t("successMessage")}</p>
-      )}
+      <div role="status" aria-live="polite">
+        {isSuccess && (
+          <p className="text-brand-primary text-center">
+            {t("successMessage")}
+          </p>
+        )}
+      </div>
 
-      {errorMsg && (
-        <p className="text-xs text-red-500 text-center">{t("errorMessage")}</p>
-      )}
+      <div role="alert">
+        {errorMsg && (
+          <p className="text-sm text-red-700 text-center">
+            {t("errorMessage")}
+          </p>
+        )}
+      </div>
     </form>
   );
 };
