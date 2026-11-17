@@ -4,7 +4,13 @@
       "metadata": {
         "title": "Nora Soini – Therapist & Craniosacral Therapy Espoo",
         "description": "Short-term therapist in presence and systemic approaches and craniosacral therapist, based in Espoo.",
-        "keywords": ["therapy", "short-term therapy", "craniosacral therapy", "espoo", "nora soini"]
+        "keywords": [
+          "therapy",
+          "short-term therapy",
+          "craniosacral therapy",
+          "espoo",
+          "nora soini"
+        ]
       },
       "hero": {
         "heading": "Gently by your side through change",
@@ -19,11 +25,26 @@
         "heading": "Situations I can help with",
         "description": "Every situation is unique. You are welcome to come, for example, when:",
         "cards": [
-          { "title": "Stress, strain or exhaustion", "description": "When life feels heavy or you tire easily, or when your body and mind need room to settle and recover." },
-          { "title": "A turning point in life", "description": "You are in transition – a new chapter, a decision or a change is asking for space and to be truly heard." },
-          { "title": "Clarity and direction", "description": "You long for clarity or a sense of direction: you want to recognise your own wishes and make choices that feel right." },
-          { "title": "Deeper self-understanding", "description": "You want to understand yourself and your experiences more deeply – in a gentle, safe pace, without rush." },
-          { "title": "Gentle somatic support", "description": "You hope for gentle, body-based support for recovery – space to listen to your body, your feelings and your nervous system." }
+          {
+            "title": "Stress, strain or exhaustion",
+            "description": "When life feels heavy or you tire easily, or when your body and mind need room to settle and recover."
+          },
+          {
+            "title": "A turning point in life",
+            "description": "You are in transition – a new chapter, a decision or a change is asking for space and to be truly heard."
+          },
+          {
+            "title": "Clarity and direction",
+            "description": "You long for clarity or a sense of direction: you want to recognise your own wishes and make choices that feel right."
+          },
+          {
+            "title": "Deeper self-understanding",
+            "description": "You want to understand yourself and your experiences more deeply – at a gentle, safe pace, without rush."
+          },
+          {
+            "title": "Gentle somatic support",
+            "description": "You hope for gentle, body-based support for recovery – space to listen to your body, your feelings and your nervous system."
+          }
         ]
       },
       "servicesSlider": {
@@ -42,44 +63,110 @@
         "heading": "Three cornerstones of my practice",
         "description": "I combine conversation, presence and somatic listening to create a holistic and safe space.",
         "items": [
-          { "icon": "comments", "title": "Conversation", "description": "Together we explore feelings, bodily experiences and the relationships and life history that shape you – in a genuine, safe encounter. You get to talk about whatever feels most important right now." },
-          { "icon": "flower", "title": "Presence", "description": "A moment where you get to be seen and heard exactly as you are – without hurry or demands. Presence itself is a healing experience." },
-          { "icon": "seedling", "title": "Body awareness", "description": "Craniosacral therapy calms the nervous system through gentle touch. The body holds wisdom that words cannot always reach." }
+          {
+            "icon": "comments",
+            "title": "Conversation",
+            "description": "Together we explore feelings, bodily experiences and the relationships and life history that shape you – in a genuine, safe encounter. You get to talk about whatever feels most important right now."
+          },
+          {
+            "icon": "flower",
+            "title": "Presence",
+            "description": "A moment where you get to be seen and heard exactly as you are – without hurry or demands. Presence itself is a healing experience."
+          },
+          {
+            "icon": "seedling",
+            "title": "Body awareness",
+            "description": "Craniosacral therapy calms the nervous system through gentle touch. The body holds wisdom that words cannot always reach."
+          }
         ]
       },
       "process": {
         "heading": "How to get started",
         "description": "The first step of reaching out can feel big – that is why I want to make it as easy as possible.",
         "steps": [
-          { "number": "1", "title": "Free introductory call", "description": "A short, non-committal 15-minute call. You can share your situation and ask me anything." },
-          { "number": "2", "title": "Book a first appointment", "description": "You can also book directly. At the first session we will calmly go through your situation and wishes." },
-          { "number": "3", "title": "Send a message", "description": "Not sure which option suits you? Send me a message and I will help you find the right way to start." }
+          {
+            "number": "1",
+            "title": "Free introductory call",
+            "description": "A short, non-committal 15-minute call. You can share your situation and ask me anything."
+          },
+          {
+            "number": "2",
+            "title": "Book a first appointment",
+            "description": "You can also book directly. At the first session we will calmly go through your situation and wishes."
+          },
+          {
+            "number": "3",
+            "title": "Send a message",
+            "description": "Not sure which option suits you? Send me a message and I will help you find the right way to start."
+          }
         ]
       },
       "faq": {
         "heading": "Answers to common questions",
         "description": "It is completely normal for therapy or a new treatment to raise questions. You can also reach me at nora@norasoini.fi",
         "items": [
-          { "question": "How do I know if I need therapy?", "answer": "If something is weighing on your mind or your life situation feels burdensome, therapy can help. You don't need a 'big enough' problem. The first meeting is a free introduction." },
-          { "question": "Is therapy confidential?", "answer": "Yes. Everything discussed in therapy sessions is confidential. I am bound by professional secrecy." },
-          { "question": "How long does therapy last?", "answer": "Short-term therapy is typically 5–20 sessions. The length of the process is planned individually according to your needs." },
-          { "question": "How much does therapy cost?", "answer": "Short-term therapy and craniosacral therapy are €89 per session (60 min). Short-term therapy is not currently covered by Kela reimbursement, but it is worth checking with your employer or insurance company." },
-          { "question": "Can sessions be arranged remotely?", "answer": "Yes, short-term therapy sessions can be arranged remotely via video call. Craniosacral therapy is always in Espoo." },
-          { "question": "Do I need to know anything in particular?", "answer": "Nothing in particular. Come as you are." },
-          { "question": "What is craniosacral therapy?", "answer": "Craniosacral therapy is a gentle form of treatment based on light, listening touch, aimed at supporting relaxation and calm. The session progresses unhurriedly, respecting your body's sensations and your individual needs. Craniosacral therapy is a complementary wellbeing treatment and does not replace medical examination or treatment." },
-          { "question": "What is the treatment like in practice?", "answer": "The treatment is carried out fully clothed, lying on a therapy table. Touch is very light and the session progresses calmly, listening to the client's body. Many people find the treatment deeply relaxing." },
-          { "question": "Who is this treatment for?", "answer": "People often come to craniosacral therapy when there is strain, stress, restlessness or chronic tension in body or mind. The treatment can help you pause, calm down and strengthen your connection to your own body." },
-          { "question": "The idea behind the treatment", "answer": "Craniosacral therapy holds that the body has a natural capacity to move towards balance. The treatment supports this natural recovery gently and individually." },
-          { "question": "What is LST therapy based on?", "answer": "Presence and Systemic Therapy (LST) combines several therapeutic approaches: family constellation, emotion-focused therapy (EFT), ACT (acceptance and commitment therapy), solution-focused therapy and mindfulness. The person is seen as a whole." },
-          { "question": "Is craniosacral therapy covered by insurance?", "answer": "Craniosacral therapy does not replace a doctor's examination or other healthcare services, and no medical diagnosis is made. The treatment is not covered by Kela reimbursement." }
+          {
+            "question": "How do I know if I need therapy?",
+            "answer": "If something is weighing on your mind or your life situation feels burdensome, therapy can help. You don't need a 'big enough' problem. The first meeting is a free introduction."
+          },
+          {
+            "question": "Is therapy confidential?",
+            "answer": "Yes. Everything discussed in therapy sessions is confidential. I am bound by professional secrecy."
+          },
+          {
+            "question": "How long does therapy last?",
+            "answer": "Short-term therapy is typically 5–20 sessions. The length of the process is planned individually according to your needs."
+          },
+          {
+            "question": "How much does therapy cost?",
+            "answer": "Short-term therapy and craniosacral therapy are €89 per session (60 min). Short-term therapy is not currently reimbursed by Kela (the Finnish social insurance institution), but it is worth checking with your employer or insurance company."
+          },
+          {
+            "question": "Can sessions be arranged remotely?",
+            "answer": "Yes, short-term therapy sessions can be arranged remotely via video call. Craniosacral therapy is always in Espoo."
+          },
+          {
+            "question": "Do I need to know anything in particular?",
+            "answer": "Nothing in particular. Come as you are."
+          },
+          {
+            "question": "What is craniosacral therapy?",
+            "answer": "Craniosacral therapy is a gentle form of treatment based on light, listening touch, aimed at supporting relaxation and calm. The session progresses unhurriedly, respecting your body's sensations and your individual needs. Craniosacral therapy is a complementary wellbeing treatment and does not replace medical examination or treatment."
+          },
+          {
+            "question": "What is the treatment like in practice?",
+            "answer": "The treatment is carried out fully clothed, lying on a therapy table. Touch is very light and the session progresses calmly, listening to the client's body. Many people find the treatment deeply relaxing."
+          },
+          {
+            "question": "Who is this treatment for?",
+            "answer": "People often come to craniosacral therapy when there is strain, stress, restlessness or chronic tension in body or mind. The treatment can help you pause, calm down and strengthen your connection to your own body."
+          },
+          {
+            "question": "The idea behind the treatment",
+            "answer": "Craniosacral therapy holds that the body has a natural capacity to move towards balance. The treatment supports this natural recovery gently and individually."
+          },
+          {
+            "question": "What is LST therapy based on?",
+            "answer": "Presence and Systemic Therapy (LST) combines several therapeutic approaches: family constellation, emotion-focused therapy (EFT), ACT (acceptance and commitment therapy), solution-focused therapy and mindfulness. The person is seen as a whole."
+          },
+          {
+            "question": "Is craniosacral therapy covered by insurance?",
+            "answer": "Craniosacral therapy does not replace a doctor's examination or other healthcare services, and no medical diagnosis is made. The treatment is not covered by Kela reimbursement."
+          }
         ]
       }
     },
     "services": {
       "metadata": {
         "title": "Short-term therapy and craniosacral therapy in Espoo and online – Nora Soini",
-        "description": "I offer short-term therapy in Espoo and remotely, craniosacral therapy in Espoo, and holistic combination sessions that bring these together. You can choose what suits you best – conversation, body-based treatment, or both.",
-        "keywords": ["short-term therapy", "craniosacral therapy", "combination treatment", "espoo", "nora soini"]
+        "description": "Short-term therapy in Espoo and online, craniosacral therapy in Espoo, and combination sessions. Choose conversation, body-based care or both.",
+        "keywords": [
+          "short-term therapy",
+          "craniosacral therapy",
+          "combination treatment",
+          "espoo",
+          "nora soini"
+        ]
       },
       "hero": {
         "heading": "Short-term therapy and craniosacral therapy in Espoo and online",
@@ -95,9 +182,21 @@
         "heading": "How does a session unfold?",
         "description": "We begin with a gentle conversation, then move into craniosacral therapy. This allows both clarity of mind and deep relaxation of the body.",
         "steps": [
-          { "number": "1", "title": "Arrival and settling in", "description": "When you arrive, we take a moment to settle. You don't need to have anything figured out – you can come exactly as you are." },
-          { "number": "2", "title": "Gentle conversation", "description": "We begin with a calm conversation. You can share what is on your mind or what brought you here today." },
-          { "number": "3", "title": "Craniosacral therapy", "description": "We move into body-based care. Gentle touch calms the nervous system and allows both clarity of mind and deep relaxation of the body." }
+          {
+            "number": "1",
+            "title": "Arrival and settling in",
+            "description": "When you arrive, we take a moment to settle. You don't need to have anything figured out – you can come exactly as you are."
+          },
+          {
+            "number": "2",
+            "title": "Gentle conversation",
+            "description": "We begin with a calm conversation. You can share what is on your mind or what brought you here today."
+          },
+          {
+            "number": "3",
+            "title": "Craniosacral therapy",
+            "description": "We move into body-based care. Gentle touch calms the nervous system and allows both clarity of mind and deep relaxation of the body."
+          }
         ]
       },
       "testimonialsHeading": "What clients say",
@@ -105,7 +204,7 @@
         {
           "title": "Short-term therapy in Espoo and remotely",
           "intro": "Goal-oriented, practical conversational support that helps you organise your thoughts, process strain, and find a way forward.",
-          "body": "Short-term therapy is goal-oriented, practical conversational support that helps you organise your thoughts, process strain, and find a way forward.\n\n- Reception in the Tapiola area of Espoo or online\n- Duration: 60 min\n- Price: €89\n\n### Short-term therapy may suit you if:\n\n- you feel stress, exhaustion or anxiety\n- you long for clarity in your life situation\n- you want a safe space to speak and be heard",
+          "body": "Short-term therapy is goal-oriented, practical conversational support that helps you organise your thoughts, process strain, and find a way forward.\n\n- Sessions in the Tapiola area of Espoo or online\n- Duration: 60 min\n- Price: €89\n\n### Short-term therapy may suit you if:\n\n- you feel stress, exhaustion or anxiety\n- you long for clarity in your life situation\n- you want a safe space to speak and be heard",
           "cta": "Book short-term therapy"
         },
         {
@@ -125,7 +224,7 @@
     "about": {
       "metadata": {
         "title": "Nora Soini – Short-term Therapist in Espoo",
-        "description": "Short-term therapist in presence and systemic approaches and craniosacral therapist, based in Espoo.",
+        "description": "Who is Nora Soini? Read my story, my training and how I work as a short-term therapist and craniosacral therapist in Espoo.",
         "keywords": ["nora soini", "therapist", "espoo"]
       },
       "hero": {
@@ -160,18 +259,45 @@
         ],
         "teachersHeading": "Thanks to my teachers:",
         "teachers": [
-          { "name": "Rainer Puittinen", "url": "https://www.rainerpuittinen.com" },
-          { "name": "Deepthi (Kirsi Ranto)", "url": "https://www.pyhanainen.com" },
-          { "name": "Jutta Niala", "url": "https://www.instagram.com/juttaniala" },
-          { "name": "Annika Witting", "url": "https://www.instagram.com/annika.aurinko" },
-          { "name": "Marianna Soveri", "url": "https://www.instagram.com/mariannasoveri_healinghouse.fi" },
-          { "name": "Jani Roman", "url": "https://www.ioast.fi" },
-          { "name": "Maippi Tuovinen ja Maarit Vilpas", "url": "https://www.instagram.com/kraniopulssi" }
+          {
+            "name": "Rainer Puittinen",
+            "url": "https://www.rainerpuittinen.com"
+          },
+          {
+            "name": "Deepthi (Kirsi Ranto)",
+            "url": "https://www.pyhanainen.com"
+          },
+          {
+            "name": "Jutta Niala",
+            "url": "https://www.instagram.com/juttaniala"
+          },
+          {
+            "name": "Annika Witting",
+            "url": "https://www.instagram.com/annika.aurinko"
+          },
+          {
+            "name": "Marianna Soveri",
+            "url": "https://www.instagram.com/mariannasoveri_healinghouse.fi"
+          },
+          {
+            "name": "Jani Roman",
+            "url": "https://www.ioast.fi"
+          },
+          {
+            "name": "Maippi Tuovinen and Maarit Vilpas",
+            "url": "https://www.instagram.com/kraniopulssi"
+          }
         ]
       },
       "testimonials": [
-        { "quote": "*Client testimonial coming soon*", "attribution": "Client feedback" },
-        { "quote": "*Client testimonial coming soon*", "attribution": "Client feedback" }
+        {
+          "quote": "*Client testimonial coming soon*",
+          "attribution": "Client feedback"
+        },
+        {
+          "quote": "*Client testimonial coming soon*",
+          "attribution": "Client feedback"
+        }
       ]
     },
     "contact": {
@@ -189,7 +315,9 @@
         "title": "Contact details",
         "info": "Sessions in Espoo and online via video call.",
         "email": "nora@norasoini.fi",
-        "formTitle": "Send a message"
+        "formTitle": "Send a message",
+        "portraitAlt": "Nora Soini – therapist in Espoo",
+        "role": "Short-term therapist & craniosacral therapist"
       },
       "testimonials": {
         "heading": "What clients say",
@@ -242,13 +370,19 @@
       "metadata": {
         "title": "Pricing – Nora Soini",
         "description": "Short-term therapy and craniosacral therapy €89 per session, combination sessions €129. All prices and session lengths – Nora Soini, Espoo.",
-        "keywords": ["pricing", "rates", "book a session", "espoo", "nora soini"]
+        "keywords": [
+          "pricing",
+          "rates",
+          "book a session",
+          "espoo",
+          "nora soini"
+        ]
       },
       "hero": {
         "heading": "Pricing",
-        "ingress": "Below are prices for short therapy, craniosacral therapy, and combined sessions."
+        "ingress": "Prices for short-term therapy, craniosacral therapy and combination sessions."
       },
-      "body": "**Short therapy** (60 min) — €89 per session · in Espoo or online\n\n**Craniosacral therapy** (60 min) — €89 per session · in Espoo\n\n**Combined: short therapy + craniosacral therapy** (90 min) — €129 per session · in Espoo"
+      "body": "**Short-term therapy** (60 min) — €89 per session · in Espoo or online\n\n**Craniosacral therapy** (60 min) — €89 per session · in Espoo\n\n**Combination session: short-term therapy + craniosacral therapy** (90 min) — €129 per session · in Espoo"
     },
     "terms": {
       "metadata": {
@@ -312,8 +446,14 @@
     },
     "testimonials": {
       "items": [
-        { "name": "*Client testimonial coming soon*", "quote": "*Client testimonial coming soon*" },
-        { "name": "*Client testimonial coming soon*", "quote": "*Client testimonial coming soon*" }
+        {
+          "name": "*Client testimonial coming soon*",
+          "quote": "*Client testimonial coming soon*"
+        },
+        {
+          "name": "*Client testimonial coming soon*",
+          "quote": "*Client testimonial coming soon*"
+        }
       ]
     },
     "contactForm": {
@@ -344,45 +484,109 @@
         {
           "name": "Therapy",
           "items": [
-            { "question": "What is short-term therapy?", "answer": "Short-term therapy is goal-oriented, practical conversational support that helps you find clarity, direction and relief for the challenges of the present moment. In therapy we pause with your situation in a safe, confidential atmosphere where you can be truly heard.\n\nThe work emphasises presence – stopping in the moment and calmly exploring your experience – and a systemic perspective that takes into account relationships, interaction and your life situation as a whole. Together we look for new perspectives and concrete ways to support everyday life. Short-term therapy proceeds according to your goals and can bring significant insights and change even in a short time." },
-            { "question": "How do I know if I need therapy?", "answer": "If something is weighing on your mind, your life situation feels overwhelming, or you find yourself going over the same thoughts again and again – therapy can be exactly the right place to pause. You don't need a crisis or a diagnosis. It's enough that something in your life is calling for space to be heard." },
-            { "question": "Is therapy confidential?", "answer": "Yes, absolutely. Everything discussed in therapy sessions is completely confidential. I am bound by professional confidentiality, and your information will never be shared without your consent. A sense of safety and trust is the very foundation of our work together." },
-            { "question": "Do I need to know anything in particular?", "answer": "Not at all. You don't need any prior experience with therapy or a specific reason to come. You arrive as you are, in this very moment – and that is entirely enough. The first session is always a calm introduction where we explore together what you need." }
+            {
+              "question": "What is short-term therapy?",
+              "answer": "Short-term therapy is goal-oriented, practical conversational support that helps you find clarity, direction and relief for the challenges of the present moment. In therapy we pause with your situation in a safe, confidential atmosphere where you can be truly heard.\n\nThe work emphasises presence – stopping in the moment and calmly exploring your experience – and a systemic perspective that takes into account relationships, interaction and your life situation as a whole. Together we look for new perspectives and concrete ways to support everyday life. Short-term therapy proceeds according to your goals and can bring significant insights and change even in a short time."
+            },
+            {
+              "question": "How do I know if I need therapy?",
+              "answer": "If something is weighing on your mind, your life situation feels overwhelming, or you find yourself going over the same thoughts again and again – therapy can be exactly the right place to pause. You don't need a crisis or a diagnosis. It's enough that something in your life is calling for space to be heard."
+            },
+            {
+              "question": "Is therapy confidential?",
+              "answer": "Yes, absolutely. Everything discussed in therapy sessions is completely confidential. I am bound by professional confidentiality, and your information will never be shared without your consent. A sense of safety and trust is the very foundation of our work together."
+            },
+            {
+              "question": "Do I need to know anything in particular?",
+              "answer": "Not at all. You don't need any prior experience with therapy or a specific reason to come. You arrive as you are, in this very moment – and that is entirely enough. The first session is always a calm introduction where we explore together what you need."
+            }
           ]
         },
         {
           "name": "Craniosacral therapy",
           "items": [
-            { "question": "What is craniosacral therapy?", "answer": "Craniosacral therapy is a gentle form of treatment based on light, listening touch, aimed at supporting relaxation and calm. The session progresses unhurriedly, respecting your body's sensations and your individual needs. Craniosacral therapy is a complementary wellbeing treatment and does not replace medical examination or treatment." },
-            { "question": "What is the treatment like in practice?", "answer": "The treatment is carried out fully clothed, lying on a therapy table – there is nothing you need to do. Touch is very light, almost imperceptible, and the session progresses calmly, following the body's own rhythms. Many people find the treatment deeply relaxing; some fall asleep during the session." },
-            { "question": "Who is this treatment for?", "answer": "People often come to craniosacral therapy when stress and everyday strain show up in the body as tension and restlessness, or when calming down and recovering feel difficult. The treatment can also suit you if you are going through a period of change and long for a moment of peace and time with yourself.\n\nA calm treatment session gives you the chance to let go of tension and allow body and mind to settle at their own pace. As the body relaxes, pain and various bodily discomforts may also feel eased. Everyone experiences the treatment in their own way, and its effects are individual." },
-            { "question": "The idea behind the treatment", "answer": "Craniosacral therapy is built on the idea that the body has a natural capacity to move towards balance, when given support and stillness. The treatment does not force or fix – it listens and creates space. This makes it a particularly gentle way of approaching the wellbeing of both body and mind." }
+            {
+              "question": "What is craniosacral therapy?",
+              "answer": "Craniosacral therapy is a gentle form of treatment based on light, listening touch, aimed at supporting relaxation and calm. The session progresses unhurriedly, respecting your body's sensations and your individual needs. Craniosacral therapy is a complementary wellbeing treatment and does not replace medical examination or treatment."
+            },
+            {
+              "question": "What is the treatment like in practice?",
+              "answer": "The treatment is carried out fully clothed, lying on a therapy table – there is nothing you need to do. Touch is very light, almost imperceptible, and the session progresses calmly, following the body's own rhythms. Many people find the treatment deeply relaxing; some fall asleep during the session."
+            },
+            {
+              "question": "Who is this treatment for?",
+              "answer": "People often come to craniosacral therapy when stress and everyday strain show up in the body as tension and restlessness, or when calming down and recovering feel difficult. The treatment can also suit you if you are going through a period of change and long for a moment of peace and time with yourself.\n\nA calm treatment session gives you the chance to let go of tension and allow body and mind to settle at their own pace. As the body relaxes, pain and various bodily discomforts may also feel eased. Everyone experiences the treatment in their own way, and its effects are individual."
+            },
+            {
+              "question": "The idea behind the treatment",
+              "answer": "Craniosacral therapy is built on the idea that the body has a natural capacity to move towards balance, when given support and stillness. The treatment does not force or fix – it listens and creates space. This makes it a particularly gentle way of approaching the wellbeing of both body and mind."
+            }
           ]
         },
         {
           "name": "Sessions",
           "items": [
-            { "question": "How long does therapy last?", "answer": "Short-term therapy is typically 5–20 sessions, usually meeting once a week or every two weeks. The duration always depends on your individual needs – for some, a few sessions are enough, while others benefit from a longer process. We will agree on a suitable rhythm together and review how things are going along the way." },
-            { "question": "Can sessions be arranged remotely?", "answer": "Yes, therapy sessions can be arranged remotely via video call. Remote sessions are a good option if you are unable to come in person or prefer to work from home. Craniosacral treatments are always in-person." },
-            { "question": "Do I need to prepare for the meeting?", "answer": "No special preparation is needed. If you can, it is nice to take a moment to settle before the session – but it is not required. Come as you are, in whatever state you happen to be in. That is completely enough." }
+            {
+              "question": "How long does therapy last?",
+              "answer": "Short-term therapy is typically 5–20 sessions, usually meeting once a week or every two weeks. The duration always depends on your individual needs – for some, a few sessions are enough, while others benefit from a longer process. We will agree on a suitable rhythm together and review how things are going along the way."
+            },
+            {
+              "question": "Can sessions be arranged remotely?",
+              "answer": "Yes, therapy sessions can be arranged remotely via video call. Remote sessions are a good option if you are unable to come in person or prefer to work from home. Craniosacral treatments are always in-person."
+            },
+            {
+              "question": "Do I need to prepare for the meeting?",
+              "answer": "No special preparation is needed. If you can, it is nice to take a moment to settle before the session – but it is not required. Come as you are, in whatever state you happen to be in. That is completely enough."
+            }
           ]
         },
         {
           "name": "Payments & booking",
           "items": [
-            { "question": "How much does therapy cost?", "answer": "Short-term therapy and craniosacral therapy are €89 per session (60 min). Short-term therapy is not currently covered by Kela reimbursement, so it is paid for out of pocket. Some employers cover therapy as part of occupational wellbeing benefits – it is worth checking your employer's policy." },
-            { "question": "How can I book an appointment?", "answer": "You can book directly using the \"Book an appointment\" button, by emailing nora@norasoini.fi, or by filling in the contact form on this website. I typically reply within 1–2 business days and we will find a time that works for you." },
-            { "question": "How can I pay?", "answer": "Sessions are paid in advance by credit card at the time of booking." }
+            {
+              "question": "How much does therapy cost?",
+              "answer": "Short-term therapy and craniosacral therapy are €89 per session (60 min). Short-term therapy is not currently reimbursed by Kela (the Finnish social insurance institution), so it is paid for out of pocket. Some employers cover therapy as part of occupational wellbeing benefits – it is worth checking your employer's policy."
+            },
+            {
+              "question": "How can I book an appointment?",
+              "answer": "You can book directly using the \"Book a session\" button, by emailing nora@norasoini.fi, or by filling in the contact form on this website. I typically reply within 1–2 business days and we will find a time that works for you."
+            },
+            {
+              "question": "How can I pay?",
+              "answer": "Sessions are paid in advance by credit card at the time of booking."
+            }
           ]
         },
         {
           "name": "Cancellations",
           "items": [
-            { "question": "How do I cancel an appointment?", "answer": "Cancellations are made by email at nora@norasoini.fi. Please let me know as soon as possible so the slot can be offered to someone else who needs it." },
-            { "question": "What happens if I cancel late?", "answer": "Please cancel at least 24 hours before the appointment. Late cancellations will be charged the full session fee, as the time can no longer be filled. I understand that unexpected things happen – if you have a particular reason, we can discuss it case by case." }
+            {
+              "question": "How do I cancel an appointment?",
+              "answer": "Cancellations are made by email at nora@norasoini.fi. Please let me know as soon as possible so the slot can be offered to someone else who needs it."
+            },
+            {
+              "question": "What happens if I cancel late?",
+              "answer": "Please cancel at least 24 hours before the appointment. Late cancellations will be charged the full session fee, as the time can no longer be filled. I understand that unexpected things happen – if you have a particular reason, we can discuss it case by case."
+            }
           ]
         }
       ]
+    },
+    "a11y": {
+      "skipToContent": "Skip to content",
+      "mainNav": "Main navigation",
+      "mobileNav": "Mobile navigation",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "bookingDialog": "Book a session",
+      "close": "Close",
+      "playVideo": "Play video",
+      "pauseVideo": "Pause video"
+    },
+    "notFound": {
+      "title": "Page not found",
+      "description": "The page you are looking for doesn't exist or has been moved.",
+      "backHome": "Back to the homepage"
     }
   }
 }

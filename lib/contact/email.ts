@@ -31,6 +31,7 @@ export function buildContactEmail(data: ContactFormData) {
     year: "numeric",
     hour: "2-digit",
     minute: "2-digit",
+    timeZone: "Europe/Helsinki",
   });
 
   const text =

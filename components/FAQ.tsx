@@ -36,6 +36,8 @@ const FAQCategory = ({
         type="button"
         className="flex w-full items-center justify-between py-5 text-left"
         onClick={onClick}
+        aria-expanded={isOpen}
+        aria-controls={`faq-panel-${index}`}
       >
         <h3>
           {index + 1}. {category.name}
@@ -55,6 +57,7 @@ const FAQCategory = ({
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
             className="overflow-hidden"
+            id={`faq-panel-${index}`}
           >
             <div className="space-y-5 pb-6 pl-4">
               {category.items.map((item, i) => (

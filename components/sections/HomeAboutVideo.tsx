@@ -2,11 +2,13 @@
 
 import { useRef, useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 import { cn } from "@/lib/utils";
 
 export default function HomeAboutVideo() {
+  const tA11y = useTranslations("component.a11y");
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
   const [hasUserStarted, setHasUserStarted] = useState(false);
@@ -57,29 +59,33 @@ export default function HomeAboutVideo() {
             {playing ? (
               <button
                 type="button"
-                aria-label="Pause video"
+                aria-label={tA11y("pauseVideo")}
                 className="absolute inset-0 z-10 cursor-pointer bg-transparent"
                 onClick={() => void togglePlay()}
               />
             ) : (
-              <div
-                className="absolute inset-0 z-10 flex items-center justify-center cursor-pointer"
+              <button
+                type="button"
+                aria-label={tA11y("playVideo")}
+                className="absolute inset-0 z-10 flex items-center justify-center cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-brand-primary"
                 onClick={() => void togglePlay()}
               >
-                <div className="relative z-10 w-16 h-16 rounded-full bg-brand-bg/80 flex items-center justify-center">
+                <span className="relative z-10 w-16 h-16 rounded-full bg-brand-bg/80 flex items-center justify-center">
                   {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                   <FontAwesomeIcon
                     icon={faCirclePlay as any}
                     className="text-brand-primary w-8 h-8"
                   />
-                </div>
-              </div>
+                </span>
+              </button>
             )}
           </>
         )}
         {!playing && !hasUserStarted && (
-          <div
-            className="absolute inset-0 z-10 flex items-center justify-center cursor-pointer"
+          <button
+            type="button"
+            aria-label={tA11y("playVideo")}
+            className="absolute inset-0 z-10 flex items-center justify-center cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-brand-primary"
             onClick={() => void togglePlay()}
           >
             <Image
@@ -91,14 +97,14 @@ export default function HomeAboutVideo() {
               priority
               fetchPriority="high"
             />
-            <div className="relative z-10 w-16 h-16 rounded-full bg-brand-bg/80 flex items-center justify-center">
+            <span className="relative z-10 w-16 h-16 rounded-full bg-brand-bg/80 flex items-center justify-center">
               {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
               <FontAwesomeIcon
                 icon={faCirclePlay as any}
                 className="text-brand-primary w-8 h-8"
               />
-            </div>
-          </div>
+            </span>
+          </button>
         )}
       </div>
     </div>

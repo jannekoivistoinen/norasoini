@@ -39,7 +39,7 @@ export default function ContactPage() {
               >
                 <Image
                   src={noraSoiniPortrait}
-                  alt="Nora Soini – terapeutti Espoossa"
+                  alt={t("contact.portraitAlt")}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
@@ -51,9 +51,7 @@ export default function ContactPage() {
                 <p className="font-medium text-black/90">
                   {SITE_CONFIG.company.name}
                 </p>
-                <p className="text-base text-black/70">
-                  Lyhytterapeutti &amp; kraniosakraaliterapeutti
-                </p>
+                <p className="text-base text-black/70">{t("contact.role")}</p>
                 <a
                   href={`mailto:${SITE_CONFIG.company.contact.email}`}
                   className="text-base text-brand-primary hover:opacity-70 transition"

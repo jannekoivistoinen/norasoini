@@ -1,6 +1,18 @@
 import { setLanguageCookie } from "@/lib/cookie-utils";
 import type { useRouter as UseRouter } from "next/navigation";
+import { SITE_CONFIG } from "@/lib/constants";
 import { LocaleData, NavigationItem, isLocaleData } from "./types";
+
+type Locale = (typeof SITE_CONFIG.i18n.locales)[number];
+
+// Map a localized slug (e.g. "palvelut") to its counterpart in another locale
+// ("services") so switching language doesn't go through an extra redirect.
+function translateSlug(slug: string, to: Locale): string {
+  for (const route of Object.values(SITE_CONFIG.i18n.routes)) {
+    if (Object.values(route).includes(slug)) return route[to];
+  }
+  return slug;
+}
 
 // Locale names mapping
 export const localeNames: Record<string, string> = {
@@ -12,13 +24,19 @@ export const localeNames: Record<string, string> = {
 export function handleLanguageChange(
   newLocale: string,
   router: ReturnType<typeof UseRouter>,
-  pathname: string
+  pathname: string,
 ) {
   setLanguageCookie(newLocale);
   // Strip a leading /fi or /en locale segment if present
-  const withoutLocale = pathname.replace(/^\/(fi|en)(\/|$)/, "/");
+  const stripped = pathname.replace(/^\/(fi|en)(\/|$)/, "/");
+  const [, first = "", ...rest] = stripped.split("/");
+  const withoutLocale = first
+    ? `/${[translateSlug(first, newLocale as Locale), ...rest].join("/")}`
+    : "/";
   const newPathname =
-    newLocale === "fi" ? withoutLocale : `/${newLocale}${withoutLocale === "/" ? "" : withoutLocale}`;
+    newLocale === "fi"
+      ? withoutLocale
+      : `/${newLocale}${withoutLocale === "/" ? "" : withoutLocale}`;
   router.push(newPathname || "/");
 }
 
@@ -38,7 +56,7 @@ export function isActive(itemHref: string, pathname: string) {
 // Helper function to get locale data safely
 export function getLocaleData(
   item: NavigationItem,
-  locale: string
+  locale: string,
 ): LocaleData {
   const data = item[locale];
   if (!isLocaleData(data)) {

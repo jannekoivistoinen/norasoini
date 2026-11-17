@@ -4,10 +4,10 @@ export const SITE_CONFIG = {
   company: {
     name: "Nora Soini",
     domain: "norasoini.fi",
-    url: "https://norasoini.fi",
+    url: "https://www.norasoini.fi",
     description:
       "Laillistettu läsnäolon ja systeemisyyden lyhytterapeutti Espoosta. Tarjoan yksilöterapiaa sekä kraniosakraaliterapiaa elämän muutoskohtiin.",
-    sitemapUrl: "https://norasoini.fi/sitemap.xml",
+    sitemapUrl: "https://www.norasoini.fi/sitemap.xml",
     logo: {
       default: "/logo.svg",
       dark: "/logo-dark.svg",
@@ -45,10 +45,6 @@ export const SITE_CONFIG = {
       pricing: {
         fi: "hinnasto",
         en: "pricing",
-      },
-      terms: {
-        fi: "kayttoehdot",
-        en: "terms",
       },
     },
     languageSwitcher: {

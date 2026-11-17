@@ -19,6 +19,18 @@ import FadeIn from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
 import { openVelloModal } from "@/lib/openVelloModal";
 
+// The h1 is the LCP element: keep it visible in the server HTML and only
+// slide it in, so it never depends on JS to become readable.
+const headingAnim = {
+  initial: { y: 14 },
+  animate: { y: 0 },
+  transition: {
+    duration: 0.75,
+    delay: 0.05,
+    ease: [0.25, 0.1, 0.25, 1] as const,
+  },
+};
+
 const heroAnim = (delay: number) => ({
   initial: { opacity: 0, y: 14 },
   animate: { opacity: 1, y: 0 },
@@ -40,8 +52,18 @@ export default function HomePage() {
   const tFooter = useTranslations("component.footer");
   const locale = useLocale();
 
-  const contactHref = localePath(locale, SITE_CONFIG.i18n.routes.contact[locale as keyof typeof SITE_CONFIG.i18n.routes.contact]);
-  const aboutHref = localePath(locale, SITE_CONFIG.i18n.routes.about[locale as keyof typeof SITE_CONFIG.i18n.routes.about]);
+  const contactHref = localePath(
+    locale,
+    SITE_CONFIG.i18n.routes.contact[
+      locale as keyof typeof SITE_CONFIG.i18n.routes.contact
+    ],
+  );
+  const aboutHref = localePath(
+    locale,
+    SITE_CONFIG.i18n.routes.about[
+      locale as keyof typeof SITE_CONFIG.i18n.routes.about
+    ],
+  );
   const terminalButtons: TerminalCTAButton[] = [
     { label: tFooter("ctaButton"), href: contactHref },
   ];
@@ -50,7 +72,7 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="md:text-center container">
-        <motion.h1 {...heroAnim(0.05)}>{t("hero.heading")}</motion.h1>
+        <motion.h1 {...headingAnim}>{t("hero.heading")}</motion.h1>
         <motion.p
           {...heroAnim(0.18)}
           className="mt-4 max-w-[50ch] md:mx-auto  text-black/70 leading-relaxed"
