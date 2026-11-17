@@ -15,6 +15,18 @@ interface PageHeroProps {
   onCtaClick?: () => void;
 }
 
+// The h1 is the LCP element: keep it visible in the server HTML and only
+// slide it in, so it never depends on JS to become readable.
+const headingAnim = {
+  initial: { y: 14 },
+  animate: { y: 0 },
+  transition: {
+    duration: 0.75,
+    delay: 0.05,
+    ease: [0.25, 0.1, 0.25, 1] as const,
+  },
+};
+
 const heroAnim = (delay: number) => ({
   initial: { opacity: 0, y: 14 },
   animate: { opacity: 1, y: 0 },
@@ -32,7 +44,7 @@ export default function PageHero({
 }: PageHeroProps) {
   return (
     <section className="px-6 pt-12 pb-12 md:pt-24 md:pb-28 md:text-center max-w-[1200px] md:mx-auto">
-      <motion.h1 {...heroAnim(0.05)} className={headingClassName}>
+      <motion.h1 {...headingAnim} className={headingClassName}>
         {heading}
       </motion.h1>
       {ingress ? (
